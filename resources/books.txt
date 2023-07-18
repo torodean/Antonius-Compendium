@@ -1,0 +1,3 @@
+Linear Algebra (4th Edition) - https://joshua.smcvt.edu/linearalgebra/#current_version, https://joshua.smcvt.edu/linearalgebra/book.pdf
+
+A First Course in Linear Algebra (Version 3.40) - https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=2d126254474e43b7d300ef5e60752d5e19f287c3
