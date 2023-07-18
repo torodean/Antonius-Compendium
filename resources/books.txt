@@ -1,3 +1,9 @@
 Linear Algebra (4th Edition) - https://joshua.smcvt.edu/linearalgebra/#current_version, https://joshua.smcvt.edu/linearalgebra/book.pdf
 
 A First Course in Linear Algebra (Version 3.40) - https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=2d126254474e43b7d300ef5e60752d5e19f287c3
+
+A Book of Abstract Algebra (2nd Edition), Charles C. Pinter - http://www2.math.umd.edu/~jcohen/402/Pinter%20Algebra.pdf
+
+Abstract Algebra: Theory and Applications, Thomas W. Judson - https://scholarworks.sfasu.edu/ebooks/23/, https://scholarworks.sfasu.edu/cgi/viewcontent.cgi?article=1022&context=ebooks
+
+ALGEBRA ABSTRACT AND CONCRETE, Frederick M. Goodman - http://homepage.divms.uiowa.edu/~goodman/algebrabook.dir/book.2.6.pdf
