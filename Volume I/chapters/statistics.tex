@@ -2,11 +2,15 @@
 \thispagestyle{fancy}
 
 \begin{defn}[Probability]{Probability}
-An exact mathematical \keyword{probability} $p$ can be defined as the asymptotic frequency of a system in state $s$ by the total number of occurances of that state $N_s$ in the limit of an infinite number of trials $N$.
-	\begin{align}
-	p(s) = \lim_{N\rightarrow\inf}\frac{N_s}{N}
-	\end{align}
- For a system with $n$ states, the total probabilities of all states must normalize to one.
- 	\begin{align}
-  	\sum_{i=0}{n}p(i) = \lim_{N\rightarrow\inf}\frac{1}{N}\sum_{i=0}{n}N_i \rightarrow 1
+An exact mathematical \keyword{probability} $p$ can be defined as the asymptotic frequency of a system in state $s$ ($s \in \Omega$, where $\Omega$ is a finite set of all possible states of a system) by the total number of occurances of that state $N_s$ in the limit of an infinite number of trials $N$.
+    \begin{align}
+        p(s) = \lim_{N\rightarrow\inf}\frac{N_s}{N} \\
+	p(s) \in [0,1] \forall s \in \Omega
+    \end{align}
+For a system with $n$ states, the total probabilities of all states must normalize to one.
+    \begin{align}
+        \sum_{i=0}{n}p(i) = \sum_{s \in \Omega}p(i) = \lim_{N\rightarrow\inf}\frac{1}{N}\sum_{i=0}{n}N_i = 1
+    \end{align}
+A \keyword{Bayesian probability} is defined as a person's knowledge of the outcome of a trial, based on the evidence at their disposal - often encompanied by an associated error. A \keyword{model probability} is an assumption or guess for the probability given the possibility of an infinite nuber of trials.
 \end{defn}
+
