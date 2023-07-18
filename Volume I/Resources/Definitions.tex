@@ -12,13 +12,16 @@
 \newcommand{\union}{\cup}
 \newcommand{\Union}{\bigcup}
 
-%create a section without making the section title.
+% Defines a keyword which will bold and add a word to the index.
+\newcommand{\keyword}[1]{\textbf{#1}\index{#1}}
+
+% Create a section without making the section title.
 \newcommand\invisiblesection[1]{%
 	\refstepcounter{section}%
 	\addcontentsline{toc}{section}{\protect\numberline{\thesection}#1}%
 	\sectionmark{#1}}
 
-%Makes a chapter with no title
+% Makes a chapter with no title
 \makeatletter
 \newcommand{\unchapter}[1]{%
 	\begingroup
