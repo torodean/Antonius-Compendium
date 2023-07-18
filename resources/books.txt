@@ -7,3 +7,19 @@ A Book of Abstract Algebra (2nd Edition), Charles C. Pinter - http://www2.math.u
 Abstract Algebra: Theory and Applications, Thomas W. Judson - https://scholarworks.sfasu.edu/ebooks/23/, https://scholarworks.sfasu.edu/cgi/viewcontent.cgi?article=1022&context=ebooks
 
 ALGEBRA ABSTRACT AND CONCRETE, Frederick M. Goodman - http://homepage.divms.uiowa.edu/~goodman/algebrabook.dir/book.2.6.pdf
+
+Partial Differential Equations: An Introduction, Walter A Strauss - https://s2pnd-matematika.fkip.unpatti.ac.id/wp-content/uploads/2019/03/Walter-A-Strauss-Partial-differential-equations-_-an-introduction-Wiley-2009.pdf
+
+Partal Differential Equations, Victor Ivrii - http://www.math.toronto.edu/ivrii/PDE-textbook/PDE-textbook.pdf
+
+Introduction to Partial Differential Equations, Peter J. Oliver - https://personal.utdallas.edu/~jwz120030/Teaching/M4362/OlverPDEBook.pdf
+
+The Physics of Quantum Mechanics, James Binney and David Skinner - https://www-thphys.physics.ox.ac.uk/people/JamesBinney/qb.pdf
+
+Quantum Physics for Beginners, Zbigniew Ficek - https://library.uoh.edu.iq/admin/ebooks/28573-ficek,-zbigniew---quantum-physics-for-beginners-pan-stanford-publishing-(2016).pdf
+
+Statistical Mechanics, Daniel F. Styer - http://www.issp.ac.ru/ebooks/books/open/Statistical_Mechanics.pdf
+
+Statistical Mechanics (Second Edition), R. K. Pathria - https://www.pas.rochester.edu/~yishengtu/research_files/EOS_reference/Pathria,%20R.%20K.%20%20Statistical%20Mechanics.pdf
+
+An Introduction to Statistical Mechanics and Thermodynamics, Robert H. Swendsen - http://www0.unsl.edu.ar/~cornette/ME/An-Introduction-to-Statistical-Mechanics-and-Thermodynamics.pdf
