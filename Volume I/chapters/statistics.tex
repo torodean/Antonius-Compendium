@@ -2,8 +2,11 @@
 \thispagestyle{fancy}
 
 \begin{defn}[Probability]{Probability}
-	An exact mathematical \textbf{probability}\index{probability} $p$ can be defined by the asymptotic frequency of successes $N_s$ in the limit of an infinite number of trials $N$.
- \begin{align}
-  p = \lim_{N\rightarrow\inf}\frac{N_s}{N}
- \end{align}
+An exact mathematical \textbf{probability}\index{probability} $p$ can be defined for a system in a state $s$ by the total number of occurances of that state $N_s$ in the limit of an infinite number of trials $N$.
+	\begin{align}
+	p(s) = \lim_{N\rightarrow\inf}\frac{N_s}{N}
+	\end{align}
+ For a system with $n$ states, the total probabilities of all states must normalize to one.
+ 	\begin{align}
+  	\lim_{N\rightarrow\inf}\frac{1}{N}\sum_{i=0}{n}N_i \rightarrow 1
 \end{defn}
