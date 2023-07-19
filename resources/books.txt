@@ -33,3 +33,7 @@ Subquantum kinetics, Paul A. LaViolette - https://www.gbv.de/dms/goettingen/3709
 Energy From the Vacuum: concepts and principals - http://www.rexresearch.com/bearden/EnergyVacuumConceptsPrinciplesBearden.pdf
 
 Relativity - https://www.academia.edu/34580700/_Wolfgang_Rindler_Relativity_Special_General_a_BookSee_org_pdf
+
+Calculus, Gilbert Strang - https://ocw.mit.edu/ans7870/resources/Strang/Edited/Calculus/Calculus.pdf
+
+Calculus (Volume 1), Edwin Herman - https://d3bxy9euw4e147.cloudfront.net/oscms-prodcms/media/documents/CalculusVolume1-OP.pdf
