@@ -37,3 +37,5 @@ Relativity - https://www.academia.edu/34580700/_Wolfgang_Rindler_Relativity_Spec
 Calculus, Gilbert Strang - https://ocw.mit.edu/ans7870/resources/Strang/Edited/Calculus/Calculus.pdf
 
 Calculus (Volume 1), Edwin Herman - https://d3bxy9euw4e147.cloudfront.net/oscms-prodcms/media/documents/CalculusVolume1-OP.pdf
+
+Quantum Electrodynamics - https://www.academia.edu/41076692/Quantum_Electrodynamics_Fourth_Edition
