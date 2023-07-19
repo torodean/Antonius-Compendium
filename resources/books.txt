@@ -27,3 +27,5 @@ An Introduction to Statistical Mechanics and Thermodynamics, Robert H. Swendsen 
 Probability and Statistics, Michael J. Evans and Je§rey S. Rosenthal - https://www.utstat.toronto.edu/mikevans/jeffrosenthal/book.pdf
 
 Probability & Statistics for Engineering and the Sciences (Eighth Edition), Jay L. Devore - https://faculty.ksu.edu.sa/sites/default/files/probability_and_statistics_for_engineering_and_the_sciences.pdf
+
+Subquantum kinetics, Paul A. LaViolette - https://www.gbv.de/dms/goettingen/370933931.pdf
