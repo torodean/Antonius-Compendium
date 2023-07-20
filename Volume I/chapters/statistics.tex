@@ -1,22 +1,12 @@
 \chapter{Statistics and Probability}
 \thispagestyle{fancy}
 
-A \keyword{state} (or outcome) is particular condition that something is in at a specific time. 
+\keyword{Probability} is a fundamental concept in mathematics and statistics that measures the likelihood of an event occurring. It is represented as a value between 0 and 1, where 0 indicates the event is impossible, 1 denotes certainty, and values between 0 and 1 represent various degrees of likelihood. In simple terms, probability quantifies how probable or likely it is for an event to happen based on the total number of possible outcomes. It helps us make informed decisions, predict outcomes, and understand uncertainty in various real-world scenarios, such as games of chance, weather forecasts, and medical diagnoses. To understand probability on a mathematical level, some definitions of terminology is needed.
 
-\begin{defn}[System]{System}
-A \keyword{system} is an activity, experiment, process, or model with states or outcomes that are typically subject to uncertainty.
-\end{defn}
-
-\begin{defn}[Sample Space]{Sample Space}
-A \keyword{sample space} of an system is the set of all possible states of a system.
-\end{defn}
-
-\begin{defn}[Event]{Event}
-An \keyword{event} (also may be referred to as a trial or measurement) is any subset or collection of states contained in the sample space of a system. An event is a \keyword{simple event} if it consists of exactly one state and a \keyword{compound event} if it consistst of more than one state.
-\end{defn}
+A \keyword{state} (or outcome) is particular condition that something is in at a specific time. A \keyword{system} is an activity, experiment, process, or model with states or outcomes that are typically subject to uncertainty. A \keyword{sample space} of an system is the set of all possible states of a system. An \keyword{event} (also may be referred to as a trial or measurement) is any subset or collection of states contained in the sample space of a system. An event is a \keyword{simple event} if it consists of exactly one state and a \keyword{compound event} if it consistst of more than one state.
 
 \begin{defn}[Probability]{Probability}
-An \keyword{probability} $p$ can be defined as the asymptotic frequency of a system in the state $s$ ($s \in \Omega$, where $\Omega$ is the sample space of the system) by the total number of occurances of that state $N_s$ in the limit of an infinite number of events $N$.
+An \keyword{probability} $p$ can be defined as the asymptotic frequency of a system in the state $s$ ($s \in \Omega$, where $\Omega$ is the sample space of the system) by the total number of occurrences of that state $N_s$ in the limit of an infinite number of events $N$.
     \begin{align}
         p(s) = \lim_{N\rightarrow\infty}\frac{N_s}{N} \\
 	p(s) \in [0,1] \forall s \in \Omega
@@ -25,6 +15,6 @@ For a system with $n$ states, the total probabilities of all states must normali
     \begin{align}
         \sum_{i=0}^{n}p(i) = \sum_{s \in \Omega}p(i) = \lim_{N\rightarrow\infty}\frac{1}{N}\sum_{i=0}^{n}N_i = 1
     \end{align}
-A \keyword{Bayesian probability} is defined as a person's knowledge of the outcome of a trial, based on the evidence at their disposal - often encompanied by an associated error. A \keyword{model probability} is an assumption or guess for the probability given the possibility of an infinite nuber of trials.
+A \keyword{Bayesian probability} is defined as a person's knowledge of the outcome of a trial, based on the evidence at their disposal - often accompanied by an associated error. A \keyword{model probability} is an assumption or guess for the probability given the possibility of an infinite number of trials.
 \end{defn}
 

@@ -1,13 +1,13 @@
 \documentclass[openany,twoside, notitlepage,letterpaper,11pt]{book}
 
 %%% These are the packages that are used
-\input{./Resources/Packages}
+\input{./resources/Packages}
 
 %This is where settings for the latex file are stored.
-\input{./Resources/Settings}
+\input{./resources/Settings}
 
 %This is where custom definitions and variables are defined and stored.
-\input{./Resources/Definitions}
+\input{./resources/Definitions}
 
 %creates the title page
 \title{\includegraphics[scale=2.5]{./Images/Covers/AC.png}
@@ -33,10 +33,10 @@
 \end{center}
 
 %Copywrite page
-\include{./Resources/Copywrite}
+\include{./resources/Copywrite}
 
 %Preface page
-\include{./Resources/Preface}
+\include{./resources/Preface}
 
 %Begins blank page.
 \thispagestyle{empty}
@@ -58,14 +58,49 @@
 \include{./chapters/constants}
 
 \newpage
+\include{./chapters/geometry}
+
+\newpage
 \include{./chapters/statistics}
 
+\newpage
+\include{./chapters/calculus}
 
-\unchapter{Resources}
+\newpage
+\include{./chapters/linear_algebra}
+
+\newpage
+\include{./chapters/classical_mechanics}
+
+\newpage
+\include{./chapters/statistical_mechanics}
+
+\newpage
+\include{./chapters/astrophysics}
+
+\newpage
+\include{./chapters/electromagnetism}
+
+\newpage
+\include{./chapters/quantum_mechanics}
+
+\newpage
+\include{./chapters/relativity}
+
+\newpage
+\include{./chapters/quantum_field_theory}
+
+\newpage
+\include{./chapters/quantum_electrodynamics}
+
+\newpage
+\include{./chapters/quantum_chromodynamics}
+
+\unchapter{resources}
 
 %Begin the backmatter.
 \backmatter
-\input{./Resources/References}
+\input{./resources/References}
 \printindex
 
 \end{document}
