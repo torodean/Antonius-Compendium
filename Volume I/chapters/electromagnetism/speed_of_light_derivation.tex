@@ -1,0 +1,53 @@
+\subsection{Derivation of The Speed Of Light $c$ In Vacuum}
+
+
+We begin with Maxwell's equations which follow in the MKS system of units \cite{bib:Wolfram} as
+\begin{multicols}{2}
+	\noindent
+	\begin{align}
+		\nabla \cdot \vec{E} &= \frac{\rho}{\epsilon_0} \label{GaussesLaw}\\
+		\nabla \times \vec{E} &= -\frac{\partial \vec{B}}{\partial t} \label{FaradaysLaw}
+	\end{align}
+	\begin{align}
+		\nabla \cdot \vec{B} &= 0 \\
+		\nabla \times \vec{B} &= \mu_0\vec{J}+\epsilon_0\mu_0\frac{\partial \vec{E}}{\partial t} \label{AmperesLaw}
+	\end{align}
+\end{multicols}
+In the above equations, $t$ is time, $\epsilon_0$ is the permittivity of free space, $\mu_0$ is the permeability of free space, $\vec{E}$ is the electric field, $\vec{B}$ is the magnetic field, and $\vec{J}$ is the current density.  The definition of current is given by $\vec{I} \equiv \frac{dQ}{dt}\hat{I}$ which allows us to represent the current density as
+\begin{align}
+	\vec{J} = \frac{d\vec{I}}{da_\perp} = \frac{d}{da_\perp}\left(\frac{dQ}{dt}\right)\hat{I}. \label{current density}
+\end{align} 
+Now, we can take the curl of equation (\ref{FaradaysLaw}) which gives
+\begin{align}
+	\nabla \times (\nabla \times \vec{E}) = \nabla \times \left(-\frac{\partial \vec{B}}{\partial t}\right).
+\end{align}
+The left-hand side of this can be manipulated using the vector identity
+\begin{align}
+	\nabla \times (\nabla \times \vec{A}) = \nabla (\nabla \cdot \vec{A})- \nabla^2\vec{A}.
+\end{align} 
+The right-hand side can also be rearranged since $\nabla$ is not an operation with respect to time which gives
+\begin{align}
+	\nabla \times (\nabla \times \vec{E}) &= \nabla (\nabla \cdot \vec{E})- \nabla^2\vec{E} = \nabla \times \left(-\frac{\partial \vec{B}}{\partial t}\right) = -\frac{\partial}{\partial t}(\nabla \times \vec{B}).
+\end{align}
+We can use equation (\ref{GaussesLaw}) to write this as
+\begin{align}
+	\nabla \left(\frac{\rho}{\epsilon}\right)- \nabla^2\vec{E} = -\frac{\partial}{\partial t}(\nabla \times \vec{B}). \label{derivationStep}
+\end{align}
+
+If we assume we are in a perfect vacuum, then there would contain no matter and thus no charge. Therefore the charge density would be $\rho=0$. This implies the total charge is zero and thus $\frac{dQ}{dt}=0$. Hence, we can clearly see from equation (\ref{current density}) that within a vacuum $\vec{J}=0$. Using these results as well as (\ref{AmperesLaw}), we can write equation (\ref{derivationStep}) as
+\begin{align}
+	-\nabla^2\vec{E} = -\frac{\partial}{\partial t}\left(\epsilon_0\mu_0\frac{\partial \vec{E}}{\partial t}\right) \implies \nabla^2\vec{E} = \epsilon_0\mu_0\frac{\partial^2 \vec{E}}{\partial t^2}. \label{waveEqnE}
+\end{align}
+
+Similarly, the magnetic field can be shown to satisfy the same relationship as the electric field. This result in equation (9) can be recognized as the wave equation which is generally in the form
+\begin{align}
+	\nabla^2\vec{\psi} = \frac{1}{v^2}\frac{\partial^2 \vec{\psi}}{\partial t^2},\label{waveEqn}
+\end{align}
+where v is the velocity of a wave. Finally, if we think of the electric and magnetic fields $\vec{E}$ as a wave moving through a vacuum together, then we can determine it's velocity by comparing equations (\ref{waveEqnE}) and (\ref{waveEqn}). This is the speed of an electromagnetic wave (the speed of light) which gives
+\begin{align}
+	v=c=\frac{1}{\sqrt{\epsilon_0\mu_0}}.
+\end{align}
+We can approximate this based on the values of $\epsilon_0 = 8.85418782 \times 10^{-12}  s^4 A^2/(m^3 kg)$ and $\mu_0 =4\pi \times 10^{-7} Wm$ which gives
+\begin{align}
+	c=\frac{1}{\sqrt{\epsilon_0\mu_0}} = \boxed{299,792,458 \frac{m}{s}}.
+\end{align}

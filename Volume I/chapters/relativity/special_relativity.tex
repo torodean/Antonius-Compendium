@@ -1,0 +1,55 @@
+\section{Special Relativity}
+
+\subsection{Time Dilation and Length Contraction}
+To begin, we start with Einsteins postulates which are given as
+\begin{enumerate}
+	\item The laws of physics must always hold in all inertial reference frames.
+	\item The speed of light in a vacuum c is the same in all reference frames.
+\end{enumerate}
+From this, we can explore the implications and effects of these assumptions. First, consider a frame\footnote{Note that $\mathcal{F}'$ is the "proper frame".} of reference $\mathcal{F}'$. Suppose we set up two mirrors in this frame that are facing each other and have a beam of light traveling back and forth between them. Let these mirrors be aligned such that the beam of light is traveling vertically and assume we are in a vacuum. If we set $t=0$ as the point when the light beam hits the bottom mirror, then the time it takes for the light to travel to the top mirror can be determined simply by the distance formula \begin{align}
+	v=\frac{\Delta x}{\Delta t} \implies \Delta t = \frac{\Delta x}{v}. \label{v=d/t}
+\end{align} 
+Since we are in a vacuum, the speed of our light is simply $c$ and thus we have $\Delta t' = \frac{\Delta x'}{c}$. 
+
+Now consider an inertial frame $\mathcal{F}$ such that the first frame is moving horizontally relative to it. The light will remain traveling between these two mirrors, only the observer in frame $\mathcal{F}$ will see the light traveling both horizontally and vertically (since $\mathcal{F}'$ is moving horizontally as seen in $\mathcal{F}$). Say the speed that $\mathcal{F}'$ is moving as seen from $\mathcal{F}$ is $v$. Assuming no acceleration, since light must travel at a constant speed in our vacuum, the distance the light travels from the bottom mirror to the top mirror as observed in $\mathcal{F}$ is longer than that of $\mathcal{F}'$. The vertical distance between the two plates is still $\Delta x'$, but now there is also a horizontal distance. Suppose it takes $\Delta t$ for the light to hit the top mirror in $\mathcal{F}$, then the horizontal distance that the light traveled is given by $\Delta x_h = v \Delta t$ and so the total distance the light traveled in $\mathcal{F}$ is 
+\begin{align}
+	\Delta x =\sqrt{(\Delta x')^2 + (\Delta x_h)^2}=\sqrt{(\Delta x')^2 + (v \Delta t)^2}. \label{a^2=b^2+c^2}
+\end{align}
+Now, by definition, $\Delta x = c \Delta t$ and so if we combine this with (\ref{v=d/t}) and (\ref{a^2=b^2+c^2}) we have the equation for time dilation which is
+\begin{align}
+	(c \Delta t)^2=(c \Delta t')^2 + (v \Delta t)^2 \implies \boxed{\Delta t=\frac{\Delta t'}{\sqrt{1-\left(\frac{v}{c}\right)^2}}} \label{time dilation}.
+\end{align}
+
+Now, we can take (\ref{v=d/t}) and use it to relate $\Delta x'$ and $\Delta x$. First, notice that $\Delta x' = c \Delta t'$ and $\Delta x = c \Delta t$. Solving for $c$ and setting these equal to each other gives \begin{align}
+	\frac{\Delta x'}{\Delta t'} = \frac{\Delta x}{\Delta t} \implies \frac{\Delta x'}{\Delta x} = \frac{\Delta t}{\Delta t'} \label{Delta x'/Delta t' = Delta x/Delta t}.
+\end{align} 
+Combining this with (\ref{time dilation}) will then give us the relationship for length contraction between reference frames which is
+\begin{align}
+	\frac{\Delta x'}{\Delta x} = \frac{\Delta t}{\Delta t'} \implies \Delta x = \boxed{\Delta x' \sqrt{1-\left(\frac{v}{c}\right)^2}}. \label{lengthContraction}
+\end{align}
+The factor of $\sqrt{1-\left(\frac{v}{c}\right)^2}$ appears often within relativity and is generally denoted $\gamma^{-1}$. Therefore these equations can also be written as $\Delta t=\gamma \Delta t'$ and $\Delta x=\frac{ \Delta x'}{\gamma}$. 
+
+\subsection{Lorentz Coordinate Transformations}
+
+Consider again two frames, $\mathcal{F}$ and $\mathcal{F}'$. Suppose we have $\mathcal{F}'$ moving at some speed $v$ as observed in the $\mathcal{F}$ frame in the $\hat{x}$ direction. Suppose there is a bar moving along with frame $\mathcal{F}'$ with length $L$. After some time, the bar will have moved a distance of $vt$ and thus the new location will be at $x=L+vt \implies L=x-vt$. Now, by the length contraction we derived previously, this length can be related to the length in it's frame by $L'= \frac{L}{\gamma}$ and so we will have $L'=\gamma(x-vt)$. Now, say at $t'=0$ that $x'=x$, and so we can set the position of the end of the bar at $x'=L'$ and thus since in the prime frame the position of the bar does not change it remains that $x'=L'$ after some time t and so we have $x'=\gamma (x-vt)$. Notice that if there is no velocity ($v=0$), this becomes $x'=x$ and so our case, the respective $y$ and $z$ components become $y=y'$ and $z=z'$. These are all of the position transformations contained within the Lorentz coordinate Transformations. 
+\begin{align}
+	\boxed{x'=\gamma (x-vt) \hspace{2cm} y=y' \hspace{2cm} z=z'} \label{Lorentz Space}
+\end{align}
+
+We can now take the above position change in the $x$ direction and derive the Lorentz transformation for time. Consider some change in position while moving at constant velocity in the prime frame 
+\begin{align}
+	\Delta x' = x_f'-x_i'=\gamma (x_f-vt_f)-\gamma (x_i-vt_i) = \gamma(\Delta x-v\Delta t).
+\end{align}
+Dividing this by $\Delta t'$  and applying (\ref{Delta x'/Delta t' = Delta x/Delta t}) yields
+\begin{align}
+	\frac{\Delta x'}{\Delta t'} = \frac{\gamma}{\Delta t'}(\Delta x-v\Delta t) = \frac{\Delta x}{\Delta t} \implies \Delta t' = \gamma\left(\Delta t-\frac{v\Delta t^2}{\Delta x}\right). \label{t_Lorentz_intermediate}
+\end{align}
+Since $\frac{Delta x}{\Delta t} = c$ (from our derivations of time dilation), we can square this and use some manipulation to get $\frac{Delta x^2}{\Delta t^2} = c^2 \implies v\Delta t^2 = \frac{v\Delta x^2}{c^2}$. Plugging this into (\ref{t_Lorentz_intermediate}) gives us
+\begin{align}
+	\Delta t' = \gamma\left(\Delta t-\frac{v\Delta x}{c^2}\right) &\implies t_f'-t_i' = \gamma\left(t_f-t_i-\frac{v(x_f-x_i)}{c^2}\right) \\
+	&\implies t_f'-t_i' = \gamma\left(t_f-\frac{vx_f}{c^2}\right)-\gamma\left(t_i-\frac{vx_i}{c^2}\right).
+\end{align}
+Examining this result allows us to clearly see a solution to any arbitrary time transformation that will be consistent with the above formulations and that result is the Lorentz time transformation. This is given by
+\begin{align}
+	\boxed{t' = \gamma\left(t-\frac{vx}{c^2}\right)}. \label{Lorentz time}
+\end{align}

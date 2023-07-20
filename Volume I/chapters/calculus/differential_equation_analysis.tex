@@ -1,0 +1,486 @@
+
+\section{Definitions and General Differential Equations}
+ The derivative of a function represents an infinitesimal change in the function with respect to one of its variables (Definition from http://mathworld.wolfram.com). 
+\begin{defn}{1}
+	Let $f:\mathbb{R}\rightarrow\mathbb{R}$. Then the derivative of $f$ with respect to a variable $x$ is given by
+	\begin{align*}
+	\frac{d}{dx}f(x)\equiv f'(x) \equiv\lim\limits_{\Delta x \rightarrow 0}\frac{f(x+\Delta x)-f(x)}{\Delta x} \equiv \lim\limits_{\Delta x \rightarrow 0}\frac{f(x+\Delta x)-f(x-\Delta x)}{2\Delta x}
+	\end{align*}
+\end{defn}
+Similarly, partial derivatives are defined as derivatives of a function of multiple variables when all but the variable of interest are held fixed during the differentiation (Definition from http://mathworld.wolfram.com). 
+\begin{defn}{1}
+	Let $f:\mathbb{R}^z\rightarrow\mathbb{R}$, with $z \in \mathbb{N}$. Then the partial derivative of $f$ with respect to a variable $x_m$ is given by
+	\begin{align*}
+	\frac{\partial}{\partial x_m}f(x_1,\dots,x_n) \equiv \lim\limits_{\Delta x \rightarrow 0}\frac{f(x_1,\dots,x_m+\Delta x, \dots,x_n)-f(x_1,\dots,x_m,\dots,x_n)}{\Delta x}
+	\end{align*}
+\end{defn}
+A few rules from definition 0.1 can be defined.
+\begin{theo}{thm:Theroem1}
+	Let $g:\mathbb{R}\rightarrow\mathbb{R}$, and $h:\mathbb{R}\rightarrow\mathbb{R}$ be continuous functions with $f(x)=g(x)+h(x)$. Then the derivative of $f$ with respect to the variable $x$ is 
+	\begin{align*}
+	\frac{d}{dx}f(x)=\frac{d}{dx}\big(g(x)+h(x)\big) = \frac{d}{dx}g(x)+\frac{d}{dx}g(x).
+	\end{align*} 
+\end{theo}
+
+\begin{proof}[Proof for theorem 1.1]
+	Let $g:\mathbb{R}\rightarrow\mathbb{R}$, and $h:\mathbb{R}\rightarrow\mathbb{R}$ be continuous functions with $f(x)=g(x)+h(x)$. Then, by the definition of a derivative, we have
+	\begin{align*}
+	\frac{d}{dx}f(x)&=\lim\limits_{\Delta x \rightarrow 0}\frac{f(x+\Delta x)-f(x)}{\Delta x} \\
+	&=\lim\limits_{\Delta x \rightarrow 0}\frac{(g+h)(x+\Delta x)-(g+h)(x)}{\Delta x} \\
+	&=\lim\limits_{\Delta x \rightarrow 0}\frac{g(x+\Delta x)+h(x+\Delta x)-g(x)-h(x)}{\Delta x} \\
+	&=\lim\limits_{\Delta x \rightarrow 0}\bigg(\frac{g(x+\Delta x)-g(x)}{\Delta x}+\frac{h(x+\Delta x)-h(x)}{\Delta x}\bigg) \\
+	&=\lim\limits_{\Delta x \rightarrow 0}\frac{g(x+\Delta x)-g(x)}{\Delta x}+\lim\limits_{\Delta x \rightarrow 0}\frac{h(x+\Delta x)-h(x)}{\Delta x} \\
+	&= \frac{d}{dx}g(x)+\frac{d}{dx}h(x).
+	\end{align*}
+	Thus, by simple manipulation we've shown
+	\begin{align*}
+	\frac{d}{dx}f(x)= \frac{d}{dx}g(x)+\frac{d}{dx}g(x).
+	\end{align*}
+\end{proof}
+If we want to take the derivative of a function
+Given a general polynomial function, we can give the following differentiation rule.
+\begin{theo}{thm:Theorem2}
+	Let $f:\mathbb{R}\rightarrow\mathbb{R}$ be a function with $f(x)=c_nx^n+c_{n-1}x^{n-1}+\cdots++C_2x^2+c_1x+c_0$, where $c_n$ is constant for all $n$. Then
+	\begin{align*}
+	\frac{d}{dx}f(x)=f'(x)=nc_nx^{n-1}+(n-1)c_{n-1}x^{n-2}+\cdots+2c_2x+c_1
+	\end{align*}
+\end{theo}
+\begin{proof}[Proof for theorem 1.2]
+	Let $f:\mathbb{R}\rightarrow\mathbb{R}$ be a function with $f(x)=c_nx^n+c_{n-1}x^{n-1}+\cdots++C_2x^2+c_1x+c_0$, where $c_n$ is constant for all $n$. Let $g_n(x)=c_nx^n$. By theorem 1.1, we know that $f'(x)=g'_n(x)+g'_{n-1}(x)+\cdots+g_1(x)+g_0(x)$. Therefore, if we can prove $p(x)=Cx^n\implies p'(x)=nCx^n$, then this directly implies each term of $f(x)$ will have a derivative of equivalent form.
+	Starting with $p$, we must first note that $p(x)=Cx^n$ and $p(x+h)=C(x+h)^n$. Inserting these into the limit definition will give us 
+	\begin{align*}
+	p'(x) = \lim_{h\to0} \frac{p(x+h)-p(x)}{h} = \lim_{h\to0} \frac{C(x+h)^n-Cx^n}{h}.
+	\end{align*}
+	As we can see, we can expand $(x+h)^n$ using the binomial theorem. This gives us
+	\begin{align*}
+	C\lim_{h\to0} \frac{\sum\limits_{k=0}^{n}{{n}\choose{k}}x^{n-k}h^k-x^n}{h}.
+	\end{align*}
+	If we denote $a_k={{n}\choose{k}}=\frac{n!}{k!(n-k)!}$, then expand the summation, we get
+	\begin{align}
+	C\lim_{h\to0}\frac{\sum\limits_{k=0}^{n}a_kx^{n-k}h^k-x^n}{h}=C\lim_{h\to0}\frac{a_0x^{n}+a_1x^{n-1}h+a_2x^{n-2}h^2+a_3x^{n-3}h^3+\dots+a_kx^{n-k}h^k-x^n}{h}.
+	\end{align}
+	If we determine $a_0$ and $a_1$ we get
+	\begin{align}
+	a_0 &=\frac{n!}{0!n!}=1 \\
+	a_1 &=\frac{n!}{1!(n-1)!} =\frac{n!(n)}{(n-1)!(n)}=\frac{n!(n)}{n!}=n.
+	\end{align}
+	Inserting equations (1.2) and (1.3) into (1.1) yields
+	\begin{align*}
+	C\lim_{h\to0}\frac{x^n+nx^{n-1}h+a_2x^{n-2}h^2+a_3x^{n-3}h^3+\dots+a_kx^{n-k}h^k-x^n}{h}.
+	\end{align*}
+	Then, we see that the first and last terms add to zero
+	\begin{align*}
+	C\lim_{h\to0}\frac{nx^{n-1}h+a_2x^{n-2}h^2+a_3x^{n-3}h^3+\dots+a_kx^{n-k}h^k}{h}.
+	\end{align*}
+	From here, we simplify by dividing by $h$ and take the limit as $h \to 0$
+	\begin{align*}
+	C\lim_{h\to0}nx^{n-1}+a_2x^{n-2}h+a_3x^{n-3}h^2+\dots+a_kx^{n-k}h^{k-1}=Cnx^{n-1}.
+	\end{align*}
+	Hence, we have determined that $p'(x)=Cnx^{n-1}$ which directly implies
+	\begin{align*}
+	\frac{d}{dx}f(x)=f'(x)=nc_nx^{n-1}+(n-1)c_{n-1}x^{n-2}+\cdots+2c_2x+c_1
+	\end{align*}
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+\section{Ordinary Linear Homogeneous Differential Equations}
+
+Consider the following linear homogeneous differential equation with constants $A$ and $B$
+\begin{align}
+\ddot{x}+2A\dot{x}+Bx=0.
+\end{align}
+We can similarly write this as
+\begin{align}
+\frac{d^2}{dt^2}x(t)+\frac{d}{dt}2Ax(t)+Bx(t)=0.
+\end{align}
+Next, we can simplify the expression by dividing both sides by $x(t)$. Note that this can only be done when $x(t)\neq 0$. We get
+\begin{align}
+\frac{d^2}{dt^2}+\frac{d}{dt}2A+B=0.
+\end{align}
+Next, notice that the expression is of a quadratic form $af^2+bf+c=0$, with $f=\frac{d}{dt}$, $a=1$, $b=2A$, and $c=B$. Thus, using the quadratic formula we can say
+\begin{align}
+f=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\Longleftrightarrow \frac{d}{dt}=\frac{-2A\pm\sqrt{(2A)^2-4(B)}}{2}.
+\end{align}
+From here, we can simplify the expression to achieve
+\begin{align}
+\frac{d}{dt}=\big(-A\pm\sqrt{A^2-B}\big).
+\end{align}
+Notice that we have a differential on the left side of the expression, yet no function. To fix this, suppose we multiply both sides by $x(t)$, which is our original function of $t$ in our differential equation. Then we get
+\begin{align}
+\frac{d}{dt}x(t)=\big(-A\pm\sqrt{A^2-B}\big)x(t).
+\end{align}
+In a case where we differentiate a function, and get the same function multiplied by a constant, we would have $x(t)=C_1e^{kt}$ as a solution, where $C_1$ and $k$ are constants. Note that taking $\frac{d}{dt}x(t)$ in this case yields $kC_1e^{kt}$, which if matched to our differential yields $k=-A\pm\sqrt{A^2-B}$. Therefore, we can say a solution to our differential equation will be of the form
+\begin{align}
+x(t)=C_1e^{(-A\pm\sqrt{A^2-B})t},
+\end{align}
+or if written more generally as two separate solutions $x_1(t)$ and $x_2(t)$, we have
+\begin{align}
+x_1(t)=C_1e^{(-A+\sqrt{A^2-B})t} \\
+x_2(t)=C_2e^{(-A-\sqrt{A^2-B})t}
+\end{align}
+Note that we must change the constant coefficients in front of each solution to be arbitrary related to each other because both possible cases are a unique solution and each case would be independent of the other. Finally, if we want to verify these solution, we can do so by differentiating twice and plugging our functions into our original differential equation. Doing this (while letting $k=-A+\sqrt{A^2-B}$ and keeping our $x(t)$ in the general form of $Ce^{kt}$), we achieve
+\begin{align}
+x(t)&=Ce^{kt} \\
+\frac{d}{dt}x(t)&=(-A\pm\sqrt{A^2-B})Ce^{kt} \\
+\frac{d^2}{dt^2}x(t)&=(-A\pm\sqrt{A^2-B})^2Ce^{kt} \\
+&= (A^2\mp2A\sqrt{A^2-B}+(A^2-B))Ce^{kt}.
+\end{align}
+Plugging these expressions into our differential equation gives us
+\begin{align}
+(A^2\mp2A\sqrt{A^2-B}+(A^2-B))Ce^{kt}+2A(-A\pm\sqrt{A^2-B})Ce^{kt}+BCe^{kt}=0.
+\end{align}
+As we can see, each term has a common factor of $Ce^{kt}$, so we can divide both sides by $Ce^{kt}$ giving
+\begin{align}
+(A^2\mp2A\sqrt{A^2-B}+(A^2-B))+2A(-A\pm\sqrt{A^2-B})+B=0.
+\end{align}
+This removes all of the $C$ constants which verifies that they can be arbitrary and the function will still work. From here, we can just apply algebraic manipulation to achieve
+\begin{align}
+A^2\mp 2A\sqrt{A^2-B}+A^2-B-2A^2\pm2A\sqrt{A^2-B}+B=0.
+\end{align}
+Which we can clearly see is a true statement by canceling terms. Thus, we can say the following:
+\begin{theo}{them:Theorem 1}
+	Let $A,B$ and $C_n$ be constants and $x(t)$ be a function of $t$. Given any homogeneous ordinary differential equation of the form
+	\begin{align*}
+	\frac{d^2}{dt^2}x(t)+\frac{d}{dt}2Ax(t)+Bx(t)=0,
+	\end{align*}
+	There will exist a solution of the form
+	\begin{align*}
+	x(t)=C_1e^{(-A\pm\sqrt{A^2-B})t}.
+	\end{align*}
+\end{theo}
+If we further the thought of this differential equation having more than one solution, we can easily understand why. First, consider an ordinary linear homogeneous differential equation given in terms of a function of $t$ ($x(t)$) with constants $C_n$ of the form
+\begin{align}
+\frac{d^n}{dt^n}x(t)+\frac{d^{n-1}}{dt^{n-1}}C_{n-1}x(t)+\cdots+\frac{d}{dt}C_1x(t)+C_0x(t)=0.
+\end{align}
+Assume there exists multiple solutions to this equation, say $x_1(t),x_2(t),\dots,x_n(t)$ and let $x_g(t)=x_1(t)+x_2(t)+\cdots+x_n(t)$. Notice that differentiating $x_g(t)$ with respect to $t$ can be written as (By Theorem 1.1)
+\begin{align}
+\frac{d}{dt}x_g(t) &=\frac{d}{dt}\big(x_1(t)+x_2(t)+\cdots+x_n(t) \big) \\
+&=\frac{d}{dt}x_1(t)+\frac{d}{dt}x_2(t)+\cdots+\frac{d}{dt}x_n(t).
+\end{align}
+Similarly, differentiating a second time gives
+\begin{align}
+\frac{d^2}{dt^2}x_g(t) &= \frac{d}{dt}\bigg(\frac{d}{dt}x_1(t)+\frac{d}{dt}x_2(t)+\cdots+\frac{d}{dt}x_n(t)\bigg) \\
+&=\frac{d^2}{dt^2}x_1(t)+\frac{d^2}{dt^2}x_2(t)+\cdots+\frac{d^2}{dt^2}x_n(t).
+\end{align}
+And so forth so that differentiating $n$ times gives us
+\begin{align}
+\frac{d^n}{dt^n}x_g(t)=\frac{d^n}{dt^n}x_1(t)+\frac{d^n}{dt^n}x_2(t)+\cdots+\frac{d^n}{dt^n}x_n(t).
+\end{align}
+Thus, looking at our original differential equation, since we initially claimed that $x_n(t)$ is a solution to our differential equation, we can say
+\begin{align}
+&\frac{d^n}{dt^n}x_n(t)+\frac{d^{n-1}}{dt^{n-1}}C_{n-1}x_n(t)+\cdots+\frac{d}{dt}C_1x_n(t)+C_0x_n(t)=0 \\
+&\frac{d^n}{dt^n}x_{n-1}(t)+\frac{d^{n-1}}{dt^{n-1}}C_{n-1}x_{n-1
+}(t)+\cdots+\frac{d}{dt}C_1x_{n-1}(t)+C_0x_{n-1}(t)=0 \\
+& \vdots \nonumber \\
+&\frac{d^n}{dt^n}x_0(t)+\frac{d^{n-1}}{dt^{n-1}}C_{n-1}x_0(t)+\cdots+\frac{d}{dt}C_1x_n(t)+C_0x_0(t)=0
+\end{align}
+Furthermore, we can add these solutions together and factor the expression to get
+\begin{align}
+\frac{d^n}{dt^n}\big(x_n(t)+\cdots x_0(t)\big)+\cdots+\frac{d}{dx}C_1\big(x_n(t)+\cdots x_0(t)\big)+C_0\big(x_n(t)+\cdots x_0(t)\big)=0,
+\end{align}
+or simply
+\begin{align}
+\frac{d^n}{dt^n}x_g(t)+\frac{d^{n-1}}{dt^{n-1}}C_{n-1}x_g(t)+\cdots+\frac{d}{dt}C_1x_g(t)+C_0x_g(t)=0.
+\end{align}
+Thus, we have showed that a sum of solutions to this form of linear homogeneous differential equation is also a solution to the equation. This means we can say
+
+
+
+
+
+
+
+
+
+\begin{theo}{thm:Theorem3}
+	Let $x(t)$ be a function of $t$ and $C_n$ be constant for all $n$. Given any ordinary homogeneous differential equation of the form
+	\begin{align*}
+	\frac{d^n}{dt^n}x(t)+\frac{d^{n-1}}{dt^{n-1}}C_{n-1}x(t)+\cdots+\frac{d}{dt}C_1x(t)+C_0x(t)=0,
+	\end{align*}
+	if $n$ solutions $x_n(t)$ exist, then another solution can be formed from summing any combination of those solutions and $x_g(t)$ will be the most general solution with
+	\begin{align*}
+	x_g(t)=\sum_{k=1}^{n}x_k(t).
+	\end{align*}
+\end{theo} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Linear Ordinary Differential Equations}
+Now let us consider some differential equations that are not homogeneous and see if we can come up with a similar way of deriving a solution. Again, let $x(t)$ be some function of $t$ with $A$ and $B$ as constants. In addition, let $g(t)$ be a function of $t$ as well. Similar to earlier, consider the following differential equation
+\begin{align}
+\frac{d^2}{dt^2}x(t)+\frac{d}{dt}2Ax(t)+Bx(t)=g(t)
+\end{align}
+In order for this equation to be satisfied, we must first notice that whatever function $g(t)$ is in, the left hand of the expression must also be that form. 
+
+
+
+
+
+
+
+
+\subsection{n-Degree Polynomial Particular Functions}
+For example, let's consider $g(t)=at^2+bt+c$, where $a,b$, and $c$ are constants. We can see then that if the equation is satisfied, we will have $t^2$, $t$ and constant terms on the left side after differentiating $x(t)$ the appropriate number of times and plugging it in. Let us work through this example completely. Consider
+\begin{align}
+\frac{d^2}{dt^2}x(t)+\frac{d}{dt}2Ax(t)+Bx(t)=at^2+bt+c.
+\end{align}
+We can start by considering theorem 1.2 which tells us that the first derivative of $g(t)$ will no longer have any $t^2$ terms, and the second derivative will no longer have any $t$ or $t^2$ terms. Therefore, by a careful observation, we can see that if we let $x(t)$ be a second degree polynomial, then $\frac{d^2}{dx^2}x(t)$ will be a constant polynomial and $\frac{d}{dx}x(t)$ will be a polynomial of degree 1. This allows us to see that the degree of the left side of this expression (given that $x(t)$ is a polynomial of degree $2$) will be of degree $2$ as well. Hence, by choosing $x(t)=C_1t^2+C_2t+C_3$, we will end up getting a second degree polynomial equal to a second degree polynomial, so choosing appropriate constants will allow this to be a solution. Let's demonstrate and check our answer by choosing
+\begin{align}
+x(t)=C_1t^2+C_2t+C_3.
+\end{align}
+From here, we have the appropriate derivatives as
+\begin{align}
+\frac{d}{dx}x(t) &=2C_1t+C_2 \\
+\frac{d^2}{dx^2}x(t) &=2C_1.
+\end{align}
+Then, substituting this into our differential equation yields
+\begin{align}
+2C_1+2A(2C_1t+C_2)+B(C_1t^2+C_2t+C_3)=at^2+bt+c.
+\end{align}
+Consolidating terms then gives
+\begin{align}
+(BC_1)t^2+(BC_2+4AC_1)t+(2C_1+2AC_2+BC_3)=at^2+bt+c.
+\end{align}
+From here Since these must be equal, the coefficients in front of the $t^2$ terms must be equal, and so forth. This then gives us the following simple set of equations to solve:
+\begin{align}
+BC_1 &=a \\
+BC_2+4AC_1 &= b \\
+2C_1+2AC_2+BC_3 &= c.
+\end{align}
+Solving for $C_1, C_2, and C_3$ then gives
+\begin{align}
+C_1 &=\frac{a}{B} \\
+C_2 &=\frac{b}{B}-\frac{4Aa}{B^2} = \frac{bB-4Aa}{B^2} \\
+C_3 &= \frac{8A^2a}{B^3}-\frac{2a}{B^2}-\frac{2Ab}{B^2}+\frac{c}{B}=\frac{8aA^2-2aB-2AbB+B^2c}{B^3}.
+\end{align}
+Therefore, a solution that would work for our differential is
+\begin{align}
+x(t)=\frac{a}{B}t^2+\frac{bB-4Aa}{B^2}t+\frac{8aA^2-2aB-2AbB+B^2c}{B^3}.
+\end{align}
+It is simple enough to verify that this is indeed a solution. To begin, we can take the derivative twice, and plug the function in. Taking the first and second derivatives give us
+\begin{align}
+\frac{d}{dx}x(t)&= \frac{2a}{B}t+\frac{bB-4Aa}{B^2} \\
+\frac{d^2}{dx^2}x(t) &= \frac{2a}{B}.
+\end{align}
+Then, plugging these into our equation gives
+\begin{align}
+\frac{2a}{B}+2A\bigg( \frac{2a}{B}t+\frac{bB-4Aa}{B^2} \bigg) +B\bigg(\frac{a}{B}t^2+\frac{bB-4Aa}{B^2}t+\frac{8aA^2-2aB-2AbB+B^2c}{B^3} \bigg),
+\end{align}
+which should simplify to $at^2+bt+c$. Foiling terms and canceling like terms gives
+\begin{align}
+\frac{Ba}{B}t^2+\frac{bB^2}{B^2}t+\frac{B^3c}{B^3} \equiv at^2+bt+c.
+\end{align}
+Thus, we have verified that our solution is valid. Now by the same principles used in this above example, we can generalize the form of our solution. Let $C_n$ and $a_\ell $ be constant for all $n, \ell $. Consider any differential equation of the form
+\begin{align}
+\frac{d^n}{dt^n}x(t)+&\frac{d^{n-1}}{dt^{n-1}}C_{n-1}x(t)+\cdots+\frac{d}{dt}C_1x(t)+C_0x(t)=g(t) \\
+& g(t)=a_\ell t^\ell +a_{\ell -1}t^{\ell -1}+\cdots+a_1t+a_0.
+\end{align} 
+By the same reasoning as before, the left side of the equation will equate to a polynomial of degree less than or equal to $\ell $. This allows us to let $x(t)$ equal an arbitrary polynomial of degree $\ell $ similarly to above, and then we would be able to solve for the coefficients in order to make the equation a solution. Thus, let $b_\ell $ be constant for all $\ell $ and
+\begin{align}
+x(t)=b_\ell t^\ell +b_{\ell -1}t^{\ell -1}+\cdots+b_4t^4+b_3t^3+b_2t^2+b_1t+b_0.
+\end{align}
+We would then solve for our coefficients $b_\ell $ in the same manner as above so they are in terms of $a_\ell $ and $C_n$, for some $n, \ell $. Let's look at what happens when we do this.  First, let's differentiate $x(t)$ an appropriate number of times. This gives
+\begin{align}
+\frac{d}{dt}x(t)&=\ell b_\ell t^{\ell -1}+(\ell -1)b_{\ell -1}t^{\ell -2}+\cdots+4b_4t^3+3b_3t^2+2b_2t+b_1 \\
+\frac{d^2}{dt^2}x(t)&=\ell (\ell -1)b_\ell t^{\ell -2}+(\ell -1)(\ell -2)b_{\ell -1}t^{\ell -3}+\cdots+12b_4t^2+6b_3t+2b_2 \\
+\frac{d^3}{dt^3}x(t)&=\ell (\ell -1)(\ell -2)b_\ell t^{\ell -3}+(\ell -1)(\ell -2)(\ell -3)b_{\ell -1}t^{\ell -4}+\cdots+24b_4t+6b_3 \\
+\vdots \nonumber \\
+\frac{d^\ell }{dt^\ell }x(t)&=\ell !b_\ell .
+\end{align}
+As we can see, a pattern begins to emerge that allows us to write the $m^{\textrm{th}}$ derivative as
+\begin{align}
+\frac{d^m}{dt^m}x(t)=\frac{\ell !}{(\ell -m)!}b_\ell t^{\ell -m}+\frac{(\ell -1)!}{(\ell -m-1)!}b_{\ell -1}t^{\ell -m-1}+\cdots+(m+1)!b_{m+1}t+m!b_m.
+\end{align}
+Since $\ell $ is fixed as the degree of $g(t)$, we can write this $m^{\textrm{th}}$ derivative expression as a sum of terms from above. This then gives us
+\begin{align}
+\frac{d^m}{dx^m}x(t)=\sum_{k=0}^{\ell -m}\frac{(\ell -k)!}{(\ell -m-k)!}b_{\ell -k}t^{\ell -m-k}.
+\end{align}
+Thus, to formalize this into something useful, we can state it as a theorem.
+\begin{theo}{thm:Theorem 3}
+	Let $f:\mathbb{R}\rightarrow\mathbb{R}$ such that $f(t)\in\mathbb{P}_n$ of the form $f(t)=b_nt^n+b_{n-1}t^{n-1}+\cdots++b_1t+b_0$. Then the $m^{\textrm{th}}$ derivative of $f(t)$ is given by
+	\begin{align*}
+	\frac{d^m}{dx^m}f(t)=f^{(m)}(t)=\sum_{k=0}^{n-m}\frac{(n-k)!}{(n-m-k)!}b_{n-k}t^{n-m-k}.
+	\end{align*}
+\end{theo}
+What we have done above is find a solution to the differential equation that correlates to an expression on the right hand side of our equation. This solution is called a particular solution and is generally denoted with a subscript of $p$, such as $x_p(t)$. We have also shown that it is fairly simple to determine a particular solution when our differential equation equates to a polynomial. In some cases, the particular solution is not as simple to compute. Since $g(t)$ is a generic function of $t$, we know it can be in the form of any possible function. As it is seemingly impossible to determine the infinite possible particular solutions for all of these differential equations, we will try to generalize a few and make some rules for combining solutions. 
+
+
+
+
+
+
+
+
+\subsection{Simple Exponential Particular Functions}
+An even easier case for particular solutions when we have exponential functions. Consider the case where $g(t)=ae^{kt}$, with $a$ and $k$ being constants. Then we have may have some differential of a form similar to
+\begin{align}
+\frac{d^2}{dt^2}x(t)+\frac{d}{dt}2Ax(t)+Bx(t)=ae^{kt}.
+\end{align}
+When given a homogeneous differential equation, it is sometimes possible to derive a solution in a completely analytical way. In some cases for particular solutions especially, it is easiest to make a keen observation, start with a possible solution, and verify from there. The most important observation here is that when an exponential has a derivative of the same form as the original exponential only with a different constant out front. Notice for example that $\frac{d}{dt}g(t)=ake^{kt}$ and $\frac{d^2}{dt^2}g(t)=ak^2e^{kt}$. Thus, if $x(t)$ were to also be an exponential of the form $be^{kt}$ (with $b$ being a constant), we would have all terms on the left side of our expression in the form of a constant multiplied by $e^{kt}$. Therefore, let us choose $x(t)=be^{kt}$ and check to see if it could be a solution. First, we have 
+\begin{align}
+\frac{d}{dt}x(t)&=bke^{kt} \\
+\frac{d^2}{dt^2}x(t)&=bk^2e^{kt}
+\end{align}
+Then substituting this into our differential yields
+\begin{align}
+bk^2e^{kt}+2ACke^{kt}+Bbke^{kt}=ae^{kt}.
+\end{align}
+From here, we can divide out the $e^{kt}$, factor and solve for our constant as follows
+\begin{align}
+b(k^2+2Ak+B)=a \implies b=\frac{a}{k^2+2Ak+B}.
+\end{align}
+Hence, we have that the particular solution to our differential equation is
+\begin{align}
+x_p(t)=\frac{ae^{kt}}{k^2+2Ak+B}.
+\end{align}
+Checking this solution is trivial and can be done simply by taking the first and second derivatives and plugging into our differential equation. The differential equation should then evaluate as true. As we can see, exponential particular solutions are very simple, and if we were to have something such as $g(t)=a_1e^{kt}+a_2e^{kt}$, then we would solve the particular in exactly the same manner. This is because we would be able to factor and say $g(t)=(a_1+a_2)e^{kt}$, with $a_1+a_2$ being our constant in $g(t)$. Let us consider a more general case however. If for example we have $g(t)=a_\ell e^{k_\ell t}+a_{\ell-1}e^{k_{\ell-1}t}+\cdots+a_1e^{k_1t}+a_0e^{k_0t}$, where $a_\ell$ and $k_\ell$ are constant, we would use the same methods, but a combination of multiple solutions. As theorem 1.1 states, we can see that $g(t)$ is a combination of functions $h_i(t)=a_i e^{k_i t}$, and thus, the derivatives can be taken separately then added. A good way to represent this is
+\begin{align}
+g(t)&=\sum_{i=0}^{\ell}h_i(t)=\sum_{i=0}^{\ell}a_i e^{k_i t}
+\end{align}
+Consider as well the following differential equation again:
+\begin{align}
+\frac{d^n}{dt^n}x(t)+&\frac{d^{n-1}}{dt^{n-1}}C_{n-1}x(t)+\cdots+\frac{d}{dt}C_1x(t)+C_0x(t)=g(t).
+\end{align} 
+Similarly, this can be written as
+\begin{align}
+\frac{d^n}{dt^n}x(t)+&\frac{d^{n-1}}{dt^{n-1}}C_{n-1}x(t)+\cdots+\frac{d}{dt}C_1x(t)+C_0x(t)=\sum_{i=0}^{\ell}a_i e^{k_i t}. 
+\end{align}
+Let $g_\ell(t)$ denote the corresponding $b_\ell e^{k_\ell t}$ term. We know by the above example that if we were to choose $x_n(t)=b_ne^{k_nt}$, it would be a solution for $g_\ell(t)=a_\ell e^{k_\ell t}$. Similarly, if we were to choose $x(t)=x_0(t)+x_1(t)=b_0e^{k_1t}+b_0e^{k_1t}$, we can show that it is a solution to $g(t)=g_0(t)+g_1(t)=a_0e^{k_0t}+a_1e^{k_1t}$ using theorem 1.1. First we say
+\begin{align}
+\frac{d^n}{dt^n}\big(x_0(t)+x_1(t) \big)+\cdots+\frac{d}{dt}C_1\big(x_0(t)+x_1(t) \big)+C_0\big(x_0(t)+x_1(t) \big)=g_0(t)+g_1(t).
+\end{align}
+This then becomes
+\begin{align}
+\frac{d^n}{dt^n}x_0(t)+\frac{d^n}{dt^n}x_1(t)+\cdots+\frac{d}{dt}C_1x_0(t)+\frac{d}{dt}C_1x_1(t) +C_0x_0(t)+C_0x_1(t)=g_0(t)+g_1(t).
+\end{align}
+Then by grouping these we have
+\begin{align*}
+\bigg(\frac{d^n}{dt^n}x_0(t)+\cdots+\frac{d}{dt}C_1x_0(t) +C_0x_0(t)\bigg) +\bigg(\frac{d^n}{dt^n}x_1(t)+\cdots+\frac{d}{dt}C_1x_1(t)+C_0x_1(t) \bigg)=g_0(t)+g_1(t).
+\end{align*}
+As we can see, this is a solution since $x_0(t)$ is a solution to
+\begin{align}
+\frac{d^n}{dt^n}x_0(t)+\cdots+\frac{d}{dt}C_1x_0(t) +C_0x_0(t)=g_0(t)
+\end{align}
+and $x_1(t)$ is a solution to
+\begin{align}
+\frac{d^n}{dt^n}x_1(t)+\cdots+\frac{d}{dt}C_1x_1(t)+C_0x_1(t) =g_1(t).
+\end{align}
+Similarly, this method will work for any number for terms in $g(t)$. Therefore, if we had
+\begin{align}
+g(t)=\sum_{i=0}^{\ell}a_i e^{k_i t},
+\end{align}
+We will have a solution of the form
+\begin{align}
+x(t)=\sum_{i=0}^{\ell}b_i e^{k_i t}.
+\end{align}
+We can then verify this by plugging our above equations into the differential as follows:
+\begin{align}
+\frac{d^n}{dt^n}\sum_{i=0}^{\ell}b_i e^{k_i t}+&\frac{d^{n-1}}{dt^{n-1}}C_{n-1}\sum_{i=0}^{\ell}b_i e^{k_i t}+\cdots+\frac{d}{dt}C_1\sum_{i=0}^{\ell}b_i e^{k_i t}x(t)+C_0\sum_{i=0}^{\ell}b_i e^{k_i t}=\sum_{i=0}^{\ell}a_i e^{k_i t}.
+\end{align}
+Similar to theorem 4.1, we need a simple way of determining the $m^\textrm{th}$ derivative for $x(t)$. We can first express $x(t)$ as a sum of all of it's components
+\begin{align}
+x(t)=b_\ell e^{k_\ell t}+b_{\ell-1}e^{k_{\ell-1}t}+\cdots+b_1e^{k_1t}+b_0e^{k_0t}.
+\end{align}
+From here, it is simple to see that the derivatives follow as
+\begin{align}
+\frac{d}{dx}x(t)&=b_\ell k_\ell e^{k_\ell t}+b_{\ell-1}k_{\ell-1}e^{k_{\ell-1}t}+\cdots+b_1k_1e^{k_1t}+b_0k_0e^{k_0t} \\
+\frac{d^2}{dx^2}x(t)&=b_\ell k_\ell^2 e^{k_\ell t}+b_{\ell-1}k_{\ell-1}^2e^{k_{\ell-1}t}+\cdots+b_1k_1^2e^{k_1t}+b_0k_0^2e^{k_0t} \\
+&\vdots \\
+\frac{d^n}{dx^n}x(t)&=b_\ell k_\ell^n e^{k_\ell t}+b_{\ell-1}k_{\ell-1}^ne^{k_{\ell-1}t}+\cdots+b_1k_1^ne^{k_1t}+b_0k_0^ne^{k_0t}. 
+\end{align}
+From here we can clearly see that
+\begin{align}
+\frac{d^n}{dx^n}x(t)&=\sum_{i=0}^{\ell}b_{\ell-i} k_{\ell-i}^n e^{k_{\ell-i} t}.
+\end{align}
+This can then be generalized for use as
+\begin{theo}{thm:Theorem4}
+	Let $f:\mathbb{R}\rightarrow\mathbb{R}$ be a continuous function such that $f(t)=b_n e^{k_n t}+b_{n-a}e^{k_{n-1}t}+\cdots+b_1e^{k_1t}+b_0e^{k_0t}$, with $b_n$ and $k_n$ as constants. The $m^\textrm{th}$ derivative is then given by
+	\begin{align*}
+	\frac{d^m}{dx^m}f(t)=\frac{d^m}{dx^m}\sum_{i=0}^{n}b_ie^{k_it}=\sum_{i=0}^{n}b_{n-i} k_{n-i}^m e^{k_{n-i} t}.
+	\end{align*}
+\end{theo}
+From here we can verify our differential equation by inserting the derivatives into our expression. Thus, equation (3.43) becomes 
+\begin{align}
+\sum_{i=0}^{\ell}b_{\ell-i} k_{\ell-i}^m e^{k_{\ell-i} t}+C_{n-1}\sum_{i=0}^{\ell}b_{\ell-i} k_{\ell-i}^{m-1} e^{k_{\ell-i} t}+\cdots+C_0\sum_{i=0}^{\ell}b_{\ell-i} e^{k_{\ell-i} t}=\sum_{i=0}^{\ell}a_i e^{k_i t}.
+\end{align}
+Starting with the left hand side of the expression (let us denote it by $F(t)$), this can be shown to be equivalent to the right as follows:
+\begin{align}
+F(t)&=\sum_{i=0}^{\ell}\bigg[b_{\ell-i} k_{\ell-i}^m e^{k_{\ell-i} t}+C_{n-1}b_{\ell-i} k_{\ell-i}^{m-1} e^{k_{\ell-i} t}+\cdots+C_0b_{\ell-i} e^{k_{\ell-i} t} \bigg] \\
+&=\sum_{i=0}^{\ell}\bigg[b_{\ell-i}e^{k_{\ell-i} t}\big( k_{\ell-i}^m +C_{n-1} k_{\ell-i}^{m-1} +\cdots+C_0\big) \bigg].
+\end{align}
+Since $b_{\ell-i}(k_{\ell-i}^m +C_{n-1} k_{\ell-i}^{m-1} +\cdots+C_0)$ is constant for all values of $i$; we can denote it by $C_\ell(i)$, since it is dependent on the value of $i$. We can then express $F(t)$ as
+\begin{align}
+F(t)\equiv \sum_{i=0}^{\ell}C_\ell(i)e^{k_{\ell-i}t}.
+\end{align}
+If we write out the terms of this sum, we get
+\begin{align}
+F(t)&\equiv C_\ell(0)e^{k_\ell t}+C_\ell(1)e^{k_{\ell-1}}+\cdots+C_\ell(\ell-1)e^{k_1t}+C_\ell(\ell)e^{k_0t} \\&\equiv C_\ell(\ell)e^{k_0t}+C_\ell(\ell-1)e^{k_1t}+\cdots+C_\ell(1)e^{k_{\ell-1}}+C_\ell(0)e^{k_\ell t} \\
+&\equiv \sum_{i=0}^{\ell}C_\ell(\ell-i)e^{k_it}.
+\end{align}
+Now, since $C_\ell(\ell-i)$ is still an arbitrary constant for all $i$, we can let $C_\ell(\ell-i)=a_i$ and then we see
+\begin{align}
+F(t)\equiv \sum_{i=0}^{\ell}a_i e^{k_i t}
+\end{align}
+which verifies that $x(t)$ (equation 3.42) is a solution to our differential equation. From here, we can also solve for our constants in $x(t)$ in terms of the given constants $C_n$ and $a_n$. First, we have (from equation 3.50)
+\begin{align}
+\sum_{i=0}^{\ell}b_{\ell-i}\big( k_{\ell-i}^m +C_{n-1} k_{\ell-i}^{m-1} +\cdots+C_0\big)e^{k_{\ell-i} t}=\sum_{i=0}^{\ell}a_i e^{k_i t}.
+\end{align}
+Writing the terms of this gives (let "$\rightsquigarrow$" denote "$+\cdots+$" to save some space)
+\begin{align}
+b_{\ell}\big( k_{\ell}^m\rightsquigarrow C_0\big)e^{k_{\ell} t}+b_{\ell-1}\big( k_{\ell-1}^m \rightsquigarrow C_0\big)e^{k_{\ell-1} t}\rightsquigarrow b_{1}\big( k_{1}^m \rightsquigarrow C_0\big)e^{k_{1} t}+b_{0}\big( k_{0}^m \rightsquigarrow C_0\big)e^{k_{0} t} = a_0e^{k_0t}\rightsquigarrow a_\ell e^{k_\ell t}.
+\end{align}
+From this, we can then match up the corresponding $e^{k_nt}$ terms on both sides to solve for our constants. This gives us
+\begin{align}
+b_{\ell}\big( k_{\ell}^m\rightsquigarrow C_0\big) &= a_\ell \\
+b_{\ell-1}\big( k_{\ell-1}^m \rightsquigarrow C_0\big) &= a_{\ell-1} \\
+&\vdots \\
+b_{0}\big( k_{0}^m \rightsquigarrow C_0\big) &= a_0.
+\end{align}
+Thus, we notice that for all values of $i$,
+\begin{align}
+b_{i}\big( k_{i}^m \rightsquigarrow C_0\big) = a_i \Longleftrightarrow b_{i}=\frac{a_i}{k_{i}^m \rightsquigarrow C_0} .
+\end{align}
+Therefore, we can express our solution to our differential as
+\begin{align}
+x(t)=\sum_{i=0}^{\ell}\frac{a_ie^{k_it}}{k_{i}^m \rightsquigarrow C_0} = \sum_{i=0}^{\ell}\frac{a_ie^{k_it}}{k_{\ell-i}^m +C_{n-1} k_{\ell-i}^{m-1} +\cdots+C_0} 
+\end{align}
+
+
+
+
+
+
+
+
+\begin{theo}{thm:theorem5}
+Let $f:\mathbb{R}\rightarrow\mathbb{R}$ be a continuous and differential function and let $C_n$, $a_n$, $b_n$ and $k_n$ be constant for all $n$. Given a differential equation of the form
+\begin{align*}
+\frac{d^n}{dt^n}f(t)+&\frac{d^{n-1}}{dt^{n-1}}C_{n-1}f(t)+\cdots+\frac{d}{dt}C_1f(t)+C_0f(t)=\sum_{i=0}^{\ell}a_i e^{k_i t},
+\end{align*}
+A solution of the following form exists:
+\begin{align*}
+f(t)=\sum_{i=0}^{\ell}b_i e^{k_i t}=\sum_{i=0}^{\ell}\frac{a_ie^{k_it}}{k_{\ell-i}^n +C_{n-1} k_{\ell-i}^{n-1} +\cdots+C_0} 
+\end{align*}
+\end{theo}

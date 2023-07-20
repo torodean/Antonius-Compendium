@@ -32,6 +32,8 @@
 \makeatother
 
 
+
+
 %%% This defines the solution environment for you to write your solutions
 \newenvironment{soln}
 {\let\oldqedsymbol=\qedsymbol
@@ -44,6 +46,14 @@
 {\let\oldqedsymbol=\qedsymbol
 	\renewcommand{\qedsymbol}{$ $}
 	\begin{proof}[\bfseries\upshape \color{red}Note]\color{red}}
+	{\end{proof}
+	\renewcommand{\qedsymbol}{\oldqedsymbol}}
+	
+
+\newenvironment{Deletion}
+{\let\oldqedsymbol=\qedsymbol
+	\renewcommand{\qedsymbol}{$ $}
+	\begin{proof}[\bfseries\upshape \color{red}Deletion]\color{red}}
 	{\end{proof}
 	\renewcommand{\qedsymbol}{\oldqedsymbol}}
 
