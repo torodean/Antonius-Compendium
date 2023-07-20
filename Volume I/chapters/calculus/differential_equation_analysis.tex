@@ -1,28 +1,28 @@
 
 \section{Definitions and General Differential Equations}
- The derivative of a function represents an infinitesimal change in the function with respect to one of its variables (Definition from http://mathworld.wolfram.com). 
-\begin{defn}{1}
+ The derivative of a function represents an infinitesimal change in the function with respect to one of its variables \cite{bib:Wolfram}. 
+\begin{defn}{derivative_defn} 
 	Let $f:\mathbb{R}\rightarrow\mathbb{R}$. Then the derivative of $f$ with respect to a variable $x$ is given by
 	\begin{align*}
 	\frac{d}{dx}f(x)\equiv f'(x) \equiv\lim\limits_{\Delta x \rightarrow 0}\frac{f(x+\Delta x)-f(x)}{\Delta x} \equiv \lim\limits_{\Delta x \rightarrow 0}\frac{f(x+\Delta x)-f(x-\Delta x)}{2\Delta x}
 	\end{align*}
 \end{defn}
-Similarly, partial derivatives are defined as derivatives of a function of multiple variables when all but the variable of interest are held fixed during the differentiation (Definition from http://mathworld.wolfram.com). 
-\begin{defn}{1}
+Similarly, partial derivatives are defined as derivatives of a function of multiple variables when all but the variable of interest are held fixed during the differentiation \cite{bib:Wolfram}. 
+\begin{defn}{partial_derivative_defn}
 	Let $f:\mathbb{R}^z\rightarrow\mathbb{R}$, with $z \in \mathbb{N}$. Then the partial derivative of $f$ with respect to a variable $x_m$ is given by
 	\begin{align*}
 	\frac{\partial}{\partial x_m}f(x_1,\dots,x_n) \equiv \lim\limits_{\Delta x \rightarrow 0}\frac{f(x_1,\dots,x_m+\Delta x, \dots,x_n)-f(x_1,\dots,x_m,\dots,x_n)}{\Delta x}
 	\end{align*}
 \end{defn}
-A few rules from definition 0.1 can be defined.
-\begin{theo}{thm:Theroem1}
+A few rules from definition \ref{derivative_defn} can be defined.
+\begin{theo}{summing_derivative}
 	Let $g:\mathbb{R}\rightarrow\mathbb{R}$, and $h:\mathbb{R}\rightarrow\mathbb{R}$ be continuous functions with $f(x)=g(x)+h(x)$. Then the derivative of $f$ with respect to the variable $x$ is 
 	\begin{align*}
 	\frac{d}{dx}f(x)=\frac{d}{dx}\big(g(x)+h(x)\big) = \frac{d}{dx}g(x)+\frac{d}{dx}g(x).
 	\end{align*} 
 \end{theo}
 
-\begin{proof}[Proof for theorem 1.1]
+\begin{proof}[Proof for theorem \ref{summing_derivative}]
 	Let $g:\mathbb{R}\rightarrow\mathbb{R}$, and $h:\mathbb{R}\rightarrow\mathbb{R}$ be continuous functions with $f(x)=g(x)+h(x)$. Then, by the definition of a derivative, we have
 	\begin{align*}
 	\frac{d}{dx}f(x)&=\lim\limits_{\Delta x \rightarrow 0}\frac{f(x+\Delta x)-f(x)}{\Delta x} \\
@@ -39,13 +39,13 @@ A few rules from definition 0.1 can be defined.
 \end{proof}
 If we want to take the derivative of a function
 Given a general polynomial function, we can give the following differentiation rule.
-\begin{theo}{thm:Theorem2}
+\begin{theo}{deriving_ordinary_polynomial}
 	Let $f:\mathbb{R}\rightarrow\mathbb{R}$ be a function with $f(x)=c_nx^n+c_{n-1}x^{n-1}+\cdots++C_2x^2+c_1x+c_0$, where $c_n$ is constant for all $n$. Then
 	\begin{align*}
 	\frac{d}{dx}f(x)=f'(x)=nc_nx^{n-1}+(n-1)c_{n-1}x^{n-2}+\cdots+2c_2x+c_1
 	\end{align*}
 \end{theo}
-\begin{proof}[Proof for theorem 1.2]
+\begin{proof}[Proof for theorem \ref{deriving_ordinary_polynomial}]
 	Let $f:\mathbb{R}\rightarrow\mathbb{R}$ be a function with $f(x)=c_nx^n+c_{n-1}x^{n-1}+\cdots++C_2x^2+c_1x+c_0$, where $c_n$ is constant for all $n$. Let $g_n(x)=c_nx^n$. By theorem 1.1, we know that $f'(x)=g'_n(x)+g'_{n-1}(x)+\cdots+g_1(x)+g_0(x)$. Therefore, if we can prove $p(x)=Cx^n\implies p'(x)=nCx^n$, then this directly implies each term of $f(x)$ will have a derivative of equivalent form.
 	Starting with $p$, we must first note that $p(x)=Cx^n$ and $p(x+h)=C(x+h)^n$. Inserting these into the limit definition will give us 
 	\begin{align*}
@@ -81,6 +81,178 @@ Given a general polynomial function, we can give the following differentiation r
 	\frac{d}{dx}f(x)=f'(x)=nc_nx^{n-1}+(n-1)c_{n-1}x^{n-2}+\cdots+2c_2x+c_1
 	\end{align*}
 \end{proof}
+
+Consider the basic product rule of a differential equation. The product rule is given by
+\begin{theo}{thm:productrule}
+	Let $f:\mathbb{R}\rightarrow\mathbb{R}$ such that $f(x)$ and $g(x)$ are continuous functions of the variable $x$. We can then say
+	\begin{align*}
+		\frac{d}{dx}f(x)g(x)=g(x)\frac{d}{dx}f(x)+f(x)\frac{d}{dx}g(x)=f'(x)g(x)+f(x)g'(x)
+	\end{align*}
+\end{theo}
+\begin{proof}[Proof for theorem \ref{thm:productrule}]
+	Let $f:\mathbb{R}\rightarrow\mathbb{R}$ such that $f(x)$ and $g(x)$ are continuous functions of the variable $x$. By the definition of the derivative, we have
+	\begin{align*}
+		\frac{d}{dx}f(x)g(x)&=\lim\limits_{\Delta x \rightarrow 0}\frac{f(x+\Delta x)g(x+\Delta x)-f(x)g(x)}{\Delta x} \\
+		&=\lim\limits_{\Delta x \rightarrow 0}\frac{f(x+\Delta x)g(x+\Delta x)-f(x+\Delta x)g(x)+f(x+\Delta x)g(x)-f(x)g(x)}{\Delta x} \\
+		&=\lim\limits_{\Delta x \rightarrow 0}\frac{f(x+\Delta x)\big(g(x+\Delta x)-g(x)\big)+g(x)\big(f(x+\Delta x)-f(x)\big)}{\Delta x} \\
+		&=\lim\limits_{\Delta x \rightarrow 0}f(x+\Delta x)\frac{g(x+\Delta x)-g(x)}{\Delta x}+\lim\limits_{\Delta x \rightarrow 0}g(x)\frac{f(x+\Delta x)-f(x)}{\Delta x} \\
+		&=f(x)\frac{d}{dx}g(x)+g(x)\frac{d}{dx}f(x) \\&=f'(x)g(x)+f(x)g'(x).
+	\end{align*}
+\end{proof}
+It is thus clear that given two continuous functions of $x$, say $f(x)$ and $g(x)$, the derivative follows as
+\begin{align}
+	\frac{d}{dx}f(x)g(x)&=g(x)\frac{d}{dx}f(x)+f(x)\frac{d}{dx}g(x) \\
+	&=f(x)g'(x)+g(x)f'(x).
+\end{align}
+Following this, the second derivative is given by
+\begin{align}
+	\frac{d^2}{dx^2}f(x)g(x)&=\frac{d}{dx}\bigg(g(x)\frac{d}{dx}f(x)\bigg)+\frac{d}{dx}\bigg(f(x)\frac{d}{dx}g(x)\bigg) \\
+	&=\frac{d}{dx}f(x)\frac{d}{dx}g(x)+g(x)\frac{d^2}{dx^2}f(x)+f(x)\frac{d^2}{dx^2}g(x)+\frac{d}{dx}f(x)\frac{d}{dx}g(x) \\
+	&=2\frac{d}{dx}f(x)\frac{d}{dx}g(x)+g(x)\frac{d^2}{dx^2}f(x)+f(x)\frac{d^2}{dx^2}g(x) \\
+	&= f(x)g''(x)+2f'(x)g'(x)+f''(x)g(x).
+\end{align}
+Similarly, the third derivative is given by
+\begin{align}
+	\frac{d^3}{dx^3}f(x)g(x)&=\frac{d}{dx}\bigg(2\frac{d}{dx}f(x)\frac{d}{dx}g(x)+g(x)\frac{d^2}{dx^2}f(x)+f(x)\frac{d^2}{dx^2}g(x)\bigg) \\
+	&=\frac{d}{dx}\bigg(2\frac{d}{dx}f(x)\frac{d}{dx}g(x)\bigg)+\frac{d}{dx}\bigg(g(x)\frac{d^2}{dx^2}f(x)\bigg)+\frac{d}{dx}\bigg(f(x)\frac{d^2}{dx^2}g(x)\bigg).
+\end{align}
+This derivative can be done in parts to help keep track of what is being done. Let us denote each term in the above sum as $h_1(x)$, $h_2(x)$ and $h_3(x)$ respectively. Then we have
+\begin{align}
+	h_1(x)&= \frac{d}{dx}\bigg(2\frac{d}{dx}f(x)\frac{d}{dx}g(x)\bigg) \\
+	h_2(x)&=\frac{d}{dx}\bigg(g(x)\frac{d^2}{dx^2}f(x)\bigg) \\
+	h_3(x)&=\frac{d}{dx}\bigg(f(x)\frac{d^2}{dx^2}g(x)\bigg).
+\end{align}
+Simplifying these expressions then gives
+\begin{align}
+	h_1(x)&= \bigg(2\frac{d^2}{dx^2}f(x)\frac{d}{dx}g(x)+2\frac{d}{dx}f(x)\frac{d^2}{dx^2}g(x)\bigg) \\
+	h_2(x)&=\bigg(\frac{d}{dx}g(x)\frac{d^2}{dx^2}f(x)+g(x)\frac{d^3}{dx^3}f(x)\bigg) \\
+	h_3(x)&=\bigg(\frac{d}{dx}f(x)\frac{d^2}{dx^2}g(x)+f(x)\frac{d^3}{dx^3}g(x)\bigg).
+\end{align}
+Then, adding these three expressions together gives us
+\begin{align}
+	\frac{d^3}{dx^3}f(x)g(x)&=f(x)\frac{d^3}{dx^3}g(x)+3\frac{d}{dx}f(x)\frac{d^2}{dx^2}g(x)+3\frac{d^2}{dx^2}f(x)\frac{d}{dx}g(x)+g(x)\frac{d^3}{dx^3}f(x)\\
+	&=f(x)g'''(x)+3f'(x)g''(x)+3f''(x)g'(x)+f'''(x)g(x).
+\end{align}
+Using the product rule, a nice pattern seems to be emerging as we continually apply it to the same function. From equation (2), (6) and (16), we can see that it appears to be a similar pattern as when applying the binomial expansion theorem. As a reminder, the binomial expansion theorem is
+\begin{align}
+	(x+y)^n&=\sum_{k=0}^{n}{{n}\choose{k}}x^{n-k}y^k \\
+	{{n}\choose{k}}&= \frac{n!}{k!(n-k)!}.
+\end{align}
+If we observe the first three terms of this (with $n=1,2,3$), we have
+\begin{align}
+	(x+y)^1&=x+y\\
+	(x+y)^2&= x^2+2xy+y^2 \\
+	(x+y)^3 &= x^3+3x^2y+3xy^2+y^3.
+\end{align}
+Comparing this to the three equations in questions allows us to notice interesting similarities. If we expand this to $n$ we have
+\begin{align}
+	(x+y)^n=x^ny^0+{{n}\choose{1}}x^{n-1}y^1+\cdots+{{n}\choose{n-1}}xy^{k-1}+x^0y^k.
+\end{align}
+Now, let $x=\frac{d}{dx}g(x)$ and $y=\frac{d}{dx}f(x)$. If we define the following conditions
+\begin{align}
+	\bigg(\frac{d}{dx}h(x)\bigg)^n&:=\frac{d^n}{dx^n}h(x) \\
+	\frac{d}{dx}g(x)+\frac{d}{dx}f(x) &:= \frac{d}{dx}g(x)f(x),
+\end{align}
+then inserting $x$ and $y$ into (21) gives
+\begin{align}
+	\bigg[\frac{d}{dx}g(x)+\frac{d}{dx}f(x) \bigg]^n=\bigg(\frac{d}{dx}g(x)\bigg)^n\bigg(\frac{d}{dx}f(x)\bigg)^0+{{n}\choose{1}}\bigg(\frac{d}{dx}g(x)\bigg)^{n-1}\bigg(\frac{d}{dx}f(x)\bigg)^1+\cdots \\ \cdots+{{n}\choose{n-1}}\bigg(\frac{d}{dx}g(x)\bigg)\bigg(\frac{d}{dx}f(x)\bigg)^{n-1}+\bigg(\frac{d}{dx}g(x)\bigg)^0\bigg(\frac{d}{dx}f(x)\bigg)^n.
+\end{align}
+Simplifying the above expression gives us
+\begin{align}
+	\frac{d^n}{dx^n}g(x)f(x)=f(x)\frac{d^n}{dx^n}g(x)+{{n}\choose{1}}\frac{d^{n-1}}{dx^{n-1}}g(x)\frac{d}{dx}f(x)+\cdots \\
+	\cdots+{{n}\choose{n-1}}\frac{d}{dx}g(x)\frac{d^{n-1}}{dx^{n-1}}f(x)+g(x)\frac{d^n}{dx^n}f(x).
+\end{align}
+Therefore, we can see that with our re-definitions in (23) and (24), it appears that the $n^{\textrm{th}}$ derivative of something using the product rule can be expressed using the binomial expansion theorem. At least to $n=3$ we can see from above that this is accurate. If we want to determine if this works for all values of $n$, we can try a proof by induction. Before going any further, since this may be a large amount of work for such a simple idea, let us quickly have a sanity check. We claim that the terms of the product rule can be expanded using the binomial theorem. It is important to note that when taking the product rule of an expression, you get two new expressions. Then, taking the product rule again will double those two into four, and then those four into eight, and so on. So we can see that each product rule doubles the number of terms we have. The binomial coefficient is used when we have like terms to combine them. If we were to add up each binomial coefficient in the sum, we should then see that each sum of coefficients is the same number of terms we would get as if we doubled our expression each time. If this were not so then our situation would have a flaw. In other words, it must hold true that
+\begin{align}
+	\sum_{i=0}^{n}{{n}\choose{k}} = 2^n.
+\end{align}
+This indeed is true. See section 1 for the proof on this. Now, we know from (1), (5) and (15) that cases $n=1,2,3$ all hold. Next, if we assume that for any $n=k$ that
+\begin{align}
+	\frac{d^k}{dx^k}g(x)f(x)&=f(x)\frac{d^k}{dx^k}g(x)+{{k}\choose{1}}\frac{d^{k-1}}{dx^{k-1}}g(x)\frac{d}{dx}f(x)+\cdots \nonumber\\
+	&\hspace{1cm}\cdots+{{k}\choose{k-1}}\frac{d}{dx}g(x)\frac{d^{k-1}}{dx^{k-1}}f(x)+g(x)\frac{d^k}{dx^k}f(x) \\
+	&=\sum_{i=0}^{k}{{k}\choose{i}}\bigg[\frac{d^i}{dx^i}f(x) \bigg]\bigg[\frac{d^{k-i}}{dx^{k-i}}g(x) \bigg]
+\end{align}
+holds true, we can then determine if it holds true for $n=k+1$. This gives
+\begin{align}
+	\frac{d^{k+1}}{dx^{k+1}}g(x)f(x)&=f(x)\frac{d^{k+1}}{dx^{k+1}}g(x)+{{{k+1}}\choose{1}}\frac{d^{k}}{dx^{k}}g(x)\frac{d}{dx}f(x)+\cdots \nonumber\\
+	&\hspace{1cm}\cdots+{{k+1}\choose{k}}\frac{d}{dx}g(x)\frac{d^{k}}{dx^{k}}f(x)+g(x)\frac{d^{k+1}}{dx^{k+1}}f(x) \\
+	&=\sum_{i=0}^{k+1}{{k+1}\choose{i}}\bigg[\frac{d^i}{dx^i}f(x) \bigg]\bigg[\frac{d^{k+1-i}}{dx^{k+1-i}}g(x) \bigg].
+\end{align}
+If we were to manually evaluate the $n=k+1$ term of this expression we would have
+\begin{align}
+	\frac{d}{dx}\frac{d^{k}}{dx^{k}}g(x)f(x)= \frac{d}{dx}\sum_{i=0}^{k}{{k}\choose{i}}\bigg[\frac{d^i}{dx^i}f(x) \bigg]\bigg[\frac{d^{k-i}}{dx^{k-i}}g(x) \bigg].
+\end{align}
+Since differentiating is distributive (by theorem 0.1), we can evaluate each term of this sum and compare it to (32) and (33). Doing this, we can use the product rule to first get
+\begin{align}
+	\frac{d^{k+1}}{dx^{k+1}}g(x)f(x)=\sum_{i=0}^{k}{{k}\choose{i}}\bigg[\frac{d^{i+1}}{dx^{i+1}}f(x) \bigg]\bigg[\frac{d^{k-i}}{dx^{k-i}}g(x) \bigg]+{{k}\choose{i}}\bigg[\frac{d^i}{dx^i}f(x) \bigg]\bigg[\frac{d^{k+1-i}}{dx^{k+1-i}}g(x) \bigg]. 
+\end{align}
+From here, writing out the series explicitly allows us to combine terms in a useful matter. This would obviously be tedious to write out so let us denote each term by $a_i$, for any $i^{\textrm{th}}$ term in the summation. Writing out a few of the terms then gives
+\begin{align}
+	a_0&={{k}\choose{0}}\bigg[\frac{d^{1}}{dx^{1}}f(x) \bigg]\bigg[\frac{d^{k}}{dx^{k}}g(x) \bigg]+{{k}\choose{0}}f(x)\bigg[\frac{d^{k+1}}{dx^{k+1}}g(x) \bigg] \\
+	a_1&={{k}\choose{1}}\bigg[\frac{d^{2}}{dx^{2}}f(x) \bigg]\bigg[\frac{d^{k-1}}{dx^{k-1}}g(x) \bigg]+{{k}\choose{1}}\bigg[\frac{d}{dx}f(x) \bigg]\bigg[\frac{d^{k}}{dx^{k}}g(x) \bigg] \\
+	a_2&={{k}\choose{2}}\bigg[\frac{d^{3}}{dx^{3}}f(x) \bigg]\bigg[\frac{d^{k-2}}{dx^{k-2}}g(x) \bigg]+{{k}\choose{2}}\bigg[\frac{d^2}{dx^2}f(x) \bigg]\bigg[\frac{d^{k-1}}{dx^{k-1}}g(x) \bigg]\\
+	&\vdots \\
+	a_{k-2}&={{k}\choose{k-2}}\bigg[\frac{d^{k-1}}{dx^{k-1}}f(x) \bigg]\bigg[\frac{d^{2}}{dx^{2}}g(x) \bigg]+{{k}\choose{k-2}}\bigg[\frac{d^{k-2}}{dx^{k-2}}f(x) \bigg]\bigg[\frac{d^{3}}{dx^{3}}g(x) \bigg]\\
+	a_{k-1}&={{k}\choose{k-1}}\bigg[\frac{d^{k}}{dx^{k}}f(x) \bigg]\bigg[\frac{d}{dx}g(x) \bigg]+{{k}\choose{v}}\bigg[\frac{d^{k-1}}{dx^{k-1}}f(x) \bigg]\bigg[\frac{d^{2}}{dx^{2}}g(x) \bigg]\\
+	a_k&={{k}\choose{k}}\bigg[\frac{d^{k+1}}{dx^{k+1}}f(x) \bigg]g(x)+{{k}\choose{k}}\bigg[\frac{d^k}{dx^k}f(x) \bigg]\bigg[\frac{d}{dx}g(x) \bigg].
+\end{align}
+At this point, it becomes obvious as to why the $f^{(n)}(x)$ notation of a derivative was invented, and switching over will greatly help in our next step. Changing our notation gives us 
+\begin{align}
+	a_0&={{k}\choose{0}}f^{(1)}(x) g^{(k)}(x)+{{k}\choose{0}}f(x)g^{(k+1)}(x) \\
+	a_1&={{k}\choose{1}}f^{(2)}(x) g^{(k-1)}(x) +{{k}\choose{1}}f^{(1)}(x) g^{(k)}(x) \\
+	a_2&={{k}\choose{2}}f^{(3)}(x) g^{(k-2)}(x) +{{k}\choose{2}}f^{(2)}(x) g^{(k-1)}(x) \\
+	&\vdots \\
+	a_{k-2}&={{k}\choose{k-2}}f^{(k-1)}(x) g^{(2)}(x) +{{k}\choose{k-2}}f^{(k-2)}(x) g^{(3)}(x)\\
+	a_{k-1}&={{k}\choose{k-1}}f^{(k)}(x) g^{(1)}(x)+{{k}\choose{k-1}}f^{(k-1)}(x) g^{(2)}(x)\\
+	a_k&={{k}\choose{k}}f^{(k+1)}(x) g(x)+{{k}\choose{k}}f^{(k)}(x)g^{(1)}(x).
+\end{align}
+Our end goal is to get this expression to be in the same form as in equation (33). If we first re-write (33) using $f^{(n)}(x)$ notation, we can easily see what our end goal is. This is
+\begin{align}
+	\sum_{i=0}^{k+1}{{k+1}\choose{i}}f^{(i)}(x) g^{(k+1-i)}(x) .
+\end{align}
+The next step is then summing expressions (4.43) through (4.49), then determining if what we get is equivalent to (4.50). Let $\Upsilon=a_0+a_1+\cdots+a_{k-1}+a_k$, then we have
+\begin{align}
+	\Upsilon&={{k}\choose{0}}f(x)g^{(k+1)}(x)+{{k}\choose{0}}f^{(1)}(x)g^{(k)}(x)+{{k}\choose{1}}f^{(1)}(x)g^{(k)}(x)+\cdots\\
+	&\hspace{1cm}\cdots+{{k}\choose{k}}f^{(k)}(x)g^{(1)}(x)+{{k}\choose{k-1}}f^{(k)}(x)g^{(1)}(x)+{{k}\choose{k}}f^{(k+1)}(x)g(x) \\
+	&={{k}\choose{0}}f(x)g^{(k+1)}(x)+\bigg[{{k}\choose{0}}+{{k}\choose{1}} \bigg]f^{(1)}(x)g^{(k)}(x)+\cdots\\
+	&\hspace{1cm}\cdots+\bigg[{{k}\choose{k-1}}+{{k}\choose{k}} \bigg]f^{(k)}(x)g^{(1)}(x)+{{k}\choose{k}}f^{(k+1)}(x)g(x)\\
+	&=\sum_{i=0}^{k+1}\bigg[{{k}\choose{i-1}}+{{k}\choose{i}} \bigg]f^{(i)}(x)g^{(k+1-i)}(x).
+\end{align}
+Using the definition of the binomial coefficient and the derivation in (7), if we let $k=m-1 \implies m=k+1$, we can re-write the binomial coefficient in (55) as follows.
+\begin{align}
+	{{k}\choose{i-1}}+{{k}\choose{i}}={{m-1}\choose{i-1}}+{{m-1}\choose{i}}={{m}\choose{i}}={{k+1}\choose{i}}.
+\end{align}
+Thus, (5.55) becomes
+\begin{align}
+	\Upsilon=\sum_{i=0}^{k+1}{{k+1}\choose{i}}f^{(i)}(x)g^{(k+1-i)}(x).
+\end{align}
+Now, $\Upsilon=a_0+a_1+\cdots+a_{k-1}+a_k=(35)$ which we have shown is equivalent to (55). Therefore, we can conclude that (28) holds for all $n\in\mathbb{N}$, which allows us to tidy our work up as a theorem.
+\begin{theo}{thm:mproductrule}
+	Let $f:\mathbb{R}\rightarrow\mathbb{R}$ and $g:\mathbb{R}\rightarrow\mathbb{R}$ be continuous and differentiable functions of the variable $x$. Then the $m^{\textrm{th}}$ derivative of $f(x)g(x)$ with respect to $x$ is
+	\begin{align*}
+		\frac{d^m}{dx^m}f(x)g(x)=\sum_{i=0}^{n}{{n}\choose{i}}\bigg[\frac{d^i}{dx^i}f(x) \bigg]\bigg[\frac{d^{n-i}}{dx^{n-i}}g(x) \bigg].
+	\end{align*}
+\end{theo}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -147,7 +319,7 @@ This removes all of the $C$ constants which verifies that they can be arbitrary 
 A^2\mp 2A\sqrt{A^2-B}+A^2-B-2A^2\pm2A\sqrt{A^2-B}+B=0.
 \end{align}
 Which we can clearly see is a true statement by canceling terms. Thus, we can say the following:
-\begin{theo}{them:Theorem 1}
+\begin{theo}{}
 	Let $A,B$ and $C_n$ be constants and $x(t)$ be a function of $t$. Given any homogeneous ordinary differential equation of the form
 	\begin{align*}
 	\frac{d^2}{dt^2}x(t)+\frac{d}{dt}2Ax(t)+Bx(t)=0,
