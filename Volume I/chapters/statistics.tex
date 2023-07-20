@@ -18,3 +18,27 @@ For a system with $n$ states, the total probabilities of all states must normali
 A \keyword{Bayesian probability} is defined as a person's knowledge of the outcome of a trial, based on the evidence at their disposal - often accompanied by an associated error. A \keyword{model probability} is an assumption or guess for the probability given the possibility of an infinite number of trials.
 \end{defn}
 
+Some more useful concepts for modeling a system are the mean (average), standard deviation, and standard deviation of the  mean. 
+
+\begin{defn}[Mean \label{Mean Definition}]
+	If $x_1, ..., x_N$ denotes N separate measurements of one quantity $x$, then we define the mean (or average) $\braket{x}$ as
+	\begin{align}
+		\braket{x} = \frac{1}{N}\sum_{i=1}^{N}x_i \label{mean equation}
+	\end{align}
+\end{defn}
+
+\begin{defn}[Standard Deviation \label{Standard Deviation Definition}]
+	If $x_1, ..., x_N$ denotes N separate measurements of one quantity $x$, then we define the standard deviation $\sigma_x$ as
+	\begin{align}
+		\sigma_x = \sqrt{\frac{1}{N-1}\sum_{i}(x_i-\braket{x})^2}
+	\end{align}
+\end{defn}
+
+The standard deviation of the mean can then be found by combining definitions \ref{Standard Deviation Definition} and \ref{Mean Definition}. First, we start by squaring (\ref{mean equation}) to get
+	\begin{align}
+	\braket{x}^2 = \bigg[\frac{1}{N}\sum_{i=1}^{N}x_i\bigg]^2
+\end{align}
+\begin{align}
+	\sigma_{x} &= \sqrt{\frac{1}{N-1}\sum_{i}(x_i-\braket{x})^2} \\
+			   &= \sqrt{\frac{1}{N-1}\sum_{i}(x_i^2-2x_i\braket{x}+\braket{x}^2)}
+\end{align}

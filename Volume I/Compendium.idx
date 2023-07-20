@@ -5,92 +5,93 @@
 \indexentry{Polygons|hyperpage}{4}
 \indexentry{Circles|hyperpage}{4}
 \indexentry{Three-dimensional shapes|hyperpage}{4}
-\indexentry{Probability|hyperpage}{5}
-\indexentry{state|hyperpage}{5}
-\indexentry{system|hyperpage}{5}
-\indexentry{sample space|hyperpage}{5}
-\indexentry{event|hyperpage}{5}
-\indexentry{simple event|hyperpage}{5}
-\indexentry{compound event|hyperpage}{5}
-\indexentry{probability|hyperpage}{5}
-\indexentry{Bayesian probability|hyperpage}{5}
-\indexentry{model probability|hyperpage}{5}
-\indexentry{Calculus|hyperpage}{6}
-\indexentry{Differentiation|hyperpage}{6}
-\indexentry{Integration|hyperpage}{6}
-\indexentry{Linear algebra|hyperpage}{24}
-\indexentry{Vectors|hyperpage}{24}
-\indexentry{Vector Spaces|hyperpage}{24}
-\indexentry{Matrices|hyperpage}{24}
-\indexentry{Linear Transformations|hyperpage}{24}
-\indexentry{Eigenvalues|hyperpage}{24}
-\indexentry{Eigenvectors|hyperpage}{24}
-\indexentry{Classical mechanics|hyperpage}{25}
-\indexentry{Newton's Laws of Motion|hyperpage}{25}
-\indexentry{Conservation of Energy|hyperpage}{25}
-\indexentry{Conservation of Momentum|hyperpage}{25}
-\indexentry{Gravitation|hyperpage}{25}
-\indexentry{Harmonic Motion|hyperpage}{25}
-\indexentry{Statistical mechanics|hyperpage}{26}
-\indexentry{Microstates|hyperpage}{26}
-\indexentry{Macrostates|hyperpage}{26}
-\indexentry{Ensembles|hyperpage}{26}
-\indexentry{Boltzmann Distribution|hyperpage}{26}
-\indexentry{Entropy|hyperpage}{26}
-\indexentry{Statistical Thermodynamics|hyperpage}{26}
-\indexentry{Astrophysics|hyperpage}{27}
-\indexentry{Stellar Astrophysics|hyperpage}{27}
-\indexentry{Galactic Astrophysics|hyperpage}{27}
-\indexentry{Cosmology|hyperpage}{27}
-\indexentry{Exoplanets and Planetary Systems|hyperpage}{27}
-\indexentry{High-Energy Astrophysics|hyperpage}{27}
-\indexentry{Astrobiology|hyperpage}{27}
-\indexentry{Electromagnetism|hyperpage}{28}
-\indexentry{electricity|hyperpage}{28}
-\indexentry{magnetism|hyperpage}{28}
-\indexentry{Electric Fields|hyperpage}{28}
-\indexentry{Magnetic Fields|hyperpage}{28}
-\indexentry{Electromagnetic Waves|hyperpage}{28}
-\indexentry{Maxwell's Equations|hyperpage}{28}
-\indexentry{Electromagnetic Induction|hyperpage}{28}
-\indexentry{Electromagnetic Force|hyperpage}{28}
-\indexentry{Quantum mechanics|hyperpage}{35}
-\indexentry{Wave-Particle Duality|hyperpage}{35}
-\indexentry{Quantization of Energy|hyperpage}{35}
-\indexentry{Uncertainty Principle|hyperpage}{35}
-\indexentry{Quantum Superposition|hyperpage}{35}
-\indexentry{Quantum Entanglement|hyperpage}{35}
-\indexentry{Special Relativity|hyperpage}{36}
-\indexentry{General Relativity|hyperpage}{36}
-\indexentry{Special Relativity|hyperpage}{36}
-\indexentry{Time Dilation|hyperpage}{36}
-\indexentry{Length Contraction|hyperpage}{36}
-\indexentry{Mass-Energy Equivalence|hyperpage}{36}
-\indexentry{General Relativity|hyperpage}{36}
-\indexentry{Curved Spacetime|hyperpage}{36}
-\indexentry{Gravitational Time Dilation|hyperpage}{36}
-\indexentry{Gravitational Waves|hyperpage}{36}
-\indexentry{Quantum Field Theory|hyperpage}{39}
-\indexentry{Quantized Fields|hyperpage}{39}
-\indexentry{Lagrangian Formalism|hyperpage}{39}
-\indexentry{Creation and Annihilation Operators|hyperpage}{39}
-\indexentry{Feynman Diagrams|hyperpage}{39}
-\indexentry{Renormalization|hyperpage}{39}
-\indexentry{Gauge Theories|hyperpage}{39}
-\indexentry{Quantum Electrodynamics|hyperpage}{39}
-\indexentry{Quantum Electrodynamics|hyperpage}{40}
-\indexentry{Quantization of Electromagnetic Fields|hyperpage}{40}
-\indexentry{Feynman Diagrams|hyperpage}{40}
-\indexentry{Renormalization|hyperpage}{40}
-\indexentry{Quantum Loops|hyperpage}{40}
-\indexentry{Gauge Invariance|hyperpage}{40}
-\indexentry{Electron Self-Energy|hyperpage}{40}
-\indexentry{Quantum Chromodynamics|hyperpage}{41}
-\indexentry{Quarks|hyperpage}{41}
-\indexentry{Gluons|hyperpage}{41}
-\indexentry{Color Charge|hyperpage}{41}
-\indexentry{Asymptotic Freedom and Confinement|hyperpage}{41}
-\indexentry{Lattice QCD|hyperpage}{41}
-\indexentry{Hadronization|hyperpage}{41}
-\indexentry{Hadron|hyperpage}{41}
-\indexentry{Strong Interactions|hyperpage}{41}
+\indexentry{Kronecker delta|hyperpage}{6}
+\indexentry{Probability|hyperpage}{9}
+\indexentry{state|hyperpage}{9}
+\indexentry{system|hyperpage}{9}
+\indexentry{sample space|hyperpage}{9}
+\indexentry{event|hyperpage}{9}
+\indexentry{simple event|hyperpage}{9}
+\indexentry{compound event|hyperpage}{9}
+\indexentry{probability|hyperpage}{9}
+\indexentry{Bayesian probability|hyperpage}{9}
+\indexentry{model probability|hyperpage}{9}
+\indexentry{Calculus|hyperpage}{11}
+\indexentry{Differentiation|hyperpage}{11}
+\indexentry{Integration|hyperpage}{11}
+\indexentry{Linear algebra|hyperpage}{29}
+\indexentry{Vectors|hyperpage}{29}
+\indexentry{Vector Spaces|hyperpage}{29}
+\indexentry{Matrices|hyperpage}{29}
+\indexentry{Linear Transformations|hyperpage}{29}
+\indexentry{Eigenvalues|hyperpage}{29}
+\indexentry{Eigenvectors|hyperpage}{29}
+\indexentry{Classical mechanics|hyperpage}{30}
+\indexentry{Newton's Laws of Motion|hyperpage}{30}
+\indexentry{Conservation of Energy|hyperpage}{30}
+\indexentry{Conservation of Momentum|hyperpage}{30}
+\indexentry{Gravitation|hyperpage}{30}
+\indexentry{Harmonic Motion|hyperpage}{30}
+\indexentry{Statistical mechanics|hyperpage}{31}
+\indexentry{Microstates|hyperpage}{31}
+\indexentry{Macrostates|hyperpage}{31}
+\indexentry{Ensembles|hyperpage}{31}
+\indexentry{Boltzmann Distribution|hyperpage}{31}
+\indexentry{Entropy|hyperpage}{31}
+\indexentry{Statistical Thermodynamics|hyperpage}{31}
+\indexentry{Astrophysics|hyperpage}{32}
+\indexentry{Stellar Astrophysics|hyperpage}{32}
+\indexentry{Galactic Astrophysics|hyperpage}{32}
+\indexentry{Cosmology|hyperpage}{32}
+\indexentry{Exoplanets and Planetary Systems|hyperpage}{32}
+\indexentry{High-Energy Astrophysics|hyperpage}{32}
+\indexentry{Astrobiology|hyperpage}{32}
+\indexentry{Electromagnetism|hyperpage}{33}
+\indexentry{electricity|hyperpage}{33}
+\indexentry{magnetism|hyperpage}{33}
+\indexentry{Electric Fields|hyperpage}{33}
+\indexentry{Magnetic Fields|hyperpage}{33}
+\indexentry{Electromagnetic Waves|hyperpage}{33}
+\indexentry{Maxwell's Equations|hyperpage}{33}
+\indexentry{Electromagnetic Induction|hyperpage}{33}
+\indexentry{Electromagnetic Force|hyperpage}{33}
+\indexentry{Quantum mechanics|hyperpage}{40}
+\indexentry{Wave-Particle Duality|hyperpage}{40}
+\indexentry{Quantization of Energy|hyperpage}{40}
+\indexentry{Uncertainty Principle|hyperpage}{40}
+\indexentry{Quantum Superposition|hyperpage}{40}
+\indexentry{Quantum Entanglement|hyperpage}{40}
+\indexentry{Special Relativity|hyperpage}{41}
+\indexentry{General Relativity|hyperpage}{41}
+\indexentry{Special Relativity|hyperpage}{41}
+\indexentry{Time Dilation|hyperpage}{41}
+\indexentry{Length Contraction|hyperpage}{41}
+\indexentry{Mass-Energy Equivalence|hyperpage}{41}
+\indexentry{General Relativity|hyperpage}{41}
+\indexentry{Curved Spacetime|hyperpage}{41}
+\indexentry{Gravitational Time Dilation|hyperpage}{41}
+\indexentry{Gravitational Waves|hyperpage}{41}
+\indexentry{Quantum Field Theory|hyperpage}{44}
+\indexentry{Quantized Fields|hyperpage}{44}
+\indexentry{Lagrangian Formalism|hyperpage}{44}
+\indexentry{Creation and Annihilation Operators|hyperpage}{44}
+\indexentry{Feynman Diagrams|hyperpage}{44}
+\indexentry{Renormalization|hyperpage}{44}
+\indexentry{Gauge Theories|hyperpage}{44}
+\indexentry{Quantum Electrodynamics|hyperpage}{44}
+\indexentry{Quantum Electrodynamics|hyperpage}{45}
+\indexentry{Quantization of Electromagnetic Fields|hyperpage}{45}
+\indexentry{Feynman Diagrams|hyperpage}{45}
+\indexentry{Renormalization|hyperpage}{45}
+\indexentry{Quantum Loops|hyperpage}{45}
+\indexentry{Gauge Invariance|hyperpage}{45}
+\indexentry{Electron Self-Energy|hyperpage}{45}
+\indexentry{Quantum Chromodynamics|hyperpage}{46}
+\indexentry{Quarks|hyperpage}{46}
+\indexentry{Gluons|hyperpage}{46}
+\indexentry{Color Charge|hyperpage}{46}
+\indexentry{Asymptotic Freedom and Confinement|hyperpage}{46}
+\indexentry{Lattice QCD|hyperpage}{46}
+\indexentry{Hadronization|hyperpage}{46}
+\indexentry{Hadron|hyperpage}{46}
+\indexentry{Strong Interactions|hyperpage}{46}
