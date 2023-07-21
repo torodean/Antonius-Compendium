@@ -36,20 +36,13 @@ Some more useful concepts for modeling a system are the mean (average) and stand
 
 When dealing with \keyword{Bayesian probability}, there is typically an uncertainty associated with the measurements or functions.
 
-\begin{defn}[Mean \label{Mean Definition}]
+\begin{defn}[Uncertainty \label{Uncertainty}]
 	Suppose $x_0, ..., x_N$ denotes N separate measurements with associated uncertainties $\delta x_0, ..., \delta x_N$. If the measured values are used to compute some function $q(x_0, ..., x_N)$ and the uncertainties in $x_0, ..., x_N$ are independent and random, then the uncertainty in $q$ is
 	\begin{align}
-		\delta q = \sqrt{\sum_{i=0}^{N}\bigg(\frac{\delta q}{\delta x_i} \delta x_i\bigg)^2}.
+		\delta q = \sqrt{\sum_{i=0}^{N}\bigg(\frac{\partial q}{\partial x_i} \delta x_i\bigg)^2}.
 	\end{align}
  It will always be true that 
  	\begin{align}
-		\delta q \leq \sum_{i=0}^{N}\abs{\frac{\delta q}{\delta x_i}} \delta x_i.
-	\end{align}
-\end{defn}
-
-\begin{defn}[Uncertainty \label{Uncertainty}]
-	If $x_1, ..., x_N$ denotes N separate measurements of one quantity $x$, then we define the standard deviation $\sigma_x$ as
-	\begin{align}
-		\sigma_x = \sqrt{\frac{1}{N-1}\sum_{i}(x_i-\braket{x})^2}
+		\delta q \leq \sum_{i=0}^{N}\abs{\frac{\partial q}{\partial x_i}} \delta x_i.
 	\end{align}
 \end{defn}
