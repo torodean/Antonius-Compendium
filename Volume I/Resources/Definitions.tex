@@ -276,3 +276,24 @@
 	\end{mdframed}
 }
 
+% questions
+
+% Define the questions environment
+\NewEnviron{questions}{%
+	\begin{tcolorbox}[
+		colback=orange!10,
+		colframe=orange!50,
+		arc=0pt,
+		boxrule=1pt,
+		title={\faQuestion\ Questions},
+		fonttitle=\bfseries,
+		coltitle=blue!50!black,
+		colbacktitle=yellow!20,
+		attach title to upper={\par},
+		boxsep=0pt,
+		]
+		\begin{itemize}  % Start the itemize environment
+			\BODY  % This will contain the list of questions
+		\end{itemize}  % End the itemize environment
+	\end{tcolorbox}
+}
