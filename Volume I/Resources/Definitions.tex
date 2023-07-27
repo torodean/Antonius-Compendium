@@ -297,3 +297,21 @@
 		\end{itemize}  % End the itemize environment
 	\end{tcolorbox}
 }
+
+% define interesting note
+\newenvironment{interestnote}{
+	\begin{tcolorbox}[
+		colback=green!10,  % Very light green background color of the box
+		colframe=green!50,  % Border color of the box
+		arc=0pt,  % Adjust the corner radius of the box
+		boxrule=1pt,  % Border thickness
+		title={\faLightbulb\ Interesting Note},  % The lightbulb icon and title
+		fonttitle=\bfseries,  % Font style for the title
+		coltitle=blue!50!black,  % Color for the title text
+		colbacktitle=yellow!20,  % Background color for the title
+		attach title to upper={\par},
+		boxsep=0pt,  % Adjust the space between the content and the box
+		]
+	}{
+	\end{tcolorbox}
+}
