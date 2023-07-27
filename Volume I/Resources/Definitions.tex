@@ -92,55 +92,82 @@
 
 
 %theorem
-\newcounter{theo}[section] \setcounter{theo}{0}
+\newcounter{theo}[section]
+\setcounter{theo}{0}
 \renewcommand{\thetheo}{\arabic{chapter}.\arabic{section}.\arabic{theo}}
-\newenvironment{theo}[2][]{%
+
+\definecolor{mytheobgcolor}{RGB}{235, 247, 255} % Light blue background
+\definecolor{mytheobordercolor}{RGB}{92, 162, 204} 
+
+\newenvironment{theo}[2][]{
 	\refstepcounter{theo}%
-	\ifstrempty{#1}%
-	{\mdfsetup{%
+	\ifstrempty{#1}{%
+		\mdfsetup{%
 			frametitle={%
 				\tikz[baseline=(current bounding box.east),outer sep=0pt]
-				\node[anchor=east,rectangle,fill=blue!20]
-				{\strut Theorem~\thetheo};}}
-	}%
-	{\mdfsetup{%
+				\node[anchor=east,rectangle,fill=mytheobordercolor]
+				{\strut Theorem~\thetheo};}
+		}
+	}{%
+		\mdfsetup{%
 			frametitle={%
-				\tikz[baseline=(current bounding box.east),outer sep=0pt]
-				\node[anchor=east,rectangle,fill=blue!20]
-				{\strut Theorem~\thetheo:~#1};}}%
+				\tikz[baseline=(current bounding box.east),outer sep=1pt]
+				\node[anchor=east,rectangle,fill=mytheobordercolor]
+				{\strut Theorem~\thetheo:~#1};}
+		}
 	}%
-	\mdfsetup{innertopmargin=10pt,linecolor=blue!20,%
-		linewidth=2pt,topline=true,%
+	\mdfsetup{%
+		innertopmargin=10pt,
+		linecolor=mytheobordercolor,
+		linewidth=2pt,
+		topline=true,
 		frametitleaboveskip=\dimexpr-\ht\strutbox\relax
 	}
-	\begin{mdframed}[]\relax%
-		\label{#2}}{\end{mdframed}}
+	\begin{mdframed}[backgroundcolor=mytheobgcolor]\relax%
+		\label{#2}
+	}{
+	\end{mdframed}
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %Lemma
-\newcounter{lemm}[section] \setcounter{lemm}{0}
+\newcounter{lemm}[section]
+\setcounter{lemm}{0}
 \renewcommand{\thelemm}{\arabic{chapter}.\arabic{section}.\arabic{lemm}}
-\newenvironment{lemm}[2][]{%
+
+% Customize the colors here
+\definecolor{mylemmbgcolor}{RGB}{235, 255, 235}  % Light green background
+\definecolor{mylemmbordercolor}{RGB}{112, 173, 112}  % Slightly lighter green border
+
+\newenvironment{lemm}[2][]{
 	\refstepcounter{lemm}%
-	\ifstrempty{#1}%
-	{\mdfsetup{%
+	\ifstrempty{#1}{%
+		\mdfsetup{%
 			frametitle={%
 				\tikz[baseline=(current bounding box.east),outer sep=0pt]
-				\node[anchor=east,rectangle,fill=green!20]
-				{\strut Lemma~\thelem};}}
-	}%
-	{\mdfsetup{%
+				\node[anchor=east,rectangle,fill=mylemmbordercolor]
+				{\strut Lemma~\thelemm};}
+		}
+	}{%
+		\mdfsetup{%
 			frametitle={%
-				\tikz[baseline=(current bounding box.east),outer sep=0pt]
-				\node[anchor=east,rectangle,fill=green!20]
-				{\strut Lemma~\thelem:~#1};}}%
+				\tikz[baseline=(current bounding box.east),outer sep=1pt]
+				\node[anchor=east,rectangle,fill=mylemmbordercolor]
+				{\strut Lemma~\thelemm:~#1};}
+		}
 	}%
-	\mdfsetup{innertopmargin=10pt,linecolor=green!20,%
-		linewidth=2pt,topline=true,%
+	\mdfsetup{%
+		innertopmargin=10pt,
+		linecolor=mylemmbordercolor,
+		linewidth=2pt,
+		topline=true,
 		frametitleaboveskip=\dimexpr-\ht\strutbox\relax
 	}
-	\begin{mdframed}[]\relax%
-		\label{#2}}{\end{mdframed}}
+	\begin{mdframed}[backgroundcolor=mylemmbgcolor]\relax%
+		\label{#2}
+	}{
+	\end{mdframed}
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %Proof
@@ -170,51 +197,82 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %Definition
-\newcounter{defn}[section] \setcounter{defn}{0}
+\definecolor{mygray}{RGB}{240,240,240}
+\definecolor{mybordergray}{RGB}{200,200,200}
+
+\newcounter{defn}[section]
+\setcounter{defn}{0}
 \renewcommand{\thedefn}{\arabic{chapter}.\arabic{section}.\arabic{defn}}
-\newenvironment{defn}[2][]{%
-	\refstepcounter{defn}%
-	\ifstrempty{#1}%
-	{\mdfsetup{%
-			frametitle={%
+
+\newenvironment{defn}[2][]{
+	\refstepcounter{defn}
+	\ifstrempty{#1}{
+		\mdfsetup{
+			frametitle={
 				\tikz[baseline=(current bounding box.east),outer sep=0pt]
-				\node[anchor=east,rectangle,fill=gray!20]
-				{\strut Definition~\thedefn};}}
-	}%
-	{\mdfsetup{%
-			frametitle={%
-				\tikz[baseline=(current bounding box.east),outer sep=0pt]
-				\node[anchor=east,rectangle,fill=gray!20]
-				{\strut Definition~\thedefn:~#1};}}%
-	}%
-	\mdfsetup{innertopmargin=10pt,linecolor=gray!20,%
-		linewidth=2pt,topline=true,%
-		frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+				\node[anchor=east,rectangle,fill=mybordergray]
+				{\strut Definition~\thedefn};
+			}
+		}
+	}{
+		\mdfsetup{
+			frametitle={
+				\tikz[baseline=(current bounding box.east),outer sep=1pt]
+				\node[anchor=east,rectangle,fill=mybordergray]
+				{\strut Definition~\thedefn:~#1};
+			}
+		}
 	}
-	\begin{mdframed}[nobreak=true]\relax%
-		\label{#2}}{\end{mdframed}}
+	\mdfsetup{
+		innertopmargin=10pt,
+		linecolor=mybordergray,
+		linewidth=2pt,
+		topline=true,
+		frametitleaboveskip=\dimexpr-\ht\strutbox\relax,
+		backgroundcolor=mygray,
+	}
+	\begin{mdframed}[nobreak=true]\relax
+		\label{#2}
+	}{
+	\end{mdframed}
+}
 	
 %Fancy Box
-\newcounter{fancybox}[section] \setcounter{fancybox}{0}
+\newcounter{fancybox}[section]
+\setcounter{fancybox}{0}
 \renewcommand{\thefancybox}{\arabic{chapter}.\arabic{section}.\arabic{fancybox}}
+
+% Customize the colors here
+\definecolor{myfancyboxbg}{RGB}{255, 235, 205}  % Light orange background
+\definecolor{myfancyboxborder}{RGB}{255, 165, 0}  % Orange border
+
 \newenvironment{fancybox}[2][]{%
 	\refstepcounter{fancybox}%
-	\ifstrempty{#1}%
-	{\mdfsetup{%
+	\ifstrempty{#1}{%
+		\mdfsetup{%
 			frametitle={%
 				\tikz[baseline=(current bounding box.east),outer sep=0pt]
-				\node[anchor=east,rectangle,fill=orange!20]
-				{\strut ~\thefancybox};}}
-	}%
-	{\mdfsetup{%
+				\node[anchor=east,rectangle,fill=myfancyboxborder]
+				{\strut ~\thefancybox};}
+		}
+	}{%
+		\mdfsetup{%
 			frametitle={%
 				\tikz[baseline=(current bounding box.east),outer sep=0pt]
-				\node[anchor=east,rectangle,fill=orange!20]
-				{\strut ~\thefancybox:~#1};}}%
+				\node[anchor=east,rectangle,fill=myfancyboxborder]
+				{\strut ~\thefancybox:~#1};}
+		}
 	}%
-	\mdfsetup{innertopmargin=10pt,linecolor=orange!20,%
-		linewidth=2pt,topline=true,%
+	\mdfsetup{%
+		innertopmargin=10pt,
+		linecolor=myfancyboxborder,
+		linewidth=2pt,
+		topline=true,
 		frametitleaboveskip=\dimexpr-\ht\strutbox\relax
 	}
-	\begin{mdframed}[]\relax%
-		\label{#2}}{\end{mdframed}}
+	\begin{mdframed}[backgroundcolor=myfancyboxbg]\relax%
+		\label{#2}
+	}{
+	\end{mdframed}
+}
+

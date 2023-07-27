@@ -1,14 +1,14 @@
 
 \section{Definitions and General Differential Equations}
  The derivative of a function represents an infinitesimal change in the function with respect to one of its variables \cite{bib:Wolfram}. 
-\begin{defn}{derivative_defn} 
+\begin{defn}[Derivative]{derivative_defn} 
 	Let $f:\mathbb{R}\rightarrow\mathbb{R}$. Then the derivative of $f$ with respect to a variable $x$ is given by
 	\begin{align*}
 	\frac{d}{dx}f(x)\equiv f'(x) \equiv\lim\limits_{\Delta x \rightarrow 0}\frac{f(x+\Delta x)-f(x)}{\Delta x} \equiv \lim\limits_{\Delta x \rightarrow 0}\frac{f(x+\Delta x)-f(x-\Delta x)}{2\Delta x}
 	\end{align*}
 \end{defn}
 Similarly, partial derivatives are defined as derivatives of a function of multiple variables when all but the variable of interest are held fixed during the differentiation \cite{bib:Wolfram}. 
-\begin{defn}{partial_derivative_defn}
+\begin{defn}[Partial Derivative]{partial_derivative_defn}
 	Let $f:\mathbb{R}^z\rightarrow\mathbb{R}$, with $z \in \mathbb{N}$. Then the partial derivative of $f$ with respect to a variable $x_m$ is given by
 	\begin{align*}
 	\frac{\partial}{\partial x_m}f(x_1,\dots,x_n) \equiv \lim\limits_{\Delta x \rightarrow 0}\frac{f(x_1,\dots,x_m+\Delta x, \dots,x_n)-f(x_1,\dots,x_m,\dots,x_n)}{\Delta x}
