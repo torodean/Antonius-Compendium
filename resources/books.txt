@@ -41,3 +41,7 @@ Calculus (Volume 1), Edwin Herman - https://d3bxy9euw4e147.cloudfront.net/oscms-
 Quantum Electrodynamics - https://www.academia.edu/41076692/Quantum_Electrodynamics_Fourth_Edition
 
 Error Analysis, Taylor - https://www.niser.ac.in/sps/sites/default/files/basic_page/John%20R.%20Taylor%20-%20An%20Introduction%20to%20Error%20Analysis_%20The%20Study%20of%20Uncertainties%20in%20Physical%20Measurements-University%20Science%20Books%20(1997).pdf
+
+Methods of theoretical physics - http://www.astrosen.unam.mx/~aceves/Metodos/ebooks/morse_feshbach1.pdf
+
+mathematical methods of theoretial physics, Karl Svozil - https://arxiv.org/pdf/1203.4558.pdf
