@@ -4,6 +4,12 @@
 Mathematics is a systematic field of study that deals with numbers, quantities, shapes, and patterns. It is often regarded as the language of science, as it provides a framework for analyzing and understanding various phenomena in the natural and social world. Mathematics involves a wide range of topics, including arithmetic, algebra, geometry, calculus, statistics, and more. It is based on rigorous logical reasoning and uses symbols and formulas to represent relationships and solve problems. Mathematics plays a crucial role in various fields, such as physics, engineering, economics, computer science, and many other disciplines, making it an essential tool for advancing knowledge and technology.
 
 
+
+\input{./chapters/mathematics/conventions}
+
+
+
+
 \section{Summation}
 
 \begin{defn}[Summation Notation \label{Summation Definition}]{1}
@@ -79,89 +85,5 @@ Mathematics is a systematic field of study that deals with numbers, quantities, 
 
 
 
-\section{Binomial Coefficients}
 
-\begin{defn}[Binomial Coefficient \label{Binomial Coefficient Definition}]{1}
-	The binomial coefficient, ${{n}\choose{k}}$, often denoted as "n choose k," is a mathematical concept used in combinatorics to represent the number of ways to choose k items from a set of n distinct items, regardless of the arrangement of the chosen elements. 	
-	\begin{align}
-		{{n}\choose{k}}&=\frac{n!}{(n-k)!k!}
-	\end{align}
-\end{defn}
-
-To begin with, a useful idea is to sum each term of the binomial coefficient which will be used later. First, by definition of the binomial coefficient, we can write
-\begin{align}
-	{{n}\choose{k}}&=\frac{n!}{(n-k)!k!} \label{binomial-coefficient-defn}\\
-	&=\frac{(n-1)!n}{(n-k)!k!}\\&
-	=\frac{(n-1)!n-k(n-1)!+k(n-1)!}{(n-k)!k!}\\
-	&=\frac{(n-1)!(n-k)}{(n-k)!k!}+\frac{k(n-1)!}{(n-k)!k!}\\
-	&=\frac{(n-1)!}{(n-1-k)!k!}+\frac{(n-1)!}{(n-k)!(k-1)!}\\&={{n-1}\choose{k}}+{{n-1}\choose{k-1}} \label{n-1choosek+n-1choosek-1}\\
-	&\equiv {{m}\choose{k}}+{{m}\choose{k-1}}, \textrm{ with }m=n-1.
-\end{align} 
-
-Observe for a moment that (\ref{n-1choosek+n-1choosek-1}) can be expanding even further. By the same process of going from (\ref{binomial-coefficient-defn}) to (\ref{n-1choosek+n-1choosek-1}), we can say
-\begin{align}
-	{{n-1}\choose{k-1}} = {{n-2}\choose{k-1}}+{{n-2}\choose{k-2}}.
-\end{align}
-Thus, (\ref{n-1choosek+n-1choosek-1}) becomes
-\begin{align}
-	{{n}\choose{k}}={{n-1}\choose{k}}+{{n-2}\choose{k-1}}+{{n-2}\choose{k-2}}.
-\end{align}
-If we continue this pattern, we can see that we can write the binomial coefficients as a sum of binomial coefficients with incrementally decreasing numerators (i.e n!, (n-1)!, (n-2)!,...). This gives
-\begin{align}
-	{{n}\choose{k}}&={{n-1}\choose{k}}+{{n-2}\choose{k-1}}+{{n-3}\choose{k-2}}+\cdots+{{1}\choose{k+2-n}}+{{0}\choose{k+1-n}} \\
-	&=\sum_{i=1}^{n}{{n-i}\choose{k+1-i}} \\
-	&=\sum_{i=0}^{n-1}{{n-1-i}\choose{k-i}}.
-\end{align}
-Note that we stop the above sequence when the numerator of our factorial sequence has reached zero. If we were to continue the sequence, we would end up having negative factorials in our numerator which would make evaluating the binomial coefficient at that term and the following terms difficult. However, if we happen to have a smaller $k$ than $n$, it may be such that we end up having negative $k$ numbers. This is ok for now, as it will lead to complex infinities in the denominator of our binomial coefficient expressions hence making those terms zero. This will be demonstrated later. Now, suppose we claim the following theorem. 
-
-\begin{theo}[opt]{1}
-	For all $n\in \mathbb{N}$,
-\begin{align}
-	\sum_{i=0}^{n}{{n}\choose{i}} =\sum_{i=0}^{n}\frac{n!}{(n-i)!i!}= 2^n.
-\end{align}
-\end{theo}
-
-\begin{proof}
-	We can then do a proof by induction to prove this is in fact true for all $n,k \in \mathbb{N}$. First, we can see checking the base cases hold as when $n=0$, we have $1=1$, when $n=1$, we have $2=2$, and when $n=3$ we have $4=4$. Next, let's assume for any $n=k$ that (1) holds true. Now, if we let $n=k+1$ we have from the left hand side of our expression,
-\begin{align}
-	\sum_{i=0}^{k+1}{{k+1}\choose{i}}&={{k+1}\choose{0}}+{{k+1}\choose{1}}+\cdots+{{k+1}\choose{k}}+{{k+1}\choose{k+1}} \\
-	&={{k}\choose{0}}+{{k}\choose{-1}}+{{k}\choose{1}}+{{k}\choose{0}}+\cdots+{{k}\choose{k}}+{{k}\choose{k-1}}+{{k}\choose{k+1}}+{{k}\choose{k}}\\
-	&=2{{k}\choose{0}}+2{{k}\choose{1}}+\cdots+2{{k}\choose{k-1}}+2{{k}\choose{k}}\\
-	&=2\sum_{i=0}^{k}{{k}\choose{i}}\\
-	&=2(2^k)\\
-	&=2^{k+1}.
-\end{align}
-Therefore, we can see that for $n=k+1$ that equation (8) holds true, and thus we conclude by induction that (8) holds for all $n\in\mathbb{N}$.
-\end{proof} 
-
-Note that in the above proof, we made use of ${{k}\choose{k+1}}={{k}\choose{-1}}=0$. If we were to evaluate each of these using the definition of the binomial coefficient above we may notice a slight issue. Suppose we try to evaluate ${{n}\choose{-1}}$. Using the definition from (1), we would have
-\begin{align}
-	{{n}\choose{-1}}&=\frac{n!}{(n-(-1))!(-1)!}\\&=\frac{n!}{(n+1)!(-1)!} \\
-	&=\frac{n!}{(n)!(n+1)(-1)!} \\
-	&=\frac{1}{(n+1)(-1)!}.
-\end{align}
-From above, we have a negative factorial in the denominator of our expression. Since this is not easily determined as a positive integer factorial would be, we will need to expand this using the Gamma function. 
-
-\begin{defn}[The Gamma function \label{The Gamma function Definition}]{1}
-The gamma function is a mathematical function that generalizes the concept of a factorial to non-integer and complex numbers. It is denoted by the Greek letter "$\Gamma$" (gamma) and defined as
-\begin{align}
-	\Gamma(n)=(n-1)!\equiv\int_{0}^{\infty}t^{n-1}e^{-t}\dt.
-\end{align}
-\end{defn}
-
-Using this gamma function with $n=0$ gives
-\begin{align}
-	\Gamma(0)&=\int_{0}^{\infty}t^{-1}e^{-t}\dt.
-\end{align}
-Since $\lim\limits_{t\rightarrow 0^+}t^{-1}e^{-t}=\infty$, we can say the integral under the curve from $0$ to $\infty$ will be divergent, and thus $\infty$. Therefore $\Gamma(0)\equiv\infty$. This allows us to write (18) as
-\begin{align}
-	\frac{1}{(n+1)(-1)!} = \frac{1}{(n+1)\Gamma(0)}=\lim\limits_{x\rightarrow \infty}\frac{1}{x}=0.
-\end{align}
-Thus, we can say that ${{n}\choose{-1}}=0$. Similarly, by the same process, if we have ${{n}\choose{n+1}}$ we get
-\begin{align}
-	{{n}\choose{n+1}}&=\frac{n!}{(n-(n+1))!(n+1)!}\\
-	&=\frac{n!}{(-1)!(n)!(n+1)}\\
-	&=\frac{1}{(-1)!(n+1)}\\
-	&=0
-\end{align}
-
+\input{./chapters/mathematics/binomial_coefficient}

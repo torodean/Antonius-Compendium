@@ -1,2 +1,81 @@
 \section{Conventions and basic Definitions}
 
+\begin{defn}[Complex Conjugate \label{Complex Conjugate Definition}]{1}
+Suppose $z=a+bi$ is a \keyword{complex number}, where $a,b\in\R$ and i is the imaginary unit ($i^2=-1$). The complex conjugate of $z$, typically denoted by $\bar{z}$ or $z^*$, is obtained by changing the sign of the imaginary part.
+
+\begin{align}
+z=a+bi \implies	\bar{z} \equiv z^* = a - bi 
+\end{align}
+\end{defn}
+
+A few mathematical identities hold when combining complex numbers with their complex conjugates.
+
+\begin{itemize}
+	\item The product of a complex number and its complex conjugate is always a real number:
+	\begin{align}
+		z \cdot \overline{z} &= (a+bi)(a-bi) = a^2 + b^2
+	\end{align}
+	
+	\item The sum of a complex number and its complex conjugate gives a real number with twice the real part:
+	\begin{align}
+		z + \overline{z} &= (a+bi) + (a-bi) = 2a
+	\end{align}
+	
+	\item The difference between a complex number and its complex conjugate gives a purely imaginary number with twice the imaginary part:
+	\begin{align}
+		z - \overline{z} &= (a+bi) - (a-bi) = 2bi
+	\end{align}
+
+	\item The complex conjugate of a product is the product of the complex conjugates.
+	\begin{align}
+		(z_1 \cdot z_2)^* &= [(a_1+b_1i)(a_2+b_2i)]^* \\ &= [a_1a_2+a_1b_2i+a_2b_1i-b_1b_2]^* \\ &= a_1a_2-b_1b_2 - (a_1b_2+a_2b_1)i \\ &= (a_1-b_1i)(a_2-b_2i) \\
+		&= z_1^* \cdot z_2^*
+	\end{align}
+
+	\item The inverse of a non-zero complex conjugate number $z=a+bi$ is
+	\begin{align}
+		\frac{1}{z} = \frac{1}{a+bi}\left(\frac{a+bi}{a+bi}\right) = \frac{a+bi}{a^2+b^2} = \frac{a}{a^2+b^2} + \frac{b}{a^2+b^2}i
+	\end{align}
+\end{itemize}
+
+The bra and ket notation is commonly used to represent vectors and vector operations. A superscript ``$^T$'' represents the \keyword{transposition} of a vector or a matrix. Vectors in 3 spacial dimensions, such as those in classical mechanics, are typically notated with an arrow overhead (i.e. $\vec{v}$). In other contexts, vectors are either represented by boldface script or by Dirac's \keyword{bra-ket} notation. 
+
+\begin{defn}[Dirac's Bra-ket Notation]{1}
+	Ket vectors are represented by column vectors, by vertically arranged tuples of scalers (or equivalently, by $n \times 1$ matrices).
+	\begin{align}
+		\vec{x} \equiv \mathbf{x} \equiv \ket{\mathbf{x}} \equiv \left(\begin{matrix}
+			x_1 \\ x_2 \\ \vdots \\ x_n
+		\end{matrix}\right) = \left(\begin{matrix}
+		x_1, x_2, \hdots, x_n
+	\end{matrix}\right)^T
+	\end{align}
+	A vector $\mathbf{x}^*$ with an asterisk symbol in its superscript denotes an element of the dual space. This is represented by the bra vector $\bra{\mathbf{x}}$ . Bra vectors represent row vectors - horizontally arranged tuples of scalars (i.e. $1 \times n$ matrices).
+		\begin{align}
+		\mathbf{x}^* \equiv \bra{\mathbf{x}} \equiv \left(\begin{matrix}
+			x_1, x_2, \hdots, x_n
+		\end{matrix}\right)
+	\end{align}
+	The dot (inner or scaler) products between two vectors $\mathbf{x}$ and $\mathbf{y}$ in Euclidean space is denoted by $\braket{\mathbf{x}|\mathbf{y}}$.
+\end{defn}
+
+The \keyword{dot product}, also known as the scalar product or inner product, is an operation defined on vectors in mathematics and physics. It takes two vectors of equal dimensionality and produces a single scalar value as the result. The dot product is commonly denoted using the dot symbol ($\cdot$), bra-ket notation, or by juxtaposing the vectors without any operator.
+
+\begin{defn}[Dot Prodcuct \label{Dot Product Definition}]{1}
+	Given two vectors $\mathbf{x}=(x_1, x_2, \hdots, x_n)$ and $\mathbf{y}=(y_1, y_2, \hdots, y_n)$, the dot product is defined as
+	\begin{align}
+		\mathbf{x}\cdot\mathbf{y} \equiv \braket{\mathbf{x}|\mathbf{y}} \equiv x_1y_1 + x_2y_2 + \hdots + x_ny_n
+	\end{align}
+\end{defn}
+
+Suppose we have two 3-dimensional vectors $\vec{r} = (r_x,r_y,r_z)$ and $\vec{s}=(s_x,s_y,s_z)$ in a Euclidean $x,y,z$ coordinate system. The dot product is then $\vec{r} \cdot \vec{s} = r_xs_x+r_ys_y+r_zs_z = |\vec{r}||\vec{s}|\cos(\theta)$, where $\theta$ is the smallest angle between the two vectors. From this, the angle between these two 3 dimensional vectors can be determined as 
+\begin{align}
+	\theta = \cos^{-1}\left(\frac{\vec{r} \cdot \vec{s}}{|\vec{r}||\vec{s}|}\right)
+\end{align}
+A few mathematical identities hold when dealing with dot products.
+
+\begin{itemize}
+	\item Commutativity
+	\begin{align}
+		\mathbf{x}\cdot\mathbf{y} = x_1y_1 + x_2y_2 + \hdots + x_ny_n = y_1x_1 + y_2x_2 + \hdots + y_nx_n = \mathbf{y}\cdot\mathbf{x}
+	\end{align}
+\end{itemize}
