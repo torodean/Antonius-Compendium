@@ -11,157 +11,162 @@
 \indexentry{transposition|hyperpage}{7}
 \indexentry{bra-ket|hyperpage}{7}
 \indexentry{dot product|hyperpage}{7}
-\indexentry{Probability|hyperpage}{14}
-\indexentry{state|hyperpage}{14}
-\indexentry{system|hyperpage}{14}
-\indexentry{sample space|hyperpage}{14}
-\indexentry{event|hyperpage}{14}
-\indexentry{simple event|hyperpage}{14}
-\indexentry{compound event|hyperpage}{14}
-\indexentry{probability|hyperpage}{14}
-\indexentry{Bayesian probability|hyperpage}{14}
-\indexentry{model probability|hyperpage}{14}
+\indexentry{Commutativity|hyperpage}{7}
+\indexentry{Scalar Multiplication|hyperpage}{8}
+\indexentry{Orthogonal|hyperpage}{8}
+\indexentry{Perpendicular|hyperpage}{8}
+\indexentry{Projection|hyperpage}{8}
+\indexentry{Probability|hyperpage}{15}
+\indexentry{state|hyperpage}{15}
+\indexentry{system|hyperpage}{15}
+\indexentry{sample space|hyperpage}{15}
+\indexentry{event|hyperpage}{15}
+\indexentry{simple event|hyperpage}{15}
+\indexentry{compound event|hyperpage}{15}
+\indexentry{probability|hyperpage}{15}
 \indexentry{Bayesian probability|hyperpage}{15}
-\indexentry{Calculus|hyperpage}{16}
-\indexentry{Differentiation|hyperpage}{16}
-\indexentry{Integration|hyperpage}{16}
-\indexentry{Linear algebra|hyperpage}{34}
-\indexentry{Vectors|hyperpage}{34}
-\indexentry{Vector Spaces|hyperpage}{34}
-\indexentry{Matrices|hyperpage}{34}
-\indexentry{Linear Transformations|hyperpage}{34}
-\indexentry{Eigenvalues|hyperpage}{34}
-\indexentry{Eigenvectors|hyperpage}{34}
-\indexentry{Classical Mechanics|hyperpage}{35}
-\indexentry{Electromagnetism|hyperpage}{35}
-\indexentry{Thermodynamics|hyperpage}{35}
-\indexentry{Quantum Mechanics|hyperpage}{35}
-\indexentry{Relativity|hyperpage}{35}
-\indexentry{Nuclear Physics|hyperpage}{35}
-\indexentry{Particle Physics|hyperpage}{35}
-\indexentry{Astrophysics|hyperpage}{35}
-\indexentry{Inorganic chemistry|hyperpage}{36}
-\indexentry{Mendeleev|hyperpage}{36}
-\indexentry{periodic table of elements|hyperpage}{36}
-\indexentry{Organic chemistry|hyperpage}{36}
-\indexentry{Statistical mechanics|hyperpage}{36}
-\indexentry{Biology|hyperpage}{36}
-\indexentry{conservation of energy|hyperpage}{36}
-\indexentry{Proteins|hyperpage}{36}
-\indexentry{Enzymes|hyperpage}{36}
-\indexentry{hemoglobin|hyperpage}{37}
-\indexentry{DNA|hyperpage}{37}
-\indexentry{Astronomy|hyperpage}{37}
-\indexentry{spectroscope|hyperpage}{37}
-\indexentry{Geology|hyperpage}{37}
-\indexentry{earth sciences|hyperpage}{37}
-\indexentry{conservation of energy|hyperpage}{38}
-\indexentry{energy|hyperpage}{38}
-\indexentry{potential energy|hyperpage}{38}
-\indexentry{gravitational potential energy|hyperpage}{38}
-\indexentry{principle of virtual work|hyperpage}{38}
-\indexentry{motion|hyperpage}{39}
-\indexentry{kinetic energy|hyperpage}{39}
-\indexentry{Classical mechanics|hyperpage}{40}
-\indexentry{Newton's Laws of Motion|hyperpage}{40}
-\indexentry{Conservation of Energy|hyperpage}{40}
-\indexentry{Conservation of Momentum|hyperpage}{40}
-\indexentry{Gravitation|hyperpage}{40}
-\indexentry{Harmonic Motion|hyperpage}{40}
-\indexentry{Statistical mechanics|hyperpage}{41}
-\indexentry{Microstates|hyperpage}{41}
-\indexentry{Macrostates|hyperpage}{41}
-\indexentry{Ensembles|hyperpage}{41}
-\indexentry{Boltzmann Distribution|hyperpage}{41}
-\indexentry{Entropy|hyperpage}{41}
-\indexentry{Statistical Thermodynamics|hyperpage}{41}
-\indexentry{atomic hypothesis|hyperpage}{41}
-\indexentry{Heat|hyperpage}{42}
-\indexentry{Pressure|hyperpage}{42}
-\indexentry{pascals|hyperpage}{42}
-\indexentry{crystalline array|hyperpage}{42}
-\indexentry{Melting|hyperpage}{42}
-\indexentry{Air|hyperpage}{43}
-\indexentry{Evaporation|hyperpage}{43}
-\indexentry{Ions|hyperpage}{43}
-\indexentry{electrical attraction|hyperpage}{43}
-\indexentry{chemical process|hyperpage}{43}
-\indexentry{physical process|hyperpage}{43}
-\indexentry{kinetic energy|hyperpage}{43}
-\indexentry{burning|hyperpage}{43}
-\indexentry{Flames|hyperpage}{43}
-\indexentry{molecule|hyperpage}{43}
-\indexentry{Organic chemistry|hyperpage}{44}
-\indexentry{Brownian motion|hyperpage}{44}
-\indexentry{Astrophysics|hyperpage}{45}
-\indexentry{Stellar Astrophysics|hyperpage}{45}
-\indexentry{Galactic Astrophysics|hyperpage}{45}
-\indexentry{Cosmology|hyperpage}{45}
-\indexentry{Exoplanets and Planetary Systems|hyperpage}{45}
-\indexentry{High-Energy Astrophysics|hyperpage}{45}
-\indexentry{Astrobiology|hyperpage}{45}
-\indexentry{Electromagnetism|hyperpage}{46}
-\indexentry{electricity|hyperpage}{46}
-\indexentry{magnetism|hyperpage}{46}
-\indexentry{Electric Fields|hyperpage}{46}
-\indexentry{Magnetic Fields|hyperpage}{46}
-\indexentry{Electromagnetic Waves|hyperpage}{46}
-\indexentry{Maxwell's Equations|hyperpage}{46}
-\indexentry{Electromagnetic Induction|hyperpage}{46}
-\indexentry{Electromagnetic Force|hyperpage}{46}
-\indexentry{electromagnetic field|hyperpage}{46}
-\indexentry{electric field|hyperpage}{46}
-\indexentry{magnetic field|hyperpage}{46}
-\indexentry{electromagnetic waves|hyperpage}{46}
-\indexentry{electromagnetic spectrum|hyperpage}{46}
-\indexentry{Quantum mechanics|hyperpage}{48}
-\indexentry{Wave-Particle Duality|hyperpage}{48}
-\indexentry{Quantization of Energy|hyperpage}{48}
-\indexentry{Uncertainty Principle|hyperpage}{48}
-\indexentry{Quantum Superposition|hyperpage}{48}
-\indexentry{Quantum Entanglement|hyperpage}{48}
-\indexentry{quantum mechanics|hyperpage}{48}
-\indexentry{photon|hyperpage}{49}
-\indexentry{quantum electrodynamics|hyperpage}{49}
-\indexentry{Special Relativity|hyperpage}{50}
-\indexentry{General Relativity|hyperpage}{50}
-\indexentry{Special Relativity|hyperpage}{50}
-\indexentry{Time Dilation|hyperpage}{50}
-\indexentry{Length Contraction|hyperpage}{50}
-\indexentry{Mass-Energy Equivalence|hyperpage}{50}
-\indexentry{General Relativity|hyperpage}{50}
-\indexentry{Curved Spacetime|hyperpage}{50}
-\indexentry{Gravitational Time Dilation|hyperpage}{50}
-\indexentry{Gravitational Waves|hyperpage}{50}
-\indexentry{Quantum Field Theory|hyperpage}{51}
-\indexentry{Quantized Fields|hyperpage}{51}
-\indexentry{Lagrangian Formalism|hyperpage}{51}
-\indexentry{Creation and Annihilation Operators|hyperpage}{51}
-\indexentry{Feynman Diagrams|hyperpage}{51}
-\indexentry{Renormalization|hyperpage}{51}
-\indexentry{Gauge Theories|hyperpage}{51}
-\indexentry{Quantum Electrodynamics|hyperpage}{51}
-\indexentry{Quantum Electrodynamics|hyperpage}{52}
-\indexentry{Quantization of Electromagnetic Fields|hyperpage}{52}
+\indexentry{model probability|hyperpage}{15}
+\indexentry{Bayesian probability|hyperpage}{16}
+\indexentry{Calculus|hyperpage}{17}
+\indexentry{Differentiation|hyperpage}{17}
+\indexentry{Integration|hyperpage}{17}
+\indexentry{Linear algebra|hyperpage}{35}
+\indexentry{Vectors|hyperpage}{35}
+\indexentry{Vector Spaces|hyperpage}{35}
+\indexentry{Matrices|hyperpage}{35}
+\indexentry{Linear Transformations|hyperpage}{35}
+\indexentry{Eigenvalues|hyperpage}{35}
+\indexentry{Eigenvectors|hyperpage}{35}
+\indexentry{Classical Mechanics|hyperpage}{36}
+\indexentry{Electromagnetism|hyperpage}{36}
+\indexentry{Thermodynamics|hyperpage}{36}
+\indexentry{Quantum Mechanics|hyperpage}{36}
+\indexentry{Relativity|hyperpage}{36}
+\indexentry{Nuclear Physics|hyperpage}{36}
+\indexentry{Particle Physics|hyperpage}{36}
+\indexentry{Astrophysics|hyperpage}{36}
+\indexentry{Inorganic chemistry|hyperpage}{37}
+\indexentry{Mendeleev|hyperpage}{37}
+\indexentry{periodic table of elements|hyperpage}{37}
+\indexentry{Organic chemistry|hyperpage}{37}
+\indexentry{Statistical mechanics|hyperpage}{37}
+\indexentry{Biology|hyperpage}{37}
+\indexentry{conservation of energy|hyperpage}{37}
+\indexentry{Proteins|hyperpage}{37}
+\indexentry{Enzymes|hyperpage}{37}
+\indexentry{hemoglobin|hyperpage}{38}
+\indexentry{DNA|hyperpage}{38}
+\indexentry{Astronomy|hyperpage}{38}
+\indexentry{spectroscope|hyperpage}{38}
+\indexentry{Geology|hyperpage}{38}
+\indexentry{earth sciences|hyperpage}{38}
+\indexentry{conservation of energy|hyperpage}{39}
+\indexentry{energy|hyperpage}{39}
+\indexentry{potential energy|hyperpage}{39}
+\indexentry{gravitational potential energy|hyperpage}{39}
+\indexentry{principle of virtual work|hyperpage}{39}
+\indexentry{motion|hyperpage}{40}
+\indexentry{kinetic energy|hyperpage}{40}
+\indexentry{Classical mechanics|hyperpage}{41}
+\indexentry{Newton's Laws of Motion|hyperpage}{41}
+\indexentry{Conservation of Energy|hyperpage}{41}
+\indexentry{Conservation of Momentum|hyperpage}{41}
+\indexentry{Gravitation|hyperpage}{41}
+\indexentry{Harmonic Motion|hyperpage}{41}
+\indexentry{Statistical mechanics|hyperpage}{42}
+\indexentry{Microstates|hyperpage}{42}
+\indexentry{Macrostates|hyperpage}{42}
+\indexentry{Ensembles|hyperpage}{42}
+\indexentry{Boltzmann Distribution|hyperpage}{42}
+\indexentry{Entropy|hyperpage}{42}
+\indexentry{Statistical Thermodynamics|hyperpage}{42}
+\indexentry{atomic hypothesis|hyperpage}{42}
+\indexentry{Heat|hyperpage}{43}
+\indexentry{Pressure|hyperpage}{43}
+\indexentry{pascals|hyperpage}{43}
+\indexentry{crystalline array|hyperpage}{43}
+\indexentry{Melting|hyperpage}{43}
+\indexentry{Air|hyperpage}{44}
+\indexentry{Evaporation|hyperpage}{44}
+\indexentry{Ions|hyperpage}{44}
+\indexentry{electrical attraction|hyperpage}{44}
+\indexentry{chemical process|hyperpage}{44}
+\indexentry{physical process|hyperpage}{44}
+\indexentry{kinetic energy|hyperpage}{44}
+\indexentry{burning|hyperpage}{44}
+\indexentry{Flames|hyperpage}{44}
+\indexentry{molecule|hyperpage}{44}
+\indexentry{Organic chemistry|hyperpage}{45}
+\indexentry{Brownian motion|hyperpage}{45}
+\indexentry{Astrophysics|hyperpage}{46}
+\indexentry{Stellar Astrophysics|hyperpage}{46}
+\indexentry{Galactic Astrophysics|hyperpage}{46}
+\indexentry{Cosmology|hyperpage}{46}
+\indexentry{Exoplanets and Planetary Systems|hyperpage}{46}
+\indexentry{High-Energy Astrophysics|hyperpage}{46}
+\indexentry{Astrobiology|hyperpage}{46}
+\indexentry{Electromagnetism|hyperpage}{47}
+\indexentry{electricity|hyperpage}{47}
+\indexentry{magnetism|hyperpage}{47}
+\indexentry{Electric Fields|hyperpage}{47}
+\indexentry{Magnetic Fields|hyperpage}{47}
+\indexentry{Electromagnetic Waves|hyperpage}{47}
+\indexentry{Maxwell's Equations|hyperpage}{47}
+\indexentry{Electromagnetic Induction|hyperpage}{47}
+\indexentry{Electromagnetic Force|hyperpage}{47}
+\indexentry{electromagnetic field|hyperpage}{47}
+\indexentry{electric field|hyperpage}{47}
+\indexentry{magnetic field|hyperpage}{47}
+\indexentry{electromagnetic waves|hyperpage}{47}
+\indexentry{electromagnetic spectrum|hyperpage}{47}
+\indexentry{Quantum mechanics|hyperpage}{49}
+\indexentry{Wave-Particle Duality|hyperpage}{49}
+\indexentry{Quantization of Energy|hyperpage}{49}
+\indexentry{Uncertainty Principle|hyperpage}{49}
+\indexentry{Quantum Superposition|hyperpage}{49}
+\indexentry{Quantum Entanglement|hyperpage}{49}
+\indexentry{quantum mechanics|hyperpage}{49}
+\indexentry{photon|hyperpage}{50}
+\indexentry{quantum electrodynamics|hyperpage}{50}
+\indexentry{Special Relativity|hyperpage}{51}
+\indexentry{General Relativity|hyperpage}{51}
+\indexentry{Special Relativity|hyperpage}{51}
+\indexentry{Time Dilation|hyperpage}{51}
+\indexentry{Length Contraction|hyperpage}{51}
+\indexentry{Mass-Energy Equivalence|hyperpage}{51}
+\indexentry{General Relativity|hyperpage}{51}
+\indexentry{Curved Spacetime|hyperpage}{51}
+\indexentry{Gravitational Time Dilation|hyperpage}{51}
+\indexentry{Gravitational Waves|hyperpage}{51}
+\indexentry{Quantum Field Theory|hyperpage}{52}
+\indexentry{Quantized Fields|hyperpage}{52}
+\indexentry{Lagrangian Formalism|hyperpage}{52}
+\indexentry{Creation and Annihilation Operators|hyperpage}{52}
 \indexentry{Feynman Diagrams|hyperpage}{52}
 \indexentry{Renormalization|hyperpage}{52}
-\indexentry{Quantum Loops|hyperpage}{52}
-\indexentry{Gauge Invariance|hyperpage}{52}
-\indexentry{Electron Self-Energy|hyperpage}{52}
-\indexentry{$\pi $-meson|hyperpage}{53}
-\indexentry{pion|hyperpage}{53}
-\indexentry{strangeness|hyperpage}{53}
-\indexentry{baryons|hyperpage}{53}
-\indexentry{mesons|hyperpage}{53}
-\indexentry{pions|hyperpage}{53}
-\indexentry{leptons|hyperpage}{53}
-\indexentry{graviton|hyperpage}{53}
-\indexentry{Quantum Chromodynamics|hyperpage}{54}
-\indexentry{Quarks|hyperpage}{54}
-\indexentry{Gluons|hyperpage}{54}
-\indexentry{Color Charge|hyperpage}{54}
-\indexentry{Asymptotic Freedom and Confinement|hyperpage}{54}
-\indexentry{Lattice QCD|hyperpage}{54}
-\indexentry{Hadronization|hyperpage}{54}
-\indexentry{Hadron|hyperpage}{54}
-\indexentry{Strong Interactions|hyperpage}{54}
+\indexentry{Gauge Theories|hyperpage}{52}
+\indexentry{Quantum Electrodynamics|hyperpage}{52}
+\indexentry{Quantum Electrodynamics|hyperpage}{53}
+\indexentry{Quantization of Electromagnetic Fields|hyperpage}{53}
+\indexentry{Feynman Diagrams|hyperpage}{53}
+\indexentry{Renormalization|hyperpage}{53}
+\indexentry{Quantum Loops|hyperpage}{53}
+\indexentry{Gauge Invariance|hyperpage}{53}
+\indexentry{Electron Self-Energy|hyperpage}{53}
+\indexentry{$\pi $-meson|hyperpage}{54}
+\indexentry{pion|hyperpage}{54}
+\indexentry{strangeness|hyperpage}{54}
+\indexentry{baryons|hyperpage}{54}
+\indexentry{mesons|hyperpage}{54}
+\indexentry{pions|hyperpage}{54}
+\indexentry{leptons|hyperpage}{54}
+\indexentry{graviton|hyperpage}{54}
+\indexentry{Quantum Chromodynamics|hyperpage}{55}
+\indexentry{Quarks|hyperpage}{55}
+\indexentry{Gluons|hyperpage}{55}
+\indexentry{Color Charge|hyperpage}{55}
+\indexentry{Asymptotic Freedom and Confinement|hyperpage}{55}
+\indexentry{Lattice QCD|hyperpage}{55}
+\indexentry{Hadronization|hyperpage}{55}
+\indexentry{Hadron|hyperpage}{55}
+\indexentry{Strong Interactions|hyperpage}{55}
