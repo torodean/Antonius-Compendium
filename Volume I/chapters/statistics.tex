@@ -18,9 +18,9 @@ For a system with $n$ states, the total probabilities of all states must normali
 A \keyword{Bayesian probability} is defined as a person's knowledge of the outcome of a trial, based on the evidence at their disposal - often accompanied by an associated error. A \keyword{model probability} is an assumption or guess for the probability given the possibility of an infinite number of trials.
 \end{defn}
 
-In a scenario with two possible outcomes, denoted as $E_1$ (Event 1) and $E_2$ (Event 2), each having its own probability, let's say $P_1$ and $P_2$ respectively (where $P_1 + P_2 = 1$), we can consider a series of $n$ trials. The probability of obtaining Event 1 $k$ times out of these $n$ trials can be expressed as $P(k, n)$ and is given by
+In a scenario with two possible outcomes, denoted as $E_1$ (Event 1) and $E_2$ (Event 2), each having its own probability, let's say $P_1$ and $P_2$ respectively (where $P_1 + P_2 = 1$), we can consider a series of $n$ trials. The total number of possible sequences is $N=2^n$ (see theorem \ref{thm:Summing Over All binomial coefficients}) since there are only 2 possible events. The probability of obtaining Event 1 $k$ times out of these $n$ trials can be expressed as $P(k, n)$ and is given by
 \begin{align}
-P(k,n) = {{n}\choose{k}}P_1^kP_2^{n-k}
+P(k,n) = \lim_{N\rightarrow\infty}\frac{E_1}{N} = \frac{1}{2^n}{{n}\choose{k}} = {{n}\choose{k}}P_1^kP_2^{n-k}
 \end{align}
 
 Some more useful concepts for modeling a system are the mean (average) and standard deviation. 
