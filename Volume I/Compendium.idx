@@ -8,15 +8,17 @@
 \indexentry{The Law of Cosines|hyperpage}{4}
 \indexentry{the Pythagorean theorem|hyperpage}{5}
 \indexentry{complex number|hyperpage}{6}
+\indexentry{complex number|hyperpage}{6}
 \indexentry{transposition|hyperpage}{7}
 \indexentry{bra-ket|hyperpage}{7}
 \indexentry{dot product|hyperpage}{7}
-\indexentry{Commutativity|hyperpage}{7}
+\indexentry{Commutativity|hyperpage}{8}
 \indexentry{Scalar Multiplication|hyperpage}{8}
 \indexentry{Orthogonal|hyperpage}{8}
 \indexentry{Perpendicular|hyperpage}{8}
 \indexentry{Projection|hyperpage}{8}
 \indexentry{Probability|hyperpage}{15}
+\indexentry{Changes|hyperpage}{15}
 \indexentry{state|hyperpage}{15}
 \indexentry{system|hyperpage}{15}
 \indexentry{sample space|hyperpage}{15}
@@ -26,6 +28,8 @@
 \indexentry{probability|hyperpage}{15}
 \indexentry{Bayesian probability|hyperpage}{15}
 \indexentry{model probability|hyperpage}{15}
+\indexentry{Bernoulli probability|hyperpage}{15}
+\indexentry{binomial probability|hyperpage}{15}
 \indexentry{Bayesian probability|hyperpage}{16}
 \indexentry{Calculus|hyperpage}{17}
 \indexentry{Differentiation|hyperpage}{17}
@@ -138,35 +142,42 @@
 \indexentry{Curved Spacetime|hyperpage}{51}
 \indexentry{Gravitational Time Dilation|hyperpage}{51}
 \indexentry{Gravitational Waves|hyperpage}{51}
-\indexentry{Quantum Field Theory|hyperpage}{52}
-\indexentry{Quantized Fields|hyperpage}{52}
-\indexentry{Lagrangian Formalism|hyperpage}{52}
-\indexentry{Creation and Annihilation Operators|hyperpage}{52}
-\indexentry{Feynman Diagrams|hyperpage}{52}
-\indexentry{Renormalization|hyperpage}{52}
-\indexentry{Gauge Theories|hyperpage}{52}
-\indexentry{Quantum Electrodynamics|hyperpage}{52}
-\indexentry{Quantum Electrodynamics|hyperpage}{53}
-\indexentry{Quantization of Electromagnetic Fields|hyperpage}{53}
-\indexentry{Feynman Diagrams|hyperpage}{53}
-\indexentry{Renormalization|hyperpage}{53}
-\indexentry{Quantum Loops|hyperpage}{53}
-\indexentry{Gauge Invariance|hyperpage}{53}
-\indexentry{Electron Self-Energy|hyperpage}{53}
-\indexentry{$\pi $-meson|hyperpage}{54}
-\indexentry{pion|hyperpage}{54}
-\indexentry{strangeness|hyperpage}{54}
-\indexentry{baryons|hyperpage}{54}
-\indexentry{mesons|hyperpage}{54}
-\indexentry{pions|hyperpage}{54}
-\indexentry{leptons|hyperpage}{54}
-\indexentry{graviton|hyperpage}{54}
-\indexentry{Quantum Chromodynamics|hyperpage}{55}
-\indexentry{Quarks|hyperpage}{55}
-\indexentry{Gluons|hyperpage}{55}
-\indexentry{Color Charge|hyperpage}{55}
-\indexentry{Asymptotic Freedom and Confinement|hyperpage}{55}
-\indexentry{Lattice QCD|hyperpage}{55}
-\indexentry{Hadronization|hyperpage}{55}
-\indexentry{Hadron|hyperpage}{55}
-\indexentry{Strong Interactions|hyperpage}{55}
+\indexentry{Time|hyperpage}{51}
+\indexentry{frequency|hyperpage}{52}
+\indexentry{cesium atomic clock|hyperpage}{52}
+\indexentry{Distance|hyperpage}{53}
+\indexentry{Triangulation|hyperpage}{53}
+\indexentry{Electron microscopes|hyperpage}{53}
+\indexentry{fermi|hyperpage}{53}
+\indexentry{Quantum Field Theory|hyperpage}{54}
+\indexentry{Quantized Fields|hyperpage}{54}
+\indexentry{Lagrangian Formalism|hyperpage}{54}
+\indexentry{Creation and Annihilation Operators|hyperpage}{54}
+\indexentry{Feynman Diagrams|hyperpage}{54}
+\indexentry{Renormalization|hyperpage}{54}
+\indexentry{Gauge Theories|hyperpage}{54}
+\indexentry{Quantum Electrodynamics|hyperpage}{54}
+\indexentry{Quantum Electrodynamics|hyperpage}{55}
+\indexentry{Quantization of Electromagnetic Fields|hyperpage}{55}
+\indexentry{Feynman Diagrams|hyperpage}{55}
+\indexentry{Renormalization|hyperpage}{55}
+\indexentry{Quantum Loops|hyperpage}{55}
+\indexentry{Gauge Invariance|hyperpage}{55}
+\indexentry{Electron Self-Energy|hyperpage}{55}
+\indexentry{$\pi $-meson|hyperpage}{56}
+\indexentry{pion|hyperpage}{56}
+\indexentry{strangeness|hyperpage}{56}
+\indexentry{baryons|hyperpage}{56}
+\indexentry{mesons|hyperpage}{56}
+\indexentry{pions|hyperpage}{56}
+\indexentry{leptons|hyperpage}{56}
+\indexentry{graviton|hyperpage}{56}
+\indexentry{Quantum Chromodynamics|hyperpage}{57}
+\indexentry{Quarks|hyperpage}{57}
+\indexentry{Gluons|hyperpage}{57}
+\indexentry{Color Charge|hyperpage}{57}
+\indexentry{Asymptotic Freedom and Confinement|hyperpage}{57}
+\indexentry{Lattice QCD|hyperpage}{57}
+\indexentry{Hadronization|hyperpage}{57}
+\indexentry{Hadron|hyperpage}{57}
+\indexentry{Strong Interactions|hyperpage}{57}
