@@ -33,7 +33,7 @@ If we continue this pattern, we can see that we can write the binomial coefficie
 \end{align}
 Note that we stop the above sequence when the numerator of our factorial sequence has reached zero. If we were to continue the sequence, we would end up having negative factorials in our numerator which would make evaluating the binomial coefficient at that term and the following terms difficult. However, if we happen to have a smaller $k$ than $n$, it may be such that we end up having negative $k$ numbers. This is ok for now, as it will lead to complex infinities in the denominator of our binomial coefficient expressions hence making those terms zero. This will be demonstrated later. Now, suppose we claim the following theorem. 
 
-\begin{theo}[opt]{1}
+\begin{theo}[Summing Over All binomial coefficients\label{thm:Summing Over All binomial coefficients}]{1}
 	For all $n\in \mathbb{N}$,
 	\begin{align}
 		\sum_{i=0}^{n}{{n}\choose{i}} =\sum_{i=0}^{n}\frac{n!}{(n-i)!i!}= 2^n.
