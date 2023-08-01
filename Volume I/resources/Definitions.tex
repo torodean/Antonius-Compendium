@@ -315,3 +315,38 @@
 	}{
 	\end{tcolorbox}
 }
+
+\definecolor{lightpurple}{RGB}{220,180,240}
+
+\newenvironment{quotationbox}{
+	\begin{tcolorbox}[
+		colback=lightpurple!10,  % Very light purple background color of the box
+		colframe=lightpurple!50,  % Border color of the box
+		arc=0pt,  % Adjust the corner radius of the box
+		boxrule=1pt,  % Border thickness
+		title={\faQuoteLeft\ Quotation},  % The quotation icon and title
+		fonttitle=\bfseries,  % Font style for the title
+		coltitle=blue!50!black,  % Color for the title text
+		colbacktitle=yellow!20,  % Background color for the title
+		attach title to upper={\par},
+		boxsep=0pt,  % Adjust the space between the content and the box
+		]
+	}{
+	\end{tcolorbox}
+}
+
+
+
+\newcommand{\unfinished}{%
+	\par\noindent%
+	\setlength{\fboxsep}{10pt} % Adjust the padding
+	\fcolorbox{red}{red!20}{%
+		\begin{minipage}{\dimexpr\linewidth-2\fboxsep}%
+			\vspace{5pt} % Adjust the vertical spacing
+			\centering
+			\textcolor{red}{\textbf{\faExclamation\ Section in Progress\ \faExclamation}}
+			\vspace{5pt} % Adjust the vertical spacing
+		\end{minipage}%
+	}%
+	\par
+}

@@ -63,14 +63,11 @@ The \keyword{dot product}, also known as the scalar product or inner product, is
 \begin{defn}[Dot Prodcuct \label{Dot Product Definition}]{1}
 	Given two vectors $\mathbf{x}=(x_1, x_2, \hdots, x_n)$ and $\mathbf{y}=(y_1, y_2, \hdots, y_n)$, the dot product is defined as
 	\begin{align}
-		\mathbf{x}\cdot\mathbf{y} \equiv \mathbf{x}^T\mathbf{y} \equiv \braket{\mathbf{x}|\mathbf{y}} \equiv ||\mathbf{x}||||\mathbf{y}||\cos(\theta) \equiv \sum_{i=1}^{n} x_iy_i = x_1y_1 + x_2y_2 + \hdots + x_ny_n
+		\mathbf{x}\cdot\mathbf{y} \equiv \mathbf{x}^T\mathbf{y} \equiv \braket{\mathbf{x}|\mathbf{y}} \equiv |\mathbf{x}||\mathbf{y}|\cos(\theta) \equiv \sum_{i=1}^{n} x_iy_i = x_1y_1 + x_2y_2 + \hdots + x_ny_n = \underbrace{x_iy_i}_{\text{Einstein Notation}},
 	\end{align}
+	where $\theta$ is the smallest angle between the two vectors.
 \end{defn}
 
-Suppose we have two 3-dimensional vectors $\vec{r} = (r_x,r_y,r_z)$ and $\vec{s}=(s_x,s_y,s_z)$ in a Euclidean $x,y,z$ coordinate system. The dot product is then $\vec{r} \cdot \vec{s} = r_xs_x+r_ys_y+r_zs_z = |\vec{r}||\vec{s}|\cos(\theta)$, where $\theta$ is the smallest angle between the two vectors. From this, the angle between these two 3 dimensional vectors can be determined as 
-\begin{align}
-	\theta = \cos^{-1}\left(\frac{\vec{r} \cdot \vec{s}}{|\vec{r}||\vec{s}|}\right)
-\end{align}
 A few mathematical identities hold when dealing with dot products.
 
 \begin{itemize}
@@ -78,4 +75,98 @@ A few mathematical identities hold when dealing with dot products.
 	\begin{align}
 		\mathbf{x}\cdot\mathbf{y} = x_1y_1 + x_2y_2 + \hdots + x_ny_n = y_1x_1 + y_2x_2 + \hdots + y_nx_n = \mathbf{y}\cdot\mathbf{x}
 	\end{align}
+	\item Distributive Property
+	\begin{align}
+		 \mathbf{A} \cdot (\mathbf{B} + \mathbf{C}) = \sum_{i=0}^{n}a_i(b_i+c_i)\hat{e_i} = \sum_{i=0}^{n}a_ib_i\hat{e_i} + \sum_{i=0}^{n}a_ic_i\hat{e_i} = \mathbf{A} \cdot \mathbf{B} + \mathbf{A} \cdot \mathbf{C}
+	\end{align}
+	\item Scalar Multiplication
+	\begin{align}
+		(k\mathbf{A}) \cdot \mathbf{B} = \sum_{i=0}^{n}(ka_i)b_i\hat{e_i} = k\sum_{i=0}^{n}a_ib_i\hat{e_i} = k(\mathbf{A} \cdot \mathbf{B}) = \sum_{i=0}^{n}a_i(kb_i)\hat{e_i}= \mathbf{A} \cdot (k\mathbf{B})
+	\end{align}
+	\item Orthogonal (Perpendicular) Vectors: If the dot product of two non-zero vectors is zero, they are orthogonal (perpendicular) to each other.
+	\begin{align}
+		\mathbf{x}\cdot\mathbf{y} = 0 \implies  |\mathbf{x}||\mathbf{y}|\cos(\theta) = 0 \implies \underbrace{\theta = \frac{\pi}{2}+\pi n\text{, where } n\in \N}_{\text{$90^\circ$ between vectors}}
+	\end{align}
 \end{itemize}
+
+Suppose we have two 3-dimensional vectors $\vec{r} = (r_x,r_y,r_z)$ and $\vec{s}=(s_x,s_y,s_z)$ in a Euclidean $x,y,z$ coordinate system. The dot product is then $\vec{r} \cdot \vec{s} = r_xs_x+r_ys_y+r_zs_z = |\vec{r}||\vec{s}|\cos(\theta)$, where $\theta$ is the smallest angle between the two vectors. From this, the angle between these two 3 dimensional vectors can be determined as 
+\begin{align}
+	\theta = \cos^{-1}\left(\frac{\vec{r} \cdot \vec{s}}{|\vec{r}||\vec{s}|}\right)
+\end{align}
+Consider two vectors $\vec{A}=A_x\hat{x}+A_y\hat{y}$ and $\vec{B}=B_x\hat{x}+B_y\hat{y}$ in a 2-dimensional plane. In polar coordinates this woulkd be $\vec{A}=A\cos(\theta_A)\hat{x}+A\sin(\theta_A)\hat{y}$ and $\vec{B}=B\cos(\theta_B)\hat{x}+B\sin(\theta_B)\hat{y}$, where $A=\sqrt{A_x^2+A_y^2}$ and $B=\sqrt{B_x^2+B_y^2}$ are the magnitudes of each vector. The definition of dot product according to Wolfram's Mathworld is simply 
+\begin{align}
+	\mathbf{x}\cdot\mathbf{y} = |\mathbf{x}||\mathbf{y}|\cos(\theta) \label{defn:Wolframs Dot Prodcut Definition}
+\end{align}, where $\theta$ is the smallest angle between the two vectors. Using the polar coordinates, the magnitudes of each vector are simply $A$ and $B$ and the angle between them is the differences of the angles $\theta_A-\theta_B$. Therefore the dot product is $\vec{A}\cdot\vec{B} = AB\cos(\theta_A-\theta_B)$. We can apply some trigonometric identities to show this is equal to the summation notation in Definition \ref{Dot Product Definition}.
+\begin{align}
+	\vec{A}\cdot\vec{B} &= AB\cos(\theta_A-\theta_B) \label{eqn:polar coordinate dot product}\\
+	&= AB(\cos(\theta_A)\cos(\theta_B)+\sin(\theta_A)\sin(\theta_B)) \\
+	&= A\cos(\theta_A)B\cos(\theta_B)+A\sin(\theta_A)B\sin(\theta_B) \\
+	&= A_xB_x+A_yB_y
+\end{align}
+A question then arises of whether of not this holds for dimensions higher than two. Now, imagine rotating the 2 dimensional reference frame for $\vec{A}$ and $\vec{B}$ into a 3-dimensional reference frame (rotating the coordinate system). The vectors themselves would be mathematically identical, as the vectors themselves did not change, however given the reference frame changed, they would have different coordinates. Thus, we define the new coordinates of these vectors in the new frame as $\vec{A}\equiv \vec{X} =x_1\hat{e}_1 + x_2\hat{e_2}+x_3\hat{e_3}$ and $\vec{B}\equiv \vec{Y} =y_1\hat{e}_1 + y_2\hat{e_2}+y_3\hat{e_3}$. Since we have only rotated our coordinate frame and not changed the vectors, the angle between them $\theta_A-\theta_B$ remains unchanged. We can begin by trying a similar method to what we got above. Converting our two vectors to spherical coordinates (now that we are in 3-dimensional we use spherical rather than polar) we have
+\begin{align}
+	\vec{X} &= x_1\hat{e}_1 + x_2\hat{e_2}+x_3\hat{e_3} = X\sin(\theta_x)\cos(\phi_x)\hat{e}_1 + X\sin(\theta_x)\sin(\phi_x)\hat{e_2}+X\cos(\theta_x)\hat{e_3} \\
+	\vec{Y} &= y_1\hat{e}_1 + y_2\hat{e_2}+y_3\hat{e_3} = Y\sin(\theta_y)\cos(\phi_y)\hat{e}_1 + Y\sin(\theta_y)\sin(\phi_y)\hat{e_2}+Y\cos(\theta_y)\hat{e_3},
+\end{align}
+where $X=\sqrt{x_1^2+x_2^2+x_3^2}$ and $Y=\sqrt{y_1^2+y_2^2+y_3^2}$. Assuming that definition \ref{Dot Product Definition} is correct, we can apply the summation form of the formula to calculate the dot product. In order to condense the formula a tad, I will preemptively divide both sides by the common magnitude factors that will exist in each term. Thus we have 
+\begin{align}
+	\frac{\vec{X} \cdot \vec{Y}}{XY} &\overset{?}{=} \sin(\theta_x)\cos(\phi_x)\sin(\theta_y)\cos(\phi_y) + \sin(\theta_x)\sin(\phi_x)\sin(\theta_y)\cos(\phi_y)+\cos(\theta_x)\cos(\theta_y)
+\end{align}
+Through some algebra, this simplifies to 
+\begin{align}
+	\vec{X} \cdot \vec{Y} \overset{?}{=} XY\left[\sin(\theta_x)\sin(\theta_y)\cos(\phi_x-\phi_y) +\cos(\theta_x)\cos(\theta_y)\right] \label{eqn:spherical dot product}
+\end{align}
+Since the angle between the two vectors $\theta_A-\theta_B$ remained unchanged in our coordinate rotation and the magnitude of the vectors remained unchanged (that is, $A\equiv X$ and $B\equiv Y$), equation (\ref{eqn:spherical dot product}) should be equivalent to equation (\ref{eqn:polar coordinate dot product}) giving us
+\begin{align}
+	\cos(\theta_A-\theta_B) \overset{?}{=} \left[\sin(\theta_x)\sin(\theta_y)\cos(\phi_x-\phi_y) +\cos(\theta_x)\cos(\theta_y)\right]
+\end{align}
+It is not obvious that this is an accurate equation. Although, if true, this gives a useful transformation between the angles between our  two coordinate systems. Note that any 3-dimensional set of vectors can be transferred onto a 2-dimensional plane in a manner similar to this. We can try another way to demonstrate the relationship. Consider our vectors $\vec{X}$ and $\vec{Y}$. The vector from the tip of $\vec{X}$ to the tip of $\vec{Y}$ would be $\vec{X}-\vec{Y}$ (see figure \ref{fig:Vector subtraction}).
+
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}[>=Stealth]
+		% Vectors
+		\coordinate (X) at (0,0);
+		\coordinate (Y) at (5,2);
+		\coordinate (P) at (4,0);
+		\draw[->, red] (0,0) -- (4,0) node[pos=0.5, below]  {$\vec{X}$};
+		\draw[->, blue] (0,0) -- (5,2) node[pos=0.6, above]{$\vec{Y}$};
+		\draw[->, purple] (4,0) -- (5,2) node[pos=0.5, right]{$\vec{X}-\vec{Y}$};
+		
+		% Angle theta
+		\draw pic [draw, angle radius=1.5cm, angle eccentricity=1.3, "$\theta$"] {angle = P--X--Y};
+	\end{tikzpicture}
+	\caption{Vector subtraction: $\vec{X} - \vec{Y}$ with angle $\theta$ as the smallest angle between $\vec{X}$ and $\vec{Y}$. \label{fig:Vector subtraction}}
+\end{figure}
+
+Let us further generalize these vectors into higher dimensions in a manner that we did previously by rotating our vectors into another higher $n$-dimension such that $\vec{X} = \sum_{i=1}^{n}x_i\hat{e_i}$ and $\vec{Y} = \sum_{i=1}^{n}y_i\hat{e_i}$. Note that the above relation in figure \ref{fig:Vector subtraction} between the two vectors holds for any dimension we rotate them into because the vectors themselves are not changing. With this in mind, we can take the magnitudes of the vectors and apply the law of cosines (see definition \ref{defn:Law Of Cosines}) to get
+\begin{align}
+	|\vec{X} - \vec{Y}|^2 = |\vec{X}|^2 + |\vec{Y}|^2 - 2 |\vec{X}||\vec{Y}|\cos(\theta)
+\end{align}
+
+Since the magnitude is defined as $|A| = \sqrt{\sum_{i=1}^{n}a_i^2}$, this becomes
+\begin{align}
+	\sum_{i=1}^{n}(x_i-y_i)^2 = \sum_{i=1}^{n}x_i^2 + \sum_{i=1}^{n}y_i^2 - 2 |\vec{X}||\vec{Y}|\cos(\theta)
+\end{align}
+We can then expand the left hand side of this to $\sum_{i=1}^{n}(x_i^2-2x_iy_i+y_i) = \sum_{i=1}^{n}x_i^2-2\sum_{i=1}^{n}x_iy_i+\sum_{i=1}^{n}y_i^2$ and cancel similar terms to get
+\begin{align}
+	-2\sum_{i=1}^{n}x_iy_i = -2 |\vec{X}||\vec{Y}|\cos(\theta)
+\end{align}
+Finally, dividing both sides by negative two and apply equation (\ref{defn:Wolframs Dot Prodcut Definition}) we see that
+\begin{align}
+	\vec{X} \cdot \vec{Y} = \sum_{i=1}^{n}x_iy_i
+\end{align}
+
+
+
+
+%\unfinished{}
+
+
+
+
+
+
+
+
