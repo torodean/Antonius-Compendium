@@ -62,3 +62,47 @@ Newton further extended this by introducing the idea of a \keyword{force}. If a 
 
 
 
+
+
+
+
+\section{Motion}
+
+keyword{Motion} is the change in the position of an object relative to a reference point over time. It involves the displacement of an object from one location to another in a continuous manner. Motion can occur in various forms, such as \keyword{linear motion} (movement along a straight line), \keyword{circular motion} (movement in a circular path), \keyword{rotational motion} (movement around a fixed axis), or \keyword{oscillatory motion} (back-and-forth movement around a central position). 
+
+\keyword{Velocity} is a vector quantity that describes the rate of change of an object's position with respect to time. It specifies both the speed and the direction of an object's motion. Velocity $\vec{v}$ is calculated by dividing the displacement (change in position) $\Delta x$ of the object by the time taken to cover that displacement $\Delta t$. Velocity is expressed in units of distance per unit of time, such as meters per second (m/s) or kilometers per hour (km/h). If the velocity is constant over time, it is referred to as constant velocity, and if the velocity is changing, it is referred to as variable velocity. When the direction of an object's motion remains constant, the velocity is considered to be uniform; otherwise, it is non-uniform. Velocity plays a crucial role in describing and analyzing the motion of objects in physics and other scientific disciplines.
+\begin{align}
+\vec{v}(t)=\lim_{\Delta t \arrow 0}\frac{\Delta \vec{x}(t)}{\Delta t} = \frac{d\vec{x}(t)}{dt} \implies $\vec{x}(t) = \int \vec{v}(t) dt
+\end{align}
+
+\keyword{Acceleration} is a vector quantity that describes the rate of change of an object's velocity with respect to time. It indicates how quickly an object's velocity is changing or how much the object is speeding up or slowing down. Acceleration is defined as the change in velocity divided by the change in time. Acceleration, like velocity, is a vector quantity, meaning it has both magnitude and direction. If an object is moving in a straight line, acceleration is in the same direction as the net force acting on the object. If the object is moving in a curved path, the acceleration is directed towards the center of the curvature. The units of acceleration are typically expressed as distance per unit time squared, such as meters per second squared (m/s²) or centimeters per second squared (cm/s²).
+\begin{align}
+\vec{a}(t)=\lim_{\Delta t \arrow 0}\frac{\Delta \vec{v}(t)}{\Delta t} = \frac{d\vec{v}(t)}{dt} = \frac{d^2\vec{x}(t)}{dt^2} \implies $\vec{v}(t) = \int \vec{a}(t) dt
+\end{align}
+
+\keyword{Jerk} is a vector quantity that represents the rate of change of acceleration with respect to time. In other words, jerk measures how quickly an object's acceleration is changing or how rapidly the object's rate of change in velocity is varying. Jerk is a vector quantity, just like acceleration and velocity, meaning it has both magnitude and direction. However, jerk is less commonly used in everyday physics problems compared to acceleration, which is more frequently encountered. In most cases, acceleration is sufficient to describe the motion of objects, and jerk is not a significant factor in standard physics analysis. Nonetheless, jerk becomes relevant in certain specialized fields, such as robotics, aerospace engineering, and studies involving rapid changes in motion or acceleration profiles.
+\begin{align}
+\vec{j}(t)=\lim_{\Delta t \arrow 0}\frac{\Delta \vec{a}(t)}{\Delta t} = \frac{d\vec{a}(t)}{dt} = \frac{d^2\vec{v}(t)}{dt^2} = \frac{d^3\vec{x}(t)}{dt^3} \implies $\vec{a}(t) = \int \vec{j}(t) dt
+\end{align}
+
+
+\subsection{Newton's Laws}
+
+\keyword{Momentum} $\vec{p}$ is a vector quantity that measures the quantity of motion possessed by an object. It is the product of an object's mass and its velocity and is a fundamental concept in classical mechanics. In this context, \keyword{Mass} is a quantitative measure of inertia. Since momentum is a vector, it has both magnitude and direction. The direction of the momentum vector is the same as the direction of the velocity vector. The SI unit of momentum is kilogram-meter per second (kg·m/s).
+
+\begin{align}
+	\vec{p} = m\vec{v}
+\end{align}
+
+Following Galileo's discovery of the principal of \keyword{inertia}, Newton set out to describe the rules for findong out how an object changes its \keyword{motion} when effected by something.
+
+\begin{enumerate}
+	\item An object at rest will remain at rest, and an object in motion will continue to move with a constant velocity in a straight line unless acted upon by an external force./footnote{This is simply a restating of Galileo's described principal of inertia.}
+ 	\item The time-rate-of-change of a quantity called momentum is proportional to the force.
+  	\begin{align}
+   		\vec{F}=\frac{d\vec{p}}{dt} = m\frac{d\vec{v}}{dt} = m\frac{d^2\vec{x}}{dt^2} = m\vec{a}
+   	\end{align}
+  	\item For every action, there is an equal and opposite reaction.
+\end{enumerate}
+
+
