@@ -6,3 +6,36 @@
 
 In two-dimensional Cartesian coordinates, a point is located by specifying its distance (magnitude) along the x-axis and the y-axis from the origin (0,0), where the x-axis is horizontal, and the y-axis is vertical. The coordinates of a point are written as (x, y), where x represents the horizontal distance and y represents the vertical distance. In three-dimensional Cartesian coordinates, a point is located by specifying its distance along the x-axis, y-axis, and z-axis from the origin (0, 0, 0). The coordinates of a point are written as (x, y, z), where x, y, and z represent the distances along the three axes. In higher $n$-dimensions, a similar formulation is used where a point is located by specifying its distance along $n$-axes (typically denoted by the unit vector $\hat{e}_i$) from the origin $\vec{0}$. The coordinates are $(x_0,x_1,...,x_n)$, where $x_i$ reoresebts the distance along the respective $n$ axes.
 
+	\begin{figure}
+		\centering
+		\begin{tikzpicture}[scale=1.5]
+		% 2D Axis
+		\draw[->] (-1.5,0) -- (2.5,0) node[right] {$x$};
+		\draw[->] (0,-1.5) -- (0,2.5) node[above] {$y$};
+		% 2D Grid
+		\foreach \x in {1}
+		\draw[dotted] (\x,0) -- (\x,\x);
+		\foreach \y in {1}
+		\draw[dotted] (0,\y) -- (\y,\y);
+		% 2D Point
+		\fill (1,1) circle (1pt) node[above right] {$(x, y)$};
+		
+		\begin{scope}[xshift=5cm]
+		% 3D Axis
+		\draw[->] (0,0,0) -- (2,0,0) node[right] {$x$};
+		\draw[->] (0,0,0) -- (0,2,0) node[above] {$y$};
+		\draw[->] (0,0,0) -- (0,0,2) node[below left] {$z$};
+		% 3D Grid
+		\foreach \x in {0}
+		\draw[dotted] (\x,0,0) -- (\x,\x,0) -- (\x,\x,\x);
+		\foreach \y in {0}
+		\draw[dotted] (0,\y,0) -- (\y,\y,0) -- (\y,\y,\y);
+		\foreach \z in {1}
+		\draw[dotted] (0,0,1) -- (0,1,1) -- (1,1,1);
+		\draw[dotted] (0,1,0) -- (0,1,1);
+		% 3D Point
+		\fill (1,1,1) circle (1pt) node[above right] {$(x, y, z)$};
+		\end{scope}
+		\end{tikzpicture}
+		\caption{2-D and 3-D Cartesian Coordinate Systems with a single point located at one unit in each axes. \label{fig:Cartesian Coordinates}}
+	\end{figure}
