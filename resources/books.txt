@@ -45,3 +45,5 @@ Error Analysis, Taylor - https://www.niser.ac.in/sps/sites/default/files/basic_p
 Methods of theoretical physics - http://www.astrosen.unam.mx/~aceves/Metodos/ebooks/morse_feshbach1.pdf
 
 mathematical methods of theoretial physics, Karl Svozil - https://arxiv.org/pdf/1203.4558.pdf
+
+Classical Mechanics, John R. Taylor - https://neuroself.files.wordpress.com/2020/09/taylor-2005-classical-mechanics.pdf
