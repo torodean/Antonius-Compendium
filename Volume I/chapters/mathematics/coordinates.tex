@@ -1,8 +1,12 @@
 \section{Coordinate Systems}
 
+Coordinate systems are mathematical tools used to represent points in space or on a surface using a set of numerical values. They provide a systematic way to describe the location of points relative to a reference point or axis. There are several types of coordinate systems, each with its unique set of parameters and applications.
+
 \subsection{Cartesian Coordinates}
 
-\begin{figure}
+\keyword{Cartesian coordinates}, also known as \keyword{rectangular coordinates}, are a system of representing points in a two-dimensional or three-dimensional space using a set of perpendicular axes (See figure \ref{fig:Cartesian Coordinates}). Cartesian coordinates can be mathematically extended into higher dimensions. 
+
+\begin{figure}[htbp]
 	\centering
 	\begin{tikzpicture}[scale=1.5]
 		% 2D Axis
@@ -14,7 +18,7 @@
 		\foreach \y in {1}
 		\draw[dotted] (0,\y) -- (\y,\y);
 		% 2D Point
-		\fill (1,1) circle (1pt) node[above right] {$(x, y)$};
+		\fill (1,1) circle (1pt) node[above right] {$(x, y)$}; 
 		
 		\begin{scope}[xshift=5cm]
 			% 3D Axis
@@ -33,10 +37,8 @@
 			\fill (1,1,1) circle (1pt) node[above right] {$(x, y, z)$};
 		\end{scope}
 	\end{tikzpicture}
-	\caption{2-D and 3-D Cartesian Coordinate Systems with a single point located at one unit in each axes. \label{fig:Cartesian Coordinates}}
+	\caption{\footnotesize 2-D and 3-D Cartesian Coordinate Systems with a single point located at one unit in each axes. \label{fig:Cartesian Coordinates}}
 \end{figure}
-
-\keyword{Cartesian coordinates}, also known as \keyword{rectangular coordinates}, are a system of representing points in a two-dimensional or three-dimensional space using a set of perpendicular axes (See figure \ref{fig:Cartesian Coordinates}). Cartesian coordinates can be mathematically extended into higher dimensions. 
 
 In two-dimensional Cartesian coordinates, a point is located by specifying its distance (magnitude) along the x-axis and the y-axis from the origin (0,0), where the x-axis is horizontal, and the y-axis is vertical. The coordinates of a point are written as (x, y), where x represents the horizontal distance and y represents the vertical distance. In three-dimensional Cartesian coordinates, a point is located by specifying its distance along the x-axis, y-axis, and z-axis from the origin (0, 0, 0). The coordinates of a point are written as (x, y, z), where x, y, and z represent the distances along the three axes. In higher $n$-dimensions, a similar formulation is used where a point is located by specifying its distance along $n$-axes (typically denoted by the unit vector $\hat{e}_i$) from the origin $\vec{0}$. The coordinates are $(x_0,x_1,...,x_n)$, where $x_i$ represents the distance along the respective $n$ axes.
 
@@ -90,7 +92,7 @@ In two-dimensional Cartesian coordinates, a point is located by specifying its d
 		\end{scope}
 	\end{tikzpicture}
 	
-	\caption{LEFT: The point $(x, y)$ in Cartesian coordinates can be represented as $(r, \theta)$ in polar coordinates, where $r$ is the distance from the origin to the point and $\theta$ is the angle measured counterclockwise from the positive $x$-axis. RIGHT: The point $(x, y, z)$ in Cartesian coordinates can be represented as $(r, \theta, \phi)$ in a modified spherical coordinate system, where $r$ is the distance from the origin to the point, $\theta$ is the angle measured counterclockwise from the positive $x$-axis towards the $y$ direction and $\phi$ is the angle from the $z$-axis.}
+	\caption{\footnotesize LEFT: The point $(x, y)$ in Cartesian coordinates can be represented as $(r, \theta)$ in polar coordinates, where $r$ is the distance from the origin to the point and $\theta$ is the angle measured counterclockwise from the positive $x$-axis. RIGHT: The point $(x, y, z)$ in Cartesian coordinates can be represented as $(r, \theta, \phi)$ in a modified spherical coordinate system, where $r$ is the distance from the origin to the point, $\theta$ is the angle measured counterclockwise from the positive $x$-axis towards the $y$ direction and $\phi$ is the angle from the $z$-axis.}
 	\label{fig:polar spherical coords}
 \end{figure}
 
@@ -119,9 +121,9 @@ r_0 = \sqrt{x_0^2 + y_0^2 + z_0^2} &\implies r = \sqrt{x^2 + y^2 + z^2}
 This conversion gives us the more commonly used spherical coordinate convention
 
 \begin{align}	 
-	x = r\sin(\theta)\cos(\phi), &\hspace{1cm} 
-	y = r\sin(\theta)\sin(\phi), &\hspace{1cm} 
-	z = r\cos(\theta), &\hspace{1cm}
+	x = r\sin(\theta)\cos(\phi), \hspace{1cm} 
+	y = r\sin(\theta)\sin(\phi), \hspace{1cm} 
+	z = r\cos(\theta), \hspace{1cm}
 	r = \sqrt{x^2 + y^2 + z^2}
 \end{align}
 
@@ -135,6 +137,48 @@ Therefore we can see they are equivalent and can be used interchangeably.
 
 
 \subsection{Cylindrical Coordinates}
+
+\begin{figure}[htbp]
+	\centering
+	\begin{tikzpicture}[scale=1]
+		% 3D Axis
+		\draw[->] (0,0,0) -- (4,0,0) node[right] {$x$};
+		\draw[->] (0,0,0) -- (0,4,0) node[above] {$y$};
+		\draw[->] (0,0,0) -- (0,0,4) node[below left] {$z$};
+	
+		% Cylindrical coordinates
+		\draw[dashed] (0,0,1.75) -- (3,1.8,1.75) node[midway, above left] {$r$};
+		\draw[dotted] (3.5,0,0) -- (3.5,0,1.75) node[midway, right] {$z$};
+		\draw[dotted] (3.5,0,1.75) -- (3.5,0,3.5);
+		\draw[dotted] (3.5,0,1.75) -- (0,0,1.75) -- (0,3.5,1.75);
+		\draw[dotted] (0,3.5,0) -- (0,3.5,1.75) node[midway, above] {$z$};	
+		\draw[dotted] (0,3.5,1.75) -- (0,3.5,3.5);
+		\draw[dotted] (3.5,0,0) arc (0:90:3.5);
+		\draw[dotted] (3.5,0,1.75) arc (0:90:3.5);
+		\draw[-] (1.5,0,1.75) arc (0:30:1.5) node[midway, right] {$\theta$};
+		\draw[dotted] (3.5,0,3.5) arc (0:90:3.5);
+	\end{tikzpicture}	
+\caption{\footnotesize The point $(x, y, z)$ in Cartesian coordinates can be represented as $(r, \theta, z)$ in cylindrical coordinates, where $r$ is the distance from the $z$ axis to the point and $\theta$ is the angle measured counterclockwise from the positive $x$-axis. }
+\label{fig:cylindrical coords}
+\end{figure}
+
+\keyword{Cylindrical coordinates} (see figure \ref{fig:cylindrical coords}) are a system used to represent points in three-dimensional space using three parameters: radial distance $r$, polar angle $\theta$, and height $z$. In this system, the radial distance measures the distance from the $z$-axis to the point in a plane perpendicular to the $z$-axis. The polar angle $\theta$ represents the azimuthal angle, measured counterclockwise from the positive $x$-axis to the projection of the point on the $xy$-plane. The height $z$ indicates the distance of the point along the z-axis. Cylindrical coordinates are particularly useful for describing objects or phenomena with cylindrical symmetry. The conversion between cylindrical coordinates and Cartesian coordinates can be done using trigonometric functions.
+
+\begin{align}	 
+	x = r\cos(\theta), \hspace{1cm} y = r\sin(\theta), \hspace{1cm} z = z, \hspace{1cm}	r = \sqrt{x^2 + y^2}
+\end{align}
+
+
+
+
+
+
+
+
+\subsection{Elliptic Coordinates}
+
+
+
 
 
 
