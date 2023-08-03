@@ -24,17 +24,18 @@ P(k,n) = \lim_{N\rightarrow\infty}\frac{E_1}{N} = \frac{1}{2^n}{{n}\choose{k}} =
 
 Some more useful concepts for modeling a system are the mean (average) and standard deviation. 
 
-\begin{defn}[Mean \label{Mean Definition}]{1}
-	If $x_1, ..., x_N$ denotes N separate measurements of one quantity $x$, then we define the mean (or average) $\braket{x}$ as
+\begin{defn}[Arithmetic Mean \label{Arithmetic Mean Definition}]{1}
+	If $x_1, ..., x_N$ denotes N separate measurements of one quantity $x$, then we define the \keyword{arithmetic mean} (or average) $\bar{x}$ as
 	\begin{align}
-		\braket{x} = \frac{1}{N}\sum_{i=1}^{N}x_i \label{mean equation}
+		\bar{x} = \frac{1}{N}\sum_{i=1}^{N}x_i \label{mean equation}
 	\end{align}
 \end{defn}
+
 
 \begin{defn}[Standard Deviation \label{Standard Deviation Definition}]{1}
 	If $x_1, ..., x_N$ denotes N separate measurements of one quantity $x$, then we define the standard deviation $\sigma_x$ as
 	\begin{align}
-		\sigma_x = \sqrt{\frac{1}{N-1}\sum_{i}(x_i-\braket{x})^2}
+		\sigma_x = \sqrt{\frac{1}{N-1}\sum_{i}(x_i-\bar{x})^2}
 	\end{align}
 \end{defn}
 
