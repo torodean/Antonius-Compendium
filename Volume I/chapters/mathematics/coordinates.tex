@@ -1,17 +1,13 @@
-/section{Coordinate Systems}
+\section{Coordinate Systems}
 
 \subsection{Cartesian Coordinates}
 
-\keyword{Cartesian coordinates}, also known as \keyword{rectangular coordinates}, are a system of representing points in a two-dimensional or three-dimensional space using a set of perpendicular axes. Cartesian coordinates can be mathematically extended into higher dimensions.
-
-In two-dimensional Cartesian coordinates, a point is located by specifying its distance (magnitude) along the x-axis and the y-axis from the origin (0,0), where the x-axis is horizontal, and the y-axis is vertical. The coordinates of a point are written as (x, y), where x represents the horizontal distance and y represents the vertical distance. In three-dimensional Cartesian coordinates, a point is located by specifying its distance along the x-axis, y-axis, and z-axis from the origin (0, 0, 0). The coordinates of a point are written as (x, y, z), where x, y, and z represent the distances along the three axes. In higher $n$-dimensions, a similar formulation is used where a point is located by specifying its distance along $n$-axes (typically denoted by the unit vector $\hat{e}_i$) from the origin $\vec{0}$. The coordinates are $(x_0,x_1,...,x_n)$, where $x_i$ reoresebts the distance along the respective $n$ axes.
-
-	\begin{figure}
-		\centering
-		\begin{tikzpicture}[scale=1.5]
+\begin{figure}
+	\centering
+	\begin{tikzpicture}[scale=1.5]
 		% 2D Axis
-		\draw[->] (-1.5,0) -- (2.5,0) node[right] {$x$};
-		\draw[->] (0,-1.5) -- (0,2.5) node[above] {$y$};
+		\draw[->] (-1,0) -- (1.5,0) node[right] {$x$};
+		\draw[->] (0,-1) -- (0,1.5) node[above] {$y$};
 		% 2D Grid
 		\foreach \x in {1}
 		\draw[dotted] (\x,0) -- (\x,\x);
@@ -21,21 +17,85 @@ In two-dimensional Cartesian coordinates, a point is located by specifying its d
 		\fill (1,1) circle (1pt) node[above right] {$(x, y)$};
 		
 		\begin{scope}[xshift=5cm]
-		% 3D Axis
-		\draw[->] (0,0,0) -- (2,0,0) node[right] {$x$};
-		\draw[->] (0,0,0) -- (0,2,0) node[above] {$y$};
-		\draw[->] (0,0,0) -- (0,0,2) node[below left] {$z$};
-		% 3D Grid
-		\foreach \x in {0}
-		\draw[dotted] (\x,0,0) -- (\x,\x,0) -- (\x,\x,\x);
-		\foreach \y in {0}
-		\draw[dotted] (0,\y,0) -- (\y,\y,0) -- (\y,\y,\y);
-		\foreach \z in {1}
-		\draw[dotted] (0,0,1) -- (0,1,1) -- (1,1,1);
-		\draw[dotted] (0,1,0) -- (0,1,1);
-		% 3D Point
-		\fill (1,1,1) circle (1pt) node[above right] {$(x, y, z)$};
+			% 3D Axis
+			\draw[->] (0,0,0) -- (1.5,0,0) node[right] {$x$};
+			\draw[->] (0,0,0) -- (0,1.5,0) node[above] {$y$};
+			\draw[->] (0,0,0) -- (0,0,2) node[below left] {$z$};
+			% 3D Grid
+			\foreach \x in {0}
+			\draw[dotted] (\x,0,0) -- (\x,\x,0) -- (\x,\x,\x);
+			\foreach \y in {0}
+			\draw[dotted] (0,\y,0) -- (\y,\y,0) -- (\y,\y,\y);
+			\foreach \z in {1}
+			\draw[dotted] (0,0,1) -- (0,1,1) -- (1,1,1);
+			\draw[dotted] (0,1,0) -- (0,1,1);
+			% 3D Point
+			\fill (1,1,1) circle (1pt) node[above right] {$(x, y, z)$};
 		\end{scope}
-		\end{tikzpicture}
-		\caption{2-D and 3-D Cartesian Coordinate Systems with a single point located at one unit in each axes. \label{fig:Cartesian Coordinates}}
-	\end{figure}
+	\end{tikzpicture}
+	\caption{2-D and 3-D Cartesian Coordinate Systems with a single point located at one unit in each axes. \label{fig:Cartesian Coordinates}}
+\end{figure}
+
+\keyword{Cartesian coordinates}, also known as \keyword{rectangular coordinates}, are a system of representing points in a two-dimensional or three-dimensional space using a set of perpendicular axes (See figure \ref{fig:Cartesian Coordinates}). Cartesian coordinates can be mathematically extended into higher dimensions. 
+
+In two-dimensional Cartesian coordinates, a point is located by specifying its distance (magnitude) along the x-axis and the y-axis from the origin (0,0), where the x-axis is horizontal, and the y-axis is vertical. The coordinates of a point are written as (x, y), where x represents the horizontal distance and y represents the vertical distance. In three-dimensional Cartesian coordinates, a point is located by specifying its distance along the x-axis, y-axis, and z-axis from the origin (0, 0, 0). The coordinates of a point are written as (x, y, z), where x, y, and z represent the distances along the three axes. In higher $n$-dimensions, a similar formulation is used where a point is located by specifying its distance along $n$-axes (typically denoted by the unit vector $\hat{e}_i$) from the origin $\vec{0}$. The coordinates are $(x_0,x_1,...,x_n)$, where $x_i$ represents the distance along the respective $n$ axes.
+
+
+\subsection{Polar Coordinates}
+
+Polar coordinates are a two-dimensional coordinate system used to describe points in a plane. Unlike the traditional Cartesian coordinates $(x, y)$, polar coordinates represent points using a distance ($r$) from the origin and an angle ($\theta$) measured counterclockwise from a reference line (usually the positive $x$-axis). The distance $r$ is always a non-negative value, representing the radial distance from the origin to the point. The polar coordinate system is especially useful when dealing with circular or radial patterns, as it simplifies calculations involving angles and distances. The conversion between polar coordinates and Cartesian coordinates can be done using trigonometric functions.
+\begin{align}
+	x = r\cos(\theta) &\hspace{2cm} y = r\sin(\theta) \\
+	 r = \sqrt{x^2 + y^2} &\hspace{2cm} \theta = \arctan\left(\frac{y}{x}\right).
+\end{align}
+\begin{figure}[htbp]
+	\centering
+	\begin{tikzpicture}
+		% Draw Cartesian axes
+		\draw[->] (-1,0) -- (3,0) node[below right] {$x$};
+		\draw[->] (0,-1) -- (0,3) node[above left] {$y$};
+		
+		% Draw point in Cartesian coordinates (x,y)
+		\filldraw[blue] (2, 1.5) circle (2pt) node[above right] {$(x, y)$};
+		
+		% Draw radial line and angle in polar coordinates (r, theta)
+		\draw[dashed] (0,0) -- (2, 1.5) node[midway, above left] {$r$};
+		\draw (0.8,0) arc (0:33.69:0.8) node[midway, right] {$\theta$};
+	\end{tikzpicture}
+	\caption{Conversion between Cartesian and polar coordinates. The point $(x, y)$ in Cartesian coordinates can be represented as $(r, \theta)$ in polar coordinates, where $r$ is the distance from the origin to the point and $\theta$ is the angle measured counterclockwise from the positive $x$-axis.}
+	\label{fig:polar_conversion}
+\end{figure}
+
+
+
+
+
+
+
+\subsection{Spherical Coordinates}
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Cylindrical Coordinates}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
