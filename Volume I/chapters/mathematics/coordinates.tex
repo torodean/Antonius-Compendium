@@ -43,17 +43,21 @@ In two-dimensional Cartesian coordinates, a point is located by specifying its d
 
 \subsection{Polar Coordinates}
 
-Polar coordinates are a two-dimensional coordinate system used to describe points in a plane. Unlike the traditional Cartesian coordinates $(x, y)$, polar coordinates represent points using a distance ($r$) from the origin and an angle ($\theta$) measured counterclockwise from a reference line (usually the positive $x$-axis). The distance $r$ is always a non-negative value, representing the radial distance from the origin to the point. The polar coordinate system is especially useful when dealing with circular or radial patterns, as it simplifies calculations involving angles and distances. The conversion between polar coordinates and Cartesian coordinates can be done using trigonometric functions.
+\keyword{Polar coordinates} are a two-dimensional coordinate system  (see figure \ref{fig:polar spherical coords})used to describe points in a plane. Unlike the traditional Cartesian coordinates $(x, y)$, polar coordinates represent points using a distance ($r$) from the origin and an angle ($\theta$) measured counterclockwise from a reference line (usually the positive $x$-axis). The distance $r$ is always a non-negative value, representing the radial distance from the origin to the point. The polar coordinate system is especially useful when dealing with circular or radial patterns, as it simplifies calculations involving angles and distances. The conversion between polar coordinates and Cartesian coordinates can be done using trigonometric functions.
+
 \begin{align}
 	x = r\cos(\theta) &\hspace{2cm} y = r\sin(\theta) \\
 	 r = \sqrt{x^2 + y^2} &\hspace{2cm} \theta = \arctan\left(\frac{y}{x}\right).
 \end{align}
+
 \begin{figure}[htbp]
 	\centering
 	\begin{tikzpicture}
 		% Draw Cartesian axes
 		\draw[->] (-1,0) -- (3,0) node[below right] {$x$};
 		\draw[->] (0,-1) -- (0,3) node[above left] {$y$};
+		\draw[dotted] (0,1.5) -- (2,1.5);
+		\draw[dotted] (2,0) -- (2,1.5);
 		
 		% Draw point in Cartesian coordinates (x,y)
 		\filldraw[blue] (2, 1.5) circle (2pt) node[above right] {$(x, y)$};
@@ -61,12 +65,34 @@ Polar coordinates are a two-dimensional coordinate system used to describe point
 		% Draw radial line and angle in polar coordinates (r, theta)
 		\draw[dashed] (0,0) -- (2, 1.5) node[midway, above left] {$r$};
 		\draw (0.8,0) arc (0:33.69:0.8) node[midway, right] {$\theta$};
+
+		\begin{scope}[xshift=7cm]
+		% 3D Axis
+		\draw[->] (0,0,0) -- (3,0,0) node[right] {$x$};
+		\draw[->] (0,0,0) -- (0,3,0) node[above] {$y$};
+		\draw[->] (0,0,0) -- (0,0,3) node[below left] {$z$};
+		
+		% 3D Grid
+		\draw[dotted] (0,0,2) -- (0,2,2) -- (2,2,2);
+		\draw[dotted] (0,2,0) -- (0,2,2);
+		\draw[dotted] (0,2,0) -- (0,2,2);
+		\draw[dotted] (0,0,0) -- (2,0,2) -- (2,2,2);
+		\draw[dotted] (2,0,0) -- (2,0,2) -- (0,0,2);
+		
+		% 3D Point
+		\filldraw[blue] (2,2,2) circle (2pt) node[above right] {$(x, y, z)$};
+		
+		% Draw radial line and angles
+		\draw[dashed] (0,0,0) -- (2,2,2);
+		\draw[dashed] (0,0,0) -- (2,2,2) node[midway, above left] {$r$};
+		\draw[-] (0,0,.8) arc (-90:-83:5.5) node[midway, below] {$\phi$};
+		\draw[-] (1,0,1) arc (0:31:1.5) node[midway, above right] {$\theta$};
+		\end{scope}
 	\end{tikzpicture}
-	\caption{Conversion between Cartesian and polar coordinates. The point $(x, y)$ in Cartesian coordinates can be represented as $(r, \theta)$ in polar coordinates, where $r$ is the distance from the origin to the point and $\theta$ is the angle measured counterclockwise from the positive $x$-axis.}
-	\label{fig:polar_conversion}
+	
+	\caption{LEFT: The point $(x, y)$ in Cartesian coordinates can be represented as $(r, \theta)$ in polar coordinates, where $r$ is the distance from the origin to the point and $\theta$ is the angle measured counterclockwise from the positive $x$-axis. RIGHT: The point $(x, y, z)$ in Cartesian coordinates can be represented as $(r, \theta, \phi)$ in a modified spherical coordinate system, where $r$ is the distance from the origin to the point, $\theta$ is the angle measured counterclockwise from the positive $x$-axis towards the $y$ direction and $\phi$ is the angle from the $z$-axis.}
+	\label{fig:polar spherical coords}
 \end{figure}
-
-
 
 
 
@@ -74,8 +100,32 @@ Polar coordinates are a two-dimensional coordinate system used to describe point
 
 \subsection{Spherical Coordinates}
 
+\keyword{Spherical coordinates} (see figure \ref{fig:polar spherical coords}) are a system of representing points in 3D space using three parameters: radial distance $r$, polar angle $\theta$, and azimuthal angle $\phi$. This system is particularly useful for describing points on a sphere or points in a 3D space relative to a fixed origin. The radial distance $r$ represents the distance from the origin to the point. It is a non-negative value and measures how far the point is from the origin. It is important to note that polar angle and azimuthal angle can often be represented in different ways depending on the coordinate convention. Typically, polar angle represents the angle between the positive z-axis and the line connecting the origin to the point projected onto the $xy$-plane. It varies from $0^\circ$ (on the positive z-axis) to $180^\circ$ (on the negative z-axis). This `polar' angle in essence would then connect both poles on a planet. I prefer to use the convention that matches 2-dimensional polar coordinates, as it removes some confusion when converting between the two - therefore $\theta$ is defined as the same angle as it would be in 2 dimensions and then $\phi$ is the angle of that 2-dimensional plane rotated about the $z$-axis. The conversion between spherical coordinates and Cartesian coordinates can be done using trigonometric functions. For the convention I prefer, and matching figure \ref{fig:polar spherical coords}, we have
 
+\begin{align}
+	x = r\cos(\theta)\sin(\phi), &\hspace{1cm} y = r\sin(\theta), \hspace{1cm} z = r\cos(\theta)\cos(\phi), \hspace{1cm}
+	r = \sqrt{x^2 + y^2 + z^2}
+\end{align}
 
+These can be shown to be equivalent to the more commonly used spherical coordinates. To demonstrate this, I will denote the coordinates defined above with the subscript $_0$. For a more common convention (the physics one), imagine we modify our coordinates so that the $x_0$ axis is the $y$ axis, The $y_0$ axis is the $z$ axis, and the $z_0$ axis is the $x$ axis. Then we further define $\theta$ as the angle from the $z$ axis to our radial line, which is therefore $\theta_0 = \frac{\pi}{2}-\theta$ or  $\theta = \frac{\pi}{2}-\theta_0$. In this change, $r$ does not change as we are not changing our line or angles (just denoting them differently) giving us $r_0\equiv r$, and $\phi$ also stays the same giving $\phi_0 \equiv \phi$. Plugging these into our coordinates above give us
+
+\begin{align}
+	x_0 = r_0\cos(\theta_0)\sin(\phi_0) &\implies y = r\cos(\frac{\pi}{2}-\theta)\sin(\phi) = r\sin(\theta)\sin(\phi) \\ 
+y_0 = r_0\sin(\theta_0) &\implies z = r\sin(\frac{\pi}{2}-\theta) = r\cos(\theta) \\
+z_0 = r_0\cos(\theta_0)\cos(\phi_0) &\implies x =  r\cos(\frac{\pi}{2}-\theta)\cos(\phi) = r\sin(\theta)\cos(\phi)\\
+r_0 = \sqrt{x_0^2 + y_0^2 + z_0^2} &\implies r = \sqrt{x^2 + y^2 + z^2}
+\end{align}
+
+This conversion gives us the more commonly used spherical coordinate convention
+
+\begin{align}	 
+	x = r\sin(\theta)\cos(\phi), &\hspace{1cm} 
+	y = r\sin(\theta)\sin(\phi), &\hspace{1cm} 
+	z = r\cos(\theta), &\hspace{1cm}
+	r = \sqrt{x^2 + y^2 + z^2}
+\end{align}
+
+Therefore we can see they are equivalent and can be used interchangeably.
 
 
 
@@ -94,6 +144,8 @@ Polar coordinates are a two-dimensional coordinate system used to describe point
 
 
 
+
+\subsection{Elliptic Cylindrical Coordinates}
 
 
 
