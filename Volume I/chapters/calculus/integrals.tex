@@ -56,6 +56,24 @@ A function $F$ is called an \keyword{antiderivative} of a function $f$ on an int
   \label{fig:Riemann Sum visualization}
 \end{figure}
 
+\begin{tikzpicture}[scale=1.5]
+% Define the function
+\def\f(#1){0.8*cos(deg(2*#1)) + 1}
+
+% Draw the x-axis
+\draw[->] (0,0) -- (5,0) node[right] {$x$};
+% Draw the y-axis
+\draw[->] (0,0) -- (0,3) node[above] {$y$};
+
+% Draw the rectangles for the Riemann sum
+\foreach \xi in {0.1, 0.2, ..., 4} {
+	\draw[fill=gray!10] (\xi-0.1, 0) rectangle (\xi, {\f(\xi)});
+}
+
+% Draw the curve
+\draw[thick, domain=0:4, samples=100] plot (\x, {\f(\x)});
+\end{tikzpicture}
+
 \begin{defn}[Riemann Sum\label{defn:Riemann Sum]{1}
 Let $f$ be defined on the closed interval $[a,b]$, and let $\Delta$ be a partition of $[a,b]$ given by $a=x_0 < x_1 < \cdots < x_{n-1} < x_n = b$, where $\Delta x_i$ is the width of the $i$th sub-interval. If $c_i \in [x_{i-1},x_i]$, then the sum $\sum_{i=1}^{n}f(c_i)\Delta x_i$ is called a Riemann sum of $f$ for the partition $\Delta$.
 \end{defn}
