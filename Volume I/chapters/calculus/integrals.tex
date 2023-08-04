@@ -3,9 +3,25 @@
 The term "\keyword{integral}" encompasses several distinct concepts in mathematics. Its most prevalent meaning relates to the fundamental concept in calculus, where it involves the process of summing infinitesimally small components to determine the content of a continuous region. In calculus, an integral is a fundamental mathematical concept that can be interpreted as measuring area or extending the notion of area to more complex shapes. Alongside derivatives, integrals are the cornerstone of calculus. They are also referred to as \keyword{antiderivatives} or \keyword{primitives}. The act of evaluating an integral is known as integration (a term sometimes replaced by the more historical word "quadrature"). When an integral is approximated numerically, it is called numerical integration.
 
 \begin{defn}[The Antiderivative]{1}
-A function $F$ is called an \keyword{antiderivative} (or \keyword{integral}) of a function $f$ on a given open interval if $\frac{d}{dx}F(x)=f(x)$ for all $x$ in the interval. This is typically denoted
+A function $F$ is called an \keyword{antiderivative} of a function $f$ on an interval $I$ if $\frac{d}{dx}F(x)=f(x)$ for all $x\in I$.
+\end{defn}
+
+\begin{defn}[Riemann Sum\label{defn:Riemann Sum]{1}
+Let $f$ be defined on the closed interval $[a,b]$, and let $\Delta$ be a partition of $[a,b]$ given by $a=x_0 < x_1 < \cdots < x_{n-1} < x_n = b$, where $\Delta x_i$ is the width of the $i$th sub-interval. If $c_i \in [x_{i-1},x_i]$, then the sum $\sum_{i=1}^{n}f(c_i)\Delta x_i$ is called a Riemann sum of $f$ for the partition $\Delta$.
+\end{defn}
+
+The largest width among the subintervals within a partition $\Delta$ is known as the partition's norm, represented by $||\Delta||$. If all subintervals have equal width, the partition is called regular, and its norm is denoted by $||\Delta|| = \Delta x = \frac{b-a}{n}$. The integral can be defined in the limit as this partition's norm approaches zero $||\Delta|| \to 0$. Therefore, there exists some $L\in\mathbf{R}$ such that for each $\epsilon > 0$, there exists a $\delta > 0$ so that for all partitions with $||\Delta|| < \delta$, we have
+
 \begin{align}
-f(x)=\frac{d}{dx}F(x) \implies \int_{a}^{b} f(x)dx = \int_a^b \frac{d}{dx}F(x) dx = F(x)\Big|_{a}^{b} = F(b)-F(a)
+\lim_{||\Delta|| \to 0}\sum_{i=1}^{n}f(c_i)\Delta x_i = L \implies \bigg|L-\sum_{i=1}^{n}f(c_i)\Delta x_i\bigg| < \epsilon
+\end{align}
+
+This then give the definition of the definite integral.
+
+\begin{defn}[The Definite Integral\label{defn:The Definite Integral}]{1}
+IF $f$ is defined on the closed interval $I=[a,b]$ and the limit of the Riemann sums over partitions $\Delta$ exists, then $f$ is said to be integrable on $I$ and the limit is denoted by the definite integral of $f$ from $a$ to $b$. 
+\begin{align}
+\lim_{||\Delta|| \to 0}\sum_{i=1}^{n}f(c_i)\Delta x_i = \int_a^b f(x)dx
 \end{align}
 \end{defn}
 
