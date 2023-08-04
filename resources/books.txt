@@ -59,3 +59,5 @@ Calculus, Anton - https://3lihandam69.files.wordpress.com/2018/10/calculus-10th-
 Calculus of a single Variable, Larson Hostetler - https://www.npsd.k12.nj.us/cms/lib/NJ01001216/Centricity/Domain/113/Calculus%20Textbook.pdf
 
 Calculus: A complete course, Robert A. Adams - http://eng.usc.ac.ir/files/1508848447251.pdf
+
+Modern Quantum Mechanics, JJ Sakurai - https://kgut.ac.ir/useruploads/1505647831850hcd.pdf
