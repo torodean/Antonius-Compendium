@@ -73,11 +73,11 @@ A function $F$ is called an \keyword{antiderivative} of a function $f$ on an int
 	
 	\end{scope}
 \end{tikzpicture}
-  \caption{A visualization of the Riemann Sums. The partition width is denoted by $\Delta x_i$ and the height of the partitions is $f(x_i)$.}
+  \caption{LEFT: A visualization of the Riemann Sums. The partition width is denoted by $\Delta x_i$ and the height of the partitions is $f(x_i)$. RIGHT: Increasing the number of partitions and decreasing the width better approximates the area under the curve.}
   \label{fig:Riemann Sum visualization}
 \end{figure}
 
-\begin{defn}[Riemann Sum\label{defn:Riemann Sum]{1}
+\begin{defn}[Riemann Sum\label{defn:Riemann Sum}]{1}
 Let $f$ be defined on the closed interval $[a,b]$, and let $\Delta$ be a partition of $[a,b]$ given by $a=x_0 < x_1 < \cdots < x_{n-1} < x_n = b$, where $\Delta x_i$ is the width of the $i$th sub-interval. If $c_i \in [x_{i-1},x_i]$, then the sum $\sum_{i=1}^{n}f(c_i)\Delta x_i$ is called a Riemann sum of $f$ for the partition $\Delta$.
 \end{defn}
 
@@ -99,3 +99,43 @@ IF $f$ is defined on the closed interval $I=[a,b]$ and the limit of the Riemann 
 %\begin{theo}[The Fundamental Theorem Of Calculus]{1}
 %Suppose that $f(x)$ is continuous on the interval [a,b]. If $F(x)$ is any antiderivative of $f(x)$, then $\int_a^b f(x) dx = F(b)-F(a)$. Given $F(x) = \int_a^b f(x) dx$, then $\frac{d}{dx}F(x) = f(x)$.
 %\end{theo}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsubsection{Integration By Parts}
+
+Integration by parts is a method used to find the integral of a product of two functions. It is derived from the product rule for differentiation and allows us to express the integral of a product in terms of simpler integrals.
+
+\begin{theo}[Integration By Parts \label{thm:Integration By Parts}]{1}
+	Let $f$ and $g$ (or $u$ and $v$) be differentiable functions for all $x$, then
+	\begin{align}
+		\int f(x)\frac{d}{dx}g(x)\dx = f(x)g(x) - \int g(x)\frac{d}{dx}f(x)\dx \implies \int u\ dv = uv - \int v\ du
+	\end{align}
+\end{theo}
+
+\begin{proof}[Proof for theorem \ref{thm:Integration By Parts}]
+	Beginning with the product rule from theorem \ref{thm:product rule} we have
+	\begin{align}
+		\frac{d}{dx}f(x)g(x)=g(x)\frac{d}{dx}f(x)+f(x)\frac{d}{dx}g(x)
+	\end{align}
+	Integrating both sides with respect to $x$ gives
+	\begin{align}
+		\int\frac{d}{dx}f(x)g(x) \dx=f(x)g(x)=\int g(x)\frac{d}{dx}f(x)\dx+\int f(x)\frac{d}{dx}g(x)\dx
+	\end{align}
+	This gives what is referred to as integration by parts.
+	\begin{align}
+		\int f(x)\frac{d}{dx}g(x)\dx = f(x)g(x) - \int g(x)\frac{d}{dx}f(x)\dx = f(x)g(x) - \int g(x)f'(x)\dx
+	\end{align}
+	Let $u=f(x)$ and $v=g(x)$, where $dv$ and $du$ represent the respective derivatives. Then this becomes $\int u\ dv = uv - \int v\ du$.
+\end{proof}

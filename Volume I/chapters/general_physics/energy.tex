@@ -4,6 +4,17 @@ The \keyword{conservation of energy} is believed to be a fundamental law governi
 
 In quantum mechanics it turns out that the conservation of energy is very closely related to another important property of the world, \textit{things do not depend on the absolute time}.
 
+\subsection{Work}
+
+In physics, work is defined as the transfer of energy that results from the application of a force over a certain distance. When a force acts on an object and causes it to move in the direction of the force, work is done on the object. Work is a scalar quantity and is expressed in units of joules (J) in the International System of Units (SI). 
+
+\begin{defn}[Work\label{defn:Work}]{1}
+	The work done on an object is defined as the force $\vec{F}$ applied to an object through some displacement $d\vec{r}$
+	\begin{align}
+		W = \int \vec{F}\cdot d\vec{r}
+	\end{align}
+\end{defn}
+
 \subsection{Gravitational Potential Energy}
 
 The general name of energy which has to do with location relative to something else is called \keyword{potential energy}. In the case of objects relative to earth (or other bodies effected by gravitational energy), it is called \keyword{gravitational potential energy}.
@@ -20,7 +31,25 @@ For static structures and systems, one can apply an imaginary motion to the syst
 
 \subsection{Kinetic Energy}
 
-The principal of \keyword{motion} gives rise to another type of energy referred to as \keyword{kinetic energy}.
+
+The principal of \keyword{motion} gives rise to another type of energy referred to as \keyword{kinetic energy}. Beginning with definition \ref{defn:Work} and applying newtons second law (see equation \ref{Newton's Second Law}), we have
+\begin{align}
+	W = \int \vec{F}\cdot d\vec{r} = \int m\vec{a}\cdot d\vec{r} = m\int \frac{d\vec{v}}{dt}\cdot d\vec{r}
+\end{align}
+
+Since $\vec{v} = \frac{d\vec{r}}{dt}$, we can say $\vec{v} dt = d\vec{r}$. We substitute this in to get
+\begin{align}
+	W = m\int \frac{d\vec{v}}{dt}\cdot \vec{v} dt = m\int \frac{d\vec{v}}{dt}\cdot \frac{d\vec{x} }{dt}dt
+\end{align}
+Let $u=v=\vec{v}=\frac{d\vec{x}}{dt}$, then $\frac{dv}{dt} =\frac{d^2\vec{x}}{dt^2} = \frac{d\vec{v} }{dt} \implies dv = \frac{d\vec{v}}{dt}dt = du$. This allows us to apply integration by parts (see theorem \ref{thm:Integration By Parts}) giving
+\begin{align}
+	m\int \frac{d\vec{v}}{dt}\cdot \frac{d\vec{x} }{dt}dt = m\vec{v}\cdot\vec{v}-m\int \frac{d\vec{v}}{dt}\cdot \frac{d\vec{x} }{dt}dt
+\end{align}
+Solving for our original integral then gives
+\begin{align}
+	m\int \frac{d\vec{v}}{dt}\cdot \frac{d\vec{x} }{dt}dt = \frac{1}{2}m||\vec{v}||^2
+\end{align}
+This is what is known as or termed the kinetic energy.
 
 \begin{defn}[Kinetic Energy \label{Kinetic Energy}]
 	Kinetic energy $E$ is a fundamental concept in physics that refers to the energy possessed by an object due to its motion. It is the energy associated with the object's velocity and is dependent on both its mass $m$ and the square of the magnitude of its velocity $v$. 
