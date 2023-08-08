@@ -40,10 +40,11 @@
 \indexentry{Calculus|hyperpage}{20}
 \indexentry{Differentiation|hyperpage}{20}
 \indexentry{Integration|hyperpage}{20}
-\indexentry{integral|hyperpage}{37}
-\indexentry{antiderivatives|hyperpage}{37}
-\indexentry{primitives|hyperpage}{37}
-\indexentry{antiderivative|hyperpage}{37}
+\indexentry{quotient rule|hyperpage}{27}
+\indexentry{integral|hyperpage}{38}
+\indexentry{antiderivatives|hyperpage}{38}
+\indexentry{primitives|hyperpage}{38}
+\indexentry{antiderivative|hyperpage}{38}
 \indexentry{Linear algebra|hyperpage}{40}
 \indexentry{Vectors|hyperpage}{40}
 \indexentry{Vector Spaces|hyperpage}{40}
@@ -183,7 +184,7 @@
 \indexentry{Time|hyperpage}{62}
 \indexentry{frequency|hyperpage}{63}
 \indexentry{cesium atomic clock|hyperpage}{63}
-\indexentry{Distance|hyperpage}{63}
+\indexentry{Distance|hyperpage}{64}
 \indexentry{Triangulation|hyperpage}{64}
 \indexentry{Electron microscopes|hyperpage}{64}
 \indexentry{fermi|hyperpage}{64}

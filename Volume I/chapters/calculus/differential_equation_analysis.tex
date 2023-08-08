@@ -83,7 +83,7 @@ Given a general polynomial function, we can give the following differentiation r
 \end{proof}
 
 Consider the basic product rule of a differential equation. The product rule is given by
-\begin{theo}{thm:product rule}
+\begin{theo}[Product Rule]{thm:product rule}
 	Let $f:\mathbb{R}\rightarrow\mathbb{R}$ such that $f(x)$ and $g(x)$ are continuous functions of the variable $x$. We can then say
 	\begin{align*}
 		\frac{d}{dx}f(x)g(x)=g(x)\frac{d}{dx}f(x)+f(x)\frac{d}{dx}g(x)=f'(x)g(x)+f(x)g'(x)
@@ -227,12 +227,57 @@ Thus, (5.55) becomes
 	\Upsilon=\sum_{i=0}^{k+1}{{k+1}\choose{i}}f^{(i)}(x)g^{(k+1-i)}(x).
 \end{align}
 Now, $\Upsilon=a_0+a_1+\cdots+a_{k-1}+a_k=(35)$ which we have shown is equivalent to (55). Therefore, we can conclude that (28) holds for all $n\in\mathbb{N}$, which allows us to tidy our work up as a theorem.
-\begin{theo}{thm:mproductrule}
+\begin{theo}[Repeating Product Rule]{thm:repeating product rule}
 	Let $f:\mathbb{R}\rightarrow\mathbb{R}$ and $g:\mathbb{R}\rightarrow\mathbb{R}$ be continuous and differentiable functions of the variable $x$. Then the $m^{\textrm{th}}$ derivative of $f(x)g(x)$ with respect to $x$ is
 	\begin{align*}
 		\frac{d^m}{dx^m}f(x)g(x)=\sum_{i=0}^{n}{{n}\choose{i}}\bigg[\frac{d^i}{dx^i}f(x) \bigg]\bigg[\frac{d^{n-i}}{dx^{n-i}}g(x) \bigg].
 	\end{align*}
 \end{theo}
+
+
+
+Consider a division of two functions rather than multiplication. The product rule can be used to derive what is referred to as the \keyword{quotient rule}. Begin by taking two arbitrary functions that are continuous and differentiable $f(x)$ and $g(x)$. What we want to find is $\frac{d}{dx} \frac{f(x)}{g(x)}$. We begin by applying the product rule from theorem \ref{thm:product rule}, which gives
+\begin{align}
+	\frac{d}{dx} \frac{f(x)}{g(x)} = f(x)\left[\frac{d}{dx} \frac{1}{g(x)}\right] + \frac{1}{g(x)}\left[\frac{d}{dx} f(x)\right] \label{quotient_rule_00}.
+\end{align}
+Let $u(x)=\frac{1}{g(x)}$. We want to determine $u'(x)$ in order to simplify equation (\ref{quotient_rule_00}). From the definition of $u(x)$, we can then say $u(x)g(x)=1$. The derivative of a constant value is just zero, so if we differentiate both sides (by yet again applying the product rule from theorem \ref{thm:product rule}), we get
+\begin{align}
+	\frac{d}{dx}u(x)g(x)=\frac{d}{dx}1 \implies u(x)g'(x) + u'(x)g(x)=0.
+\end{align}
+Solving this for $u'(x)$ gives us $\frac{d}{dx} \frac{1}{g(x)}$ which we is then equal to 
+\begin{align}
+	u'(x) = \frac{d}{dx} u(x) = \frac{d}{dx} \frac{1}{g(x)} = \frac{-u(x)g'(x)}{g(x)} = -\frac{g'(x)}{g(x)^2} \label{quotient_rule_01}.
+\end{align}
+By taking equation (\ref{quotient_rule_01}) and substituting it into equation (\ref{quotient_rule_00}), we get
+\begin{align}
+	\frac{d}{dx} \frac{f(x)}{g(x)} = \frac{1}{g(x)}\left[-\frac{g'(x)}{g(x)^2}\right] + g(x)f'(x) = -\frac{f(x)g'(x)}{g(x)^2}+ \frac{g(x)f'(x)}{g(x)^2} = \frac{f'(x)g(x)-f(x)g'(x)}{g(x)^2}.
+\end{align}
+
+\begin{theo}[Quotient Rule]{thm:quotient rule}
+	Let $f:\R \to \R$ and $g: \R\to\R$ be continuous and differentiable functions of the variable $x$. Then the derivative of $\frac{f(x)}{g(x)}$ with respect to $x$ is
+	\begin{align}
+		\frac{d}{dx} \frac{f(x)}{g(x)} = \frac{f'(x)g(x)-f(x)g'(x)}{g(x)^2}.
+	\end{align}
+\end{theo}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
