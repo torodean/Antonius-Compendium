@@ -1,0 +1,54 @@
+\section{Logarithms}
+
+Logarithms are fundamental mathematical functions that arise in various areas of mathematics, science, and engineering. They are used to solve exponential equations, simplify calculations involving large numbers, and analyze exponential growth and decay.
+
+\begin{defn}[Logarithm]{defn:logarithm}
+  The \keyword{logarithm} of a positive number \(x\) with respect to a base \(b\) is defined as the exponent to which \(b\) must be raised to obtain \(x\). This is expressed as:
+  \begin{equation}
+  \log_b(x) = y \quad \text{if and only if} \quad b^y = x
+  \end{equation}
+\end{defn}
+
+Two commonly used bases for logarithms are 10 and the mathematical constant \(e\) (approximately 2.71828). The logarithms with base 10 are called common logarithms, denoted as \(\log_{10}(x)\) or simply \(\log(x)\). The logarithms with base \(e\) are called natural logarithms, denoted as \(\ln(x)\). Sometimes in physics or other natural science fields, the natural logarithm is implied and these will be used interchangeably.
+
+Logarithms have a wide range of applications in various fields:
+
+\begin{itemize}
+	\item \textbf{Exponential Growth and Decay}: Logarithms are used to model and analyze processes that involve exponential growth or decay, such as population growth, radioactive decay, and compound interest.
+	\item \textbf{Scientific Notation}: Logarithms are used to express very large or very small numbers in a more compact and manageable form known as scientific notation.
+	\item \textbf{Signal Processing}: Logarithms are used in signal processing to compress dynamic range and reduce computational complexity.
+	\item \textbf{Complex Analysis}: Logarithms are used in complex analysis to define complex powers and extend the concept of logarithms to complex numbers.
+\end{itemize}
+
+\subsection{Properties of Logarithms}
+
+Logarithms possess several important properties that make them useful in various mathematical manipulations:
+
+\begin{itemize}
+	\item \textbf{Product Rule}: $\log_b(xy) = \log_b(x) + \log_b(y)$
+ 	\begin{proof}
+		Suppose $\log_b(xy) = z$, then $b^z = xy$ (by definition). Let $\log_b(x)=z_0$, and $\log_b(y) = z_1$. Taking these two expressions, we have (by definition)
+		\begin{align}
+		\log_b(x)=z_0 \implies b^{z_0} = x \\
+		\log_b(y)=z_1 \implies b^{z_1} = y.
+		\end{align}
+		Multiplying $x$ by $y$ gives $xy = b^{z_0}b^{z_1} = b^{z_0+z_1}$. But since $b^z=xy$, we have $b^z = b^{z_0+z_1} \implies z = z_0+z_1 = \log_b(x) + \log_b(y) = \log_b(xy)$.
+	\end{proof}
+	\item \textbf{Quotient Rule}: $\log_b\left(\frac{x}{y}\right) = \log_b(x) - \log_b(y)$
+ 	\begin{proof}
+		Suppose $\log_b\left(\frac{x}{y}\right) = z$, then $b^z = \frac{x}{y}$ (by definition). Let $\log_b(x)=z_0$, and $\log_b(y) = z_1$. Taking these two expressions, we have (by definition)
+		\begin{align}
+		\log_b(x)=z_0 \implies b^{z_0} = x \\
+		\log_b(y)=z_1 \implies b^{z_1} = y.
+		\end{align}
+		Dividing $x$ by $y$ gives $\frac{x}{y} = \frac{b^{z_0}}{b^{z_1}} = b^{z_0-z_1}$. But since $b^z=\frac{x}{y}$, we have $b^z = b^{z_0-z_1} \implies z = z_0-z_1 = \log_b(x) - \log_b(y) = \log_b\left(\frac{x}{y}\right)$.
+	\end{proof}
+	\item \textbf{Power Rule}: $\log_b(x^n) = n \cdot \log_b(x)$
+ 	\begin{proof}
+		Suppose $\log_b(x^n) = z$, then $b^z = x^n$ (by definition). Raising both sides by $\frac{1}{n}$ yields $b^{\frac{z}{n}}=x$. Let $n\log_b(x)=q$. Dividing both sides by $n$ and applying the definition of logarithm gives $\log_b(x) = \frac{q}{n}\implies b^{\frac{q}{n}} = x$. Since $x=b^{\frac{z}{n}} = b^{\frac{q}{n}} \implies z=q \implies \log_b(x^n) = n \cdot \log_b(x)$
+	\end{proof}
+	\item \textbf{Change of Base Formula}: $\log_b(x) = \frac{\log_c(x)}{\log_c(b)}$ (for any positive $c \neq 1$)
+ 		\begin{proof}
+		TODO
+	\end{proof}
+\end{itemize}
