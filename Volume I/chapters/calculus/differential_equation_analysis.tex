@@ -170,7 +170,7 @@ This indeed is true. See theorem \ref{thm:Summing Over All binomial coefficients
 \begin{align}
 	\frac{d^k}{dx^k}g(x)f(x)&=f(x)\frac{d^k}{dx^k}g(x)+{{k}\choose{1}}\frac{d^{k-1}}{dx^{k-1}}g(x)\frac{d}{dx}f(x)+\cdots \nonumber\\
 	&\hspace{1cm}\cdots+{{k}\choose{k-1}}\frac{d}{dx}g(x)\frac{d^{k-1}}{dx^{k-1}}f(x)+g(x)\frac{d^k}{dx^k}f(x) \\
-	&=\sum_{i=0}^{k}{{k}\choose{i}}\bigg[\frac{d^i}{dx^i}f(x) \bigg]\bigg[\frac{d^{k-i}}{dx^{k-i}}g(x) \bigg]
+	&=\sum_{i=0}^{k}{{k}\choose{i}}\bigg[\frac{d^i}{dx^i}f(x) \bigg]\bigg[\frac{d^{k-i}}{dx^{k-i}}g(x) \bigg] \label{repeating_product_rule_final_k}
 \end{align}
 holds true, we can then determine if it holds true for $n=k+1$. This gives
 \begin{align}
@@ -191,42 +191,42 @@ From here, writing out the series explicitly allows us to combine terms in a use
 	a_0&={{k}\choose{0}}\bigg[\frac{d^{1}}{dx^{1}}f(x) \bigg]\bigg[\frac{d^{k}}{dx^{k}}g(x) \bigg]+{{k}\choose{0}}f(x)\bigg[\frac{d^{k+1}}{dx^{k+1}}g(x) \bigg] \\
 	a_1&={{k}\choose{1}}\bigg[\frac{d^{2}}{dx^{2}}f(x) \bigg]\bigg[\frac{d^{k-1}}{dx^{k-1}}g(x) \bigg]+{{k}\choose{1}}\bigg[\frac{d}{dx}f(x) \bigg]\bigg[\frac{d^{k}}{dx^{k}}g(x) \bigg] \\
 	a_2&={{k}\choose{2}}\bigg[\frac{d^{3}}{dx^{3}}f(x) \bigg]\bigg[\frac{d^{k-2}}{dx^{k-2}}g(x) \bigg]+{{k}\choose{2}}\bigg[\frac{d^2}{dx^2}f(x) \bigg]\bigg[\frac{d^{k-1}}{dx^{k-1}}g(x) \bigg]\\
-	&\vdots \\
+	&\vdots \nolabel\\
 	a_{k-2}&={{k}\choose{k-2}}\bigg[\frac{d^{k-1}}{dx^{k-1}}f(x) \bigg]\bigg[\frac{d^{2}}{dx^{2}}g(x) \bigg]+{{k}\choose{k-2}}\bigg[\frac{d^{k-2}}{dx^{k-2}}f(x) \bigg]\bigg[\frac{d^{3}}{dx^{3}}g(x) \bigg]\\
 	a_{k-1}&={{k}\choose{k-1}}\bigg[\frac{d^{k}}{dx^{k}}f(x) \bigg]\bigg[\frac{d}{dx}g(x) \bigg]+{{k}\choose{v}}\bigg[\frac{d^{k-1}}{dx^{k-1}}f(x) \bigg]\bigg[\frac{d^{2}}{dx^{2}}g(x) \bigg]\\
 	a_k&={{k}\choose{k}}\bigg[\frac{d^{k+1}}{dx^{k+1}}f(x) \bigg]g(x)+{{k}\choose{k}}\bigg[\frac{d^k}{dx^k}f(x) \bigg]\bigg[\frac{d}{dx}g(x) \bigg].
 \end{align}
 At this point, it becomes obvious as to why the $f^{(n)}(x)$ notation of a derivative was invented, and switching over will greatly help in our next step. Changing our notation gives us 
 \begin{align}
-	a_0&={{k}\choose{0}}f^{(1)}(x) g^{(k)}(x)+{{k}\choose{0}}f(x)g^{(k+1)}(x) \\
+	a_0&={{k}\choose{0}}f^{(1)}(x) g^{(k)}(x)+{{k}\choose{0}}f(x)g^{(k+1)}(x) \label{repeating_product_rule_a0}\\
 	a_1&={{k}\choose{1}}f^{(2)}(x) g^{(k-1)}(x) +{{k}\choose{1}}f^{(1)}(x) g^{(k)}(x) \\
 	a_2&={{k}\choose{2}}f^{(3)}(x) g^{(k-2)}(x) +{{k}\choose{2}}f^{(2)}(x) g^{(k-1)}(x) \\
-	&\vdots \\
+	&\vdots \nolabel\\
 	a_{k-2}&={{k}\choose{k-2}}f^{(k-1)}(x) g^{(2)}(x) +{{k}\choose{k-2}}f^{(k-2)}(x) g^{(3)}(x)\\
 	a_{k-1}&={{k}\choose{k-1}}f^{(k)}(x) g^{(1)}(x)+{{k}\choose{k-1}}f^{(k-1)}(x) g^{(2)}(x)\\
-	a_k&={{k}\choose{k}}f^{(k+1)}(x) g(x)+{{k}\choose{k}}f^{(k)}(x)g^{(1)}(x).
+	a_k&={{k}\choose{k}}f^{(k+1)}(x) g(x)+{{k}\choose{k}}f^{(k)}(x)g^{(1)}(x). \label{repeating_product_rule_ak}
 \end{align}
-Our end goal is to get this expression to be in the same form as in equation (33). If we first re-write (33) using $f^{(n)}(x)$ notation, we can easily see what our end goal is. This is
+Our end goal is to get this expression to be in the same form as in equation (\ref{repeating_product_rule_final_k}). If we first re-write equation (\ref{repeating_product_rule_final_k}) using $f^{(n)}(x)$ notation, we can easily see what our end goal is. This is
 \begin{align}
-	\sum_{i=0}^{k+1}{{k+1}\choose{i}}f^{(i)}(x) g^{(k+1-i)}(x) .
+	\sum_{i=0}^{k+1}{{k+1}\choose{i}}f^{(i)}(x) g^{(k+1-i)}(x) \label{repeating_product_rule_final}.
 \end{align}
-The next step is then summing expressions (4.43) through (4.49), then determining if what we get is equivalent to (4.50). Let $\Upsilon=a_0+a_1+\cdots+a_{k-1}+a_k$, then we have
+The next step is then summing expressions (\ref{repeating_product_rule_a0}) through (\ref{repeating_product_rule_ak}), then determining if what we get is equivalent to equation (\ref{repeating_product_rule_final}). Let $\Upsilon=a_0+a_1+\cdots+a_{k-1}+a_k$, then we have
 \begin{align}
-	\Upsilon&={{k}\choose{0}}f(x)g^{(k+1)}(x)+{{k}\choose{0}}f^{(1)}(x)g^{(k)}(x)+{{k}\choose{1}}f^{(1)}(x)g^{(k)}(x)+\cdots\\
+	\Upsilon&={{k}\choose{0}}f(x)g^{(k+1)}(x)+{{k}\choose{0}}f^{(1)}(x)g^{(k)}(x)+{{k}\choose{1}}f^{(1)}(x)g^{(k)}(x)+\cdots \nolabel\\
 	&\hspace{1cm}\cdots+{{k}\choose{k}}f^{(k)}(x)g^{(1)}(x)+{{k}\choose{k-1}}f^{(k)}(x)g^{(1)}(x)+{{k}\choose{k}}f^{(k+1)}(x)g(x) \\
-	&={{k}\choose{0}}f(x)g^{(k+1)}(x)+\bigg[{{k}\choose{0}}+{{k}\choose{1}} \bigg]f^{(1)}(x)g^{(k)}(x)+\cdots\\
+	&={{k}\choose{0}}f(x)g^{(k+1)}(x)+\bigg[{{k}\choose{0}}+{{k}\choose{1}} \bigg]f^{(1)}(x)g^{(k)}(x)+\cdots \nolabel\\
 	&\hspace{1cm}\cdots+\bigg[{{k}\choose{k-1}}+{{k}\choose{k}} \bigg]f^{(k)}(x)g^{(1)}(x)+{{k}\choose{k}}f^{(k+1)}(x)g(x)\\
-	&=\sum_{i=0}^{k+1}\bigg[{{k}\choose{i-1}}+{{k}\choose{i}} \bigg]f^{(i)}(x)g^{(k+1-i)}(x).
+	&=\sum_{i=0}^{k+1}\bigg[{{k}\choose{i-1}}+{{k}\choose{i}} \bigg]f^{(i)}(x)g^{(k+1-i)}(x). \label{repeating_product_rule_00}
 \end{align}
-Using the definition of the binomial coefficient and the derivation in (7), if we let $k=m-1 \implies m=k+1$, we can re-write the binomial coefficient in (55) as follows.
+Using the definition of the binomial coefficient and the derivation in (7), if we let $k=m-1 \implies m=k+1$, we can re-write the binomial coefficient in equation (\ref{repeating_product_rule_00}) as follows.
 \begin{align}
 	{{k}\choose{i-1}}+{{k}\choose{i}}={{m-1}\choose{i-1}}+{{m-1}\choose{i}}={{m}\choose{i}}={{k+1}\choose{i}}.
 \end{align}
-Thus, (5.55) becomes
+Thus, equation (\ref{repeating_product_rule_00}) becomes
 \begin{align}
 	\Upsilon=\sum_{i=0}^{k+1}{{k+1}\choose{i}}f^{(i)}(x)g^{(k+1-i)}(x).
 \end{align}
-Now, $\Upsilon=a_0+a_1+\cdots+a_{k-1}+a_k=(35)$ which we have shown is equivalent to (55). Therefore, we can conclude that (28) holds for all $n\in\mathbb{N}$, which allows us to tidy our work up as a theorem.
+Now, $\Upsilon=a_0+a_1+\cdots+a_{k-1}+a_k=(35)$ which we have shown is equivalent to equation (\ref{repeating_product_rule_00}). Therefore, we can conclude that (28) holds for all $n\in\mathbb{N}$, which allows us to tidy our work up as a theorem.
 \begin{theo}[Repeating Product Rule]{thm:repeating product rule}
 	Let $f:\mathbb{R}\rightarrow\mathbb{R}$ and $g:\mathbb{R}\rightarrow\mathbb{R}$ be continuous and differentiable functions of the variable $x$. Then the $m^{\textrm{th}}$ derivative of $f(x)g(x)$ with respect to $x$ is
 	\begin{align*}
