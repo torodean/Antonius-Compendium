@@ -48,7 +48,7 @@ Logarithms possess several important properties that make them useful in various
 		Suppose $\log_b(x^n) = z$, then $b^z = x^n$ (by definition). Raising both sides by $\frac{1}{n}$ yields $b^{\frac{z}{n}}=x$. Let $n\log_b(x)=q$. Dividing both sides by $n$ and applying the definition of logarithm gives $\log_b(x) = \frac{q}{n}\implies b^{\frac{q}{n}} = x$. Since $x=b^{\frac{z}{n}} = b^{\frac{q}{n}} \implies z=q \implies \log_b(x^n) = n \cdot \log_b(x)$
 	\end{proof}
 	\item \textbf{Change of Base Formula}: $\log_b(x) = \frac{\log_c(x)}{\log_c(b)}$ (for any positive $c \neq 1$)
- 		\begin{proof}
-		TODO
+	\begin{proof}
+		Let $\log_b(x) = z$, $\log_c(x) = z_0$, and $\log_c(b) = z_1$. By definition we then have $b^z = x$, $c^{z_0} = x$, and $c^{z_1} = b$. Raising $b$ in this last expression to the power of $z$ gives $b^z = c^{zz_1}$. Then it follows that $c^{z_0} = x = b^z = c^{zz_1}$. We can then relate the exponents $zz_1=z_0 \implies z = \frac{z_0}{z_1}$. Using the definitions of $z_0$ and $z_1$, this gives $z = \frac{z_0}{z_1} = \frac{\log_c(x)}{\log_c(b)} = \log_b(x)$.
 	\end{proof}
 \end{itemize}
