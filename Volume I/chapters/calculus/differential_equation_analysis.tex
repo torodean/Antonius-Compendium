@@ -15,14 +15,14 @@ Similarly, partial derivatives are defined as derivatives of a function of multi
 	\end{align*}
 \end{defn}
 A few rules from definition \ref{derivative_defn} can be defined.
-\begin{theo}{summing_derivative}
+\begin{theo}[Distributive Property Of Derivatives]{thm:derivative_distributive}
 	Let $g:\mathbb{R}\rightarrow\mathbb{R}$, and $h:\mathbb{R}\rightarrow\mathbb{R}$ be continuous functions with $f(x)=g(x)+h(x)$. Then the derivative of $f$ with respect to the variable $x$ is 
 	\begin{align*}
 	\frac{d}{dx}f(x)=\frac{d}{dx}\big(g(x)+h(x)\big) = \frac{d}{dx}g(x)+\frac{d}{dx}g(x).
 	\end{align*} 
 \end{theo}
 
-\begin{proof}[Proof for theorem \ref{summing_derivative}]
+\begin{proof}[Proof for theorem \ref{thm:derivative_distributive}]
 	Let $g:\mathbb{R}\rightarrow\mathbb{R}$, and $h:\mathbb{R}\rightarrow\mathbb{R}$ be continuous functions with $f(x)=g(x)+h(x)$. Then, by the definition of a derivative, we have
 	\begin{align*}
 	\frac{d}{dx}f(x)&=\lim\limits_{\Delta x \rightarrow 0}\frac{f(x+\Delta x)-f(x)}{\Delta x} \\
@@ -101,15 +101,15 @@ Consider the basic product rule of a differential equation. The product rule is 
 \end{proof}
 It is thus clear that given two continuous functions of $x$, say $f(x)$ and $g(x)$, the derivative follows as
 \begin{align}
-	\frac{d}{dx}f(x)g(x)&=g(x)\frac{d}{dx}f(x)+f(x)\frac{d}{dx}g(x) \\
-	&=f(x)g'(x)+g(x)f'(x).
+	\frac{d}{dx}f(x)g(x) &= g(x)\frac{d}{dx}f(x)+f(x)\frac{d}{dx}g(x) \\
+ 		             &= f(x)g'(x)+g(x)f'(x). \label{product_rule_n1}
 \end{align}
 Following this, the second derivative is given by
 \begin{align}
 	\frac{d^2}{dx^2}f(x)g(x)&=\frac{d}{dx}\bigg(g(x)\frac{d}{dx}f(x)\bigg)+\frac{d}{dx}\bigg(f(x)\frac{d}{dx}g(x)\bigg) \\
 	&=\frac{d}{dx}f(x)\frac{d}{dx}g(x)+g(x)\frac{d^2}{dx^2}f(x)+f(x)\frac{d^2}{dx^2}g(x)+\frac{d}{dx}f(x)\frac{d}{dx}g(x) \\
 	&=2\frac{d}{dx}f(x)\frac{d}{dx}g(x)+g(x)\frac{d^2}{dx^2}f(x)+f(x)\frac{d^2}{dx^2}g(x) \\
-	&= f(x)g''(x)+2f'(x)g'(x)+f''(x)g(x).
+	&= f(x)g''(x)+2f'(x)g'(x)+f''(x)g(x). \label{product_rule_n2}
 \end{align}
 Similarly, the third derivative is given by
 \begin{align}
@@ -131,29 +131,29 @@ Simplifying these expressions then gives
 Then, adding these three expressions together gives us
 \begin{align}
 	\frac{d^3}{dx^3}f(x)g(x)&=f(x)\frac{d^3}{dx^3}g(x)+3\frac{d}{dx}f(x)\frac{d^2}{dx^2}g(x)+3\frac{d^2}{dx^2}f(x)\frac{d}{dx}g(x)+g(x)\frac{d^3}{dx^3}f(x)\\
-	&=f(x)g'''(x)+3f'(x)g''(x)+3f''(x)g'(x)+f'''(x)g(x).
+	&=f(x)g'''(x)+3f'(x)g''(x)+3f''(x)g'(x)+f'''(x)g(x). \label{product_rule_n3}
 \end{align}
 Using the product rule, a nice pattern seems to be emerging as we continually apply it to the same function. From equation (2), (6) and (16), we can see that it appears to be a similar pattern as when applying the binomial expansion theorem. As a reminder, the binomial expansion theorem is
 \begin{align}
-	(x+y)^n&=\sum_{k=0}^{n}{{n}\choose{k}}x^{n-k}y^k \\
+	(a+b)^n&=\sum_{k=0}^{n}{{n}\choose{k}}a^{n-k}b^k \\
 	{{n}\choose{k}}&= \frac{n!}{k!(n-k)!}.
 \end{align}
 If we observe the first three terms of this (with $n=1,2,3$), we have
 \begin{align}
-	(x+y)^1&=x+y\\
-	(x+y)^2&= x^2+2xy+y^2 \\
-	(x+y)^3 &= x^3+3x^2y+3xy^2+y^3.
+	(a+b)^1&=a+b\\
+	(a+b)^2&= a^2+2ab+b^2 \\
+	(a+b)^3 &= a^3+3a^2b+3ab^2+b^3.
 \end{align}
 Comparing this to the three equations in questions allows us to notice interesting similarities. If we expand this to $n$ we have
 \begin{align}
-	(x+y)^n=x^ny^0+{{n}\choose{1}}x^{n-1}y^1+\cdots+{{n}\choose{n-1}}xy^{k-1}+x^0y^k.
+	(a+b)^n=a^nb^0+{{n}\choose{1}}a^{n-1}y^1+\cdots+{{n}\choose{n-1}}ab^{k-1}+a^0b^k. \label{binomial_expansion_00}
 \end{align}
-Now, let $x=\frac{d}{dx}g(x)$ and $y=\frac{d}{dx}f(x)$. If we define the following conditions
+Now, let $a=\frac{d}{dx}g(x)$ and $b=\frac{d}{dx}f(x)$. If we temporarily define\footnote{This is solely for an easy way of noticing the similarities in the formulas, these equations do not necessarily hold and are not used once the equations are expanded.} the following conditions
 \begin{align}
-	\bigg(\frac{d}{dx}h(x)\bigg)^n&:=\frac{d^n}{dx^n}h(x) \\
-	\frac{d}{dx}g(x)+\frac{d}{dx}f(x) &:= \frac{d}{dx}g(x)f(x),
+	\bigg(\frac{d}{dx}h(x)\bigg)^n&:=\frac{d^n}{dx^n}h(x) \label{redefinition_derivative_00}\\
+	\frac{d}{dx}g(x)+\frac{d}{dx}f(x) &:= \frac{d}{dx}g(x)f(x) \label{redefinition_derivative_01},
 \end{align}
-then inserting $x$ and $y$ into (21) gives
+then inserting $a$ and $b$ into equation (\ref{binomial_expansion_00}) gives
 \begin{align}
 	\bigg[\frac{d}{dx}g(x)+\frac{d}{dx}f(x) \bigg]^n=\bigg(\frac{d}{dx}g(x)\bigg)^n\bigg(\frac{d}{dx}f(x)\bigg)^0+{{n}\choose{1}}\bigg(\frac{d}{dx}g(x)\bigg)^{n-1}\bigg(\frac{d}{dx}f(x)\bigg)^1+\cdots \\ \cdots+{{n}\choose{n-1}}\bigg(\frac{d}{dx}g(x)\bigg)\bigg(\frac{d}{dx}f(x)\bigg)^{n-1}+\bigg(\frac{d}{dx}g(x)\bigg)^0\bigg(\frac{d}{dx}f(x)\bigg)^n.
 \end{align}
@@ -162,11 +162,11 @@ Simplifying the above expression gives us
 	\frac{d^n}{dx^n}g(x)f(x)=f(x)\frac{d^n}{dx^n}g(x)+{{n}\choose{1}}\frac{d^{n-1}}{dx^{n-1}}g(x)\frac{d}{dx}f(x)+\cdots \\
 	\cdots+{{n}\choose{n-1}}\frac{d}{dx}g(x)\frac{d^{n-1}}{dx^{n-1}}f(x)+g(x)\frac{d^n}{dx^n}f(x).
 \end{align}
-Therefore, we can see that with our re-definitions in (23) and (24), it appears that the $n^{\textrm{th}}$ derivative of something using the product rule can be expressed using the binomial expansion theorem. At least to $n=3$ we can see from above that this is accurate. If we want to determine if this works for all values of $n$, we can try a proof by induction. Before going any further, since this may be a large amount of work for such a simple idea, let us quickly have a sanity check. We claim that the terms of the product rule can be expanded using the binomial theorem. It is important to note that when taking the product rule of an expression, you get two new expressions. Then, taking the product rule again will double those two into four, and then those four into eight, and so on. So we can see that each product rule doubles the number of terms we have. The binomial coefficient is used when we have like terms to combine them. If we were to add up each binomial coefficient in the sum, we should then see that each sum of coefficients is the same number of terms we would get as if we doubled our expression each time. If this were not so then our situation would have a flaw. In other words, it must hold true that
+Therefore, we can see that with our re-definitions in equations (\ref{redefinition_derivative_00}) and (\ref{redefinition_derivative_01}), it appears that the $n^{\textrm{th}}$ derivative of something using the product rule can be expressed using the binomial expansion theorem. At least to $n=3$ we can see from above that this is accurate. If we want to determine if this works for all values of $n$, we can try a proof by induction. Before going any further, since this may be a large amount of work for such a simple idea, let us quickly have a sanity check. We claim that the terms of the product rule can be expanded using the binomial theorem. It is important to note that when taking the product rule of an expression, you get two new expressions. Then, taking the product rule again will double those two into four, and then those four into eight, and so on. So we can see that each product rule doubles the number of terms we have. The binomial coefficient is used when we have like terms to combine them. If we were to add up each binomial coefficient in the sum, we should then see that each sum of coefficients is the same number of terms we would get as if we doubled our expression each time. If this were not so then our situation would have a flaw. In other words, it must hold true that
 \begin{align}
 	\sum_{i=0}^{n}{{n}\choose{k}} = 2^n.
 \end{align}
-This indeed is true. See section 1 for the proof on this. Now, we know from (1), (5) and (15) that cases $n=1,2,3$ all hold. Next, if we assume that for any $n=k$ that
+This indeed is true. See theorem \ref{thm:Summing Over All binomial coefficients}. Now, we know from equations (\ref{product_rule_n1}), (\ref{product_rule_n2}) and (\ref{product_rule_n3}) that cases $n=1,2,3$ all hold. Next, if we assume that for any $n=k$ that
 \begin{align}
 	\frac{d^k}{dx^k}g(x)f(x)&=f(x)\frac{d^k}{dx^k}g(x)+{{k}\choose{1}}\frac{d^{k-1}}{dx^{k-1}}g(x)\frac{d}{dx}f(x)+\cdots \nonumber\\
 	&\hspace{1cm}\cdots+{{k}\choose{k-1}}\frac{d}{dx}g(x)\frac{d^{k-1}}{dx^{k-1}}f(x)+g(x)\frac{d^k}{dx^k}f(x) \\
@@ -182,7 +182,7 @@ If we were to manually evaluate the $n=k+1$ term of this expression we would hav
 \begin{align}
 	\frac{d}{dx}\frac{d^{k}}{dx^{k}}g(x)f(x)= \frac{d}{dx}\sum_{i=0}^{k}{{k}\choose{i}}\bigg[\frac{d^i}{dx^i}f(x) \bigg]\bigg[\frac{d^{k-i}}{dx^{k-i}}g(x) \bigg].
 \end{align}
-Since differentiating is distributive (by theorem 0.1), we can evaluate each term of this sum and compare it to (32) and (33). Doing this, we can use the product rule to first get
+Since differentiating is distributive (by theorem \ref{thm:derivative_distributive}), we can evaluate each term of this sum and compare it to (32) and (33). Doing this, we can use the product rule to first get
 \begin{align}
 	\frac{d^{k+1}}{dx^{k+1}}g(x)f(x)=\sum_{i=0}^{k}{{k}\choose{i}}\bigg[\frac{d^{i+1}}{dx^{i+1}}f(x) \bigg]\bigg[\frac{d^{k-i}}{dx^{k-i}}g(x) \bigg]+{{k}\choose{i}}\bigg[\frac{d^i}{dx^i}f(x) \bigg]\bigg[\frac{d^{k+1-i}}{dx^{k+1-i}}g(x) \bigg]. 
 \end{align}
