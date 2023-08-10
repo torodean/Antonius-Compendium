@@ -94,8 +94,13 @@ A probability density function $P$ describing an event in an ideal experiment is
 	\begin{align}
 		\braket{x} = \int_{-\infty}^{\infty}xP(x) dx \label{expectation Value equation}
 	\end{align}
+	For discrete values of $x_i$ each with a correlated probability $P_i$, then the expectation value is 
+	\begin{align}
+		\braket{x} = \sum_{i}x_iP_i \label{expectation Value equation discrete}
+	\end{align}
 \end{defn}
-
+ 
+A physical state is represented by a \keyword{state vector} in a complex vector space called a \keyword{ket}. This state is postulated to contain the complete information about the physical state of a system. An \keyword{observable} (momentum, spin components, etc) is represented by an \keyword{operator} within the vector space. The operators act on a ket from the left. In quantum physics, operators play a fundamental role in describing the behavior of quantum systems and the mathematical representation of physical observables. Quantum operators are mathematical entities that represent physical properties, transformations, and measurements within the framework of quantum mechanics. They are used to describe the behavior of quantum states, interactions, and measurements in a mathematical and abstract way. For example, consider the Hamiltonian operator $\hat{\text{\textbf{H}}}$ acted on a ket $\ket{x}$, represented by $\hat{\text{\textbf{H}}}\ket{x}$. This is not the operator `times' the ket, but rather the operator acting on the ket. In this example, the hamiltonian operator in classical mechanics is defined by $\hat{\text{\textbf{H}}} = \frac{\hbar}{2m}\nabla^2+V(\vec{r,t})$. This would act on $\ket{x}$ by taking the partial differentials of $\ket{x}$ as found in the first term of $\hat{\text{\textbf{H}}}$.
 
 
 

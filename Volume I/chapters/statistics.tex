@@ -25,9 +25,9 @@ P(k,n) = \lim_{N\rightarrow\infty}\frac{E_1}{N} = \frac{1}{2^n}{{n}\choose{k}} =
 Some more useful concepts for modeling a system are the mean (average) and standard deviation. 
 
 \begin{defn}[Arithmetic Mean \label{Arithmetic Mean Definition}]{1}
-	If $x_1, ..., x_N$ denotes N separate measurements of one quantity $x$, then we define the \keyword{arithmetic mean} (or average) $\bar{x}$ as
+	If $x_0, ..., x_N$ denotes N separate measurements of one quantity $x$, then we define the \keyword{arithmetic mean} (or average) $\bar{x}$ as
 	\begin{align}
-		\bar{x} = \frac{1}{N}\sum_{i=1}^{N}x_i \label{mean equation}
+		\bar{x} = \frac{1}{N}\sum_{i=0}^{N}x_i \label{mean equation}
 	\end{align}
 \end{defn}
 
@@ -41,15 +41,20 @@ Some more useful concepts for modeling a system are the mean (average) and stand
 
 When dealing with \keyword{Bayesian probability}, there is typically an uncertainty associated with the measurements or functions.
 
-\begin{defn}[Uncertainty \label{defn:Uncertainty}]{1}
-	Suppose $x_0, ..., x_N$ denotes N separate measurements with associated uncertainties $\delta x_0, ..., \delta x_N$. If the measured values are used to compute some function $q(x_0, ..., x_N)$ and the uncertainties in $x_0, ..., x_N$ are independent and random, then the uncertainty in $q$ is
+\begin{defn}[Uncertainty]{defn:Uncertainty}
+	Suppose $x_0, ..., x_N$ denotes N separate measurements with associated uncertainties $\sigma_{x_0}, ..., \sigma_{x_N}$. If the measured values are used to compute some function $q(x_0, ..., x_N)$ and the uncertainties in $x_0, ..., x_N$ are independent and random, then the uncertainty in $q$ is
 	\begin{align}
-		\delta q = \sqrt{\sum_{i=0}^{N}\bigg(\frac{\partial q}{\partial x_i} \delta x_i\bigg)^2}.
+		\sigma_q = \sqrt{\sum_{i=0}^{N}\bigg(\frac{\partial q}{\partial x_i} \sigma_{x_i}\bigg)^2}.
 	\end{align}
  It will always be true that 
  	\begin{align}
-		\delta q \leq \sum_{i=0}^{N}\abs{\frac{\partial q}{\partial x_i}} \delta x_i.
+		\sigma_q \leq \sum_{i=0}^{N}\abs{\frac{\partial q}{\partial x_i}} \sigma_{x_i}.
 	\end{align}
 \end{defn}
+
+Consider the uncertainty in the mean value. Definition \ref{defn:Uncertainty} can be used to determine the uncertainty of $\bar{x}$. If we assume that all values of $x_i$ are normally distributed, then each $x_i$ value will have the same uncertainty, $\sigma_{x_i}\equiv \sigma_x\forall i\in\N$. The partial derivative of $\bar{x}$ with respect to any $x_i$ value will simply be $\frac{\partial\bar{x}}{\partial x_i} = \frac{\partial}{\partial x_i} \frac{1}{N}\sum_{i=0}^{N}x_i = \frac{1}{N}$, since every term will be zero except the $i$th term. We then simply apply the definition to get
+	\begin{align}
+	\sigma_{\bar{x}} = \sqrt{\sum_{i=0}^{N}\bigg(\frac{\partial \bar{x}}{\partial x_i} \sigma_{x}\bigg)^2} =  \sqrt{\sigma_{x}^2\sum_{i=0}^{N}\bigg(\frac{\partial \bar{x}}{\partial x_i}\bigg)^2} = \sqrt{\sigma_{x}^2\sum_{i=0}^{N}\frac{1}{N^2}} = \sqrt{\sigma_{x}^2\frac{1}{N}} = \frac{\sigma_x}{\sqrt{N}}.
+\end{align}
 
  
