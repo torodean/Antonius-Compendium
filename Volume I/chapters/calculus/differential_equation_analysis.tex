@@ -1,20 +1,20 @@
 
 \section{Definitions and General Differential Equations}
  The derivative of a function represents an infinitesimal change in the function with respect to one of its variables \cite{bib:Wolfram}. 
-\begin{defn}[Derivative]{derivative_defn} 
+\begin{defn}[Derivative]{defn:derivative} 
 	Let $f:\mathbb{R}\rightarrow\mathbb{R}$. Then the derivative of $f$ with respect to a variable $x$ is given by
 	\begin{align*}
 	\frac{d}{dx}f(x)\equiv f'(x) \equiv\lim\limits_{\Delta x \rightarrow 0}\frac{f(x+\Delta x)-f(x)}{\Delta x} \equiv \lim\limits_{\Delta x \rightarrow 0}\frac{f(x+\Delta x)-f(x-\Delta x)}{2\Delta x}
 	\end{align*}
 \end{defn}
 Similarly, partial derivatives are defined as derivatives of a function of multiple variables when all but the variable of interest are held fixed during the differentiation \cite{bib:Wolfram}. 
-\begin{defn}[Partial Derivative]{partial_derivative_defn}
+\begin{defn}[Partial Derivative]{defn:partial derivative}
 	Let $f:\mathbb{R}^z\rightarrow\mathbb{R}$, with $z \in \mathbb{N}$. Then the partial derivative of $f$ with respect to a variable $x_m$ is given by
 	\begin{align*}
 	\frac{\partial}{\partial x_m}f(x_1,\dots,x_n) \equiv \lim\limits_{\Delta x \rightarrow 0}\frac{f(x_1,\dots,x_m+\Delta x, \dots,x_n)-f(x_1,\dots,x_m,\dots,x_n)}{\Delta x}
 	\end{align*}
 \end{defn}
-A few rules from definition \ref{derivative_defn} can be defined.
+A few rules from definition \ref{defn:derivative} can be defined.
 \begin{theo}[Distributive Property Of Derivatives]{thm:derivative_distributive}
 	Let $g:\mathbb{R}\rightarrow\mathbb{R}$, and $h:\mathbb{R}\rightarrow\mathbb{R}$ be continuous functions with $f(x)=g(x)+h(x)$. Then the derivative of $f$ with respect to the variable $x$ is 
 	\begin{align*}
@@ -133,7 +133,7 @@ Then, adding these three expressions together gives us
 	\frac{d^3}{dx^3}f(x)g(x)&=f(x)\frac{d^3}{dx^3}g(x)+3\frac{d}{dx}f(x)\frac{d^2}{dx^2}g(x)+3\frac{d^2}{dx^2}f(x)\frac{d}{dx}g(x)+g(x)\frac{d^3}{dx^3}f(x)\\
 	&=f(x)g'''(x)+3f'(x)g''(x)+3f''(x)g'(x)+f'''(x)g(x). \label{product_rule_n3}
 \end{align}
-Using the product rule, a nice pattern seems to be emerging as we continually apply it to the same function. From equation (2), (6) and (16), we can see that it appears to be a similar pattern as when applying the binomial expansion theorem. As a reminder, the binomial expansion theorem is
+Using the product rule, a nice pattern seems to be emerging as we continually apply it to the same function. From equations (\ref{product_rule_n1}), (\ref{product_rule_n2}) and (\ref{product_rule_n3}), we can see that it appears to be a similar pattern as when applying the binomial expansion theorem. As a reminder, the binomial expansion theorem is
 \begin{align}
 	(a+b)^n&=\sum_{k=0}^{n}{{n}\choose{k}}a^{n-k}b^k \\
 	{{n}\choose{k}}&= \frac{n!}{k!(n-k)!}.
@@ -191,7 +191,7 @@ From here, writing out the series explicitly allows us to combine terms in a use
 	a_0&={{k}\choose{0}}\bigg[\frac{d^{1}}{dx^{1}}f(x) \bigg]\bigg[\frac{d^{k}}{dx^{k}}g(x) \bigg]+{{k}\choose{0}}f(x)\bigg[\frac{d^{k+1}}{dx^{k+1}}g(x) \bigg] \\
 	a_1&={{k}\choose{1}}\bigg[\frac{d^{2}}{dx^{2}}f(x) \bigg]\bigg[\frac{d^{k-1}}{dx^{k-1}}g(x) \bigg]+{{k}\choose{1}}\bigg[\frac{d}{dx}f(x) \bigg]\bigg[\frac{d^{k}}{dx^{k}}g(x) \bigg] \\
 	a_2&={{k}\choose{2}}\bigg[\frac{d^{3}}{dx^{3}}f(x) \bigg]\bigg[\frac{d^{k-2}}{dx^{k-2}}g(x) \bigg]+{{k}\choose{2}}\bigg[\frac{d^2}{dx^2}f(x) \bigg]\bigg[\frac{d^{k-1}}{dx^{k-1}}g(x) \bigg]\\
-	&\vdots \nolabel\\
+	&\vdots \nonumber\\
 	a_{k-2}&={{k}\choose{k-2}}\bigg[\frac{d^{k-1}}{dx^{k-1}}f(x) \bigg]\bigg[\frac{d^{2}}{dx^{2}}g(x) \bigg]+{{k}\choose{k-2}}\bigg[\frac{d^{k-2}}{dx^{k-2}}f(x) \bigg]\bigg[\frac{d^{3}}{dx^{3}}g(x) \bigg]\\
 	a_{k-1}&={{k}\choose{k-1}}\bigg[\frac{d^{k}}{dx^{k}}f(x) \bigg]\bigg[\frac{d}{dx}g(x) \bigg]+{{k}\choose{v}}\bigg[\frac{d^{k-1}}{dx^{k-1}}f(x) \bigg]\bigg[\frac{d^{2}}{dx^{2}}g(x) \bigg]\\
 	a_k&={{k}\choose{k}}\bigg[\frac{d^{k+1}}{dx^{k+1}}f(x) \bigg]g(x)+{{k}\choose{k}}\bigg[\frac{d^k}{dx^k}f(x) \bigg]\bigg[\frac{d}{dx}g(x) \bigg].
@@ -201,7 +201,7 @@ At this point, it becomes obvious as to why the $f^{(n)}(x)$ notation of a deriv
 	a_0&={{k}\choose{0}}f^{(1)}(x) g^{(k)}(x)+{{k}\choose{0}}f(x)g^{(k+1)}(x) \label{repeating_product_rule_a0}\\
 	a_1&={{k}\choose{1}}f^{(2)}(x) g^{(k-1)}(x) +{{k}\choose{1}}f^{(1)}(x) g^{(k)}(x) \\
 	a_2&={{k}\choose{2}}f^{(3)}(x) g^{(k-2)}(x) +{{k}\choose{2}}f^{(2)}(x) g^{(k-1)}(x) \\
-	&\vdots \nolabel\\
+	&\vdots \nonumber\\
 	a_{k-2}&={{k}\choose{k-2}}f^{(k-1)}(x) g^{(2)}(x) +{{k}\choose{k-2}}f^{(k-2)}(x) g^{(3)}(x)\\
 	a_{k-1}&={{k}\choose{k-1}}f^{(k)}(x) g^{(1)}(x)+{{k}\choose{k-1}}f^{(k-1)}(x) g^{(2)}(x)\\
 	a_k&={{k}\choose{k}}f^{(k+1)}(x) g(x)+{{k}\choose{k}}f^{(k)}(x)g^{(1)}(x). \label{repeating_product_rule_ak}
@@ -212,9 +212,9 @@ Our end goal is to get this expression to be in the same form as in equation (\r
 \end{align}
 The next step is then summing expressions (\ref{repeating_product_rule_a0}) through (\ref{repeating_product_rule_ak}), then determining if what we get is equivalent to equation (\ref{repeating_product_rule_final}). Let $\Upsilon=a_0+a_1+\cdots+a_{k-1}+a_k$, then we have
 \begin{align}
-	\Upsilon&={{k}\choose{0}}f(x)g^{(k+1)}(x)+{{k}\choose{0}}f^{(1)}(x)g^{(k)}(x)+{{k}\choose{1}}f^{(1)}(x)g^{(k)}(x)+\cdots \nolabel\\
+	\Upsilon&={{k}\choose{0}}f(x)g^{(k+1)}(x)+{{k}\choose{0}}f^{(1)}(x)g^{(k)}(x)+{{k}\choose{1}}f^{(1)}(x)g^{(k)}(x)+\cdots \nonumber\\
 	&\hspace{1cm}\cdots+{{k}\choose{k}}f^{(k)}(x)g^{(1)}(x)+{{k}\choose{k-1}}f^{(k)}(x)g^{(1)}(x)+{{k}\choose{k}}f^{(k+1)}(x)g(x) \\
-	&={{k}\choose{0}}f(x)g^{(k+1)}(x)+\bigg[{{k}\choose{0}}+{{k}\choose{1}} \bigg]f^{(1)}(x)g^{(k)}(x)+\cdots \nolabel\\
+	&={{k}\choose{0}}f(x)g^{(k+1)}(x)+\bigg[{{k}\choose{0}}+{{k}\choose{1}} \bigg]f^{(1)}(x)g^{(k)}(x)+\cdots \nonumber\\
 	&\hspace{1cm}\cdots+\bigg[{{k}\choose{k-1}}+{{k}\choose{k}} \bigg]f^{(k)}(x)g^{(1)}(x)+{{k}\choose{k}}f^{(k+1)}(x)g(x)\\
 	&=\sum_{i=0}^{k+1}\bigg[{{k}\choose{i-1}}+{{k}\choose{i}} \bigg]f^{(i)}(x)g^{(k+1-i)}(x). \label{repeating_product_rule_00}
 \end{align}
