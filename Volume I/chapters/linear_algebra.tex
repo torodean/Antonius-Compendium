@@ -64,11 +64,11 @@ If a linear system is changed to another by one of the following operations, the
 
 
 \begin{defn}[Echelon Form]{defn:echelon form}
-	In a system of equations, the initial variable with a non-zero coefficient within each row is referred to as the leading variable for that row. A system is said to be in \keyword{echelon form} when every leading variable, except for the first row's leading variable, is positioned to the right of the leading variable in the row above it. Additionally, any rows containing coefficients of all zeros are situated at the bottom.
+	In a system of equations, the initial variable with a non-zero coefficient within each row is referred to as the leading variable for that row. A system is said to be in \keyword{echelon form} when every leading variable, except for the first row's leading variable, is positioned to the right of the leading variable in the row above it. Additionally, any rows containing coefficients of all zeros are situated at the bottom. 
 \end{defn}
 
 
-An example of echelon form follows. Consider the equations $x - 4y + 2z = -1$, $7z + 3y = 10$, and $3x + 7z = 10$. The echelon form of these is 
+In an echelon form linear system the variables that are not leading are \keyword{free}. An example of echelon form follows. Consider the equations $x - 4y + 2z = -1$, $7z + 3y = 10$, and $3x + 7z = 10$. The echelon form of these is 
 \begin{align}
 1x - 4y + 2z &= -1 \\
 0x+3y + 7z &= 10 \\
@@ -104,4 +104,16 @@ z
 \end{align}
 
 
+
+\begin{defn}[Matrix]{defn:matrix}
+	An $m\times n$ matrix is a rectangular array of numbers with $m$ rows and $n$ columns (2-dimensional). Each number in the matrix is an entry which has an index in each dimension. A matrix is typically denoted with an upper case letter. A matrix is typically a 2-dimensional object but can be mathematically extended into higher dimensions. for example, a $3x5$ matrix with elements $a_{mn}$ is denoted
+	\begin{align}
+	A = 
+	\begin{bmatrix}
+	a_{11} & a_{12} & a_{13} & a_{14} & a_{15} \\
+	a_{21} & a_{22} & a_{23} & a_{24} & a_{25} \\
+	a_{31} & a_{32} & a_{33} & a_{34} & a_{35} \\
+	\end{bmatrix}
+	\end{align}
+\end{defn}
 
