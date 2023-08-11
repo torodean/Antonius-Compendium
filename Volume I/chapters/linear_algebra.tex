@@ -18,3 +18,90 @@
 Linear algebra finds applications in various fields, including physics, computer graphics, engineering, data science, and economics. It plays a fundamental role in solving systems of linear equations, understanding linear transformations, and providing tools to analyze complex systems with multiple variables and interactions. Moreover, it forms the basis for more advanced mathematical concepts and techniques in areas like optimization, machine learning, and numerical analysis.
 
 
+
+\section{Linear Systems}
+
+\begin{defn}[Linear Combination]{defn:linear combination}
+A \keyword{linear combination} of $x_0,..., x_n$ has the form 
+\begin{align*}
+a_0x_0 + a_1x_1 + a_2x_2 + \cdots + a_nx_n,
+\end{align*}
+where the numbers $a_0,..., a_n \in \R$ are the combination’s coefficients. A linear
+equation in the variables $x_0,..., x_n$ has the form $a_0x_0 + a_1x_1 + a_2x_2 + \cdots +
+a_nx_n = d$, where $d \in\R$ is the constant. An $n$-tuple $(s_0, s_1,..., s_n) \in\R^n$ is a solution of, or satisfies, that equation
+if substituting the numbers $s_0,..., s_n$ for the variables gives a true statement: $a_0s_0 + a_1s_1 + · · · + a_ns_n = d$. A system of linear equations
+\begin{align*}
+a_{0,0}x_0 + a_{0,1}x_1 + ... + a_{0,n}x_n &= d_0 \\
+a_{1,0}x_0 + a_{1,1}x_1 + ... + a_{1,n}x_n &= d_1 \\
+a_{2,0}x_0 + a_{2,1}x_1 + ... + a_{2,n}x_n &= d_2 \\
+&\vdots \\
+a_{m,0}x_0 + a_{m,1}x_1 + ... + a_{2,n}x_n &= d_m
+\end{align*}
+has the solution $(s_0, s_1,..., s_n)$ if that n-tuple is a solution of all of the equations.
+\end{defn}
+
+\begin{theo}[Gauss's Method]{theo:gauss's method}
+If a linear system is changed to another by one of the following operations, then the two systems have the same set of solutions.
+\begin{enumerate}
+	\item An equation is swapped with another.
+	\item An equation has both sides multiplied by a non-zero constant.
+	\item An equation is replaced by the sum of itself and a multiple of another.
+\end{enumerate}
+\end{theo}
+\begin{proof}[Proof for theorem \ref{theo:gauss's method} item 1]
+	The proof for this one is trivial. If we have a system of linear equations with a tuple that satisfies those equations, then by definition \ref{defn:linear combination}, all the equations hold true with that tuple. By swapping any of them, they will still hold true, and thus swapping them has no effect on the set of solutions.
+\end{proof}
+\begin{proof}[Proof for theorem \ref{theo:gauss's method} item 2]
+	The proof for this one is also trivial. Consider a system of linear equations with a tuple $(s_0, s_1,..., s_n) \in\R^n$ that satisfies those solutions. Then by definition \ref{defn:linear combination}, for all $i\in\N$, we have a true statement $a_{i,0}x_0 + a_{i,1}x_1 + ... + a_{i,n}x_n = d_i$. Suppose we multiply both sides of this equation by some $p\in\R$, where $p \neq 0$. Then we have $p(a_{i,0}s_0 + a_{i,1}s_1 + ... + a_{i,n}s_n)= pd_i$. Since the tuple is a solution to the equation, there has to exist some $pd_i$ value to satisfies this equation call it $d'_i$ (the prime representing our new linear system), giving us $a'_{i,0}s_0 + a'_{i,1}s_1 + ... + a'_{i,n}s_n) = pd_i = d'_i$, where $a'_i$ are some new coefficients $pa_i$ that satisfy the equation and $d'_i$ is some new constant. Our tuple will satisfy this equation, and since none of the other equations changed, it will also satisfy them. Therefore, our solution satisfies this new linear system. Since the solution was arbitrary, this implies that all solutions are also satisfied.
+\end{proof}
+\begin{proof}[Proof for theorem \ref{theo:gauss's method} item 3]
+	The proof for this one is also trivial. Consider a system of linear equations with a tuple $(s_0, s_1,..., s_n) \in\R^n$ that satisfies those solutions. Let $p \in \R$. Take two equations in the system $a_{i,0}x_0 + a_{i,1}x_1 + ... + a_{i,n}x_n = d_i$ and $a_{j,0}x_0 + a_{j,1}x_1 + ... + a_{j,n}x_n = d_j$. We can construct a new equation by adding the first to a multiple of the second, say $d_i + pd_j$. this gives $d_i + pd_j = a_{i,0}x_0 + a_{i,1}x_1 + ... + a_{i,n}x_n + p(a_{j,0}x_0 + a_{j,1}x_1 + ... + a_{j,n}x_n)$. Since our tuple is a solution to both of these equations, we know that the first term $d_i$ and the second term $pd_j$ (when our tuple is plugged into the variables) will satisfy the new expression. Thus, since this tuple is a solution to this equation, and since none of the other equations changed, it will also satisfy them. Therefore, our solution satisfies this new linear system. Since the solution was arbitrary, this implies that all solutions are also satisfied.
+\end{proof}
+
+\begin{defn}[Gaussian Operations]{defn:gaussian operations}
+	The three operations from theorem \ref{theo:gauss's method} are called \keyword{Gaussian operations} (or elementary reduction operations, or row operations). They are swapping, multiplying by a scalar, and row combination.
+\end{defn}
+
+
+\begin{defn}[Echelon Form]{defn:echelon form}
+	In a system of equations, the initial variable with a non-zero coefficient within each row is referred to as the leading variable for that row. A system is said to be in \keyword{echelon form} when every leading variable, except for the first row's leading variable, is positioned to the right of the leading variable in the row above it. Additionally, any rows containing coefficients of all zeros are situated at the bottom.
+\end{defn}
+
+
+An example of echelon form follows. Consider the equations $x - 4y + 2z = -1$, $7z + 3y = 10$, and $3x + 7z = 10$. The echelon form of these is 
+\begin{align}
+1x - 4y + 2z &= -1 \\
+0x+3y + 7z &= 10 \\
+3x+0y+1z &= 2
+\end{align}
+I added coefficients to each term in order to better demonstrate how the variables `line up.' This form is analogous to representing data in matrix format. For these equations, a matrix representation would be written as
+
+\begin{align}
+\begin{bmatrix}
+1 & -4 & 2 \\
+0 & 3 & 7 \\
+3 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+x \\
+y \\
+z
+\end{bmatrix}
+=
+\begin{bmatrix}
+-1 \\
+10 \\
+2
+\end{bmatrix} 
+\hspace{1cm} \text{or} \hspace{1cm} 
+\left(
+\begin{array}{ccc|c}
+1 & -4 & 2 & -1 \\
+0 & 3 & 7 & 10\\
+3 & 0 & 1 & 2
+\end{array}
+\right)
+\end{align}
+
+
+
