@@ -22,31 +22,31 @@ Linear algebra finds applications in various fields, including physics, computer
 \section{Linear Systems}
 
 \begin{defn}[Linear Combination]{defn:linear combination}
-A \keyword{linear combination} of $x_0,..., x_n$ has the form 
-\begin{align*}
-a_0x_0 + a_1x_1 + a_2x_2 + \cdots + a_nx_n,
-\end{align*}
-where the numbers $a_0,..., a_n \in \R$ are the combination’s coefficients. A linear
-equation in the variables $x_0,..., x_n$ has the form $a_0x_0 + a_1x_1 + a_2x_2 + \cdots +
-a_nx_n = d$, where $d \in\R$ is the constant. An $n$-tuple $(s_0, s_1,..., s_n) \in\R^n$ is a solution of, or satisfies, that equation
-if substituting the numbers $s_0,..., s_n$ for the variables gives a true statement: $a_0s_0 + a_1s_1 + · · · + a_ns_n = d$. A system of linear equations
-\begin{align*}
-a_{0,0}x_0 + a_{0,1}x_1 + ... + a_{0,n}x_n &= d_0 \\
-a_{1,0}x_0 + a_{1,1}x_1 + ... + a_{1,n}x_n &= d_1 \\
-a_{2,0}x_0 + a_{2,1}x_1 + ... + a_{2,n}x_n &= d_2 \\
-&\vdots \\
-a_{m,0}x_0 + a_{m,1}x_1 + ... + a_{2,n}x_n &= d_m
-\end{align*}
-has the solution $(s_0, s_1,..., s_n)$ if that n-tuple is a solution of all of the equations.
+	A \keyword{linear combination} of $x_0,..., x_n$ has the form 
+	\begin{align*}
+	a_0x_0 + a_1x_1 + a_2x_2 + \cdots + a_nx_n,
+	\end{align*}
+	where the numbers $a_0,..., a_n \in \R$ are the combination’s coefficients. A linear
+	equation in the variables $x_0,..., x_n$ has the form $a_0x_0 + a_1x_1 + a_2x_2 + \cdots +
+	a_nx_n = d$, where $d \in\R$ is the constant. An $n$-tuple $(s_0, s_1,..., s_n) \in\R^n$ is a solution of, or satisfies, that equation
+	if substituting the numbers $s_0,..., s_n$ for the variables gives a true statement: $a_0s_0 + a_1s_1 + · · · + a_ns_n = d$. A system of linear equations
+	\begin{align*}
+	a_{0,0}x_0 + a_{0,1}x_1 + ... + a_{0,n}x_n &= d_0 \\
+	a_{1,0}x_0 + a_{1,1}x_1 + ... + a_{1,n}x_n &= d_1 \\
+	a_{2,0}x_0 + a_{2,1}x_1 + ... + a_{2,n}x_n &= d_2 \\
+	&\vdots \\
+	a_{m,0}x_0 + a_{m,1}x_1 + ... + a_{2,n}x_n &= d_m
+	\end{align*}
+	has the solution $(s_0, s_1,..., s_n)$ if that n-tuple is a solution of all of the equations.
 \end{defn}
 
 \begin{theo}[Gauss's Method]{theo:gauss's method}
-If a linear system is changed to another by one of the following operations, then the two systems have the same set of solutions.
-\begin{enumerate}
-	\item An equation is swapped with another.
-	\item An equation has both sides multiplied by a non-zero constant.
-	\item An equation is replaced by the sum of itself and a multiple of another.
-\end{enumerate}
+	If a linear system is changed to another by one of the following operations, then the two systems have the same set of solutions.
+	\begin{enumerate}
+		\item An equation is swapped with another.
+		\item An equation has both sides multiplied by a non-zero constant.
+		\item An equation is replaced by the sum of itself and a multiple of another.
+	\end{enumerate}
 \end{theo}
 \begin{proof}[Proof for theorem \ref{theo:gauss's method} item 1]
 	The proof for this one is trivial. If we have a system of linear equations with a tuple that satisfies those equations, then by definition \ref{defn:linear combination}, all the equations hold true with that tuple. By swapping any of them, they will still hold true, and thus swapping them has no effect on the set of solutions.
@@ -68,11 +68,11 @@ If a linear system is changed to another by one of the following operations, the
 \end{defn}
 
 
-In an echelon form linear system the variables that are not leading are \keyword{free}. An example of echelon form follows. Consider the equations $x - 4y + 2z = -1$, $7z + 3y = 10$, and $3x + 7z = 10$. The echelon form of these is 
+In an echelon form linear system the variables that are not leading are \keyword{free}. An example of echelon form follows. Consider the equations $x - 4y + 2z = -1$, $7z + 3y = 10$, and $ z = 10$. The echelon form of these is 
 \begin{align}
 1x - 4y + 2z &= -1 \\
 0x+3y + 7z &= 10 \\
-3x+0y+1z &= 2
+0x+0y+1z &= 2
 \end{align}
 I added coefficients to each term in order to better demonstrate how the variables `line up.' This form is analogous to representing data in matrix format. For these equations, a matrix representation would be written as
 
@@ -80,7 +80,7 @@ I added coefficients to each term in order to better demonstrate how the variabl
 \begin{bmatrix}
 1 & -4 & 2 \\
 0 & 3 & 7 \\
-3 & 0 & 1
+0 & 0 & 1
 \end{bmatrix}
 \begin{bmatrix}
 x \\
@@ -107,13 +107,37 @@ z
 
 \begin{defn}[Matrix]{defn:matrix}
 	An $m\times n$ matrix is a rectangular array of numbers with $m$ rows and $n$ columns (2-dimensional). Each number in the matrix is an entry which has an index in each dimension. A matrix is typically denoted with an upper case letter. A matrix is typically a 2-dimensional object but can be mathematically extended into higher dimensions. for example, a $3x5$ matrix with elements $a_{mn}$ is denoted
-	\begin{align}
+	\begin{align*}
 	A = 
 	\begin{bmatrix}
 	a_{11} & a_{12} & a_{13} & a_{14} & a_{15} \\
 	a_{21} & a_{22} & a_{23} & a_{24} & a_{25} \\
 	a_{31} & a_{32} & a_{33} & a_{34} & a_{35} \\
 	\end{bmatrix}
+	\end{align*}
+\end{defn}
+
+\begin{defn}[Homogeneous Solutions]{defn:homogeneous solution}
+	A linear equation is \keyword{homogeneous} if it has a constant of zero and thus can be written
+	\begin{align}
+	a_0x_0+a_1x_1+\cdots+a_nx_n=0
 	\end{align}
 \end{defn}
 
+
+\begin{lemma}[Homogeneous solution]{lemma:homogeneous linear equation solution}
+	Any homogeneous linear system has a solution set of the form
+	\begin{align*}
+	\{c_1\vec{\alpha}_1+\cdots++c_n\vec{\alpha}_n| c_1,...c_n \in \R\},
+	\end{align*}
+	where $n$ is the number of free variables in an echelon form of the system.
+\end{lemma}
+
+
+\begin{theo}[General Solution: Particular + Homogeneous]{theo:general linear equation solution}
+	Any linear system has a solution set of the form
+	\begin{align*}
+	\{\vec{p}+c_1\vec{\alpha}_1+\cdots++c_n\vec{\alpha}_n| c_1,...c_n \in \R\},
+	\end{align*}
+	where $\vec{p}$ is a particular solution and $n$ is the number of free variables that the system has after a Gaussian reduction.
+\end{theo}
