@@ -21,6 +21,13 @@ Linear algebra finds applications in various fields, including physics, computer
 
 \section{Linear Systems}
 
+A linear system, in the context of mathematics and engineering, refers to a collection of linear equations involving multiple variables. Each equation in the system is linear, meaning that it represents a relationship where each variable is raised to the power of 1 and multiplied by a constant coefficient. The general form of a linear equation in one variable, $x$, is $mx + b = 0$, Where $m$ and $b$ are constants. In a linear system involving multiple variables, the equations have a similar form
+\begin{align}
+	a_0x_0 + a_1x_1 + a_2x_2 + \cdots + a_nx_n = b,
+\end{align}
+where $a_0, ..., a_n$ are the coefficients, $x_0, ..., x_n$ are the variables, and $b$ is a constant.
+
+
 \begin{defn}[Linear Combination]{defn:linear combination}
 	A \keyword{linear combination} of $x_0,..., x_n$ has the form 
 	\begin{align*}
@@ -125,13 +132,13 @@ z
 \end{defn}
 
 
-\begin{lemma}[Homogeneous solution]{lemma:homogeneous linear equation solution}
+\begin{lemm}[Homogeneous solution]{lemma:homogeneous linear equation solution}
 	Any homogeneous linear system has a solution set of the form
 	\begin{align*}
 	\{c_1\vec{\alpha}_1+\cdots++c_n\vec{\alpha}_n| c_1,...c_n \in \R\},
 	\end{align*}
 	where $n$ is the number of free variables in an echelon form of the system.
-\end{lemma}
+\end{lemm}
 
 
 \begin{theo}[General Solution: Particular + Homogeneous]{theo:general linear equation solution}

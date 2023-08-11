@@ -259,13 +259,11 @@ By taking equation (\ref{quotient_rule_01}) and substituting it into equation (\
 		\frac{d}{dx} \frac{f(x)}{g(x)} = \frac{f'(x)g(x)-f(x)g'(x)}{g(x)^2}.
 	\end{align}
 \end{theo}
-A special case of this quotient rule is when the numerator is $1$. This can be seen in equation (\ref{quotient_rule_00}). For simplicity, I will drop the "$(x)$" and assume functions with a single variable here. We will also define $u_n \equiv g^n$. Note that raising both sides of this definition to some power $m$ gives $u_n^m = (g^n)^m = g^{nm} = u_{nm}$. Taking consecutive derivatives of this give
+A special case of this quotient rule is when the numerator is $1$. This can be seen in equation (\ref{quotient_rule_00}). For simplicity, I will drop the "$(x)$" and assume functions with a single variable here. Taking consecutive derivatives of this give
 \begin{align}
 	\frac{d}{dx}\frac{1}{g} &= \frac{-g'}{g^2} \\
-	\frac{d^2}{dx^2}\frac{1}{g} &= \frac{d}{dx}\frac{-g'}{g^2} = -\frac{d}{dx}g'\frac{1}{u_2} = -\frac{g''}{u_2}-g'\left(\frac{-u'_2}{u_2^2}\right) = -\frac{g''}{u_2}+\frac{g'u'_2}{u_4} \\
-	\frac{d^3}{dx^3}\frac{1}{g} &= \frac{d}{dx}\left(-\frac{g''}{u_2}+\frac{g'u'_2}{u_4}\right) = - \frac{d}{dx}g''\frac{1}{u_2} + \frac{d}{dx}g'u'_2\frac{1}{u_4} \\
-	&= -\frac{g'''}{u_2}+\frac{g''u'_2}{u_4}+ g'u'_2\left(\frac{-u'_4}{u^2_4}\right)+ (g'u''_2+g''u'_2)\frac{1}{u_4} \\
-	&= -\frac{g'''}{u_2}+2\frac{g''u'_2}{u_4}+ \frac{g'u''_2}{u_4}-\frac{g'u'_2u'_4}{u_8}
+	\frac{d^2}{dx^2}\frac{1}{g} &= \frac{d}{dx}\frac{-g'}{g^2} = -\frac{d}{dx}g'\frac{1}{g^2} = -\frac{g''}{g^2}-g'\left(\frac{-2gg'}{g^4}\right) = -\frac{g''}{g^2}+\frac{2g'^2}{g^3} \\
+	\frac{d^3}{dx^3}\frac{1}{g} &= \frac{d}{dx}\left(-\frac{g''}{g^2}+\frac{2g'^2}{g^3}\right) =- \frac{g'''}{g^2} - g''\frac{d}{dx}\frac{1}{g^2} +  \frac{4g'g''}{g^3} + 2g'^2\frac{d}{dx}\frac{1}{g^3}  \nonumber \\&= -\frac{g'''}{g^2}-g''\left(\frac{-2gg'}{g^4}\right)+\frac{4gg''}{g^3}+2g'^2\left(\frac{-3g^2g'}{g^6}\right) \nonumber\\&=\frac{6g'g''}{g^3}-\frac{6g'^3}{g^4}-\frac{g'''}{g^2}
 \end{align}
 
 
