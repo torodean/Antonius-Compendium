@@ -261,12 +261,24 @@ By taking equation (\ref{quotient_rule_01}) and substituting it into equation (\
 \end{theo}
 A special case of this quotient rule is when the numerator is $1$. This can be seen in equation (\ref{quotient_rule_00}). For simplicity, I will drop the "$(x)$" and assume functions with a single variable here. Taking consecutive derivatives of this give
 \begin{align}
-	\frac{d}{dx}\frac{1}{g} &= \frac{-g'}{g^2} \\
-	\frac{d^2}{dx^2}\frac{1}{g} &= \frac{d}{dx}\frac{-g'}{g^2} = -\frac{d}{dx}g'\frac{1}{g^2} = -\frac{g''}{g^2}-g'\left(\frac{-2gg'}{g^4}\right) = -\frac{g''}{g^2}+\frac{2g'^2}{g^3} \\
-	\frac{d^3}{dx^3}\frac{1}{g} &= \frac{d}{dx}\left(-\frac{g''}{g^2}+\frac{2g'^2}{g^3}\right) =- \frac{g'''}{g^2} - g''\frac{d}{dx}\frac{1}{g^2} +  \frac{4g'g''}{g^3} + 2g'^2\frac{d}{dx}\frac{1}{g^3}  \nonumber \\&= -\frac{g'''}{g^2}-g''\left(\frac{-2gg'}{g^4}\right)+\frac{4gg''}{g^3}+2g'^2\left(\frac{-3g^2g'}{g^6}\right) \nonumber\\&=\frac{6g'g''}{g^3}-\frac{6g'^3}{g^4}-\frac{g'''}{g^2}
+	\frac{d}{dx}\frac{1}{g} &= \frac{-g'}{g^2} \label{d/dx 1/g 1}\\
+	\frac{d^2}{dx^2}\frac{1}{g} &= \frac{d}{dx}\frac{-g'}{g^2} = -\frac{d}{dx}g'\frac{1}{g^2} = -\frac{g''}{g^2}-g'\left(\frac{-2gg'}{g^4}\right) = -\frac{g''}{g^2}+\frac{2g'^2}{g^3} \label{d/dx 1/g 2}\\
+	\frac{d^3}{dx^3}\frac{1}{g} &= \frac{d}{dx}\left(-\frac{g''}{g^2}+\frac{2g'^2}{g^3}\right) =- \frac{g'''}{g^2} - g''\frac{d}{dx}\frac{1}{g^2} +  \frac{4g'g''}{g^3} + 2g'^2\frac{d}{dx}\frac{1}{g^3}  \nonumber \\&= -\frac{g'''}{g^2}-g''\left(\frac{-2gg'}{g^4}\right)+\frac{4g'g''}{g^3}+2g'^2\left(\frac{-3g^2g'}{g^6}\right) \nonumber\\
+	&= -\frac{g'''}{g^2}+\frac{2g'g''}{g^3}+\frac{4g'g''}{g^3}-\frac{6g'^3}{g^4} \nonumber\\
+	&=\frac{6g'g''}{g^3}-\frac{6g'^3}{g^4}-\frac{g'''}{g^2} \\
+	\frac{d^4}{dx^4}\frac{1}{g} &= \frac{d}{dx}\left(\frac{6g'g''}{g^3}-\frac{6g'^3}{g^4}-\frac{g'''}{g^2}\right) \nonumber \\
+	&= 6g'g''\frac{d}{dx}\frac{1}{g^3}+\frac{1}{g^3}\frac{d}{dx}6g'g''-6g'^3\frac{d}{dx}\frac{1}{g^4}-\frac{1}{g^4}\frac{d}{dx}6g'^3-g'''\frac{d}{dx}\frac{1}{g^2}-\frac{1}{g^2}\frac{d}{dx}g'''\nonumber \\
+	&= \frac{-18g'^2g''}{g^4}+\frac{6g'g'''+6g''^2}{g^3}+\frac{24g'^4}{g^5}-\frac{18g'^2g''}{g^4}+\frac{2g'g'''}{g^3}-\frac{g^{(4)}}{g^2}\nonumber \\
+	&= \frac{-36g'^2g''}{g^4}+\frac{8g'g'''}{g^3}+\frac{6g''^2}{g^3}+\frac{24g'^4}{g^5}-\frac{g''''}{g^2} \\
+	\frac{d^5}{dx^5}\frac{1}{g} &= \frac{-g^{(5)}}{g^2}-\frac{120g'^5}{g^6}+\frac{10g^{(4)}g'}{g^3}+\frac{20g'''g''}{g^3}-\frac{60g'''g'^2}{g^4}+\frac{240g'^3g''}{g^5}-\frac{90g'g''^2}{g^4},\label{d/dx 1/g 5}
 \end{align}
+and so on. Notice on that last one I spared the algebra. to find a pattern in this sequence, a few things can be noted. First. The factor of $\left(\frac{1}{g}\right)^m$ is common in every term. The maximum $m$ value here appears to be equal to $m=n+1$, where $n$ is the number of derivatives performed. There also seem to be at least one term for each $m$ value except for $m=1$ (for example, in equation \ref{d/dx 1/g 1} there is only a $g^2$ term, with a maximum $m=2$, but in equation \ref{d/dx 1/g 5}, there are $m=2,3,4,5,\text{ and }6$ terms). Next, there is a common occurrence of $\frac{d^k}{dx^k}g$ terms, where the highest $k$ value appears to be $k=n$ in each derivative. There does not seem to be an immediate pattern with the coefficients. For each $\frac{d^n}{dx^n}$, there is also a $-\frac{g^{(n)}}{g^2}$ term.
 
-
+Using these observations, we can begin to construct a potential formula to represent this pattern. It must be a sum of some kind, since it has summed terms. It must contain one term for each $\left(\frac{1}{g}\right)^m$ for all $1\leq m \leq n+1$. Each term will have some coefficient, which will likely be dependent on $m$, $n$, or both $m$ and $n$. And each term will have some product of $g^{(i)}$ terms. We can thus guess our formula to look something like
+\begin{align}
+	\frac{d^n}{dx^n}\frac{1}{g} = \sum_{m=0}^{n}\frac{C(n,m)}{g^{m+1}}G(m, n, g^{(i)}|i \leq n \in \N^+),
+\end{align}
+where $C(n,m)$ is some coefficient function dependent on $n$ and $m$, and $G(m,n,g^{(i)}|i \leq n \in \N^+) \equiv G(m,n,g^{(1)}, g^{(2)},...,g^{(n)})$ is some function which is a product of the repeated derivatives of $g(x)$ in some combination. 
 
 
 
