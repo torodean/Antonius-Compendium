@@ -265,21 +265,74 @@ A special case of this quotient rule is when the numerator is $1$. This can be s
 	\frac{d^2}{dx^2}\frac{1}{g} &= \frac{d}{dx}\frac{-g'}{g^2} = -\frac{d}{dx}g'\frac{1}{g^2} = -\frac{g''}{g^2}-g'\left(\frac{-2gg'}{g^4}\right) = -\frac{g''}{g^2}+\frac{2g'^2}{g^3} \label{d/dx 1/g 2}\\
 	\frac{d^3}{dx^3}\frac{1}{g} &= \frac{d}{dx}\left(-\frac{g''}{g^2}+\frac{2g'^2}{g^3}\right) =- \frac{g'''}{g^2} - g''\frac{d}{dx}\frac{1}{g^2} +  \frac{4g'g''}{g^3} + 2g'^2\frac{d}{dx}\frac{1}{g^3}  \nonumber \\&= -\frac{g'''}{g^2}-g''\left(\frac{-2gg'}{g^4}\right)+\frac{4g'g''}{g^3}+2g'^2\left(\frac{-3g^2g'}{g^6}\right) \nonumber\\
 	&= -\frac{g'''}{g^2}+\frac{2g'g''}{g^3}+\frac{4g'g''}{g^3}-\frac{6g'^3}{g^4} \nonumber\\
-	&=\frac{6g'g''}{g^3}-\frac{6g'^3}{g^4}-\frac{g'''}{g^2} \\
+	&=\frac{6g'g''}{g^3}-\frac{6g'^3}{g^4}-\frac{g'''}{g^2} \label{d/dx 1/g 3}\\
 	\frac{d^4}{dx^4}\frac{1}{g} &= \frac{d}{dx}\left(\frac{6g'g''}{g^3}-\frac{6g'^3}{g^4}-\frac{g'''}{g^2}\right) \nonumber \\
 	&= 6g'g''\frac{d}{dx}\frac{1}{g^3}+\frac{1}{g^3}\frac{d}{dx}6g'g''-6g'^3\frac{d}{dx}\frac{1}{g^4}-\frac{1}{g^4}\frac{d}{dx}6g'^3-g'''\frac{d}{dx}\frac{1}{g^2}-\frac{1}{g^2}\frac{d}{dx}g'''\nonumber \\
 	&= \frac{-18g'^2g''}{g^4}+\frac{6g'g'''+6g''^2}{g^3}+\frac{24g'^4}{g^5}-\frac{18g'^2g''}{g^4}+\frac{2g'g'''}{g^3}-\frac{g^{(4)}}{g^2}\nonumber \\
-	&= \frac{-36g'^2g''}{g^4}+\frac{8g'g'''}{g^3}+\frac{6g''^2}{g^3}+\frac{24g'^4}{g^5}-\frac{g''''}{g^2} \\
+	&= \frac{-36g'^2g''}{g^4}+\frac{8g'g'''}{g^3}+\frac{6g''^2}{g^3}+\frac{24g'^4}{g^5}-\frac{g''''}{g^2} \label{d/dx 1/g 4}\\
 	\frac{d^5}{dx^5}\frac{1}{g} &= \frac{-g^{(5)}}{g^2}-\frac{120g'^5}{g^6}+\frac{10g^{(4)}g'}{g^3}+\frac{20g'''g''}{g^3}-\frac{60g'''g'^2}{g^4}+\frac{240g'^3g''}{g^5}-\frac{90g'g''^2}{g^4},\label{d/dx 1/g 5}
 \end{align}
-and so on. Notice on that last one I spared the algebra. to find a pattern in this sequence, a few things can be noted. First. The factor of $\left(\frac{1}{g}\right)^m$ is common in every term. The maximum $m$ value here appears to be equal to $m=n+1$, where $n$ is the number of derivatives performed. There also seem to be at least one term for each $m$ value except for $m=1$ (for example, in equation \ref{d/dx 1/g 1} there is only a $g^2$ term, with a maximum $m=2$, but in equation \ref{d/dx 1/g 5}, there are $m=2,3,4,5,\text{ and }6$ terms). Next, there is a common occurrence of $\frac{d^k}{dx^k}g$ terms, where the highest $k$ value appears to be $k=n$ in each derivative. There does not seem to be an immediate pattern with the coefficients. For each $\frac{d^n}{dx^n}$, there is also a $-\frac{g^{(n)}}{g^2}$ term.
+and so on. Notice on that last one I spared the algebra. to find a pattern in this sequence, a few things can be noted. First. The factor of $\left(\frac{1}{g}\right)^m$ is common in every term. The maximum $m$ value here appears to be equal to $m=n+1$, where $n$ is the number of derivatives performed. There also seem to be at least one term for each $m$ value except for $m=1$ (for example, in equation (\ref{d/dx 1/g 1}) there is only a $g^2$ term, with a maximum $m=2$, but in equation (\ref{d/dx 1/g 5}), there are $m=2,3,4,5,\text{ and }6$ terms). Next, there is a common occurrence of $\frac{d^k}{dx^k}g$ terms, where the highest $k$ value appears to be $k=n$ in each derivative. There does not seem to be an immediate pattern with the coefficients. For each $\frac{d^n}{dx^n}$, there is also a $-\frac{g^{(n)}}{g^2}$ term.
 
 Using these observations, we can begin to construct a potential formula to represent this pattern. It must be a sum of some kind, since it has summed terms. It must contain one term for each $\left(\frac{1}{g}\right)^m$ for all $1\leq m \leq n+1$. Each term will have some coefficient, which will likely be dependent on $m$, $n$, or both $m$ and $n$. And each term will have some product of $g^{(i)}$ terms. We can thus guess our formula to look something like
 \begin{align}
-	\frac{d^n}{dx^n}\frac{1}{g} = \sum_{m=0}^{n}\frac{C(n,m)}{g^{m+1}}G(m, n, g^{(i)}|i \leq n \in \N^+),
+	\frac{d^n}{dx^n}\frac{1}{g} \overset{?}{=} \sum_{m=0}^{n}\frac{C(n,m)}{g^{m+1}}G( g^{(i)}|i \leq n \in \N^+), \label{d/dx 1/g guess 00}
 \end{align}
-where $C(n,m)$ is some coefficient function dependent on $n$ and $m$, and $G(m,n,g^{(i)}|i \leq n \in \N^+) \equiv G(m,n,g^{(1)}, g^{(2)},...,g^{(n)})$ is some function which is a product of the repeated derivatives of $g(x)$ in some combination. 
-
+where $C(n,m)$ is some coefficient function dependent on $n$ and $m$, and $G(g^{(i)}|i \leq n \in \N^+) \equiv G(g^{(1)}, g^{(2)},...,g^{(n)})$ is some function which is a product of the repeated derivatives of $g(x)$ in some combination. Some possible steps to determine this formula better would of course be to then determine $G$ and $C$. We know the above equations involve deriving $g(x)$. With a careful and lucky observation, $G$ can be determined. Consider this derivative for a moment $\frac{d}{dx} g(x) =  g'(x)$. If we take consecutive derivatives, we simply get $\frac{d^i}{dx^i} g(x) =  g^{(i)}(x)$. Now consider this derivative for a moment $\frac{d}{dx} g(x)^2 =  2g(x)g'(x)$. When there are multiple terms of our function, the consecutive derivatives require the product rule, which would give $\frac{d^2}{dx^2} g(x)^2 =  2g(x)g''(x)+2g'(x)^2$. Careful observation will reveal that this corresponds to the derivatives in equation (\ref{d/dx 1/g 2}), where as the first derivative of $g(x)$ corresponds to the coefficients in equation (\ref{d/dx 1/g 1}). Taking a third derivative of $g(x)^2$ gives $\frac{d^3}{dx^3} g(x)^2 =  2g(x)g'''(x)+6g'(x)g''(x)$. This only closely correlates to equation (\ref{d/dx 1/g 3}). If instead we take the third derivative of $g(x)^3$, we have $\frac{d^3}{dx^3} g(x)^3 =  3(g(x)^2g'''(x)+2g'(x)^3 +6g'(x)g''(x)$, which indeed correlates to the coefficients in equation (\ref{d/dx 1/g 3}). This pattern appears to repeat. The excess $g$ terms in these will interfere with our $g^{m+1}$ denominator in equation (\ref{d/dx 1/g guess 00}), and so we should modify this to be some function, say $q(x, n, m)$ (It has a dependency on $m$ and $n$ because it's value may depend on which term in the summation it is), and determine if it needs to be changed. The pattern of $G$ reveals we can potentially make $G$ a function of $n$ (and more technically $n$ and $x$ since $g$ is a function of $x$) to get our correct factors of $g^{(i)}$ in each term.
+\begin{align}
+	G( g^{(i)}|i \leq n \in \N^+) \overset{?}{\equiv} G(n, x) \overset{?}{=} \frac{\partial^n}{\partial x^n}g(x)^n.
+\end{align}
+Inserting this into equation (\ref{d/dx 1/g guess 00}) gives
+\begin{align}
+	\frac{d^n}{dx^n}\frac{1}{g} \overset{?}{=} \sum_{m=0}^{n}\frac{C(n,m)}{q(x, n, m)}\frac{\partial^n}{\partial x^n}g(x)^n \label{d/dx 1/g guess 01}.
+\end{align}
+To determine $q$, we can write out the first few expansions of $G$.
+\begin{align}
+	\frac{d}{dx} g(x) &= g'(x) \\
+	\frac{d^2}{dx^2} g(x)^2 &=  2g(x)g''(x)+2g'(x)^2 \\
+	\frac{d^3}{dx^3} g(x)^3 &= 3(g(x)^2g'''(x)+2g'(x)^3 +6g'(x)g''(x) \\
+	\frac{d^4}{dx^4} g(x)^4 &= 4(6g'(x)^4+g(x)^3g^{(4)}(x)+9g(x)^2g''(x)^2+ 12g(x)^2g'(x)g^{(3)}(x)+36g(x)g'(x)^2g''(x))
+\end{align}
+Using this and beginning with $n=1$, we have
+\begin{align}
+		\frac{d}{dx}\frac{1}{g} = \sum_{m=0}^{1}\frac{C(1,m)}{q(x, 1, m)}\frac{\partial}{\partial x}g(x) = \frac{C(1,0)}{q(x, 1, 0)}g'(x) + \frac{C(1,1)}{q(x, 1, 1)}g'(x).
+\end{align}
+We can let $C(1,0)=0$, which makes the first term vanish, $q(x,1,1) = g^{2}$, and $C(1,1) = -1$. For $n=2$ we have
+\begin{align}
+	\frac{d^2}{dx^2}\frac{1}{g} &\overset{?}{=} \sum_{m=0}^{2}\frac{C(2,m)}{q(x, 2, m)}\frac{\partial^2}{\partial^2 x}g(x)^2 \\ 
+	&= \left[\frac{C(2,0)}{q(x, 2, 0)} + \frac{C(2,1)}{q(x, 2, 1)} + \frac{C(2,m)}{q(x, 2, 2)}\right]\left(2g(x)g''(x)+2g'(x)^2\right) \\
+	&= \frac{C(2,0)}{q(x, 2, 0)}\left(2gg''+2g'^2\right) + \frac{C(2,1)}{q(x, 2, 2)}\left(2gg''(x)+2g'^2\right) + \frac{C(2,m)}{q(x, 2, 2)}\left(2gg''+2g'^2\right).
+\end{align}
+From this we can compare coefficients to equation \ref{d/dx 1/g 2} and thus we have
+\begin{align}
+	2g\left[\frac{C(2,0)}{q(x, 2, 0)}+ \frac{C(2,1)}{q(x, 2, 1)} + \frac{C(2,2)}{q(x, 2, 2)}\right] &= \frac{-1}{g^2} \\	
+	2\left[\frac{C(2,0)}{q(x, 2, 0)}+ \frac{C(2,1)}{q(x, 2, 1)} + \frac{C(2,2)}{q(x, 2, 2)}\right] &= \frac{2}{g^3}
+\end{align}
+We can again make the first $m=0$ term have a zero constant ($C(2,0=0$)) causing it to vanish, then these become 
+\begin{align}
+	\frac{C(2,1)}{q(x, 2, 1)} + \frac{C(2,2)}{q(x, 2, 2)} &= \frac{-1}{2g^3} \\	
+	\frac{C(2,1)}{q(x, 2, 1)} + \frac{C(2,2)}{q(x, 2, 2)} &= \frac{1}{g^3}
+\end{align}
+From this, $q(x,2,m)=\frac{1}{g^3}$, $C(2,1)+C(2,2) = \frac{-1}{2}$ and $C(2,1) + C(2,2) = 1$. \textcolor{red}{This cannot be true and is in fact a contradiction. Therefore we must conclude that equation (\ref{d/dx 1/g guess 01}) is incorrect!}. One thing of noteworthiness is that in the above process, if the steps were repeated for more $n$ values, there would always be each set of equations with the same coefficients leading to this contradiction. This is because $G$ did not depend on anything other than $n$ giving the same factor for each term of the sum. To remedy this, we can add an $m$ dependence to $G$ and allow the coefficient variables to cancel out the un-used terms. As long as we have the maximum $n$ value, we will have some equation that gives the correct $g^{(i)}$ terms and then we can make the other unwanted terms cancel. Thus, we can try to modify $G$ such that $G = \frac{\partial^n}{\partial x^n}g(x)^m$. This gives
+\begin{align}
+	\frac{d^n}{dx^n}\frac{1}{g} \overset{?}{=} \sum_{m=0}^{n}\frac{C(n,m)}{q(x, n, m)}\frac{\partial^n}{\partial x^n}g(x)^m \label{d/dx 1/g guess 02}.
+\end{align}
+We then try the same process again. Let $n=1$. We have
+\begin{align}
+	\frac{d}{dx}\frac{1}{g} = \sum_{m=0}^{1}\frac{C(1,m)}{q(x, 1, m)}\frac{\partial}{\partial x}g(x)^m =\frac{C(1,0)}{q(x, 1, 0)}\frac{\partial}{\partial x}1 + \frac{C(1,1)}{q(x, 1, 1)}\frac{\partial}{\partial x}g(x) = \frac{C(1,1)}{q(x, 1, 1)}g'(x).
+\end{align}
+Notice that the initial term automatically canceled out this time leaving us with just one term. If we equate this to equation (\ref{d/dx 1/g 1}), we have $C(1,1) = -1$ and $q(x,1,1) = g^{2}$. Now doing the same for $n=2$ give
+\begin{align}
+	\frac{d^2}{dx^2}\frac{1}{g} &\overset{?}{=} \sum_{m=0}^{2}\frac{C(2,m)}{q(x, 2, m)}\frac{\partial^2}{\partial^2 x}g(x)^m \\
+	&= \frac{C(2,1)}{q(x, 2, 1)}\frac{\partial^2}{\partial^2 x}g(x) + \frac{C(2,2)}{q(x, 2, 2)}\frac{\partial^2}{\partial^2 x}g(x)^2 \\
+	&= \frac{C(2,1)}{q(x, 2, 1)}g''(x) + \frac{C(2,2)}{q(x, 2, 2)}\left(2g(x)g''(x)+2g'(x)^2\right).
+\end{align}
+Pulling out our coefficients and equating this to equation (\ref{d/dx 1/g 2}) yields
+\begin{align}
+	\frac{C(2,1)}{q(x, 2, 1)} + 2g\frac{C(2,2)}{q(x, 2, 2)} &= \frac{-1}{g^2} \label{C(2,1)/q(x,2,1)} \\
+	2\frac{C(2,2)}{q(x, 2, 2)} &= \frac{2}{g^3} \label{C(2,2)/q(x,2,2)}.
+\end{align}
+Notice how we have have equations that are more of an echelon-like\footnote{If we imagine the fraction as the variables, then this is echelon format. See definition \ref{defn:echelon form}.} format. We can solve for $C(2,2)$ and $q(x,2,2)$ using equation (\ref{C(2,2)/q(x,2,2)}) giving $C(2,2)=1$ and $q(x,2,2)= g(x)^3$. Plugging these into equation (\ref{C(2,1)/q(x,2,1)}) then gives $C(2,1)=-3$ and $q(x,2,1) = g(x)^2$.
 
 
 \unfinished
