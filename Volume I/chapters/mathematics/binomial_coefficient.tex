@@ -1,3 +1,19 @@
+\subsection{Pascal's Triangle}
+
+\keyword{Pascal's Triangle} is a mathematical arrangement of numbers that holds several interesting properties and has applications in various fields. Pascal's Triangle is constructed by starting with a single "1" at the top. Each subsequent row is created by placing "1"s on both ends, and each inner value is the sum of the two values directly above it.
+\begin{equation}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{cccccccccccc}
+&      &      &      &      &      &  1   &      &      &      &      &      \\
+&      &      &      &      &  1   &      &  1   &      &      &      &      \\
+&      &      &      &  1   &      &  2   &      &  1   &      &      &      \\
+&      &      &  1   &      &  3   &      &  3   &      &  1   &      &      \\
+&      &  1   &      &  4   &      &  6   &      &  4   &      &  1   &      \\
+&  1   &      &  5   &      &  10  &      &  10  &      &   5  &      &   1   \\
+\end{tabular}\label{pascals_triangle}
+\end{equation}
+The numbers in Pascal's Triangle are also known as \keyword{binomial coefficients}. The entry in the $n$th row and $k$th column represents the coefficient of the term $x^k$ in the expansion of $(x + 1)^n$. The values in Pascal's Triangle also correspond to combinations (binomial coefficients) that count the number of ways to choose $k$ items from a set of $n$ items without considering the order. Pascal's Triangle is symmetric along its central vertical axis. Each row is a palindrome. The sum of the numbers in each row is a power of 2 (see theorem \ref{thm:Summing Over All binomial coefficients}). In number theory, Pascal's Triangle is involved in finding patterns and relationships in numbers, and it is often connected to the study of the binomial series and power series in calculus. Pascal's Triangle can be extended to include negative row indices and even more complex expansions.
+
 \section{Binomial Coefficients}
 
 \begin{defn}[Binomial Coefficient \label{Binomial Coefficient Definition}]{1}
