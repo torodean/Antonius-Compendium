@@ -340,12 +340,25 @@ Notice how we have have equations that are more of an echelon-like\footnote{If w
 \end{align}
 Pulling out our coefficients and equating this to equation (\ref{d/dx 1/g 3}) yields
 \begin{align}
-	\frac{C(3,1)}{q(x, 3, 1)}+2g\frac{C(3,2)}{q(x, 3, 2)} + 3g^2\frac{C(3,3)}{q(x, 3, 3)} = \frac{-1}{g^2} \\
-	6\frac{C(3,2)}{q(x, 3, 2)} + 18g\frac{C(3,3)}{q(x, 3, 3)} = \frac{6}{g^3} \\
-	6\frac{C(3,3)}{q(x, 3, 3)} = \frac{-6}{g^4}.
+	\frac{C(3,1)}{q(x, 3, 1)}+2g\frac{C(3,2)}{q(x, 3, 2)} + 3g^2\frac{C(3,3)}{q(x, 3, 3)} &= \frac{-1}{g^2} \\
+	6\frac{C(3,2)}{q(x, 3, 2)} + 18g\frac{C(3,3)}{q(x, 3, 3)} &= \frac{6}{g^3} \\
+	6\frac{C(3,3)}{q(x, 3, 3)} &= \frac{-6}{g^4}.
 \end{align}
-From this (and using a little bit of algebra) it's clear that $q(x,3,3)=g^4$, $q(x,3,2) = g^3$, $q(x,3,1) = g^2$, $C(3,3) = -1$, $C(3,2)=4$, and $C(3,1)=-6$.
-
+From this (and using a little bit of algebra) it's clear that $q(x,3,3)=g^4$, $q(x,3,2) = g^3$, $q(x,3,1) = g^2$, $C(3,3) = -1$, $C(3,2)=4$, and $C(3,1)=-6$. Now doing the same for $n=3$ gives
+\begin{align}
+	\frac{d^4}{dx^4}\frac{1}{g} &\overset{?}{=} \sum_{m=1}^{4}\frac{C(4,m)}{q(x, 4, m)}\frac{\partial^4}{\partial^4 x}g(x)^m \\
+	&= \frac{C(4,1)}{q(x, 4, 1)}\frac{\partial^4}{\partial^4 x}g(x)+\frac{C(4,2)}{q(x, 4, 2)}\frac{\partial^4}{\partial^4 x}g(x)^2+\frac{C(4,3)}{q(x, 4, 3)}\frac{\partial^4}{\partial^4 x}g(x)^3+\frac{C(4,4)}{q(x, 4, 4)}\frac{\partial^4}{\partial^4 x}g(x)^4 \\
+	&= \frac{C(4,1)}{q(x, 4, 1)}g^{(4)}+\frac{C(4,2)}{q(x, 4, 2)}\left(2gg^{(4)}+6g''^2+8g^{(3)}g'\right)+\frac{C(4,3)}{q(x, 4, 3)}\Big(3g^2g^{(4)}+18gg''^2 \nonumber\\&\hspace{.5cm}+24gg'g^{(3)}+36g'^2g''\Big)+\frac{C(4,4)}{q(x, 4, 4)}\left(4 g^3 g^{(4)} + 36 g^2 g''^2 + 24 g'^4 + 48 g^2 g^{(3)} g' + 144 g g'^2 g''\right)
+\end{align}
+Pulling out our coefficients and equating this to equation (\ref{d/dx 1/g 4}) yields
+\begin{align}
+	\frac{C(4,1)}{q(x, 4, 1)}+2g\frac{C(4,2)}{q(x, 4, 2)}+3g^2\frac{C(4,3)}{q(x, 4, 3)}+4 g^3 \frac{C(4,4)}{q(x, 4, 4)} &= \frac{-1}{g^2} \\
+	6\frac{C(4,2)}{q(x, 4, 2)}+18g\frac{C(4,3)}{q(x, 4, 3)}+36 g^2\frac{C(4,4)}{q(x, 4, 4)} &= \frac{6}{g^3} \label{d^4/dx^4 1/g coefficients 00}\\
+	8\frac{C(4,2)}{q(x, 4, 2)} + 24g\frac{C(4,3)}{q(x, 4, 3)}+48 g^2 \frac{C(4,4)}{q(x, 4, 4)} &= \frac{8}{g^3} \label{d^4/dx^4 1/g coefficients 01}\\
+	36\frac{C(4,3)}{q(x, 4, 3)} + 144 g \frac{C(4,4)}{q(x, 4, 4)} &= \frac{-36}{g^4} \\
+	24\frac{C(4,4)}{q(x, 4, 4)} &= \frac{24}{g^5}
+\end{align}
+From this (and using a little bit of algebra) it's clear that $q(x,4,4)=g^5$, $q(x,4,3)=g^4$, $q(x,4,2) = g^3$, $q(x,4,1) = g^2$, $C(4,4)=1$, $C(4,3) = -5$, $C(4,2)=10$, and $C(4,1)=-10$. Fortunately, the same values satisfy both equations (\ref{d^4/dx^4 1/g coefficients 00}) and (\ref{d^4/dx^4 1/g coefficients 01}) - indicating that our equation (\ref{d/dx 1/g guess 02}) is more likely true.
 
 \unfinished
 
