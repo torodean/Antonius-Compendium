@@ -360,6 +360,61 @@ Pulling out our coefficients and equating this to equation (\ref{d/dx 1/g 4}) yi
 \end{align}
 From this (and using a little bit of algebra) it's clear that $q(x,4,4)=g^5$, $q(x,4,3)=g^4$, $q(x,4,2) = g^3$, $q(x,4,1) = g^2$, $C(4,4)=1$, $C(4,3) = -5$, $C(4,2)=10$, and $C(4,1)=-10$. Fortunately, the same values satisfy both equations (\ref{d^4/dx^4 1/g coefficients 00}) and (\ref{d^4/dx^4 1/g coefficients 01}) - indicating that our equation (\ref{d/dx 1/g guess 02}) is more likely true.
 
+It can already be seen that there is an obvious pattern for $q$. For all four $n$ values tested, $q$ has only been dependent on $m$. Furthermore, it can be observed that $q(x,n,m) \equiv q(x,m) = g^{m+1}$, which interestingly enough is the guess we had from equation (\ref{d/dx 1/g guess 00}). If accurate, the only thing left to do is determine the coefficient formula for $C(n,m)$. We can visualize $C(n,m)$ as a $n\times m$ matrix $\mathbf{C}$, where each row represents a single $n$ value and each column represents a single $m$ value, and insert the values we have determined above in an attempt to identify a pattern. Note we will start indexing both $m$ and $n$ at 1 and leave all undefined values at zero. Making all undefined values zero would make the coefficients zero thus canceling out the terms if they were to exist. Without taking the time to write out the work in \LaTeX for the $n>4$ cases, this gives
+\begin{align}
+\mathbf{C} = 	\begin{bmatrix}
+-1 & 0 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+-3 & 1 & 0 & 0 & 0 & 0 & 0 & \cdots \\
+-6 & 4 & -1 & 0 & 0 & 0 & 0 & \cdots \\
+-10 & 10 & -5 & 1 & 0 & 0 & 0 & \cdots \\
+-15 & 20 & -15 & 6 & -1 & 0 & 0 & \cdots \\
+-21 & 35 & -35 & 21 & -7 & 1 & 0 & \cdots \\
+\vdots & \vdots & \vdots & \vdots & \vdots& \vdots& \vdots & \ddots
+\end{bmatrix} \label{quotient_derivation_C_matrix}
+\end{align}
+An immediate observation is that each column alternates from negative to positive. Therefore, since the columns represent changing $m$ values, we can say there is likely a $(-1)^m$ term in $C(n,m)$. For $n=1$, there appears to be a difference $C(1,m+1) = C(1,m)-(m+1)$ for each value. For $n=2$ there isn't as obvious of a pattern. Let $N_m$ represent the absolute value of each non-zero\footnote{This is important. By taking only the non-zero values we are `omitting' certain values of $n$ from our pattern. This will need to be kept in mind throughout this process.} $m$ values from the columns of $\mathbf{C}$ as a set. Then we have
+\begin{align}
+N_1 &= \{1,3,6,10,15,21,...\} \\
+N_2 &= \{1,4,10,20,35,...\} \\
+N_3 &= \{1,5,15,35,...\} \\
+N_4 &= \{1,6,21,..\} \\
+N_5 &= \{1,7,...\}
+\end{align}
+Our coefficients $C(n,m)$ are then given by $N_m(n)$. The first term of each set $N_i\forall i \in \N$ is one. The second term appears to be $N_{m+1} (2) = N_{m} (2) + N_m(1)$. the third term appears to be $N_{i+1} (3) = N_i (3) + N_i(2)$. The fourth term appears to be $N_{i+1} (4) = N_i(4) + N_i (3)$, and so on. This pattern is familiar and can be visualized using pascal's triangle (see section \ref{section:pascals_triangle}). Take the list of $N_i$ sets and visually rotate them by $-\frac{\pi}{4}$. This gives a pascal-like chart of
+\begin{center}
+	\renewcommand{\arraystretch}{1.5}
+	\begin{tabular}{cccccccccccc}
+		&    &    &    &    &    &  1   &    &    &    &    &    \\
+		&    &    &    &    &  1   &    &  3   &    &    &    &    \\
+		&    &    &    &  1   &    &  4   &    &  6   &    &    &    \\
+		&    &    &  1   &    &  5   &    &  10  &    &  10  &    &    \\
+		&    &  1   &    &  6   &    &  15  &    &  20  &    &  15  &    \\
+		&  1   &    &  7   &    &  21  &    &  35  &    &  35  &    &  21   \\
+	\end{tabular}
+\end{center}
+In the above triangle, starting from the top of the triangle heading down and to the left does \textit{not} represent increasing $n$ values (because we took only non-zero values of $C(n,m)$ when representing $N_i$), while heading down and to the left \textit{does} represents increasing $m$ values for our system. Since these only represent the $non-zero$ values of $C(n,m)$, the corresponding $n$ values are in fact the horizontal rows in this triangle rather than diagonal rows\footnote{This can be seen in equation (\ref{quotient_derivation_C_matrix})}. This must be the case since $n \geq m$ also must be satisfied. The coefficients of Pascal's Triangle can be represented by the binomial coefficients $\binom{n}{m}$ and thus we can perhaps represent these values using this as a factor in $C(n,m)$. Writing each term in terms of its corresponding bonimial coefficient gives
+\begin{center}
+	\renewcommand{\arraystretch}{1.5}
+	\begin{tabular}{cccccccccccc}
+	&    &    &    &    &    & $\frac{2}{2}\binom{1}{1}$  &    &    &    &    &    \\
+	&    &    &    &    & $\frac{3}{3}\binom{2}{2}$  &    & $\frac{3}{2}\binom{2}{1}$  &    &    &    &    \\
+	&    &    &    & $\frac{4}{4}\binom{3}{3}$  &    &  $\frac{4}{3}\binom{3}{2}$  &    & $\frac{6}{3}\binom{3}{1}$  &    &    &    \\
+	&    &    & $\frac{5}{5}\binom{4}{4}$  &    &  $\frac{5}{4}\binom{4}{3}$   &    &  $\frac{5}{3}\binom{4}{2}$  &    & $\frac{5}{2}\binom{4}{1}$ &    &    \\
+	&    & $\frac{6}{6}\binom{5}{5}$  &    &  $\frac{6}{5}\binom{5}{4}$   &    &  $\frac{6}{4}\binom{5}{3}$  &    &  $\frac{6}{3}\binom{5}{2}$  &    & $\frac{6}{2}\binom{5}{1}$ &    \\
+	& $\frac{7}{7}\binom{6}{6}$  &    &  $\frac{7}{6}\binom{6}{5}$   &    &  $\frac{7}{3}\binom{6}{4}$  &    &  $\frac{7}{4}\binom{6}{3}$  &    &  $\frac{7}{3}\binom{6}{2}$  &    & $\frac{7}{2}\binom{6}{1}$  \\
+	\end{tabular}
+\end{center}
+I wrote each term in the above triangle as a fraction to further demonstrate the obvious pattern. The coefficients multiplied by each binomial coefficient here is $\frac{n+1}{m+1}$. We know from previous steps that $C(n,m)$ has a $(-1)^m$ term, a $\binom{n}{m}$ term, and finally a $\frac{n+1}{m+1}$ term. Combining these gives $C(n,m) = (-1)^m\frac{n+1}{m+1}\binom{n}{m}$. Therefore our equation (\ref{d/dx 1/g guess 02}) becomes clear.
+
+\begin{lemma}[opt]{1}
+	Let $g:\R \to \R$ be a continuous and differential function over the variable $x$ such that $g(x) \neq 0$ for all $x\in\mathbb{R}$. Then the $n^{\text{th}}$ derivative of $\frac{1}{g(x)}$ is
+	\begin{align}
+	\frac{d^n}{dx^n}\frac{1}{g(x)} = \sum_{m=1}^{n}(-1)^m\frac{n+1}{m+1}\binom{n}{m}\frac{1}{g(x)^{m+1}}\frac{\partial^n}{\partial x^n}g(x)^m \label{d^n/dx^n 1/g final}.
+	\end{align} 
+\end{lemma}
+
+
+
 \unfinished
 
 
