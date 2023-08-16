@@ -406,14 +406,28 @@ In the above triangle, starting from the top of the triangle heading down and to
 \end{center}
 I wrote each term in the above triangle as a fraction to further demonstrate the obvious pattern. The coefficients multiplied by each binomial coefficient here is $\frac{n+1}{m+1}$. We know from previous steps that $C(n,m)$ has a $(-1)^m$ term, a $\binom{n}{m}$ term, and finally a $\frac{n+1}{m+1}$ term. Combining these gives $C(n,m) = (-1)^m\frac{n+1}{m+1}\binom{n}{m}$. Therefore our equation (\ref{d/dx 1/g guess 02}) becomes clear.
 
-\begin{lemma}[opt]{1}
+\begin{lemma}[repeating Differentiation of $\frac{1}{g(x)}$]{lemm:Repeating Quotient Rule Special Case}
 	Let $g:\R \to \R$ be a continuous and differential function over the variable $x$ such that $g(x) \neq 0$ for all $x\in\mathbb{R}$. Then the $n^{\text{th}}$ derivative of $\frac{1}{g(x)}$ is
-	\begin{align}
-	\frac{d^n}{dx^n}\frac{1}{g(x)} = \sum_{m=1}^{n}(-1)^m\frac{n+1}{m+1}\binom{n}{m}\frac{1}{g(x)^{m+1}}\frac{\partial^n}{\partial x^n}g(x)^m \label{d^n/dx^n 1/g final}.
-	\end{align} 
+\begin{align}
+\frac{d^n}{dx^n}\frac{1}{g(x)} = \sum_{m=1}^{n}(-1)^m\frac{n+1}{m+1}\binom{n}{m}\frac{1}{g(x)^{m+1}}\frac{\partial^n}{\partial x^n}g(x)^m \label{d/dx 1/g guess 03}.
+\end{align} 
 \end{lemma}
-
-
+\begin{proof}[Proof for Lemma \ref{lemm:Repeating Quotient Rule Special Case}]
+	Since this equation involves a summation over $n$, we can do a proof by induction. From the above derivation of this equation, the first few cases have already been shown to hold true. Assume that for some $n=k$, that 
+	\begin{align}
+	\frac{d^k}{dx^k}\frac{1}{g(x)} = \sum_{m=1}^{k}(-1)^m\frac{k+1}{m+1}\binom{k}{m}\frac{1}{g(x)^{m+1}}\frac{\partial^k}{\partial x^k}g(x)^m \label{d^k/dx^k 1/g inductive step}.
+	\end{align} 
+	Consider $n=k+1$. This is simply the derivative with respect to $x$ of equation $\ref{d^k/dx^k 1/g inductive step}$.
+	\begin{align}
+	\frac{d^{k+1}}{dx^{k+1}}\frac{1}{g(x)} &= \frac{d}{dx}\frac{d^k}{dx^k}\frac{1}{g(x)} \\
+	&= \frac{d}{dx}\sum_{m=1}^{k}(-1)^m\frac{k+1}{m+1}\binom{k}{m}\frac{1}{g(x)^{m+1}}\frac{\partial^k}{\partial x^k}g(x)^m \\
+	&= \sum_{m=1}^{k}(-1)^m\frac{k+1}{m+1}\binom{k}{m}\frac{d}{dx}\left[\frac{1}{g(x)^{m+1}}\frac{\partial^k}{\partial x^k}g(x)^m\right] \label{lemm:Repeating Quotient Rule Special Case 00}
+	\end{align}
+	The product rule in theorem \ref{thm:product rule} can be applied to the derivative in equation (\ref{lemm:Repeating Quotient Rule Special Case 00}). 
+	\begin{align}
+	\frac{d}{dx}\left[\frac{1}{g(x)^{m+1}}\frac{\partial^k}{\partial x^k}g(x)^m\right] &= \frac{1}{g(x)^{m+1}}\frac{\partial^{k+1}}{\partial x^{k+1}}g(x)^m - \frac{(m+1)g'(x)}{g(x)^{m+2}}\frac{\partial^k}{\partial x^k}g(x)^m  \label{lemm:Repeating Quotient Rule Special Case 02}
+	\end{align}
+	
 
 \unfinished
 
