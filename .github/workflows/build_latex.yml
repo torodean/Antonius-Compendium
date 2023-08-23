@@ -14,9 +14,9 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Setup TeX Live
-      uses: xu-cheng/texlive-action@v2
+      uses: xu-cheng/latex-action@v2
       with:
-        profile: small  # You can adjust the TeX Live profile
+        root_file: Volume\ I/Compendium.tex  # You can adjust the TeX Live profile
 
     - name: Build index
       run: |
