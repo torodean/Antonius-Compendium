@@ -15,12 +15,13 @@ jobs:
 
     - name: Setup TeX Live
       uses: xu-cheng/latex-action@v2
-      with:
-        root_file: Volume I/Compendium.tex  # You can adjust the TeX Live profile
+      with:      
+        working_directory: Volume I
+        root_file: Compendium.tex  # You can adjust the TeX Live profile
 
     - name: Build index
       run: |
-        cd Volume\ I  # Change directory to the subfolder
+        cd Volume I  # Change directory to the subfolder
         makeindex Compendium  # Adjust the index file name if needed
 
     - name: Compile LaTeX document
