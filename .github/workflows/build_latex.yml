@@ -22,7 +22,7 @@ jobs:
     - name: Rename LaTeX document
       run: |
         cd Volume\ I  # Change directory to the subfolder
-        mv Compendium.tex Compendium_autogen.tex
+        mv Compendium.pdf Compendium_autogen.pdf
         
     - name: Commit and Push Changes
       run: |
