@@ -3,7 +3,7 @@ name: Build LaTeX Documents
 on:
   push:
     branches:
-      - main  # Adjust this to the branch you want to trigger the workflow on
+      - master  # Adjust this to the branch you want to trigger the workflow on
 
 jobs:
   build:
