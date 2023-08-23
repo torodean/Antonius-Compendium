@@ -18,19 +18,11 @@ jobs:
       with:      
         working_directory: Volume I
         root_file: Compendium.tex  # You can adjust the TeX Live profile
-
-    - name: Build index
-      run: |
-        cd Volume I  # Change directory to the subfolder
-        makeindex Compendium  # Adjust the index file name if needed
-
-    - name: Compile LaTeX document
+        
+    - name: Rename LaTeX document
       run: |
         cd Volume\ I  # Change directory to the subfolder
-        pdflatex Compendium.tex
-        pdflatex Compendium.tex  # Run pdflatex multiple times for proper index generation
         mv Compendium.tex Compendium_autogen.tex
-        # Run additional LaTeX commands here if needed
         
     - name: Commit and Push Changes
       run: |
