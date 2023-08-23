@@ -465,14 +465,13 @@ Let $u_0 = \frac{1}{g^{m+1}}$ and $u_1 = \partial_x^{k}g^m$. Then it follows tha
 \partial_x u_0u_1 = u_0'u_1 + u_0u_1' \implies
 u_0'u_1 = \partial_x u_0u_1 - u_0u_1'
 \end{align}
-
 Applying the product rule to equation (\ref{lemm:Repeating Quotient Rule Special Case 06}), we have
 \begin{align}
-\sum_{m=1}^{k}(-1)^m\frac{k+1}{k-m+1}\binom{k}{m}\frac{1}{g^{m+1}}\partial_x^{k+1}g^m + (-1)^{k+1}\frac{1}{g^{k+2}}\partial_x^{k+1}g^{k+1} \\ = \sum_{m=1}^{k}(-1)^m\frac{k+1}{m+1}\binom{k}{m}\left[\partial_x\left(\frac{1}{g^{m+1}}\partial_x^{k}g^m\right) - \frac{1}{g^{m+1}}\partial_x^{k+1}g^m\right]
+\sum_{m=1}^{k}(-1)^m\frac{k+1}{k-m+1}\binom{k}{m}\frac{1}{g^{m+1}}\partial_x^{k+1}g^m + (-1)^{k+1}\frac{1}{g^{k+2}}\partial_x^{k+1}g^{k+1} \nonumber\\ = \sum_{m=1}^{k}(-1)^m\frac{k+1}{m+1}\binom{k}{m}\left[\partial_x\left(\frac{1}{g^{m+1}}\partial_x^{k}g^m\right) - \frac{1}{g^{m+1}}\partial_x^{k+1}g^m\right]
 \end{align}
 simplifying this gives
 \begin{align}
-\sum_{m=1}^{k}(-1)^m\frac{(k+1)(k+2)}{(m+1)(k-m+1)}\binom{k}{m}\frac{1}{g^{m+1}}\partial_x^{k+1}g^m + (-1)^{k+1}\frac{1}{g^{k+2}}\partial_x^{k+1}g^{k+1} \\ = \partial_x\sum_{m=1}^{k}(-1)^m\frac{k+1}{m+1}\binom{k}{m}\frac{1}{g^{m+1}}\partial_x^{k}g^m \label{lemm:Repeating Quotient Rule Special Case 07}
+\sum_{m=1}^{k}(-1)^m\frac{(k+1)(k+2)}{(m+1)(k-m+1)}\binom{k}{m}\frac{1}{g^{m+1}}\partial_x^{k+1}g^m + (-1)^{k+1}\frac{1}{g^{k+2}}\partial_x^{k+1}g^{k+1} \nonumber\\ = \partial_x\sum_{m=1}^{k}(-1)^m\frac{k+1}{m+1}\binom{k}{m}\frac{1}{g^{m+1}}\partial_x^{k}g^m \label{lemm:Repeating Quotient Rule Special Case 07}
 \end{align}
 Looking at the summation coefficients once more we have
 \begin{align}
@@ -487,7 +486,6 @@ Then finally, combining the terms on the left hand side of this equation gives
 \sum_{m=1}^{k+1}(-1)^m\frac{(k+2)}{(m+1)}\binom{k+1}{m}\frac{1}{g^{m+1}}\partial_x^{k+1}g^m  = \partial_x\sum_{m=1}^{k}(-1)^m\frac{k+1}{m+1}\binom{k}{m}\frac{1}{g^{m+1}}\partial_x^{k}g^m \label{lemm:Repeating Quotient Rule Special Case 08}
 \end{align}
 Therefore, for the condition mentioned earlier in equation (\ref{lemm:Repeating Quotient Rule Special Case 06}) to hold true, equation (\ref{lemm:Repeating Quotient Rule Special Case 08}) has to be true. Put another way, equation (\ref{lemm:Repeating Quotient Rule Special Case 00}) equals (\ref{lemm:Repeating Quotient Rule Special Case 01}), which is what we had to show to prove lemma \ref{lemm:Repeating Quotient Rule Special Case}.
-
 \end{proof}
 	
 
