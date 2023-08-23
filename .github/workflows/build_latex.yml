@@ -16,7 +16,7 @@ jobs:
     - name: Setup TeX Live
       uses: xu-cheng/latex-action@v2
       with:
-        root_file: Volume\ I/Compendium.tex  # You can adjust the TeX Live profile
+        root_file: Volume I/Compendium.tex  # You can adjust the TeX Live profile
 
     - name: Build index
       run: |
