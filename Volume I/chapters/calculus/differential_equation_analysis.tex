@@ -455,20 +455,21 @@ Looking at the coefficients of the sum again, $\frac{(k+2)(k+1)}{(m+1)(k-m+1)}\b
 \end{align}
 Using this, we can add a sum of $X$ terms and subtract the same sum of $X$ terms from equation (\ref{lemm:Repeating Quotient Rule Special Case 04}) to get
 \begin{align}
-D &= \sum_{m=1}^{k}(-1)^m\frac{k+1}{m+1}\binom{k}{m}\frac{1}{g^{m+1}}\partial_x^{k+1}g^m + \sum_{m=1}^{k}(-1)^m\frac{k+1}{k-m+1}\binom{k}{m}\frac{1}{g^{m+1}}\partial_x^{k+1}g^m + (-1)^{k+1}\frac{1}{g^{k+2}}\partial_x^{k+1}g^{k+1} \label{lemm:Repeating Quotient Rule Special Case 05}
+D &= \underbrace{\sum_{m=1}^{k}(-1)^m\frac{k+1}{m+1}\binom{k}{m}\frac{1}{g^{m+1}}\partial_x^{k+1}g^m}_{D_0} + \underbrace{\sum_{m=1}^{k}(-1)^m\frac{k+1}{k-m+1}\binom{k}{m}\frac{1}{g^{m+1}}\partial_x^{k+1}g^m + (-1)^{k+1}\frac{1}{g^{k+2}}\partial_x^{k+1}g^{k+1}}_{D_1} \label{lemm:Repeating Quotient Rule Special Case 05}
 \end{align}
 Since this is equivalent to equation (\ref{lemm:Repeating Quotient Rule Special Case 01}), and we want to show that this equals equation (\ref{lemm:Repeating Quotient Rule Special Case 00}), we can set them equal to each-other and find the condition that must hold for equality. We can do this because our inductive step is assumed to be true, therefore equation (\ref{lemm:Repeating Quotient Rule Special Case 03}), which is simply the derivative of our inductive step, is true. In this case I will use equation (\ref{lemm:Repeating Quotient Rule Special Case 03}) which is an alternate form of equation (\ref{lemm:Repeating Quotient Rule Special Case 00}). Thus comparing equation (\ref{lemm:Repeating Quotient Rule Special Case 05}) to $\partial_x^k\frac{1}{g}$ from equation (\ref{lemm:Repeating Quotient Rule Special Case 03}), we have
 \begin{align}
-\sum_{m=1}^{k}(-1)^m\frac{k+1}{k-m+1}\binom{k}{m}\frac{1}{g^{m+1}}\partial_x^{k+1}g^m + (-1)^{k+1}\frac{1}{g^{k+2}}\partial_x^{k+1}g^{k+1} = -\sum_{m=1}^{k}(-1)^m\frac{k+1}{m+1}\binom{k}{m}\frac{(m+1)g'}{g^{m+2}}\partial_x^{k}g^m  \label{lemm:Repeating Quotient Rule Special Case 06}
+D_1 &= \sum_{m=1}^{k}(-1)^m\frac{k+1}{k-m+1}\binom{k}{m}\frac{1}{g^{m+1}}\partial_x^{k+1}g^m + (-1)^{k+1}\frac{1}{g^{k+2}}\partial_x^{k+1}g^{k+1} \\ &= -\sum_{m=1}^{k}(-1)^m\frac{k+1}{m+1}\binom{k}{m}\frac{(m+1)g'}{g^{m+2}}\partial_x^{k}g^m  \label{lemm:Repeating Quotient Rule Special Case 06}
 \end{align}
 Simplifying this gives.
 \begin{align}
-	\sum_{m=1}^{k+1}(-1)^m\binom{k+1}{m}\frac{1}{g^{m+1}}\partial_x^{k+1}g^m = -\sum_{m=1}^{k}(-1)^m\binom{k}{m}\frac{(k+1)g'}{g^{m+2}}\partial_x^{k}g^m  \label{lemm:Repeating Quotient Rule Special Case 065}
+	\sum_{m=1}^{k+1}(-1)^m\binom{k+1}{m}\frac{1}{g^{m+1}}\partial_x^{k+1}g^m = -\sum_{m=1}^{k}(-1)^m(k+1)\binom{k}{m}\frac{g'}{g^{m+2}}\partial_x^{k}g^m  \label{lemm:Repeating Quotient Rule Special Case 065}
 \end{align}
 Therefore if we can show this is true, it would suffice for our proof. Alternatively, this may just be an interesting and potentially useful result. Let $u_0 = \frac{1}{g^{m+1}}$ and $u_1 = \partial_x^{k}g^m$. Then it follows that $u'_0 = -\frac{(m+1)g'}{g^{m+2}}$ and $u_1'(x) = \partial_x^{k+1}g^m$. Implementing the product rule from theorem \ref{thm:product rule}, we have
 \begin{align}
 \partial_x u_0u_1 = u_0'u_1 + u_0u_1' \implies
-u_0'u_1 = \partial_x u_0u_1 - u_0u_1'
+u_0'u_1 = \partial_x u_0u_1 - u_0u_1' \\
+-\frac{(m+1)g'}{g^{m+2}}\partial_x^{k}g^m = \partial_x\left(\frac{1}{g^{m+1}}\partial_x^{k}g^m\right) - \frac{1}{g^{m+1}}\partial_x^{k+1}g^m
 \end{align}
 Applying the product rule to equation (\ref{lemm:Repeating Quotient Rule Special Case 06}), we have
 \begin{align}
