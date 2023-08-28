@@ -9,7 +9,7 @@ Volume I
 ~~~~~~~~~~~ Copywrite and Licensing Information ~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Copywrite 2016 Antonius Torode All rights reserved.
+Copywrite 2023 Antonius Torode All rights reserved.
 
 This work may be distributed and/or modified under the conditions of Antonius’ General Purpose License (AGPL).
 
