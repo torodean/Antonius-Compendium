@@ -1,288 +1,330 @@
 \begin{theindex}
 
-  \item $\pi $-meson, \hyperpage{80}
+  \item $\pi $-meson, \hyperpage{87}
 
   \indexspace
 
-  \item Acceleration, \hyperpage{61}
-  \item Air, \hyperpage{65}
+  \item Acceleration, \hyperpage{63}
+  \item Air, \hyperpage{70}
+  \item Analog, \hyperpage{65}
   \item Angles, \hyperpage{4}
-  \item antiderivative, \hyperpage{46}
-  \item antiderivatives, \hyperpage{46}
+  \item antiderivative, \hyperpage{48}
+  \item antiderivatives, \hyperpage{48}
   \item arithmetic mean, \hyperpage{21}
-  \item Astrobiology, \hyperpage{67}
-  \item Astronomy, \hyperpage{55}
-  \item Astrophysics, \hyperpage{53}, \hyperpage{67}
-  \item Asymptotic Freedom and Confinement, \hyperpage{81}
-  \item atomic hypothesis, \hyperpage{63}
+  \item Astrobiology, \hyperpage{72}
+  \item Astronomy, \hyperpage{57}
+  \item Astrophysics, \hyperpage{55}, \hyperpage{72}
+  \item Asymptotic Freedom and Confinement, \hyperpage{88}
+  \item atomic hypothesis, \hyperpage{68}
 
   \indexspace
 
-  \item baryons, \hyperpage{80}
+  \item baryons, \hyperpage{87}
   \item Bayesian probability, \hyperpage{20, 21}
   \item Bernoulli probability, \hyperpage{20}
   \item binomial coefficients, \hyperpage{16}
   \item binomial probability, \hyperpage{20}
-  \item Biology, \hyperpage{54}
-  \item Bohr atom, \hyperpage{70}
-  \item Boltzmann Distribution, \hyperpage{63}
+  \item Biology, \hyperpage{56}
+  \item Bohr atom, \hyperpage{75}
+  \item Boltzmann Distribution, \hyperpage{68}
   \item bra, \hyperpage{11}
   \item bra-ket, \hyperpage{11}
-  \item Brownian motion, \hyperpage{66}
-  \item burning, \hyperpage{65}
+  \item Brownian motion, \hyperpage{71}
+  \item burning, \hyperpage{71}
 
   \indexspace
 
   \item Calculus, \hyperpage{22}
+  \item Canonical Formulation, \hyperpage{90}
   \item Cartesian coordinates, \hyperpage{6}
-  \item cesium atomic clock, \hyperpage{76}
+  \item cesium atomic clock, \hyperpage{81}
   \item Changes, \hyperpage{20}
-  \item chemical process, \hyperpage{65}
+  \item chemical process, \hyperpage{70}
   \item Circles, \hyperpage{4}
-  \item circular motion, \hyperpage{61}
-  \item Classical Mechanics, \hyperpage{53}
-  \item Classical mechanics, \hyperpage{59}
-  \item Color Charge, \hyperpage{81}
+  \item Circuit Design, \hyperpage{65}
+  \item circular motion, \hyperpage{63}
+  \item Classical Mechanics, \hyperpage{55}
+  \item Classical mechanics, \hyperpage{61}
+  \item Color Charge, \hyperpage{88}
   \item Commutativity, \hyperpage{12}
   \item complex number, \hyperpage{10, 11}
   \item compound event, \hyperpage{20}
-  \item Conservation of Energy, \hyperpage{59}
-  \item conservation of energy, \hyperpage{54}, \hyperpage{56}
-  \item Conservation of Momentum, \hyperpage{59}
-  \item Cosmology, \hyperpage{67}
-  \item Creation and Annihilation Operators, \hyperpage{78}
-  \item crystalline array, \hyperpage{64}
-  \item Curved Spacetime, \hyperpage{75}
+  \item conductor, \hyperpage{66}
+  \item Conservation of Energy, \hyperpage{61}
+  \item conservation of energy, \hyperpage{56}, \hyperpage{58}
+  \item Conservation of Momentum, \hyperpage{61}
+  \item Correlation, \hyperpage{89}
+  \item Cosmology, \hyperpage{72}
+  \item Creation and Annihilation Operators, \hyperpage{85}
+  \item crystalline array, \hyperpage{69}
+  \item Curved Spacetime, \hyperpage{80}
   \item Cylindrical coordinates, \hyperpage{8}
 
   \indexspace
 
-  \item de Broglie's matter waves, \hyperpage{70}
+  \item de Broglie's matter waves, \hyperpage{75}
+  \item Deterministic Dynamics, \hyperpage{89}
   \item Differentiation, \hyperpage{22}
-  \item Distance, \hyperpage{76}
-  \item DNA, \hyperpage{55}
+  \item Diffraction, \hyperpage{67}
+  \item Digital, \hyperpage{65}
+  \item Dispersion, \hyperpage{67}
+  \item Distance, \hyperpage{82}
+  \item DNA, \hyperpage{57}
   \item dot product, \hyperpage{12}
 
   \indexspace
 
-  \item earth sciences, \hyperpage{55}
-  \item echelon form, \hyperpage{51}
-  \item Eigenvalues, \hyperpage{49}
-  \item Eigenvectors, \hyperpage{49}
-  \item Einstein-Debye theory of specific heats, \hyperpage{70}
-  \item electric field, \hyperpage{68}
-  \item Electric Fields, \hyperpage{68}
-  \item electrical attraction, \hyperpage{65}
-  \item electricity, \hyperpage{68}
-  \item electromagnetic field, \hyperpage{68}
-  \item Electromagnetic Force, \hyperpage{68}
-  \item Electromagnetic Induction, \hyperpage{68}
-  \item electromagnetic spectrum, \hyperpage{68}
-  \item Electromagnetic Waves, \hyperpage{68}
-  \item electromagnetic waves, \hyperpage{68}
-  \item Electromagnetism, \hyperpage{53}, \hyperpage{68}
-  \item Electron microscopes, \hyperpage{77}
-  \item Electron Self-Energy, \hyperpage{79}
-  \item energy, \hyperpage{56}
-  \item Ensembles, \hyperpage{63}
-  \item Entropy, \hyperpage{63}
-  \item Enzymes, \hyperpage{54}
-  \item Evaporation, \hyperpage{65}
+  \item earth sciences, \hyperpage{57}
+  \item echelon form, \hyperpage{53}
+  \item Eigenvalues, \hyperpage{51}
+  \item Eigenvectors, \hyperpage{51}
+  \item Einstein Field Equations, \hyperpage{90}
+  \item Einstein-Debye theory of specific heats, \hyperpage{75}
+  \item electric field, \hyperpage{73}
+  \item Electric Fields, \hyperpage{73}
+  \item electrical attraction, \hyperpage{70}
+  \item electricity, \hyperpage{73}
+  \item electromagnetic field, \hyperpage{73}
+  \item Electromagnetic Force, \hyperpage{73}
+  \item Electromagnetic Induction, \hyperpage{73}
+  \item electromagnetic spectrum, \hyperpage{73}
+  \item Electromagnetic Waves, \hyperpage{73}
+  \item electromagnetic waves, \hyperpage{73}
+  \item Electromagnetism, \hyperpage{55}, \hyperpage{73}
+  \item electromagnetism, \hyperpage{89}
+  \item Electron microscopes, \hyperpage{82}
+  \item Electron Self-Energy, \hyperpage{86}
+  \item Electronics, \hyperpage{65}
+  \item energy, \hyperpage{58}
+  \item Ensembles, \hyperpage{68}
+  \item Entropy, \hyperpage{68}
+  \item Enzymes, \hyperpage{56}
+  \item Evaporation, \hyperpage{70}
   \item event, \hyperpage{20}
-  \item Exoplanets and Planetary Systems, \hyperpage{67}
-  \item expectation Value, \hyperpage{73}
+  \item Exoplanets and Planetary Systems, \hyperpage{72}
+  \item expectation Value, \hyperpage{78}
 
   \indexspace
 
-  \item fermi, \hyperpage{77}
-  \item Feynman Diagrams, \hyperpage{78, 79}
-  \item Flames, \hyperpage{65}
-  \item force, \hyperpage{60}
-  \item free, \hyperpage{51}
-  \item frequency, \hyperpage{76}
+  \item fermi, \hyperpage{82}
+  \item Feynman Diagrams, \hyperpage{85, 86}
+  \item Flames, \hyperpage{71}
+  \item force, \hyperpage{62}
+  \item free, \hyperpage{53}
+  \item frequency, \hyperpage{81}
 
   \indexspace
 
-  \item Galactic Astrophysics, \hyperpage{67}
-  \item Gauge Invariance, \hyperpage{79}
-  \item Gauge Theories, \hyperpage{78}
-  \item Gaussian operations, \hyperpage{51}
-  \item General Relativity, \hyperpage{75}
-  \item Geology, \hyperpage{55}
+  \item Galactic Astrophysics, \hyperpage{72}
+  \item Gauge Invariance, \hyperpage{86}
+  \item Gauge Theories, \hyperpage{85}
+  \item Gaussian operations, \hyperpage{53}
+  \item General Relativity, \hyperpage{80}, \hyperpage{90}
+  \item Geology, \hyperpage{57}
+  \item Geometrodynamics, \hyperpage{90}
   \item Geometry, \hyperpage{4}
-  \item Gluons, \hyperpage{81}
-  \item Gravitation, \hyperpage{59}
-  \item gravitational potential energy, \hyperpage{57}
-  \item Gravitational Time Dilation, \hyperpage{75}
-  \item Gravitational Waves, \hyperpage{75}
-  \item graviton, \hyperpage{80}
+  \item Gluons, \hyperpage{88}
+  \item Gravitation, \hyperpage{61}
+  \item gravitational potential energy, \hyperpage{59}
+  \item Gravitational Time Dilation, \hyperpage{80}
+  \item Gravitational Waves, \hyperpage{80}
+  \item graviton, \hyperpage{87}
 
   \indexspace
 
-  \item Hadron, \hyperpage{81}
-  \item Hadronization, \hyperpage{81}
-  \item Harmonic Motion, \hyperpage{59}
-  \item Heat, \hyperpage{64}
-  \item hemoglobin, \hyperpage{55}
-  \item High-Energy Astrophysics, \hyperpage{67}
-  \item homogeneous, \hyperpage{52}
+  \item Hadron, \hyperpage{88}
+  \item Hadronization, \hyperpage{88}
+  \item Harmonic Motion, \hyperpage{61}
+  \item Heat, \hyperpage{69}
+  \item hemoglobin, \hyperpage{57}
+  \item High-Energy Astrophysics, \hyperpage{72}
+  \item Holography, \hyperpage{67}
+  \item homogeneous, \hyperpage{54}
 
   \indexspace
 
-  \item inertia, \hyperpage{60--62}
-  \item inertial frame, \hyperpage{62}
-  \item inertial reference frame, \hyperpage{62}
-  \item Inorganic chemistry, \hyperpage{54}
-  \item integral, \hyperpage{46}
+  \item inertia, \hyperpage{62--64}
+  \item inertial frame, \hyperpage{64}
+  \item inertial reference frame, \hyperpage{64}
+  \item Inorganic chemistry, \hyperpage{56}
+  \item insulator, \hyperpage{66}
+  \item integral, \hyperpage{48}
+  \item Integrated Circuits, \hyperpage{65}
   \item Integration, \hyperpage{22}
-  \item Ions, \hyperpage{65}
+  \item Interference, \hyperpage{67}
+  \item Ions, \hyperpage{70}
 
   \indexspace
 
-  \item Jerk, \hyperpage{61}
+  \item Jerk, \hyperpage{63}
 
   \indexspace
 
-  \item Kepler's laws, \hyperpage{60}
-  \item ket, \hyperpage{11}, \hyperpage{73}
-  \item kinetic energy, \hyperpage{57}, \hyperpage{65}
+  \item Kepler's laws, \hyperpage{62}
+  \item ket, \hyperpage{11}, \hyperpage{78}
+  \item kinetic energy, \hyperpage{59}, \hyperpage{71}
 
   \indexspace
 
-  \item Lagrangian Formalism, \hyperpage{78}
-  \item Lattice QCD, \hyperpage{81}
-  \item Length Contraction, \hyperpage{75}
-  \item leptons, \hyperpage{80}
-  \item Linear algebra, \hyperpage{49}
-  \item linear combination, \hyperpage{50}
-  \item linear motion, \hyperpage{61}
-  \item Linear Transformations, \hyperpage{49}
+  \item Lagrangian Formalism, \hyperpage{85}
+  \item Lattice QCD, \hyperpage{88}
+  \item Length Contraction, \hyperpage{80}
+  \item leptons, \hyperpage{87}
+  \item Linear algebra, \hyperpage{51}
+  \item linear combination, \hyperpage{52}
+  \item linear motion, \hyperpage{63}
+  \item Linear Transformations, \hyperpage{51}
   \item Lines, \hyperpage{4}
   \item logarithm, \hyperpage{9}
 
   \indexspace
 
-  \item Macrostates, \hyperpage{63}
-  \item magnetic field, \hyperpage{68}
-  \item Magnetic Fields, \hyperpage{68}
-  \item magnetism, \hyperpage{68}
-  \item Mass, \hyperpage{61}
-  \item Mass-Energy Equivalence, \hyperpage{75}
-  \item Matrices, \hyperpage{49}
-  \item Maxwell's Equations, \hyperpage{68}
-  \item Melting, \hyperpage{64}
-  \item Mendeleev, \hyperpage{54}
-  \item mesons, \hyperpage{80}
-  \item Microstates, \hyperpage{63}
+  \item Macrostates, \hyperpage{68}
+  \item magnetic field, \hyperpage{73}
+  \item Magnetic Fields, \hyperpage{73}
+  \item magnetism, \hyperpage{73}
+  \item Mass, \hyperpage{63}
+  \item Mass-Energy Equivalence, \hyperpage{80}
+  \item Matrices, \hyperpage{51}
+  \item Maxwell's Equations, \hyperpage{73}
+  \item Melting, \hyperpage{69}
+  \item Mendeleev, \hyperpage{56}
+  \item mesons, \hyperpage{87}
+  \item Microcontrollers, \hyperpage{65}
+  \item Microprocessors, \hyperpage{65}
+  \item Microstates, \hyperpage{68}
   \item model probability, \hyperpage{20}
-  \item molecule, \hyperpage{65}
-  \item Momentum, \hyperpage{61}
-  \item motion, \hyperpage{57}, \hyperpage{62}
+  \item molecule, \hyperpage{71}
+  \item Momentum, \hyperpage{63}
+  \item motion, \hyperpage{59}, \hyperpage{64}
 
   \indexspace
 
-  \item Newton's Laws of Motion, \hyperpage{59}
-  \item Nuclear Physics, \hyperpage{53}
+  \item Newton's Laws of Motion, \hyperpage{61}
+  \item Non-Locality, \hyperpage{89}
+  \item Nuclear Physics, \hyperpage{55}
 
   \indexspace
 
-  \item observable, \hyperpage{73}
-  \item operator, \hyperpage{73}
-  \item Organic chemistry, \hyperpage{54}, \hyperpage{66}
+  \item observable, \hyperpage{78}
+  \item ohms, \hyperpage{66}
+  \item operator, \hyperpage{78}
+  \item Optical Instruments, \hyperpage{67}
+  \item Optical Phenomena, \hyperpage{67}
+  \item Organic chemistry, \hyperpage{56}, \hyperpage{71}
   \item Orthogonal, \hyperpage{13}
-  \item oscillatory motion, \hyperpage{61}
+  \item oscillatory motion, \hyperpage{63}
 
   \indexspace
 
-  \item Particle Physics, \hyperpage{53}
+  \item Particle Physics, \hyperpage{55}
   \item Pascal's Triangle, \hyperpage{16}
-  \item pascals, \hyperpage{64}
-  \item periodic table of elements, \hyperpage{54}
+  \item pascals, \hyperpage{69}
+  \item periodic table of elements, \hyperpage{56}
   \item Perpendicular, \hyperpage{13}
-  \item photon, \hyperpage{71}
-  \item physical process, \hyperpage{65}
-  \item pion, \hyperpage{80}
-  \item pions, \hyperpage{80}
-  \item Planck's radiation law, \hyperpage{70}
+  \item photon, \hyperpage{76}
+  \item physical process, \hyperpage{70}
+  \item pion, \hyperpage{87}
+  \item pions, \hyperpage{87}
+  \item Planck's radiation law, \hyperpage{75}
   \item Points, \hyperpage{4}
   \item Polar coordinates, \hyperpage{7}
+  \item Polarization, \hyperpage{67}
   \item Polygons, \hyperpage{4}
-  \item potential energy, \hyperpage{57}
-  \item Pressure, \hyperpage{64}
-  \item primitives, \hyperpage{46}
-  \item principle of virtual work, \hyperpage{57}
+  \item potential energy, \hyperpage{59}
+  \item Power Electronics, \hyperpage{65}
+  \item Pressure, \hyperpage{69}
+  \item primitives, \hyperpage{48}
+  \item principle of virtual work, \hyperpage{59}
+  \item Printed Circuit Boards, \hyperpage{65}
   \item Probability, \hyperpage{20}
   \item probability, \hyperpage{20}
   \item Projection, \hyperpage{13}
-  \item Proteins, \hyperpage{54}
+  \item Proteins, \hyperpage{56}
 
   \indexspace
 
-  \item Quantization of Electromagnetic Fields, \hyperpage{79}
-  \item Quantization of Energy, \hyperpage{70}
-  \item Quantized Fields, \hyperpage{78}
-  \item Quantum Chromodynamics, \hyperpage{81}
-  \item Quantum Electrodynamics, \hyperpage{78, 79}
-  \item quantum electrodynamics, \hyperpage{71}
-  \item Quantum Entanglement, \hyperpage{70}
-  \item Quantum Field Theory, \hyperpage{78}
-  \item Quantum Loops, \hyperpage{79}
-  \item Quantum Mechanics, \hyperpage{53}
-  \item Quantum mechanics, \hyperpage{70, 71}
-  \item quantum mechanics, \hyperpage{70}
-  \item Quantum Superposition, \hyperpage{70}
-  \item Quarks, \hyperpage{81}
+  \item Quantization of Electromagnetic Fields, \hyperpage{86}
+  \item Quantization of Energy, \hyperpage{75}
+  \item Quantized Fields, \hyperpage{85}
+  \item Quantum Chromodynamics, \hyperpage{88}
+  \item Quantum Electrodynamics, \hyperpage{85, 86}
+  \item quantum electrodynamics, \hyperpage{76}
+  \item Quantum Entanglement, \hyperpage{75}
+  \item Quantum Field Theory, \hyperpage{85}
+  \item Quantum Geometrodynamics, \hyperpage{90}
+  \item Quantum Loops, \hyperpage{86}
+  \item Quantum Mechanics, \hyperpage{55}
+  \item Quantum mechanics, \hyperpage{75, 76}
+  \item quantum mechanics, \hyperpage{75}, \hyperpage{89}
+  \item Quantum Superposition, \hyperpage{75}
+  \item Quarks, \hyperpage{88}
   \item quotient rule, \hyperpage{29}
 
   \indexspace
 
   \item rectangular coordinates, \hyperpage{6}
-  \item Relativity, \hyperpage{53}
-  \item Renormalization, \hyperpage{78, 79}
-  \item rotational motion, \hyperpage{61}
+  \item Reflection, \hyperpage{67}
+  \item Refraction, \hyperpage{67}
+  \item Relativity, \hyperpage{55}
+  \item Renormalization, \hyperpage{85, 86}
+  \item Resistors, \hyperpage{66}
+  \item rotational motion, \hyperpage{63}
 
   \indexspace
 
   \item sample space, \hyperpage{20}
   \item Scalar Multiplication, \hyperpage{12}
+  \item Semiconductors, \hyperpage{65}
+  \item Signal Processing, \hyperpage{65}
   \item simple event, \hyperpage{20}
-  \item Special Relativity, \hyperpage{75}
-  \item spectroscope, \hyperpage{55}
+  \item Space, \hyperpage{90}
+  \item Special Relativity, \hyperpage{80}
+  \item spectroscope, \hyperpage{57}
   \item Spherical coordinates, \hyperpage{7}
   \item state, \hyperpage{20}
-  \item state vector, \hyperpage{73}
-  \item Statistical mechanics, \hyperpage{54}, \hyperpage{63}
-  \item Statistical Thermodynamics, \hyperpage{63}
-  \item Stellar Astrophysics, \hyperpage{67}
-  \item strangeness, \hyperpage{80}
-  \item Strong Interactions, \hyperpage{81}
+  \item state vector, \hyperpage{78}
+  \item Statistical mechanics, \hyperpage{56}, \hyperpage{68}
+  \item Statistical Thermodynamics, \hyperpage{68}
+  \item Stellar Astrophysics, \hyperpage{72}
+  \item Stochastic Electrodynamics, \hyperpage{89}
+  \item Stochastic Element, \hyperpage{89}
+  \item strangeness, \hyperpage{87}
+  \item Strong Interactions, \hyperpage{88}
   \item system, \hyperpage{20}
 
   \indexspace
 
   \item The Law of Cosines, \hyperpage{4}
-  \item The Law of Inertia, \hyperpage{62}
-  \item the law of inertia, \hyperpage{62}
+  \item The Law of Inertia, \hyperpage{64}
+  \item the law of inertia, \hyperpage{64}
   \item the Pythagorean theorem, \hyperpage{5}
-  \item Thermodynamics, \hyperpage{53}
+  \item Thermodynamics, \hyperpage{55}
   \item Three-dimensional shapes, \hyperpage{4}
-  \item Time, \hyperpage{75}
-  \item Time Dilation, \hyperpage{75}
+  \item Time, \hyperpage{80}, \hyperpage{90}
+  \item Time Dilation, \hyperpage{80}
+  \item Transistors, \hyperpage{65}
   \item transposition, \hyperpage{11}
-  \item Triangulation, \hyperpage{77}
+  \item Triangulation, \hyperpage{82}
 
   \indexspace
 
-  \item Uncertainty Principle, \hyperpage{70}
+  \item Uncertainty Principle, \hyperpage{75}
 
   \indexspace
 
-  \item Vector Spaces, \hyperpage{49}
-  \item Vectors, \hyperpage{49}
-  \item Velocity, \hyperpage{61}
+  \item Vector Spaces, \hyperpage{51}
+  \item Vectors, \hyperpage{51}
+  \item Velocity, \hyperpage{63}
 
   \indexspace
 
-  \item Wave-Particle Duality, \hyperpage{70}
+  \item Wave Function Collapse, \hyperpage{89}
+  \item Wave-Particle Duality, \hyperpage{67}, \hyperpage{75}
+
+  \indexspace
+
+  \item Zero-Point Field, \hyperpage{89}
+  \item Zitterbewegung, \hyperpage{89}
 
 \end{theindex}
