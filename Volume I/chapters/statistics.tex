@@ -5,7 +5,25 @@
 
 A \keyword{state} (or outcome) is particular condition that something is in at a specific time. A \keyword{system} is an activity, experiment, process, or model with states or outcomes that are typically subject to uncertainty. A \keyword{sample space} of an system is the set of all possible states of a system. An \keyword{event} (also may be referred to as a trial or measurement) is any subset or collection of states contained in the sample space of a system. An event is a \keyword{simple event} if it consists of exactly one state and a \keyword{compound event} if it consistst of more than one state.
 
-\begin{defn}[Probability]{Probability}
+\begin{defn}[Probability (Axiomatic)]{Probability_axiomatic}
+An \keyword{probability} $p$ can be defined axiomatically with three postulates. The certain event $E$ os the event that occurs in every trial. The union $A+B$ (of two events $A$ and $B$) is the event that occurs when $A$ or $B$ or both occur. The intersection of $AB$ of the events $A$ and $B$ is the event that occurs when both events $A$ and $B$ occur. The events $A$ and $B$ are mutually exclusive if the occurance of one of them excludes the occurance of the other. 
+\begin{enumerate}
+\item The probability $P(s)$ of an event $s$ is a positive number assigned to this event:
+	\begin{align}
+	P(s) \geq 0
+	\end{align}
+ \item The probability of the certain event is one:
+	\begin{align}
+	P(E) =1
+	\end{align}
+  \item If the events $A$ and $B$ are mutually exclusive, then 
+	\begin{align}
+	P(A+B) = P(A) + P(B)
+	\end{align}
+\end{enumerate}
+\end{defn}
+
+\begin{defn}[Probability (Relative Frequency)]{Probability}
 An \keyword{probability} $p$ can be defined as the asymptotic frequency of a system in the state $s$ ($s \in \Omega$, where $\Omega$ is the sample space of the system) by the total number of occurrences of that state $N_s$ in the limit of an infinite number of events $N$.
     \begin{align}
         p(s) = \lim_{N\rightarrow\infty}\frac{N_s}{N} \text{, with } p(s) \in [0,1] \forall s \in \Omega
