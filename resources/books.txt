@@ -63,3 +63,13 @@ Calculus: A complete course, Robert A. Adams - http://eng.usc.ac.ir/files/150884
 Modern Quantum Mechanics, JJ Sakurai - https://kgut.ac.ir/useruploads/1505647831850hcd.pdf
 
 Teach yourself electricity and electronics - https://fmipa.umri.ac.id/wp-content/uploads/2016/03/Stan_Gibilisco_Teach_Yourself_Electricity_And_ElBookZZ.org_.pdf
+
+General Relativity - http://www.damtp.cam.ac.uk/user/tong/gr/gr.pdf
+
+Spacetime and Geometry, Sean Carroll - https://fma.if.usp.br/~mlima/teaching/PGF5292_2021/Carroll_SG.pdf
+
+A First course in General Relativity, Bernard Schutz - https://www.if.ufrgs.br/oei/santiago/fis02012/FirstCourseGR.pdf
+
+General Relativity, Black Holes, and Cosmology, Andrew Hamilton - https://jila.colorado.edu/~ajsh/astr3740_17/grbook.pdf
+
+Lecture Notes on General Relativity, Sean Carroll - https://sites.astro.caltech.edu/~george/ay21/readings/carroll-gr-textbook.pdf
