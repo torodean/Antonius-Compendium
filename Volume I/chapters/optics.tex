@@ -15,3 +15,54 @@ Optics is the branch of physics that focuses on the behavior and properties of l
     \item \keyword{Holography}: Holography is a technique that captures and reconstructs the complete three-dimensional information of an object using light interference patterns. It has applications in security, art, and data storage.
     \item \keyword{Optical Phenomena}: Optics is responsible for a multitude of natural and man-made phenomena, such as mirages, rainbows, the blue color of the sky, and the functioning of the human eye.
 \end{itemize}
+
+
+
+
+
+
+
+\section{Snell's Law}
+
+\keyword{Snell's Law}, also known as the \keyword{Law Of Refraction}. is a physical formula that describes how light of other waves change direction when passing through different mediums. This law works because the light takes the path for which the travel time from one medium to another is minimized (in time). Solving this problem gives \keyword{Snell's Law}. This law follows from \keyword{Fermat's principal of least time}.
+
+\begin{fancybox}[Snell's Law (The Law Of Refraction) \label{Snell's Law}]{1}
+    Given two mediums, light traveling from medium 1 to medium 2 will refract at an angle given by the following relationship:
+    \begin{align}
+        \frac{\sin(\theta_1)}{\sin(\theta_2)} = n = \frac{n_2}{n_1} = \frac{v_1}{v_2} \label{Snell's Law Eqn}
+    \end{align}
+    where $n_1$ and $n_2$ are the refractive indices and $v_1$ and $v_2$ are the phase velocities in the two media.
+\end{fancybox}
+
+\usetikzlibrary{decorations.markings}
+\tikzstyle arrowstyle=[scale=1]
+\tikzstyle directed=[postaction={decorate,decoration={markings,
+    mark=at position .65 with {\arrow[arrowstyle]{stealth}}}}]
+\tikzstyle reverse directed=[postaction={decorate,decoration={markings,
+    mark=at position .65 with {\arrowreversed[arrowstyle]{stealth};}}}]
+\begin{tikzpicture}
+
+    % define coordinates
+    \coordinate (O) at (0,0) ;
+    \coordinate (A) at (0,4) ;
+    \coordinate (B) at (0,-4) ;
+    
+    % media
+    \fill[red!25!,opacity=.3] (-4,0) rectangle (4,4);
+    \fill[blue!25!,opacity=.3] (-4,0) rectangle (4,-4);
+    \node[right] at (2,2) {Medium 1};
+    \node[left] at (-2,-2) {Medium 2};
+
+    % axis
+    \draw[dash pattern=on5pt off3pt] (A) -- (B) ;
+
+    % rays
+    \draw[red,ultra thick,reverse directed] (O) -- (130:5.2);
+    \draw[blue,directed,ultra thick] (O) -- (-70:4.24);
+
+    % angles
+    \draw (0,1) arc (90:130:1);
+    \draw (0,-1.4) arc (270:290:1.4) ;
+    \node[] at (280:1.8)  {$\theta_{2}$};
+    \node[] at (110:1.4)  {$\theta_{1}$};
+\end{tikzpicture}
