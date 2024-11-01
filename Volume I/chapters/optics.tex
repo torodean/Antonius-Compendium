@@ -24,7 +24,37 @@ Optics is the branch of physics that focuses on the behavior and properties of l
 
 \section{Snell's Law}
 
-\keyword{Snell's Law}, also known as the \keyword{Law Of Refraction}. is a physical formula that describes how light of other waves change direction when passing through different mediums. This law works because the light takes the path for which the travel time from one medium to another is minimized (in time). Solving this problem gives \keyword{Snell's Law}. This law follows from \keyword{Fermat's principal of least time}.
+Consider two mediums, where light travels through them at some angle starting and point $(0, A)$ and ending at point $(B, 0)$. The first medium will be denoted with subscript $1$, and the second with subscript $2$. Therefore, the light traveling through a medium $i$ has velocity $v_i$, a distance $d_i$ that the lgiht travels, an angle relative to a vertical line at the intersection of mediums as $\theta_i$, a refractive index of $n_i = \frac{c}{v_i}$. The distance $d_i$ has horizontal and vertical components of $x_i$ and $y_i$ respectively, which gives a total distance of $d_i = \sqrt{x_i^2+y_i^2}$ per the \keyword{Pythagorean Theorem}. The time it takes for light to travel through each medium is $t_i$, and applying the distance formula gives $v_i = \frac{d_i}{t_i} \implies t_i = \frac{d_i}{v_i}$. The total time taken for the light to travel from point $(0, A)$ to $(B, 0)$ is thus 
+
+\begin{align}
+t=t_1+t_2 = \frac{d_1}{v_1} + \frac{d_2}{v_2} = \frac{\sqrt{x_1^2+y_1^2}}{v_1} + \frac{\sqrt{x_2^2+y_2^2}}{v_2} \label{snells_law_derivation_1}
+\end{align}
+
+Given some path from $(0, A)$ to $(B, 0)$, the velocities, the vertical distances, and $B$ are constant. Therefore, we can write $x_2$ in terms of $B$ as $x_2 = B - x_1$, which allows us to write \ref{snells_law_derivation_1} in terms of $x_1$ and constants. Thsi gives
+
+\begin{align}
+t = \frac{\sqrt{x_1^2+y_1^2}}{v_1} + \frac{\sqrt{(B - x_1)^2+y_2^2}}{v_2} \label{snells_law_derivation_2}
+\end{align}
+
+Since $x_1$ is the only non-constant value, we can take the derivative set to zero, $\frac{dt}{dx_1}=0$, to calculate a minimum value of time with respect to $x_1$. Taking the derivative of \ref{snells_law_derivation_2} gives
+
+\begin{align}
+\frac{dt}{dx_1} = \frac{2x_1(x_1^2+y_1^2)^{-1/2}}{v_1} - \frac{2(B - x_1)((B - x_1)^2+y_2^2)^{-1/2}}{v_2} = \frac{2x_1}{v_1\sqrt{x_1^2+y_1^2}} - \frac{2x_2}{v_2\sqrt{x_2^2+y_2^2}} \label{snells_law_derivation_3}
+\end{align}
+
+Each distance can be written in terms of the angle that the light makes with the vertical line by applying simple trigonometry which gives $\sin(\theta_i)=\frac{x_i}{d_i}=\frac{x_i}{\sqrt{x_i^2+y_i^2}}$. This allows \ref{snells_law_derivation_3} to be written as
+
+\begin{align}
+\frac{dt}{dx_1} = \frac{2}{v_1}\sin(\theta_1) - \frac{2}{v_2}\sin(\theta_2) \label{snells_law_derivation_4}
+\end{align}
+
+Setting \ref{snells_law_derivation_4} to zero to satisfy $\frac{dt}{dx_1}=0$ gives
+
+\begin{align}
+0 = \frac{2}{v_1}\sin(\theta_1) - \frac{2}{v_2}\sin(\theta_2) \implies v_1\sin(\theta_2) = v_2\sin(\theta_1) \label{snells_law_derivation_5}.
+\end{align}
+
+The refractive index is defined by $n_i = \frac{c}{v_i}$. Plugging this into \ref{snells_law_derivation_5} and rearranging gives Snell's Law as it is typically written. \keyword{Snell's Law}, also known as the \keyword{Law Of Refraction}. is a physical formula that describes how light of other waves change direction when passing through different mediums. This law works because the light takes the path for which the travel time from one medium to another is minimized (in time). Solving this problem gives \keyword{Snell's Law}. This law follows from \keyword{Fermat's principal of least time}.
 
 \begin{fancybox}[Snell's Law (The Law Of Refraction) \label{Snell's Law}]{1}
     Given two mediums, light traveling from medium 1 to medium 2 will refract at an angle given by the following relationship:
