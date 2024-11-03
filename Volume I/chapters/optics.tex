@@ -24,7 +24,46 @@ Optics is the branch of physics that focuses on the behavior and properties of l
 
 \section{Snell's Law}
 
-Consider two mediums, where light travels through them at some angle starting and point $(0, A)$ and ending at point $(B, 0)$. The first medium will be denoted with subscript $1$, and the second with subscript $2$. Therefore, the light traveling through a medium $i$ has velocity $v_i$, a distance $d_i$ that the lgiht travels, an angle relative to a vertical line at the intersection of mediums as $\theta_i$, a refractive index of $n_i = \frac{c}{v_i}$. The distance $d_i$ has horizontal and vertical components of $x_i$ and $y_i$ respectively, which gives a total distance of $d_i = \sqrt{x_i^2+y_i^2}$ per the \keyword{Pythagorean Theorem}. The time it takes for light to travel through each medium is $t_i$, and applying the distance formula gives $v_i = \frac{d_i}{t_i} \implies t_i = \frac{d_i}{v_i}$. The total time taken for the light to travel from point $(0, A)$ to $(B, 0)$ is thus 
+\begin{figure}
+\centering
+
+\usetikzlibrary{decorations.markings}
+\tikzstyle arrowstyle=[scale=1]
+\tikzstyle directed=[postaction={decorate,decoration={markings,
+    mark=at position .65 with {\arrow[arrowstyle]{stealth}}}}]
+\tikzstyle reverse directed=[postaction={decorate,decoration={markings,
+    mark=at position .65 with {\arrowreversed[arrowstyle]{stealth};}}}]
+\begin{tikzpicture}
+
+    % define coordinates
+    \coordinate (O) at (0,0) ;
+    \coordinate (A) at (0,3) ;
+    \coordinate (B) at (0,-3) ;
+    
+    % media
+    \fill[red!25!,opacity=.3] (-4,0) rectangle (4,3);
+    \fill[blue!25!,opacity=.3] (-4,0) rectangle (4,-3);
+    \node[right] at (2,1.5) {Medium 1};
+    \node[left] at (-2,-1.5) {Medium 2};
+
+    % axis
+    \draw[dash pattern=on5pt off3pt] (A) -- (B) ;
+
+    % rays
+    \draw[red,ultra thick,reverse directed] (O) -- (130:3.92);
+    \draw[blue,directed,ultra thick] (O) -- (-70:3.2);
+
+    % angles
+    \draw (0,1) arc (90:130:1);
+    \draw (0,-1.4) arc (270:290:1.4) ;
+    \node[] at (280:1.8)  {$\theta_{2}$};
+    \node[] at (110:1.4)  {$\theta_{1}$};
+\end{tikzpicture}
+\caption{\footnotesize Light traveling through two mediums. The upper left position of the red vector (in medium 1)is $(0,A)$ and the lower right position of the blue vector (in medium 2) is $(B,0)$.}
+\label{fig:snells_law}
+\end{figure}
+
+Consider two mediums, where light travels through them at some angle starting and point $(0, A)$ and ending at point $(B, 0)$ (see Fig. \ref{fig:snells_law}). The first medium will be denoted with subscript $1$, and the second with subscript $2$. Therefore, the light traveling through a medium $i$ has velocity $v_i$, a distance $d_i$ that the lgiht travels, an angle relative to a vertical line at the intersection of mediums as $\theta_i$, a refractive index of $n_i = \frac{c}{v_i}$. The distance $d_i$ has horizontal and vertical components of $x_i$ and $y_i$ respectively, which gives a total distance of $d_i = \sqrt{x_i^2+y_i^2}$ per the \keyword{Pythagorean Theorem}. The time it takes for light to travel through each medium is $t_i$, and applying the distance formula gives $v_i = \frac{d_i}{t_i} \implies t_i = \frac{d_i}{v_i}$. The total time taken for the light to travel from point $(0, A)$ to $(B, 0)$ is thus 
 
 \begin{align}
 t=t_1+t_2 = \frac{d_1}{v_1} + \frac{d_2}{v_2} = \frac{\sqrt{x_1^2+y_1^2}}{v_1} + \frac{\sqrt{x_2^2+y_2^2}}{v_2} \label{snells_law_derivation_1}
@@ -64,35 +103,4 @@ The refractive index is defined by $n_i = \frac{c}{v_i}$. Plugging this into \re
     where $n_1$ and $n_2$ are the refractive indices and $v_1$ and $v_2$ are the phase velocities in the two media.
 \end{fancybox}
 
-\usetikzlibrary{decorations.markings}
-\tikzstyle arrowstyle=[scale=1]
-\tikzstyle directed=[postaction={decorate,decoration={markings,
-    mark=at position .65 with {\arrow[arrowstyle]{stealth}}}}]
-\tikzstyle reverse directed=[postaction={decorate,decoration={markings,
-    mark=at position .65 with {\arrowreversed[arrowstyle]{stealth};}}}]
-\begin{tikzpicture}
 
-    % define coordinates
-    \coordinate (O) at (0,0) ;
-    \coordinate (A) at (0,4) ;
-    \coordinate (B) at (0,-4) ;
-    
-    % media
-    \fill[red!25!,opacity=.3] (-4,0) rectangle (4,4);
-    \fill[blue!25!,opacity=.3] (-4,0) rectangle (4,-4);
-    \node[right] at (2,2) {Medium 1};
-    \node[left] at (-2,-2) {Medium 2};
-
-    % axis
-    \draw[dash pattern=on5pt off3pt] (A) -- (B) ;
-
-    % rays
-    \draw[red,ultra thick,reverse directed] (O) -- (130:5.2);
-    \draw[blue,directed,ultra thick] (O) -- (-70:4.24);
-
-    % angles
-    \draw (0,1) arc (90:130:1);
-    \draw (0,-1.4) arc (270:290:1.4) ;
-    \node[] at (280:1.8)  {$\theta_{2}$};
-    \node[] at (110:1.4)  {$\theta_{1}$};
-\end{tikzpicture}
