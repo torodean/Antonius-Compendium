@@ -81,7 +81,7 @@ A function $F$ is called an \keyword{antiderivative} of a function $f$ on an int
 Let $f$ be defined on the closed interval $[a,b]$, and let $\Delta$ be a partition of $[a,b]$ given by $a=x_0 < x_1 < \cdots < x_{n-1} < x_n = b$, where $\Delta x_i$ is the width of the $i$th sub-interval. If $c_i \in [x_{i-1},x_i]$, then the sum $\sum_{i=1}^{n}f(c_i)\Delta x_i$ is called a Riemann sum of $f$ for the partition $\Delta$.
 \end{defn}
 
-The largest width among the subintervals within a partition $\Delta$ is known as the partition's norm, represented by $||\Delta||$. If all subintervals have equal width, the partition is called regular, and its norm is denoted by $||\Delta|| = \Delta x = \frac{b-a}{n}$. The integral can be defined in the limit as this partition's norm approaches zero $||\Delta|| \to 0$. Therefore, there exists some $L\in\mathbf{R}$ such that for each $\epsilon > 0$, there exists a $\delta > 0$ so that for all partitions with $||\Delta|| < \delta$, we have
+The largest width among the sub-intervals within a partition $\Delta$ is known as the partition's norm, represented by $||\Delta||$. If all sub-intervals have equal width, the partition is called regular, and its norm is denoted by $||\Delta|| = \Delta x = \frac{b-a}{n}$. The integral can be defined in the limit as this partition's norm approaches zero $||\Delta|| \to 0$. Therefore, there exists some $L\in\mathbf{R}$ such that for each $\epsilon > 0$, there exists a $\delta > 0$ so that for all partitions with $||\Delta|| < \delta$, we have
 
 \begin{align}
 \lim_{||\Delta|| \to 0}\sum_{i=1}^{n}f(c_i)\Delta x_i = L \implies \bigg|L-\sum_{i=1}^{n}f(c_i)\Delta x_i\bigg| < \epsilon
