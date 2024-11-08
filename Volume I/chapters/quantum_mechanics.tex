@@ -152,6 +152,32 @@ As an example, the commutator of position and momentum can be calculated. Given 
 
 This type of result $[\hat{x},\hat{p}] = i\hbar\hat{I}$, where $\hat{I}$ is the identity operator, is very important to the study of quantum mechanics. A similar result is the angular momentum commutator which is $[\hat{L}_i,\hat{L}_j] = i\hbar\epsilon_{ijk}\hat{L}_k$.
 
+\section{Schrödinger Equation}
 
+The \keyword{Schrödinger equation} is the foundational equation of non-relativistic quantum mechanics. It describes the evolution of the quantum state of a physical system over time. There are two main forms: the time-dependent Schrödinger equation and the time-independent \keyword{Schrödinger equation}. For a particle of mass $m$ in a potential $V(x,t)$, the time-dependent Schrödinger equation is
+
+\begin{align}
+i\hbar \frac{\partial \psi(x,t)}{\partial t} = \hat{H} \psi(x,t)
+\end{align}
+
+where $\psi(x, t)$ is the wavefunction, which provides information about the probability distribution of the particle's position and momentum, $\hbar$ is the reduced Planck constant, and $\hat{H}$ is the \keyword{Hamiltonian} operator, representing the total energy of the system. For a single particle in one dimension, the Hamiltonian is typically given by
+
+\begin{align}
+\hat{H} = -\frac{\hbar^2}{2m} \frac{partial^2}{\partial^2} + V(x,t)
+\end{align}
+
+One important features of the \keyword{Schrödinger equation} is that it is a \keyword{linear} equation. Therefore, if $\psi_1$ and $\psi_2$ both solve the equation, then $\alpha\psi_1+\beta\psi_2$ will also solve it. Another feature is that it is \keyword{unitary} and conserves probability. The system described by the \keyword{Schrödinger equation} is \keyword{deterministic}, which means you can determine the wave function at any point in time. This concept is actually somewhat disturbing. On one hand, quantum mechanics suggests that the universe is probabilistic by nature, meaning that you cannot know where or how things will behave until making a measurement and thus \textit{collapsing} the wave function to get a determined measurement. However, on the other hand, it is deterministic. One common historical explanation for this is simply that quantum mechanics is a tool that appears accurate for making predictions and holds up to the test of experiment. Thus, the inconsistencies are not necessarily inherent to reality, but only flaws in the \textit{tool}. This is the \keyword{Copenhagen interpretation} which views the quantum world as fundamentally probabilistic, with measurement acting as a bridge between quantum potentialities and classical, observed reality.
+
+The \keyword{Copenhagen interpretation} is one of the most widely taught frameworks for understanding quantum mechanics, formulated primarily by Niels Bohr, Werner Heisenberg, and others in the 1920s. It emphasizes a few core principals. 
+
+\begin{itemize}
+	\item Quantum objects, like electrons and photons, exhibit both wave-like and particle-like properties. Which aspect is observed depends on the measurement setup, meaning the nature of an object is not fixed but depends on how it is measured.
+	\item The wavefunction $\psi$ represents the probability amplitude for different outcomes of measurements. The square of the wavefunction's magnitude, $|\psi|^2$, gives the probability of finding a particle in a particular state or position upon measurement.
+	\item Before measurement, a particle exists in a superposition of all possible states described by its wavefunction. Once a measurement is made, the wavefunction \textit{collapses} to a specific state, with the observed outcome being one of the possible states with a probability given by $|\psi|^2$.
+	\item Observables like position and momentum are complementary, meaning they cannot be precisely known at the same time (uncertainty principle). The kind of measurement performed determines which property (wave or particle nature, position or momentum) can be observed in a single experiment.
+	\item Measurement plays a crucial role in defining the outcome of a quantum system. The act of measurement forces the system to \textit{choose} a particular state from its range of possibilities, an idea known as the \textit{observer effect}.
+\end{itemize} 
+
+An alternate and more recent view of this is called the \keyword{theory of decoherence}. This posits that the \textit{collapse} of the wavefunction is essentially the result of a quantum system interacting with the observers (machines, people, etc) which causes an interference affect such that the classical systems \textit{drown out} any quantum systems, producing a measurement. A quantum system in a superposition state can be represented by a wavefunction that includes multiple possible states simultaneously. However, when the system interacts with its environment (such as through photons, particles, or fields), it becomes entangled with it. This entanglement means that the system and environment together form a combined, complex state. Decoherence explains why macroscopic objects do not show quantum behavior, like superposition and interference, because they are constantly interacting with their surroundings (air molecules, photons, etc.). This theory helps address the measurement problem by suggesting that \textit{collapse} is not required for a system to display classical outcomes. However, decoherence itself does not solve the problem of why a specific outcome is observed; it only explains the appearance of classical behavior. For this reason, it is often combined with interpretations of quantum mechanics, like the many-worlds interpretation, which posits that all possible outcomes continue to exist in branching universes. In essence, decoherence explains how quantum systems lose their quantum properties and begin to behave classically as they interact with the environment, providing a naturalistic mechanism for the transition between quantum superpositions and classical states.
 
 
