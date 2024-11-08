@@ -107,9 +107,50 @@ A physical state is represented by a \keyword{state vector} in a complex vector 
 
 
 
+\subsection{\keyword{Operators}}
 
+An operator is essentially something that acts on an object and does \textit{something} to it. Much like the commonly used +, -, and * operators, which are well defined in algebra, operators can be defined as anything.
 
+\begin{defn}[Operators \label{defn: Operators}]{1}
+	An \keyword{operator} is a \textit{thing}, typically denoted with a hat (i.e. $\hat{A}$) or other defining characteristic (i.e. in the case of the derivative $\frac{\partial}{\partial x}$), which performs some action on objects (typically functions, variables, or matrices).Operators
+\end{defn}
 
+An operator which acts on another function generally produces another function, for example $\hat{O}f(x) \rightarrow g(x)$. Some trivial examples of operators follow.
+
+\begin{itemize}
+	\item The identity operator $\hat{I}$: $\hat{I}f \rightarrow f$
+	\item The derivative operator $\frac{\partial}{\partial x}$: $\frac{\partial}{\partial x}f(x) \rightarrow f'(x)$
+	\item The position operator $\hat{x}$: $\hat{x}f(x) \rightarrow xf(x)$
+	\item The momentum operator $\hat{p}$: $\hat{p}f(x) \rightarrow \frac{\hbar}{i}\frac{\partial}{\partial x}f(x)$ \label{test}
+\end{itemize}
+
+\begin{defn}[Linear Operators \label{defn: Linear Operators}]{1}
+	A \keyword{linear operator} is an operator $\hat{O}$ which respects superposition. In otherwords, $\hat{O}$ is linear if 
+\begin{align}
+\hat{O}(af(x)+bg(x)) = a\hat{O}f(x)+b\hat{O}g(x)
+\end{align}	
+\end{defn}
+
+\keyword{Linear operators} can have \keyword{eigenfunctions} and \keyword{eigenvalues} associated with them. Given an operator $\hat{A}$, the eigenvalues $a$ and eigenfunctions $f_a$ will satisfy $\hat{A}f_a = af_a$. Every observable in quantum mechanics has an associated operator, say $\hat{A}$. These operators have some expected value $\braket{\hat{A}}$ and an uncertainty $\Delta \hat{A}$ given by
+\begin{align}
+\braket{\hat{A}} = \int dx \psi^*(x)\hat{A}\psi(x), \text{  and  } \Delta \hat{A} = \sqrt{\braket{\hat{A}^2} - \braket{\hat{A}}^2},
+\end{align}
+
+for a function of $x$. Operators are \textit{not} necessarily commutative. For this reason, the \keyword{commutator} is defined.
+
+\begin{defn}[Commutator \label{defn: Commutator}]{1}
+	The \keyword{commutator} $[\hat{A},\hat{B}]$ measures the degree to which two operators ($\hat{A}$ and $\hat{B}$) fail to commute, meaning how much the order of their application affects the result. It is defined as follows.
+\begin{align}
+[\hat{A},\hat{B}] \equiv \hat{A}\hat{B} - \hat{B}\hat{A}
+\end{align}
+\end{defn}
+
+As an example, the commutator of position and momentum can be calculated. Given the position operator $\hat{x}: \hat{x}f \rightarrow xf$ and position operator $\hat{p}: \hat{p}f \rightarrow \frac{\hbar}{i}\frac{\partial}{\partial x} f$, we can imagine these operators operating on some function $\psi$. Then, we would have
+\begin{align}
+[\hat{x},\hat{p}]\psi = (\hat{x}\hat{p} - \hat{p}\hat{x})\psi = x\frac{\hbar}{i}\frac{\partial}{\partial x}\psi - \frac{\hbar}{i}\frac{\partial}{\partial x}x\psi = x\frac{\hbar}{i}\frac{\partial}{\partial x}\psi - \left(\frac{\hbar}{i}\psi + x\frac{\hbar}{i}\frac{\partial}{\partial x}\psi\right) = -\frac{\hbar}{i}\psi = i\hbar\psi
+\end{align}
+
+This type of result $[\hat{x},\hat{p}] = i\hbar\hat{I}$, where $\hat{I}$ is the identity operator, is very important to the study of quantum mechanics. A similar result is the angular momentum commutator which is $[\hat{L}_i,\hat{L}_j] = i\hbar\epsilon_{ijk}\hat{L}_k$.
 
 
 
