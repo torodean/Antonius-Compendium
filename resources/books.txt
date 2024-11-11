@@ -1,75 +1,80 @@
-Linear Algebra (4th Edition) - https://joshua.smcvt.edu/linearalgebra/#current_version, https://joshua.smcvt.edu/linearalgebra/book.pdf
+ABSTRACT ALGEBRA
+----------------
+A Book of Abstract Algebra (2nd Edition), Charles C. Pinter - http://www2.math.umd.edu/~jcohen/402/Pinter%20Algebra.pdf
+Abstract Algebra: Theory and Applications, Thomas W. Judson - https://scholarworks.sfasu.edu/ebooks/23/, https://scholarworks.sfasu.edu/cgi/viewcontent.cgi?article=1022&context=ebooks
+Algebra Abstract and Concrete, Frederick M. Goodman - http://homepage.divms.uiowa.edu/~goodman/algebrabook.dir/book.2.6.pdf
 
+
+LINEAR ALGEBRA
+--------------
+Linear Algebra (4th Edition) - https://joshua.smcvt.edu/linearalgebra/#current_version, https://joshua.smcvt.edu/linearalgebra/book.pdf
 A First Course in Linear Algebra (Version 3.40) - https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=2d126254474e43b7d300ef5e60752d5e19f287c3
 
-A Book of Abstract Algebra (2nd Edition), Charles C. Pinter - http://www2.math.umd.edu/~jcohen/402/Pinter%20Algebra.pdf
 
-Abstract Algebra: Theory and Applications, Thomas W. Judson - https://scholarworks.sfasu.edu/ebooks/23/, https://scholarworks.sfasu.edu/cgi/viewcontent.cgi?article=1022&context=ebooks
-
-ALGEBRA ABSTRACT AND CONCRETE, Frederick M. Goodman - http://homepage.divms.uiowa.edu/~goodman/algebrabook.dir/book.2.6.pdf
-
+CALCULUS/DIFFERENTIAL EQUATIONS
+----------------------
 Partial Differential Equations: An Introduction, Walter A Strauss - https://s2pnd-matematika.fkip.unpatti.ac.id/wp-content/uploads/2019/03/Walter-A-Strauss-Partial-differential-equations-_-an-introduction-Wiley-2009.pdf
-
 Partal Differential Equations, Victor Ivrii - http://www.math.toronto.edu/ivrii/PDE-textbook/PDE-textbook.pdf
-
 Introduction to Partial Differential Equations, Peter J. Oliver - https://personal.utdallas.edu/~jwz120030/Teaching/M4362/OlverPDEBook.pdf
-
-The Physics of Quantum Mechanics, James Binney and David Skinner - https://www-thphys.physics.ox.ac.uk/people/JamesBinney/qb.pdf
-
-Quantum Physics for Beginners, Zbigniew Ficek - https://library.uoh.edu.iq/admin/ebooks/28573-ficek,-zbigniew---quantum-physics-for-beginners-pan-stanford-publishing-(2016).pdf
-
-Statistical Mechanics, Daniel F. Styer - http://www.issp.ac.ru/ebooks/books/open/Statistical_Mechanics.pdf
-
-Statistical Mechanics (Second Edition), R. K. Pathria - https://www.pas.rochester.edu/~yishengtu/research_files/EOS_reference/Pathria,%20R.%20K.%20%20Statistical%20Mechanics.pdf
-
-An Introduction to Statistical Mechanics and Thermodynamics, Robert H. Swendsen - http://www0.unsl.edu.ar/~cornette/ME/An-Introduction-to-Statistical-Mechanics-and-Thermodynamics.pdf
-
-Probability and Statistics, Michael J. Evans and Je§rey S. Rosenthal - https://www.utstat.toronto.edu/mikevans/jeffrosenthal/book.pdf
-
-Probability & Statistics for Engineering and the Sciences (Eighth Edition), Jay L. Devore - https://faculty.ksu.edu.sa/sites/default/files/probability_and_statistics_for_engineering_and_the_sciences.pdf
-
-Subquantum kinetics, Paul A. LaViolette - https://www.gbv.de/dms/goettingen/370933931.pdf
-
-Energy From the Vacuum: concepts and principals - http://www.rexresearch.com/bearden/EnergyVacuumConceptsPrinciplesBearden.pdf
-
-Relativity - https://www.academia.edu/34580700/_Wolfgang_Rindler_Relativity_Special_General_a_BookSee_org_pdf
-
 Calculus, Gilbert Strang - https://ocw.mit.edu/ans7870/resources/Strang/Edited/Calculus/Calculus.pdf
-
 Calculus (Volume 1), Edwin Herman - https://d3bxy9euw4e147.cloudfront.net/oscms-prodcms/media/documents/CalculusVolume1-OP.pdf
-
-Quantum Electrodynamics - https://www.academia.edu/41076692/Quantum_Electrodynamics_Fourth_Edition
-
-Error Analysis, Taylor - https://www.niser.ac.in/sps/sites/default/files/basic_page/John%20R.%20Taylor%20-%20An%20Introduction%20to%20Error%20Analysis_%20The%20Study%20of%20Uncertainties%20in%20Physical%20Measurements-University%20Science%20Books%20(1997).pdf
-
-Methods of theoretical physics - http://www.astrosen.unam.mx/~aceves/Metodos/ebooks/morse_feshbach1.pdf
-
-mathematical methods of theoretial physics, Karl Svozil - https://arxiv.org/pdf/1203.4558.pdf
-
-Classical Mechanics, John R. Taylor - https://neuroself.files.wordpress.com/2020/09/taylor-2005-classical-mechanics.pdf
-
 Calculus, Gilbert Strang (MIT) - https://ocw.mit.edu/ans7870/resources/Strang/Edited/Calculus/Calculus.pdf
-
 Calculus, David R. Guichard - https://www.whitman.edu/mathematics/california_calculus/calculus.pdf
-
 Advanced Calculus, Lynn H. Loomis - https://people.math.harvard.edu/~shlomo/docs/Advanced_Calculus.pdf
-
 Calculus, Anton - https://3lihandam69.files.wordpress.com/2018/10/calculus-10th-edition-anton.pdf
-
 Calculus of a single Variable, Larson Hostetler - https://www.npsd.k12.nj.us/cms/lib/NJ01001216/Centricity/Domain/113/Calculus%20Textbook.pdf
-
 Calculus: A complete course, Robert A. Adams - http://eng.usc.ac.ir/files/1508848447251.pdf
 
+
+QUANTUM MECHANICS
+-----------------
+The Physics of Quantum Mechanics, James Binney and David Skinner - https://www-thphys.physics.ox.ac.uk/people/JamesBinney/qb.pdf
+Quantum Physics for Beginners, Zbigniew Ficek - https://library.uoh.edu.iq/admin/ebooks/28573-ficek,-zbigniew---quantum-physics-for-beginners-pan-stanford-publishing-(2016).pdf
 Modern Quantum Mechanics, JJ Sakurai - https://kgut.ac.ir/useruploads/1505647831850hcd.pdf
+Quantum Electrodynamics - https://www.academia.edu/41076692/Quantum_Electrodynamics_Fourth_Edition
+Energy From the Vacuum: concepts and principals - http://www.rexresearch.com/bearden/EnergyVacuumConceptsPrinciplesBearden.pdf
 
-Teach yourself electricity and electronics - https://fmipa.umri.ac.id/wp-content/uploads/2016/03/Stan_Gibilisco_Teach_Yourself_Electricity_And_ElBookZZ.org_.pdf
 
+STATISTICAL MECHANICS
+---------------------
+Statistical Mechanics, Daniel F. Styer - http://www.issp.ac.ru/ebooks/books/open/Statistical_Mechanics.pdf
+Statistical Mechanics (Second Edition), R. K. Pathria - https://www.pas.rochester.edu/~yishengtu/research_files/EOS_reference/Pathria,%20R.%20K.%20%20Statistical%20Mechanics.pdf
+An Introduction to Statistical Mechanics and Thermodynamics, Robert H. Swendsen - http://www0.unsl.edu.ar/~cornette/ME/An-Introduction-to-Statistical-Mechanics-and-Thermodynamics.pdf
+
+
+STATISTICS
+----------
+Probability and Statistics, Michael J. Evans and Je§rey S. Rosenthal - https://www.utstat.toronto.edu/mikevans/jeffrosenthal/book.pdf
+Probability & Statistics for Engineering and the Sciences (Eighth Edition), Jay L. Devore - https://faculty.ksu.edu.sa/sites/default/files/probability_and_statistics_for_engineering_and_the_sciences.pdf
+
+
+RELATIVITY
+----------
+Relativity - https://www.academia.edu/34580700/_Wolfgang_Rindler_Relativity_Special_General_a_BookSee_org_pdf
 General Relativity - http://www.damtp.cam.ac.uk/user/tong/gr/gr.pdf
-
 Spacetime and Geometry, Sean Carroll - https://fma.if.usp.br/~mlima/teaching/PGF5292_2021/Carroll_SG.pdf
-
+General Relativity, Black Holes, and Cosmology, Andrew Hamilton - https://jila.colorado.edu/~ajsh/astr3740_17/grbook.pdf
+Lecture Notes on General Relativity, Sean Carroll - https://sites.astro.caltech.edu/~george/ay21/readings/carroll-gr-textbook.pdf
 A First course in General Relativity, Bernard Schutz - https://www.if.ufrgs.br/oei/santiago/fis02012/FirstCourseGR.pdf
 
-General Relativity, Black Holes, and Cosmology, Andrew Hamilton - https://jila.colorado.edu/~ajsh/astr3740_17/grbook.pdf
 
-Lecture Notes on General Relativity, Sean Carroll - https://sites.astro.caltech.edu/~george/ay21/readings/carroll-gr-textbook.pdf
+CLASSICAL MECHANICS
+-------------------
+Classical Mechanics, John R. Taylor - https://neuroself.files.wordpress.com/2020/09/taylor-2005-classical-mechanics.pdf
+
+
+ELECTRICITY AND MAGNETISM
+-------------------------
+Teach yourself electricity and electronics - https://fmipa.umri.ac.id/wp-content/uploads/2016/03/Stan_Gibilisco_Teach_Yourself_Electricity_And_ElBookZZ.org_.pdf
+
+
+THEORETICAL PHYSICS
+-------------------
+Methods of theoretical physics - http://www.astrosen.unam.mx/~aceves/Metodos/ebooks/morse_feshbach1.pdf
+mathematical methods of theoretial physics, Karl Svozil - https://arxiv.org/pdf/1203.4558.pdf
+
+
+OTHER
+-----
+Error Analysis, Taylor - https://www.niser.ac.in/sps/sites/default/files/basic_page/John%20R.%20Taylor%20-%20An%20Introduction%20to%20Error%20Analysis_%20The%20Study%20of%20Uncertainties%20in%20Physical%20Measurements-University%20Science%20Books%20(1997).pdf
+Subquantum kinetics, Paul A. LaViolette - https://www.gbv.de/dms/goettingen/370933931.pdf
