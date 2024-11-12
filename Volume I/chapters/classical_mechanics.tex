@@ -20,6 +20,10 @@ Classical mechanics provides accurate and practical predictions for a wide range
 
 \section{Gravity}
 
+\begin{defn}[Mass \label{defn: mass}]{1}
+The \keyword{mass} of an object characterizes the object's \keyword{inertia} - its resistance to being accelerated. The internationally agreed unit of mass is the \keyword{kilogram} (kg) which is defined arbitrarily to be the mass of a chunk of platinum-iridium stored outside of Paris in the International Bureau of Weights and Measures \cite{bib:Classical_Mechanics}.
+\end{defn}
+
 The law of gravitation is that every object in the universe attracts every other object with a force which for any two bodies is proportional to the mass of each and varies inversely as the square of the distance between them. This is typically mathematically represented as
 
 \begin{align}
@@ -101,14 +105,53 @@ Following Galileo's discovery of the principal of \keyword{inertia}, Newton set 
 		\item \keyword{The Law of Inertia}: An object at rest will remain at rest, and an object in motion will continue to move with a constant velocity in a straight line unless acted upon by an external force./footnote{This is simply a restating of Galileo's described principal of inertia.}
 		\item The time-rate-of-change of a quantity called momentum is proportional to the force.
 		\begin{align}
-			\vec{F}=\frac{d\vec{p}}{dt} = m\frac{d\vec{v}}{dt} = m\frac{d^2\vec{x}}{dt^2} = m\vec{a} \label{Newton's Second Law}
+			\vec{F}=\frac{d\vec{p}}{dt} = m\frac{d\vec{v}}{dt} = m\frac{d^2\vec{x}}{dt^2} = m\vec{a} = m\dot{\text{\textbf{v}}} = m\ddot{\text{\textbf{x}}} = \dot{\text{\textbf{p}}} \label{Newton's Second Law}
 		\end{align}
 		The two forms of this law $\vec{F}=m\vec{a}$ and $\vec{F}=\frac{d\vec{p}}{dt}$ are \textit{not} equivalent with respect to relativity.
-		\item For every action, there is an equal and opposite reaction.
+		\item For every action, there is an equal and opposite reaction. In otherwords, if object 1 exerts a force $\vec{F}_{21}$ on object 2, then object 2 always exerts a reaction force $\vec{F}_{12}$ on object 1 given by $\vec{F}_{12}=-\vec{F}_{21}$.
 	\end{enumerate}
 \end{fancybox}
 
+\begin{interestnote}
 Since relativity and quantum mechanics were formulated, it has been known that these laws are not universally valid and only a highly accurate approximation for classical physics scenarios.
+\end{interestnote}
+
+Consider a system of $n$ particles. We denote an arbitrary particle using $i$, where $1\leq i \leq n$. Each particle has some associated total force $\vec{F}_i$ and angular momentum $\vec{p}_i$ (such that $\vec{F}_i = \dot{\text{\textbf{p}}}_i$), including some external force acting upon it from outside the system $\vec{F}_i^e$. The total force of each particle would be the sum of the forces acting upon it from every other particle in the system plus the external force,
+
+\begin{align}
+\vec{F}_i = \vec{F}_i^e + \sum_{j\neq i}^{n} \vec{F}_{ij}
+\end{align}
+
+The total angular momentum of the system is defined by $\vec{P} = \sum_{i}^{n} \vec{p}_i$, which can be modified by taking the time derivative and applying some substitutions to
+
+\begin{align}
+\dot{\text{\textbf{P}}} = \frac{\partial}{\partial t}\sum_{i}^{n} \vec{p}_i = \sum_{i}^{n} \dot{\text{\textbf{p}}}_i = \sum_{i}^{n} \left[\vec{F}_i^e + \sum_{j\neq i}^{n} \vec{F}_{ij}\right] = \sum_{i}^{n} \vec{F}_i^e + \sum_{i}^{n}\sum_{j\neq i}^{n} \vec{F}_{ij} \label{angular momentum derivation 1}
+\end{align}
+
+The first sum of this system represents the \textit{total} external force acting on the system (the sum of all external forces) $\vec{F}^e$. The second term (with the double sum) is unique in the sense that it is the sum of all combinations of $\vec{F}_{ij}$ and $\vec{F}_{ji}$. We can show this as follows. It can be re-written to
+
+\begin{align}
+\sum_{i}^{n}\sum_{j\neq i}^{n} \vec{F}_{ij} = \sum_{j\neq 1}^{n} \vec{F}_{1j} + \sum_{j\neq 2}^{n} \vec{F}_{2j} + \cdots + \sum_{j\neq n}^{n} \vec{F}_{nj}
+\end{align}
+
+Each summation term in this can be expanded into its components
+\begin{align}
+\sum_{i}^{n}\sum_{j\neq i}^{n} \vec{F}_{ij} &= \left(\vec{F}_{12} + \vec{F}_{13} + \vec{F}_{14} +\cdots + \vec{F}_{1n-1} +\vec{F}_{1n}\right) \\ &+ \left(\vec{F}_{21} + \vec{F}_{23} + \vec{F}_{24} +\cdots + \vec{F}_{2n-1} +\vec{F}_{2n}\right)\\ &+ \left(\vec{F}_{31} + \vec{F}_{32} + \vec{F}_{34} +\cdots + \vec{F}_{3n-1} +\vec{F}_{3n}\right)\\ &\hspace{0.5em}\vdots \\ &+ \left(\vec{F}_{n1} + \vec{F}_{n2} + \vec{F}_{n3} +\cdots + \vec{F}_{nn-2} + \vec{F}_{nn-1}\right) 
+\end{align}
+
+It takes either a lot of paper or a bit of imagination at this point to easily see that every term $\vec{F}_{ij}$ and every term $\vec{F}_{ji}$ appear exactly once. You can see that for $i=1$ (first row), all of the terms correlate to the $j=1$ terms (first column) in every other column. Similarly, for each $i$ row, the $j=1$ column will correspond to the opposite terms. Every $i$ and $j$ have a correlated term and there are no duplicate terms since $i\neq j$ is strictly prohibited by the sum. Note that by Newton's third law, $\vec{F}_{ij} = -\vec{F}_{ji} \implies \vec{F}_{ij} + \vec{F}_{ji} = 0$. These can be applied to the above equation, which be simply written as
+
+\begin{align}
+\sum_{i}^{n}\sum_{j\neq i}^{n} \vec{F}_{ij} = \sum_{i}^{n}\sum_{j > i}^{n} \left(\vec{F}_{ij} + \vec{F}_{ji}\right) = 0
+\end{align} 
+
+Thus, equation \ref{angular momentum derivation 1} becomes
+
+\begin{align}
+\dot{\text{\textbf{P}}} = \sum_{i}^{n} \vec{F}_i^e = \vec{F}^e
+\end{align}
+
+Therefore, we can see that for any arbitrary particle system, if $\vec{F}^e = 0$, then $\dot{\text{\textbf{P}}} = 0$ and thus $\vec{P}$ must be constant. This gives the conservation of momentum.
 
 \begin{defn}[Conservation of Momentum]{defn:conservation of momentum}
 If the net externat force $F^{\text{ext}}$ on an $N$-particle system is zero, the system's total momentum $P$ is constant.
@@ -118,6 +161,15 @@ If the net externat force $F^{\text{ext}}$ on an $N$-particle system is zero, th
 \subsection{Inertial Frames}
 
 An \keyword{inertial reference frame}, also known as an \keyword{inertial frame} of reference or simply an inertial frame, is a specific coordinate system or frame of reference in which Newton's first law of motion holds true. In an inertial reference frame, an object at rest remains at rest, and an object in motion with constant velocity continues to move in a straight line with the same velocity unless acted upon by an external force. Alternatively, an inertial reference frame is a coordinate system that is not accelerating and has no net force acting on it. In such a frame, objects move freely and uniformly in accordance with Newton's laws of motion without any additional forces or accelerations introduced by the frame itself. Newton's second law, given no net force on an object ($\vec{F}=0$) gives an acceleration of zero ($a=0$). This suggests that Newton's second law includes the first. However, this is only the case in an \keyword{inertial frame}. The laws of motion only hold in inertial frames and an \keyword{inertial frame} is defined as one where \keyword{the law of inertia} holds.
+
+\begin{defn}[Inertial Reference Frame \label{defn: Inertial Reference Frame}]{1}
+An \keyword{inertial frame} is any reference frame in which Newton's first law holds, that is, a non-accelerating and non-rotating frame.
+\end{defn}
+
+
+
+
+
 
 
 
