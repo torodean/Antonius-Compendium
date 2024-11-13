@@ -184,19 +184,22 @@ There are many cases where a \keyword{Cartesian} coordinate system is not ideal 
 \begin{figure}[htbp]
 	\centering
 	\begin{tikzpicture}[scale=1.5]
-		\draw[->] (-0.5,0) -- (5,0) node[right] {$\hat{x}$};
+		\draw[->] (-0.5,0) -- (6,0) node[right] {$\hat{x}$};
 		\draw[->] (0,-0.5) -- (0,3) node[above] {$\hat{y}$};
-		\draw[->] (0,0) -- (4,2);
+		\draw[->] (0,0) -- (4,2) node[midway, above left] {$r$};
 		\draw[dotted, ->] (4,2) -- (5,2.5)  node[above] {$\hat{r}$};
+		\draw[dotted, <->] (2,2) node[left] {$-\hat{x}$} -- (6,2)  node[right] {$\hat{x}$};
 		\draw[dotted] (4,0) -- (4,2);
 		\draw[dotted, ->] (4,2) -- (3.5,3) node[above] {$\hat{\theta}$};
 		\draw (4,1) node[right] {$y$}; 
-		\draw (2,0) node[below] {$x$}; 
+		\draw (2,0) node[below] {$x$};
 		\draw[-] (1,0,0) arc (0:30:.89) node[midway, right] {$\theta$};
+		\draw[-] (4.4,2,0) arc (0:20:.55) node[midway, right] {$^\theta$};
+		\draw[-] (3.6,2,0) arc (180:130:.53) node[midway, left] {$^{90-\theta}$};
 		
 
 	\end{tikzpicture}
-	\caption{\footnotesize TODO \label{fig:Polar Coordinates}}
+	\caption{\footnotesize A vector representation of an arbitrary  position with polar directional labels.\label{fig:Polar Coordinates}}
 \end{figure}
 
 
