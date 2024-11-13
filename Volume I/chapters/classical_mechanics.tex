@@ -173,14 +173,6 @@ If the net externat force $F^{\text{ext}}$ on an $N$-particle system is zero, th
 
 \subsection{Newton's Laws In Polar Coordinates}
 
-There are many cases where a \keyword{Cartesian} coordinate system is not ideal (i.e. orbiting planets) for working a problem. Another possible coordinate system commonly used with Newton's Laws is \keyword{Polar Coordinates} (see section \ref{section: Polar Coordinates}). Beginning with a 2-dimensional vector $\vec{r}$ which corresponds to some position in polar coordinates with magnitude $r$ and direction $\hat{r}$, we have $\vec{r} = r\hat{r}$. The velocity in polar coordinates would just be the time derivative of the position which gives
-\begin{align}
-\frac{d \vec{r}}{dt} = \dot{\text{\textbf{r}}}= r\frac{d\hat{r}}{dt} + \frac{dr}{dt}\hat{r}
-\end{align}
-
-
-
-
 \begin{figure}[htbp]
 	\centering
 	\begin{tikzpicture}[scale=1.5]
@@ -202,8 +194,55 @@ There are many cases where a \keyword{Cartesian} coordinate system is not ideal 
 	\caption{\footnotesize A vector representation of an arbitrary  position with polar directional labels.\label{fig:Polar Coordinates}}
 \end{figure}
 
+There are many cases where a \keyword{Cartesian} coordinate system is not ideal (i.e. orbiting planets) for working a problem. Another possible coordinate system commonly used with Newton's Laws is \keyword{Polar Coordinates} (see section \ref{section: Polar Coordinates}). Beginning with a 2-dimensional vector $\vec{r}$ which corresponds to some position in polar coordinates with magnitude $r$ and direction $\hat{r}$, we have $\vec{r} = r\hat{r}$. The velocity in polar coordinates would just be the time derivative of the position which gives
+\begin{align}
+\frac{d \vec{r}}{dt} = \dot{\text{\textbf{r}}}= r\frac{d\hat{r}}{dt} + \frac{dr}{dt}\hat{r} \label{newton's laws in polar coords 1}
+\end{align}
 
-
+In equation \ref{newton's laws in polar coords 1}, the term $\frac{d\hat{r}}{dt}$ needs written in more common terms. To start, since $\hat{r}$ is well defined on the $(\hat{x}, \hat{y})$ plane (see figure \ref{fig:Polar Coordinates}), it can be written in terms of $\hat{x}$ and $\hat{y}$ as $\hat{r} = x_0\hat{x} + y_0\hat{y}$, where $a, b \in \mathbb{R}$. given that $\hat{r}$ is a unit vector, the magnitude $r=\sqrt{x_0^2+y_0^2}$ must equal 1. By applying basic trigonometric identities, $x_0=r\cos(\theta)=\cos(\theta)$ and $y_0=r\sin(\theta)=\sin(\theta)$ which gives
+\begin{align}
+\hat{r} = \cos(\theta)\hat{x} + \sin(\theta)\hat{y}. \label{r unit vector}
+\end{align} 
+Similarly, $\hat{\theta}$ is simply the same except with an angle of $90-\theta$. By applying the sum-difference trigonometric identities, this gives
+\begin{align}
+\hat{\theta} &= \cos(90-\theta)\hat{x} + \sin(90-\theta)\hat{y} \nonumber \\ 
+			 &= \left[\cos(90)\cos(-\theta)+\sin(90)\sin(-\theta)\right]\hat{x} + \left[\sin(90)\cos(-\theta)-\cos(90)\sin(-\theta)\right]\hat{y} \nonumber\\
+			 &= -\sin(\theta)\hat{x} + \cos(\theta)\hat{y} \label{theta unit vector}
+\end{align}
+Note that since the unit vectors in Cartesian coordinates do not change with respect to position, both $\frac{d\hat{x}}{dt}$ and $\frac{d\hat{y}}{dt}$ are zero. From equation \ref{r unit vector}, we then have
+\begin{align}
+\frac{d\hat{r}}{dt} = \cos(\theta)\frac{d\hat{x}}{dt} - \sin(\theta)\dot{\theta}\hat{x} + \sin(\theta)\frac{d\hat{y}}{dt} + \cos(\theta)\dot{\theta}\hat{y} = -\sin(\theta)\dot{\theta}\hat{x} + \cos(\theta)\dot{\theta}\hat{y} = \dot{\theta} \hat{\theta}
+\end{align}
+Therefore, equation \ref{newton's laws in polar coords 1} then becomes
+\begin{align}
+\frac{d \vec{r}}{dt} = r\dot{\theta} \hat{\theta} + \dot{r} \hat{r} \label{newton's laws in polar coords 2}
+\end{align}
+From this, the polar components of velocity $v_r$ and $v_\theta$ in the $\hat{r}$ and $\hat{\theta}$ directions respectively are $v_r = \dot{r}$ and $v_\theta = r\dot{\theta}$. The time derivative of the velocity will then give the acceleration of the system as
+\begin{align}
+\vec{a} = \frac{d^2 \vec{r}}{dt^2} = r\dot{\theta} \frac{d\hat{\theta}}{dt} + \left[\dot{r}\dot{\theta} + r\ddot{\theta}\right] \hat{\theta}      + \dot{r} \frac{d\hat{r}}{dt}  + \ddot{r} \hat{r} \label{newton's laws in polar coords acceleration 1}
+\end{align}
+From equation \ref{theta unit vector}, we have
+\begin{align}
+\frac{d\hat{\theta}}{dt} = -\cos(\theta)\dot{\theta}\hat{x} - \sin(\theta)\dot{\theta}\hat{y} = -\dot{\theta}\hat{r}
+\end{align}
+Combining this and the other known elements from above, equation \ref{newton's laws in polar coords acceleration 1} becomes
+\begin{align}
+\frac{d^2 \vec{r}}{dt^2} = \left[\ddot{r}-r\dot{\theta}^2\right]\hat{r} + \left[2\dot{r}\dot{\theta} + r\ddot{\theta}\right] \hat{\theta} \label{newton's laws in polar coords acceleration 2}
+\end{align}
+This can easily be expanded into \keyword{cylindrical coordinates} by applying this and adding a third direction. Since the differential operator is commutative, the process for this would follow similar to as it is in Cartesian coordinates where each term is simply the time derivative of itself. This third spacial dimension in cylindrical coordinates would not depend on the other two dimensional unit vectors in any way. This would give 
+\begin{align}
+\frac{d^2 \vec{r}}{dt^2} = \left[\ddot{r}-r\dot{\theta}^2\right]\hat{r} + \left[2\dot{r}\dot{\theta} + r\ddot{\theta}\right] \hat{\theta} + \ddot{z}\hat{z} \label{newton's laws in polar coords acceleration 3}
+\end{align}
+Finally, applying Newton's law gives 
+\begin{defn}[Newton's Second Law In 2D-Polar Coordinates \label{Newton's Second Law In 2D-Polar Coordinates}]{1}
+\begin{align}
+\vec{F} = m\vec{a}  \implies \left\{
+\begin{array}{ll}
+      \vec{F}_r &= m(\ddot{r}-r\dot{\theta}^2) \\
+      \vec{F}_\theta &= m(2\dot{r}\dot{\theta} + r\ddot{\theta}) \\
+\end{array} \right. 
+\end{align}
+\end{defn}
 
 
 
