@@ -181,7 +181,23 @@ There are many cases where a \keyword{Cartesian} coordinate system is not ideal 
 
 
 
+\begin{figure}[htbp]
+	\centering
+	\begin{tikzpicture}[scale=1.5]
+		\draw[->] (-0.5,0) -- (5,0) node[right] {$\hat{x}$};
+		\draw[->] (0,-0.5) -- (0,3) node[above] {$\hat{y}$};
+		\draw[->] (0,0) -- (4,2);
+		\draw[dotted, ->] (4,2) -- (5,2.5)  node[above] {$\hat{r}$};
+		\draw[dotted] (4,0) -- (4,2);
+		\draw[dotted, ->] (4,2) -- (3.5,3) node[above] {$\hat{\theta}$};
+		\draw (4,1) node[right] {$y$}; 
+		\draw (2,0) node[below] {$x$}; 
+		\draw[-] (1,0,0) arc (0:30:.89) node[midway, right] {$\theta$};
+		
 
+	\end{tikzpicture}
+	\caption{\footnotesize TODO \label{fig:Polar Coordinates}}
+\end{figure}
 
 
 
