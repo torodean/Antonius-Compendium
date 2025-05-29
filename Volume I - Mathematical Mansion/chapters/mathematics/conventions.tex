@@ -44,6 +44,32 @@ A few mathematical identities hold when combining complex numbers with their com
 	\end{align}
 \end{itemize}
 
+
+\subsubsection{Complex Exponentials}
+
+Given a complex number $z=a+bi$ (where $a,b \in \mathbb{R}$), the exponential $e^z$ is most common explained with \keyword{Euler's Formula}. First, note that $e^z = e^{a+bi} = e^ae^{bi}$ by the simple properties of exponents. Since $e^a$ is real, we can say this is simply some constant $A$, giving $Ae^{bi}$. The important term here is $e^{ib}$. If expanded as a \keyword{Taylor series}, we have
+\begin{align}
+	e^{ib} = 1 +ib + \frac{(ib)^2}{2!} + \frac{(ib)^3}{3!} + \frac{(ib)^4}{4!} + \cdots
+\end{align}
+
+The Taylor series for $\sin(b)$ and $\cos(b)$ can be found in this series via a bit of rearranging. Since $i^2=-1$, $i^3 = -i$, $i^4=i$, and so on, this can be written as
+
+\begin{align}
+	e^{ib} &= 1 +ib - \frac{(b)^2}{2!} - i\frac{(b)^3}{3!} + \frac{(b)^4}{4!} + \cdots \\
+	       &= \left[1 - \frac{b^2}{2!} + \frac{b^4}{4!}  - \cdots\right] + i\left[b- \frac{b^3}{3!}  + \cdots \right] \\
+	       &= \cos(b) + i\sin(b)
+\end{align}
+
+The common form of this is denoted with $b \equiv \theta$, which suggests the visual of this being represented in polar coordinates. The magnitude of this can be determined as any other polar system, which is $\sqrt{\cos^2\theta + \sin^2\theta}=1$. Therefore, $e^{i\theta}$ lies on the \textit{unit circle}, where $\theta$ is the polar angle, the magnitude/radius is one, and the circle is centered at the origin.
+
+\begin{defn}[Euler's Formula \label{Euler's Formula Definition}]{1}
+\keyword{Euler's formula} was named after Leonhard Euler. It is a mathematical formula which establishes the fundamental relationship between the trigonometric functions and the complex exponential function.
+\begin{align}
+	e^{i\theta} = \cos(\theta) + i\sin(\theta)
+\end{align}
+\end{defn}
+
+
 \subsection{Vectors}
 
 The \keyword{bra} and \keyword{ket} notation is commonly used to represent vectors and vector operations. A superscript ``$^T$'' represents the \keyword{transposition} of a vector or a matrix. Vectors in 3 spacial dimensions, such as those in classical mechanics, are typically notated with an arrow overhead (i.e. $\vec{v}$). In other contexts, vectors are either represented by boldface script or by Dirac's \keyword{bra-ket} notation. 

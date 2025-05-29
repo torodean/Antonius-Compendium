@@ -16,12 +16,12 @@ jobs:
     - name: Setup TeX Live
       uses: xu-cheng/latex-action@v2
       with:      
-        working_directory: Volume I
+        working_directory: Volume I - Mathematical Mansion
         root_file: Compendium.tex  # You can adjust the TeX Live profile
         
     - name: Rename LaTeX document
       run: |
-        cd Volume\ I  # Change directory to the subfolder
+        cd Volume\ I\ -\ Mathematical\ Mansion  # Change directory to the subfolder
         mv Compendium.pdf Compendium_autogen.pdf
         
     - name: Commit and Push Changes
