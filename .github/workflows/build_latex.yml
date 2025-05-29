@@ -33,8 +33,10 @@ jobs:
         cd Volume\ I\ -\ Mathematical\ Mansion  # Change directory to the subfolder
         git add Compendium_autogen.pdf
         git commit -m "Automated LaTeX generation - updating PDF"
+        git push
         
-  build_volume_ii:
+  build_volume_ii:  
+    needs: build_volume_i
     runs-on: ubuntu-latest
 
     steps:
