@@ -1,0 +1,73 @@
+\documentclass[openany,twoside, notitlepage,letterpaper,11pt]{book}
+
+%%% These are the packages that are used
+\input{./resources/Packages}
+
+%This is where settings for the latex file are stored.
+\input{./resources/Settings}
+
+%This is where custom definitions and variables are defined and stored.
+\input{./resources/Definitions}
+
+%creates the title page
+\title{\includegraphics[scale=2.5]{./Images/Covers/AC.png}
+	\\ Compendium of Knowledge \\ Volume II: Neural Nucleus \\ Version \Version}
+\date{}
+\author{Compiled by: Antonius W. Torode$^{1}$ \\ \scriptsize{1. Applied Research Laboratories - University Of Texas: Austin} \\ Written in: \LaTeX}
+
+\makeindex
+%\addcontentsline{toc}{chapter}{Index}
+
+
+%%% Document Starts now
+\begin{document}
+
+%Begin the front matter.
+\frontmatter
+%Begins title page.	
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+\begin{center}	
+	\includegraphics[scale=1.6]{./Images/Covers/background_tunnel.png}
+\end{center}
+
+%Copywrite page
+\include{./resources/Copywrite}
+
+%Preface page
+\include{./resources/Preface}
+
+%Begins blank page.
+\thispagestyle{empty}
+\newpage
+\vspace*{\stretch{1}}
+\begin{center}
+	\textit{This page intentionally left blank.\\ (Yes, this is a contradiction.)}
+\end{center}
+\vspace*{\stretch{1}}
+
+%Begins table of contents
+\tableofcontents
+
+
+%Begin the mainmatter.
+\setlength{\parindent}{0pt}
+\mainmatter
+\pagestyle{fancy}
+%\include{./chapters/constants}
+\setlength{\parindent}{25pt}
+
+\include{./chapters/ai}
+
+\include{./chapters/psychology}
+
+
+\unchapter{resources}
+
+%Begin the backmatter.
+\backmatter
+\input{./resources/References}
+\printindex
+
+\end{document}
