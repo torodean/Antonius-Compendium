@@ -30,7 +30,7 @@ jobs:
         git config --global user.email 'torodean@users.noreply.github.com'
         git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}
         git checkout "${GITHUB_REF:11}"
-        cd Volume\ I  # Change directory to the subfolder
+        cd Volume\ I\ -\ Mathematical\ Mansion  # Change directory to the subfolder
         git add Compendium_autogen.pdf
         git commit -m "Automated LaTeX generation - updating PDF"
         git push
