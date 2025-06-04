@@ -1,0 +1,75 @@
+chapter{Modeling}
+\thispagestyle{fancy}
+\label{chap:modeling}
+
+
+
+
+
+\section{Introduction}
+
+Modeling is the process of constructing abstract representations of real-world systems, behaviors, or phenomena. These representations—whether mathematical, statistical, or computational—enable analysis, simulation, prediction, and understanding of complex structures and dynamics.
+
+This chapter will introduces several types of models used across disciplines, with a focus on those that capture structure, uncertainty, and sequential behavior. Topics include deterministic models, probabilistic frameworks, and data-driven models. The goal is to present models not only as tools for approximation or prediction, but as frameworks for organizing knowledge and reasoning about systems.
+
+
+
+
+
+
+
+
+
+
+\section{Markov Models}
+
+\subsection{Overview}
+
+In a previous project I was working on for Dungeons \& Dragons, I created a model for generating random names and character sequences. That project code can be found here: 
+\begin{center}
+\url{https://github.com/torodean/DnD/blob/main/templates/creator.py}. 
+\end{center}
+The functionality was based on transition patterns between characters of preexisting names. I only later found out that this was referred to as a Markov model. The features related to this will be discussed here in a more generalized form. These models can be used to create elements which follow a similar pattern of an input sequence (such as creating predictive text).
+
+\subsection{First-Order Markov Model}
+
+This section contains an explanation of how the markov model functions. Consider some set of sequences $S$ for some arbitrary type, where each element is denoted by a capitalized letter, $S=\{ABC, ABD, BAD\}$. The probability matrix $P$ is constructed by determining all of the elements which follow another, and at what probability that element has of following the others (The probabilities of elements following some element $K$ is $P_K$). that is $P(S) = \{K:P_K \forall K \in S\}$.
+
+The set of elements which exist in $S$ are ${A, B, C, D, \emptyset}$, where $\emptyset$ denotes the absence of an element (or beginning/end of a sequence). Starting with $A$, we can see that the $A$ element is followed only by $B$ (twice), and $D$ (once) in $S$. The total number of elements ever following an $A$ is thus three. The probabilities following an element $A$ is thus
+\begin{align}
+P_A = \begin{cases}
+  B & :\text{twice} \\
+  D & :\text{once}
+\end{cases} \implies P_A = \begin{cases}
+  B & : 66.\overline{6}\% \\
+  D & : 33.\overline{3}\%
+\end{cases} = \{B:0.\overline{6}, D:0.\overline{3}\}
+\end{align}
+Following this same process for the other elements gives
+\begin{align}
+P_B &= \{A:0.\overline{3}, C:0.\overline{3}, D:0.\overline{3}\} \\ P_C &= P_D = \{\emptyset:1.0\}\\ P_\emptyset &= \{A:0.\overline{6}, B:0.\overline{3}\}.
+\end{align}
+The total probability matrix for this set of sequences would then be
+\begin{align}
+P(S) = \{A:P_A, B:P_B, C:P_C, D:P_D, \emptyset: P_\emptyset\} = \begin{cases}
+A:\{B:0.\overline{6}, D:0.\overline{3}\} \\
+B: \{A:0.\overline{3}, C:0.\overline{3}, D:0.\overline{3}\} \\
+C: \{\emptyset:1.0\} \\
+D: \{\emptyset:1.0\} \\
+\emptyset: \{A:0.\overline{6}, B:0.\overline{3}\}.
+\end{cases}
+\end{align}
+The $\emptyset$ is a special case in that it represents the first character of a sequence (there is never a character after the last). This format may not look like a matrix at all, but it can be re-written to matrix format. First, note that there are a total of 5 elements ($A$, $B$, $C$, $D$, $\emptyset$) which will give a $5 \times 5$ matrix for all possible combinations. The matrix is configured such that both the rows and columns span from $A\rightarrow\emptyset$, covering all the elements of the set. The matrix value of $a, b$ then represents the probability that element $a$ will be proceeded by element $b$.
+\begin{align}
+P(S) = \left[
+\begin{matrix}
+0 & 0.\overline{3} & 0 & 0 & 0.\overline{6} \\ 
+0.\overline{6} & 0 & 0 & 0 & 0.\overline{3} \\ 
+0 & 0.\overline{3} & 0 & 0 & 0 \\ 
+0.\overline{3} & 0.\overline{3} & 0 & 0 & 0\\ 
+0 & 0 & 1.0 & 1.0 & 0 \\ 
+\end{matrix}\right]
+\end{align}
+This probability matrix thus represents the probability of an element proceeding another in one of the given sequences. Each column of the matrix should total to $1.0$, as they represent the total set of elements proceeding another. It can be used to generate new sequences which adhere to similar patterns of the input sequences. With larger data sets, more possibilities of sequences typically arise as probable outputs. 
+
+One important feature of these models is that under low-entropy (the model is derived from a deterministic source), a uniquely resolvable input set (You can reconstruct exactly one input set) and with enough metadata (initial state, model size, model order, etc), the model can be used to reconstruct the original data.
