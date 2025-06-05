@@ -1,4 +1,4 @@
-chapter{Modeling}
+\chapter{Modeling}
 \thispagestyle{fancy}
 \label{chap:modeling}
 
@@ -78,6 +78,44 @@ One important feature of these models is that under low-entropy (the model is de
 
 
 
+
+
+\subsection{A Larger Example}
+
+Consider the following set of sequences:
+\begin{align}
+	S=\{ABCDE, ABDEE, AABCD, ACDCE, AABCD\}
+\end{align}
+The set of all elements of this sequence are $\{A, B, C, D, E, \emptyset\}$. There are a total of 6 elements. This set of sequences has 7 $A$'s, 4 $B$'s, 5 $C$'s, 5 $D$'s, 4 $E$'s, and 5 $\emptyset$'s (beginning of each sequence). The probabilities $P_k$ are then
+\begin{align}
+	P_A &= \{A:2/7, B:4/7, C:1/7, D:0, E:0, \emptyset:0 \} \\
+	P_B &= \{A:0, B:0, C:3/4, D:1/4, E:0, \emptyset:0 \} \\
+	P_C &= \{A:0, B:0, C:0, D:4/5, E:1/5, \emptyset:0 \} \\
+	P_D &= \{A:0, B:0, C:1/5, D:0, E:2/5, \emptyset:2/5 \} \\
+	P_E &= \{A:0, B:0, C:0, D:0, E:1/4, \emptyset:3/4 \} \\
+	P_\emptyset &= \{A:5/5, B:0, C:0, D:0, E:0, \emptyset: 0\} 
+\end{align}
+This gives a probability matrix $P(S)$ of
+\begin{align}
+	P(S) = \left[\begin{matrix}
+		2/7 & 0 & 0 & 0 & 0 & 5/5 \\
+		4/7 & 0 & 0 & 0 & 0 &  0 \\
+		1/7 & 3/4 & 0 & 1/5 & 0 & 0 \\
+		0 & 1/4 & 4/5 & 0 & 0 & 0 \\
+		0 & 0 & 1/5 & 2/5 & 1/4 & 0 \\
+		0 & 0 & 0 & 2/5 & 3/4 & 0 \\
+	\end{matrix}\right]
+\end{align}
+
+
+
+
+
+
+
+
+
+
 \subsection{Predicting Input Size}
 
 A probability matrix for a markov model is generated with a set of sequences. Each sequence $s$ has a size, and the set of all sequences $S$ also has a size. If the size of each sequence $s$ is fixed, there will always be a minimum possible size of the $S$ needed to generate the probability matrix. This analysis will being by using a fixed size for all $s\in S$.
@@ -99,11 +137,38 @@ As mentioned before, the probabilities of each column $k$ (each column represent
 P(k) = \sum_{i=0}^{n}s_{in} = 1, \forall k \in S.
 \end{align}
 
-Every element $k\in S$ will appear an integer number of times (since an element either appears or does not). This means, that every probability $s$ will be a rational value, $s\in\mathbb{Q}$ (since it is defined as the total occurrences of $k$ over the total possible occurrences of any element). Therefore, we can define $s^*_{in}\in \mathbb{N}$ such that $s^*_{in} = s_{in}N$, where $N\in\mathbb{N}$. Given that $N$ is the least common denominator (LCD) when summing all values of $s_{in}$ to 1, this value of $N$ would then be the minimum possible number of total elements of $k$, denoted $T_k$, in the initial sequence which produced this matrix. This gives
+Every element $k\in S$ will appear an integer number of times (since an element either appears or does not). This means, that every probability $s$ will be a rational value, $s\in\mathbb{Q}$ (since it is defined as the total occurrences of $k$ over the total possible occurrences of any element). Therefore, we can define $s^*_{ik}\in \mathbb{N}$ such that $s^*_{ik} = s_{ik}N_k$, where $N_k\in\mathbb{N}$. Given that $N_k$ is the least common denominator (LCD) when summing all values of $s_{ik}$ to 1, this value of $N_k$ would then be the minimum possible number of total elements of $k$, denoted $T_k$, in the initial sequence which produced this matrix. This gives
 \begin{align}
-\min (T_k) = \sum_{i=0}^{n}s^*_{in} = N, \forall k \in S.
+\min (T_k) = \sum_{i=0}^{n}s^*_{ik} = N_k, \forall k \in S.
 \end{align}
+Note that the $\emptyset$ element is a special case here. It is defined as the start or end of a sequence and therefore there will always be $n$ of them from the reference of following an element, and $n$ from the reference of preceding an element.
 
-This is more of an observational conclusion than a formal theorem. Notice in equation \ref{eqn:Example-prob-matrix-1}, for the first column, we have $\frac{2}{3}$ and $\frac{1}{3}$ as the probabilities. When summed to 1, the LCD of these is 3. This correctly matches the value of the number of $A$ elements (which corresponds to the first column) in the corresponding sequence of $S$ which was used. However, if the initial sequence had 6 elements, and the probabilities were thus $\frac{4}{6} = \frac{2}{3}$ and $\frac{2}{6} = \frac{1}{3}$ (respectively), then the value would have been incorrect because the fractions may have been reduced. This is the reason I saw it is $\min (T_k)$ rather than $T_k$. Given that the fractions for the probabilities are left in an non-reduced form, or are irreducible to begin with, this would be $T_k$. But for general purposes, the probabilities are likely always reduced to simplest form and thus we can only determine the minimum value of $T_k$. It will be true that the total number if some multiple of $T_k$, however, which can be valuable information.
+This is more of an observational conclusion than a formal theorem. Notice in equation \ref{eqn:Example-prob-matrix-1}, for the first column, we have $\frac{2}{3}$ and $\frac{1}{3}$ as the probabilities. When summed to 1, the LCD of these is 3. This correctly matches the value of the number of $A$ elements (which corresponds to the first column) in the corresponding sequence of $S$ which was used. However, if the initial sequence had 6 elements, and the probabilities were thus $\frac{4}{6} = \frac{2}{3}$ and $\frac{2}{6} = \frac{1}{3}$ (respectively), then the value would have been incorrect because the fractions may have been reduced. This is the reason I say it is $\min (T_k)$ rather than $T_k$. Given that the fractions for the probabilities are left in an non-reduced form, or are irreducible to begin with, this would be $T_k$. But for general purposes, the probabilities are likely always reduced to simplest form and thus we can only determine a minimum value of $T_k$. It will be true that the total number is some multiple of $T_k$, however, which can be valuable information.
+
+There may be some interesting insights to gain from the rows of the probability matrix as well. Given the existence of $N_k$, which has already been established, the sum of the row $R$ for some element $k$ can be written as
+\begin{align}
+	R(k) = \sum_{i=0}^{n} s_{ki} = \sum_{i=0}^{n} \frac{s^*_{ki}}{N_i} = \frac{s^*_{k0}}{N_0} + \frac{s^*_{k1}}{N_1}\frac{s^*_{k2}}{N_2} + \cdots + \frac{s^*_{kn}}{N_n}.
+\end{align}
+If $N_i$ is an unreduced LCD for the values of its row, then these coefficients give the total number of elements $k$ in the set of sequences
+\begin{align}
+	T_k = \sum_{i=0}^{n} s^*_{ki}. 
+\end{align}
+Again, this is more of an observational conclusion than a formal theorem. But this can be seen in the following way. Each element, when appearing in a sequence, will add some minimum amount of probability $p_{min}$ to a corresponding position in the matrix. this amount will always be equal to $1/T_k$. If the elements appear after another element more than once, say, $s^*_{ki}$ times, then this coefficient increments, giving $s^*_{ki}/T_k$. For unreduced fractional forms of each probability, $T_k = N_k$, so $s^*_{ki}/N_k$ is just a count of how many elements there are. Thus, by summing these counters for each case (an element proceeding another element), we have the total number of elements in a set of sequences.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
