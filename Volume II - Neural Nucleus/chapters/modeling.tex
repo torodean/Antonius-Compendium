@@ -33,7 +33,11 @@ The functionality was based on transition patterns between characters of preexis
 
 \subsection{First-Order Markov Model}
 
-This section contains an explanation of how the markov model functions. Consider some set of sequences $S$ for some arbitrary type, where each element is denoted by a capitalized letter, $S=\{ABC, ABD, BAD\}$. The probability matrix $P$ is constructed by determining all of the elements which follow another, and at what probability that element has of following the others (The probabilities of elements following some element $K$ is $P_K$). that is $P(S) = \{K:P_K \forall K \in S\}$.
+This section contains an explanation of how the markov model functions. Consider some set of sequences $S$ for some arbitrary type, where each element is denoted by a capitalized letter. For example, let 
+\begin{align}
+	S=\{ABC, ABD, BAD\} \label{example-first-order-markov-sequence-small}
+\end{align}. 
+The probability matrix $P$ is constructed by determining all of the elements which follow another, and at what probability that element has of following the others (The probabilities of elements following some element $K$ is $P_K$). that is $P(S) = \{K:P_K \forall K \in S\}$.
 
 The set of elements which exist in $S$ are ${A, B, C, D, \emptyset}$, where $\emptyset$ denotes the absence of an element (or beginning/end of a sequence). Starting with $A$, we can see that the $A$ element is followed only by $B$ (twice), and $D$ (once) in $S$. The total number of elements ever following an $A$ is thus three. The probabilities following an element $A$ is thus
 \begin{align}
@@ -157,6 +161,7 @@ Again, this is more of an observational conclusion than a formal theorem. But th
 
 
 
+\unfinished
 
 
 
@@ -169,6 +174,24 @@ Again, this is more of an observational conclusion than a formal theorem. But th
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Higher-Order Markov Model}
+
+A higher order Markov model follows similar principals as a first-order Markov model. The difference is how many elements in sequence are tracked and considered when determining another. Consider the same sequence found in \ref{example-first-order-markov-sequence-small}.
+Suppose the order of this model is $O$ (that is a $O$-order Markov model). This would mean that instead of calculating the probability that an element follows another, the probability matrix would instead contain the probability of an element following any sequence of elements from 1 to $O$. For example, suppose we want $O=2$, giving a second order Markov model. For the sequence in \ref{example-first-order-markov-sequence-small}, The possible combinations of any sequence of 1 or 2 elements are the same elements in the first-order Markov model with the union of the additional probabilities of every sequence of 2 elements. The sequence of two elements within $S$ in this case are $AB$ (twice), $BC$ (once), $BD$ (once), $BA$ (once), and $AD$ (once). The probability for a second order is denoted by $P^2$. 
 
 
 
