@@ -51,7 +51,9 @@ P_A = \begin{cases}
 \end{align}
 Following this same process for the other elements gives
 \begin{align}
-P_B &= \{A:0.\overline{3}, C:0.\overline{3}, D:0.\overline{3}\} \\ P_C &= P_D = \{\emptyset:1.0\}\\ P_\emptyset &= \{A:0.\overline{6}, B:0.\overline{3}\}.
+P_B &= \{A:0.\overline{3}, C:0.\overline{3}, D:0.\overline{3}\} \\ 
+P_C &= P_D = \{\emptyset:1.0\}\\ 
+P_\emptyset &= \{A:0.\overline{6}, B:0.\overline{3}\}.  
 \end{align}
 The total probability matrix for this set of sequences would then be
 \begin{align}
@@ -88,7 +90,7 @@ One important feature of these models is that under low-entropy (the model is de
 
 Consider the following set of sequences:
 \begin{align}
-	S=\{ABCDE, ABDEE, AABCD, ACDCE, AABCD\}
+	S=\{ABCDE, ABDEE, AABCD, ACDCE, AABCD\} \label{markov-model-larger-example-sequences}
 \end{align}
 The set of all elements of this sequence are $\{A, B, C, D, E, \emptyset\}$. There are a total of 6 elements. This set of sequences has 7 $A$'s, 4 $B$'s, 5 $C$'s, 5 $D$'s, 4 $E$'s, and 5 $\emptyset$'s (beginning of each sequence). The probabilities $P_k$ are then
 \begin{align}
@@ -108,7 +110,7 @@ This gives a probability matrix $P(S)$ of
 		0 & 1/4 & 4/5 & 0 & 0 & 0 \\
 		0 & 0 & 1/5 & 2/5 & 1/4 & 0 \\
 		0 & 0 & 0 & 2/5 & 3/4 & 0 \\
-	\end{matrix}\right]
+	\end{matrix}\right] \label{markov-model-larger-example-probability-matrix}
 \end{align}
 
 
@@ -182,6 +184,41 @@ Again, this is more of an observational conclusion than a formal theorem. But th
 
 
 
+\subsection{Generating A New Sequence}
+
+One primary use for generating Markov models is so that they can be used to generate a sequence adhering to a similar pattern of the system that the model was generated from. This is useful in many application. One trivial example, which I've used this for in the past, is generating new fantasy-style (Dwarven, Elvish, etc) names based on lists of pre-existing names. In this example case, this type of model served as the perfect tool for generating new and unique names. The newly generated names followed similar stylistic and phonetic patterns of the names from the original list, which gave for a very realistic set of unique names.
+
+When generating a new sequence based on an existing model, a few considerations are needed. The size of the generated sequence needs considered. This can either be fixed (for instance in the case of a set of fixed-sized sequences), randomized (based on some criteria). Typically, I have found that creating a randomized value between the minimum sequence size and maximum sequence size is usually most representative of the data (with some normalization factors for more confined results). 
+
+The procedure for calculating subsequent sequence elements can also be done in a few ways. First, the simplest method is to simply use the exact probabilities from the model, and generate a random subsequent element based on the model weights. There are a few cases which could arise where this type of generation would yield undesirable sequences. First, if you rely solely on the generated probabilities, you will never be able to get results outside of those. For example, for the sequence found in \ref{example-first-order-markov-sequence-small}, you will never get an $A$ followed by a $C$ because it does not ever exist. Alternately, you may have a rather large dataset with a few outliers. For example, a large list of words may contain something like "syzygy". The sequences generated from this could then contain words with "yzy", which may not be desirable for any other sequences but this one. In cases like this, some of the smaller probabilities can be ignored (which usually works nicely for larger data sets).
+
+With the above optional conditions in mind, the steps for generating a sequence follow:
+\begin{enumerate}\itemsep0em
+	\item Determine the first element of the sequence.
+	\item Use the probability matrix of the first element, with appropriate conditional changes, to generate the second element. This probability is based on the elements following the previous element.
+	\item Repeat the previous step until the desired sequence size is reached... 
+\end{enumerate}
+
+The transition from one element $E_1$ to another element $E_2$ is denoted via $E_1\rightarrow E_2$.  Consider the sequences given in \ref{markov-model-larger-example-sequences}, whose probability matrix is given in \ref{markov-model-larger-example-probability-matrix}. In this example, to begin a sequence is to begin with the element $\emptyset$ (representing the start of a sequence). The only element which ever follows this one is $A$ with $100\%$ probability. So sticking to the given probabilities, a new sequence would begin as $\emptyset\rightarrow A$. Continuing this pattern, the elements which can follow $A$ are $A$, $B$, or $C$. Suppose we randomly choose $C$, which gives the new sequence $\emptyset\rightarrow A\rightarrow C$. Continuing this patter could lead to a final sequence (as an example) of $ACEED$. Thus, a new, perfectly valid sequence is generated using the probability matrix. 
+
+Repeating this pattern can give any number of elements, though some issues may arise which require some edge-case corrections to complete the sequence. For example, suppose we have a sequence starting with $ABCD$. Since $D\rightarrow C$ is perfectly valid, this sequence could continue as $ABCDC$. However, this sequence is already five elements long, and note that $C\rightarrow\emptyset$ is not a valid transition. Therefore, if we strictly held to the rules of this probability matrix, $ABCDC$ would be troublesome in that it is either non-valid or would have to break the rules allowing $C\rightarrow\emptyset$. With these models, certain rules like this often need \textit{broken} in order to provide a path to completion for some sequences (though this is entirely a preferential choice depending on the use).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -190,8 +227,20 @@ Again, this is more of an observational conclusion than a formal theorem. But th
 
 \subsection{Higher-Order Markov Model}
 
-A higher order Markov model follows similar principals as a first-order Markov model. The difference is how many elements in sequence are tracked and considered when determining another. Consider the same sequence found in \ref{example-first-order-markov-sequence-small}.
-Suppose the order of this model is $O$ (that is a $O$-order Markov model). This would mean that instead of calculating the probability that an element follows another, the probability matrix would instead contain the probability of an element following any sequence of elements from 1 to $O$. For example, suppose we want $O=2$, giving a second order Markov model. For the sequence in \ref{example-first-order-markov-sequence-small}, The possible combinations of any sequence of 1 or 2 elements are the same elements in the first-order Markov model with the union of the additional probabilities of every sequence of 2 elements. The sequence of two elements within $S$ in this case are $AB$ (twice), $BC$ (once), $BD$ (once), $BA$ (once), and $AD$ (once). The probability for a second order is denoted by $P^2$. 
+A higher order Markov model follows similar principals as a first-order Markov model. The difference is how many elements in sequence are tracked and considered when determining another. Consider the same sequence found in \ref{example-first-order-markov-sequence-small}. Suppose the order of this model is $O$ (that is a $O$-order Markov model). This would mean that instead of calculating the probability that an element follows another, the probability matrix would instead contain the probability of an element following any sequence of elements from 1 to $O$. For example, suppose we want $O=2$, giving a second order Markov model. 
 
+There are actually multiple ways to construct the probability matrix depending on the intended purpose of the model. For the sequence in \ref{example-first-order-markov-sequence-small}, one possible matrix can be constructed from the possible combinations of any sequence of 1 \textit{or} 2 elements, which are the same elements in the first-order Markov model with the union of the additional probabilities of every sequence of 2 elements. The sequence of two elements within $S$ in this case are $\emptyset A$ (twice), $\emptyset B$ (once), $AB$ (twice), $BC$ (once), $BD$ (once), $BA$ (once), $AD$ (once), $C\emptyset$ (once) and $D\emptyset$ (twice). The probability for a second order is denoted by $P^2$. This can be written as
+\begin{align}
+P_{\emptyset A} &= \{A:0, B:2/2, C:0, D:0, \emptyset:0 \} \\
+P_{\emptyset B} &= \{A:1/1, B:0, C:0, D:0, \emptyset:0 \} \\
+P_{AB} &= \{A:0, B:0, C:1/2, D:1/2, \emptyset:0 \} \\
+P_{BA} &= \{A:0, B:0, C:0, D:1/1, \emptyset:0 \} \\
+P_{AD} &= \{A:0, B:0, C:0, D:0, \emptyset:1/1 \} \\
+P_{BC} &= \{A:0, B:0, C:0, D:0, \emptyset:1/1 \} \\
+P_{BD} &= \{A:0, B:0, C:0, D:0, \emptyset:1/1 \} \\
+\end{align}
+The complete matrix $P^2$ could be constructed by taking this and the union of the matrix given in \ref{eqn:Example-prob-matrix-1}. It could also be constructed into its own matrix without any consideration for single element transitions. A third approach is to construct this matrix with the union of only the single element transitions which don't overlap with the two-element sequences. For example, the elements of $\emptyset$ (which denotes the start of a sequence), would not be a two-element sequence, but rather just a single element, which is then followed by either $A$ or $B$. This would be $P_\emptyset$, which could be included in the above list. In this example, there are no other cases, but other examples would have more. 
+
+Taking the union of all individual element sequences with the multi-element sequences could be a preferred way of constructing these probability matrices for a more complete model because they account for all the multi-element sequences, and then also provide individual element sequences if those do not exist. This is particularly useful when generating new sequences. If you are generating a new sequence, it could be common that you come across a sequence of elements which do not have an existing element proceeding it. In this case, you could shorten the element by one, and check against that sequence to determine the next.
 
 
